@@ -3,7 +3,7 @@
 Checked 11 September 2026 from this staged snapshot, without model inference:
 
 - The journal bundle verifier matched all 110 distributed payload files with zero unexpected files.
-- The documented three-file pytest command passed 34 tests and skipped 3 optional local-artifact checks, with no failures.
+- The original three-file pytest command passed 34 tests and skipped 3 optional local-artifact checks, with no failures. The two added publication-test files passed all 12 tests, validating the exact decoded and suffix macros against their hash-bound inputs.
 - Both documented journal numerical reanalyses exactly reproduced their saved scientific payloads. Only execution provenance and completion timestamps were excluded from the comparison.
 - All released Python files parsed successfully.
 - Original and independently rebuilt TeX archives produced identical extracted text and rendered pages. The 23-page journal PDF and all 19 pages of the public archive passed build checks; the journal pages were visually reviewed.

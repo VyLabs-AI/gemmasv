@@ -23,7 +23,7 @@ Use Python 3.11 or newer. The following commands require NumPy, SciPy, CVXPY and
 ```sh
 python journal_evidence/verify_bundle.py
 cd code
-python -m pytest tests/test_boundary_evidence_publication_v3.py tests/test_publish_longmemeval_chat_result.py tests/test_exactness.py -q
+python -m pytest tests/test_boundary_evidence_publication_v3.py tests/test_publish_longmemeval_chat_result.py tests/test_exactness.py tests/test_build_longmemeval_chat_v3_paper_macros.py tests/test_build_longmemeval_chat_suffix_disclosure_crosstab_v2.py -q
 ```
 
 Reproduce the journal numerical analyses from the saved measured results (NumPy only; run from `journal_evidence/`):

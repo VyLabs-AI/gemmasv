@@ -9,7 +9,7 @@ Deletion from Addressable Memory*.
 python3 -m venv .venv311
 source .venv311/bin/activate
 python -m pip install -r requirements-core.txt
-bash gemma_sv/reproducibility/run_quick.sh
+python -m pytest tests/test_boundary_evidence_publication_v3.py tests/test_publish_longmemeval_chat_result.py tests/test_exactness.py tests/test_build_longmemeval_chat_v3_paper_macros.py tests/test_build_longmemeval_chat_suffix_disclosure_crosstab_v2.py -q
 ```
 
 The data-free test suite covers exact solver contracts and request-scoped
@@ -30,9 +30,13 @@ represented here only by a source-free prompt/count/replay binding. The
 snapshot also includes the source-free human lock chain, final counts,
 adjudicated v4 census, and superseding suffix cross-tab.
 
-This snapshot is not release-complete until the source-free decoded, Luna,
-human-validation, and adjudicated-census artifacts plus their macro generators
-are copied from the reviewed parent implementation and validated
-byte-for-byte.
+The source-free decoded summary, immutable Luna statistics, human-validation
+lock chain, adjudicated census, suffix cross-tab, and both macro generators are
+included. Twelve publication tests validate the exact input hashes, recompute
+the cross-tab, and reproduce the committed decoded and suffix TeX macros
+byte-for-byte. Generator modules and numerical input artifacts were copied
+unchanged from the reviewed parent; the two tests only adjust the paper path
+for this standalone directory layout. Complete source-bearing responses and
+private human-review packets remain excluded by design.
 
-See `../reproducibility/PROVENANCE.md` for the claim-to-command map.
+See `gemma_sv/reproducibility/PROVENANCE.md` for the claim-to-command map.
