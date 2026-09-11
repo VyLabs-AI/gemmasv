@@ -1,0 +1,290 @@
+{
+  "analysis": {
+    "assumes_matcher_positives_are_true_leaks": true,
+    "cluster_bootstrap": {
+      "K": 32,
+      "confidence_level": 0.95,
+      "histories": 96,
+      "histories_per_cluster": 3,
+      "histories_resampled_within_cluster": false,
+      "method": "percentile_cluster_bootstrap",
+      "resamples": 100000,
+      "seed": 2026082701
+    },
+    "conservative_lower": "original matcher positives plus clean judge leaks",
+    "conservative_upper": "lower plus clean ambiguous and judge failures",
+    "design": "matcher-clean census",
+    "horvitz_thompson_sampling_weights_used": false,
+    "judge_validates_matcher_recall_only": true,
+    "validates_precision": false
+  },
+  "artifacts": {
+    "extension_local_ledger_integrity_sha256": "c75b691574f5e9e8381a54d69a8022230222440b24b75352b60f24076f4d8b5d",
+    "extension_local_ledger_payload_sha256": "154651078777dd11a30845a7d76724cbd619c48dbf2a509a65b31ec6a83a63e1",
+    "extension_lock": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "1b254d8566925cd6c59e5e0737b01ffbe99254e7e9965dc9e544dda9c698c623",
+      "immutable": true,
+      "integrity_sha256": "ab5345572ec0be737f8b9a9e03008eb0bca9ff2fe70813f7e85a3041ffe2fa5f",
+      "payload_sha256": "05a3cba4ebf472148eed9f2078142501e81673a2a9a926f1b88b7602139c643e",
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_extension_lock_v2.json"
+    },
+    "v1_authorization": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "b8faa6d72f3622c809d3725ee410a998ef535032795c20912a4e155e66b3eac7",
+      "immutable": true,
+      "integrity_sha256": "262e93eef4e3f465a0d9c224e5188b43c6111d591fc6fb63ca4f2672d564c84b",
+      "payload_sha256": "e726d63d9dafeb78260e98c5df10e43aa441e029504a1ade8edcde3f37dcddf8",
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_openai_authorization_v1.json"
+    },
+    "v1_judge_protocol_implementation": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "4a8e8e95df143190434825f2bc09c5d7f9513020aa18cfad35ffbc2ee0ae5902",
+      "repository_path": "gemma_sv/longmemeval_chat_leakage_recall_judge_protocol_v1.py"
+    },
+    "v1_provider_runner_implementation": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "ff1aac4517eeb1bef148159f1c2fddf44b0433b3c35c958a1d0debfe1a4a1ab4",
+      "repository_path": "gemma_sv/longmemeval_chat_leakage_recall_openai_v1.py"
+    },
+    "v1_rubric": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "021bd0e82fe6462088a5a1099b7e668cefcd348ef12715d574ab6ff46095041a",
+      "immutable": true,
+      "integrity_sha256": "b5ffd2cfcf8fd9daf62dda77bfc585ae52b7504665f1b8e6a8e8acd596dfa5a9",
+      "payload_sha256": "733db22d470447873d1c7c77d4cb7467dc1138f05c2e1e4a1e3940a8770c5733",
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_rubric_v1.json"
+    },
+    "v1_sample_lock": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "ca8818f56290bacb1d5c34166ee46a425ce665d25cc7571b7615f521e6635b11",
+      "immutable": true,
+      "integrity_sha256": "3313c9d501136b0fd9242243e0a11b52db9e81b0f0dff9c5f93f82a62830a9cc",
+      "payload_sha256": "d850eaee42db848fc64025dbaf53a942266e850a7c5f39e983999755bead6f53",
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_sample_lock_v1.json"
+    },
+    "v1_source_free_summary": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "16bf6bc174dcf32a199cf568c7a2eb6a99baaebe88400f5bdca87c8c2e6d624f",
+      "immutable": true,
+      "integrity_sha256": "cfd0170beba9fc233e42d1aafccf4a7c515de328779a996939d452124cb8ece5",
+      "payload_sha256": "c6332c838431933584a06a78ef5c450e7c8a76ce0d1eff8085f007f743be2b12",
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_summary_v1.json"
+    },
+    "v2_census_implementation": {
+      "committed_head_required_before_key_or_ledger_read": true,
+      "file_sha256": "30b5eacdeef866f1a85c8aaba2f70ffc72426f78cb1fcc7976897a522d24a5ca",
+      "repository_path": "gemma_sv/longmemeval_chat_leakage_recall_openai_v2.py"
+    }
+  },
+  "authorization_gate": {
+    "authorization_and_all_bound_public_files_at_committed_head": true,
+    "bound_v1_and_v2_implementations_at_committed_head": true,
+    "exact_acknowledgement": "I_ACKNOWLEDGE_OPENAI_SOURCE_BEARING_LEAKAGE_RECALL_CENSUS_V2",
+    "gate_precedes_environment_key_read": true,
+    "gate_precedes_local_ledger_read": true,
+    "gate_precedes_requests": true
+  },
+  "contains_credentials": false,
+  "contains_model_generated_text": false,
+  "contains_source_identifiers": false,
+  "contains_source_text": false,
+  "credential_policy": {
+    "credential_may_enter_logs_or_artifacts": false,
+    "dotenv_files_read": false,
+    "environment_only": true,
+    "environment_variable": "OPENAI_API_KEY",
+    "read_only_after_acknowledgement_and_committed_head_gate": true
+  },
+  "estimate_request_cost": {
+    "actual_usage_and_cost_reported_after_run": true,
+    "currency": "USD",
+    "estimate_only": true,
+    "estimated_input_cost_usd": 0.05381760000000001,
+    "input_usd_per_million_tokens": 0.2,
+    "maximum_estimated_total_cost_usd": 0.1306176,
+    "maximum_output_cost_usd": 0.0768,
+    "output_usd_per_million_tokens": 1.2,
+    "price_source": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+  },
+  "estimate_request_tokens": {
+    "actual_api_usage_available_only_after_run": true,
+    "approximation": "Conservative upper approximation: count one input token per UTF-8 byte of each complete canonical request JSON. This is an estimate, not tokenizer output or provider usage.",
+    "canonical_request_json_utf8_bytes": 269088,
+    "estimated_input_tokens": 269088,
+    "maximum_output_tokens": 64000,
+    "rendered_prompt_character_counts": {
+      "combined_total": 183587,
+      "system_total": 40000,
+      "user_total": 143587
+    },
+    "rendered_prompt_utf8_bytes": 183587,
+    "request_count": 125
+  },
+  "execution": {
+    "authorized_requests": 125,
+    "batch_api_used": false,
+    "extension_units": 125,
+    "generation_controls": {
+      "reasoning_effort": "low",
+      "reasoning_mode": "standard",
+      "temperature": null,
+      "temperature_parameter_supported": false
+    },
+    "passes": 1,
+    "prompt_sha256": "eefdfcdd0b00dcad93bcac94fa1de88273a542d1efa87e461cddb2a250746dab",
+    "request_started_marker_precedes_transport": true,
+    "requests_per_unit": 1,
+    "retries": 0,
+    "same_exact_v1_prompt_and_rubric": true,
+    "started_without_terminal": "permanently_indeterminate",
+    "started_without_terminal_may_be_retried": false,
+    "terminal_slots_may_be_retried": false
+  },
+  "headline_semantic_scoring": false,
+  "human_validation": {
+    "not_used_in_census_estimate": true,
+    "remains_secondary": true,
+    "status": "pending"
+  },
+  "instrument_validation_only": true,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "7340a0065134c38e2670f951d1fe1b370d31242262a697948a155415b1085d09"
+  },
+  "post_hoc_after_v1_outcomes": true,
+  "price_assumptions": {
+    "actual_billing_may_differ": true,
+    "estimate_only": true,
+    "input_usd_per_million_tokens": 0.2,
+    "official_gpt_5_6_luna_page": true,
+    "output_usd_per_million_tokens": 1.2,
+    "source": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+  },
+  "provider": {
+    "api": "Responses API",
+    "dated_snapshot_available": false,
+    "exact_requested_alias": "gpt-5.6-luna",
+    "immutable_model_revision_claim": false,
+    "model_reference_kind": "moving_alias",
+    "name": "OpenAI",
+    "request_contract": {
+      "endpoint": "https://api.openai.com/v1/responses",
+      "input": {
+        "content_source": "frozen v1 render_judge_request output",
+        "content_type": "string",
+        "ordered_roles": [
+          "system",
+          "user"
+        ],
+        "type": "message_array"
+      },
+      "max_output_tokens": 512,
+      "method": "POST",
+      "model": "gpt-5.6-luna",
+      "reasoning": {
+        "effort": "low",
+        "mode": "standard"
+      },
+      "response_text_extraction": "output[].content[].type == output_text",
+      "sha256": "6b2c35471e84550fdcde36d1363ede87f36652fd1325041387d952ee868d99be",
+      "store": false,
+      "text": {
+        "format": {
+          "name": "leakage_recall_v1",
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "additionalProperties": false,
+            "properties": {
+              "brief_reason": {
+                "maxLength": 240,
+                "type": "string"
+              },
+              "evidence_span": {
+                "maxLength": 500,
+                "type": "string"
+              },
+              "label": {
+                "enum": [
+                  "leak",
+                  "no_leak",
+                  "ambiguous"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "evidence_span",
+              "brief_reason"
+            ],
+            "type": "object"
+          },
+          "strict": true,
+          "type": "json_schema"
+        }
+      },
+      "top_level_fields": [
+        "model",
+        "input",
+        "reasoning",
+        "max_output_tokens",
+        "store",
+        "text"
+      ]
+    },
+    "terminal_provider_returned_model_recorded": true,
+    "terminal_provider_returned_model_validated": true
+  },
+  "rationale": "eliminate sampling uncertainty by completing the matcher-negative census",
+  "retention": {
+    "standard_api_implies_zero_retention": false,
+    "statement": "Standard API use does not imply zero retention; store=false disables later Responses retrieval but does not promise zero abuse-monitoring retention.",
+    "store": false
+  },
+  "schema": "gemma-sv-longmemeval-chat-leakage-recall-openai-authorization-v2",
+  "schema_version": 2,
+  "selection": {
+    "combined_matcher_clean_units": 253,
+    "exhaustive": true,
+    "extension_counts_by_condition": [
+      8,
+      51,
+      50,
+      16
+    ],
+    "ranking_used": false,
+    "replacement": false,
+    "v1_labels_or_outcomes_used": false
+  },
+  "source_free": true,
+  "status": "frozen-before-first-openai-census-v2-request",
+  "transfer": {
+    "condition_identity_transferred": false,
+    "full_history_transferred": false,
+    "identifiers_transferred": false,
+    "inclusion_weight_transferred": false,
+    "matcher_result_transferred": false,
+    "only": [
+      "blinded question",
+      "blinded reference",
+      "blinded candidate",
+      "frozen rubric",
+      "frozen response schema"
+    ],
+    "prohibited": [
+      "condition",
+      "condition ID",
+      "sample or unit ID",
+      "source or record ID",
+      "matcher result",
+      "inclusion weight",
+      "suffix stratum",
+      "source metadata",
+      "full history"
+    ],
+    "source_metadata_transferred": false,
+    "suffix_stratum_transferred": false
+  }
+}

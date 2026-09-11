@@ -1,0 +1,100 @@
+{
+  "admission": {
+    "conditional_efficacy_requires_joint_admission": true,
+    "operational_or_admission_failure_primary_value": 0,
+    "primary_itt_denominator_ignores_admission": true,
+    "retained_present_and_raw_first_token_rank_maximum": 10,
+    "target_full_sequence_scoring_required": true,
+    "target_present_first_token_rank_maximum": 10,
+    "target_present_minus_raw_full_sequence_mean_logprob_nats_minimum": 0.05,
+    "threshold_overrides_allowed": false,
+    "unit": "history_instance"
+  },
+  "analysis": {
+    "binary_rate_interval": {
+      "confidence_level": 0.95,
+      "denominator": "target clusters",
+      "method": "Wilson score interval"
+    },
+    "conditional_endpoints": "secondary only; report numerator and conditioning denominator",
+    "confidence_interval": {
+      "confidence_level": 0.95,
+      "histories_resampled_within_cluster": false,
+      "method": "percentile cluster bootstrap",
+      "resamples": 100000,
+      "resampling_unit": "target_cluster",
+      "seed": 20260823
+    },
+    "history_instances_are_independent_records": false,
+    "history_instances_are_nested_repeats": true,
+    "multiplicity": "no multiplicity-adjusted confirmatory claim",
+    "operational_failures_in_primary": "retained in denominator and scored as endpoint failure",
+    "primary_endpoint": "intent-to-treat",
+    "primary_estimand": "cluster-level mean across three frozen histories, then mean across all 32 target clusters",
+    "primary_n": 32,
+    "primary_population": "all 32 pre-outcome strict-v2 target clusters",
+    "primary_unit": "target_cluster",
+    "secondary_population": "14 source-unseen target clusters, explicitly secondary"
+  },
+  "claim_language": {
+    "permitted": [
+      "32 target clusters",
+      "96 histories nested within 32 target clusters",
+      "N=32",
+      "14 source-unseen target clusters"
+    ],
+    "prohibited": [
+      "N=96",
+      "96 independent records",
+      "32 source-unseen target clusters",
+      "100 independent records"
+    ]
+  },
+  "contains_source_text": false,
+  "exposure_disclosure": {
+    "all_32_can_be_called_source_unseen": false,
+    "classes": {
+      "context-only": 2,
+      "direct-target": 16,
+      "source-unseen": 14
+    },
+    "pre_outcome_target_membership": true,
+    "source_unseen_target_clusters": 14,
+    "support_sources_fresh_to_prior_scoring": true
+  },
+  "geometry": {
+    "all_affected_boundaries_must_be_feasible": true,
+    "fixed_c_reference_required": true,
+    "full_repack_fallback_allowed": false,
+    "maximum_runtime_total_token_bound": 8192,
+    "minimum_tokens_strictly_after_owned": 1152,
+    "window_tokens": 1024
+  },
+  "lock_sha256": "01e106afb668e4e29971c3f7574f0b93ecc9b5bef37842a84bd991447ed0552d",
+  "schema": "gemma-sv-longmemeval-chat-cluster-analysis-lock-v3",
+  "schema_version": 3,
+  "selection": {
+    "all_32_strict_v2_targets_reserved_before_support_assignment": true,
+    "cross_cluster_all_role_source_disjointness": true,
+    "globally_unique_tail_sources": true,
+    "histories_per_cluster": 3,
+    "maximum_variant_retries": 256,
+    "model_outputs_used": false,
+    "nested_history_instances": 96,
+    "one_unique_retained_control_per_cluster": true,
+    "output_based_replacement": false,
+    "retained_control_fixed_across_cluster_histories": true,
+    "selection_seed": 20260823,
+    "source_only": true,
+    "tail_minimum_schedule": [
+      1152,
+      1536,
+      2048,
+      3072,
+      4096,
+      6144
+    ],
+    "target_clusters": 32
+  },
+  "status": "frozen-before-v3-model-scoring"
+}

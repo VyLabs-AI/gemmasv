@@ -15,16 +15,16 @@
       "bytes": 11321
     },
     "README.md": {
-      "sha256": "bae52bb1e691f9775c26a5176cff307b8ce56146f11b8357c04aefd1e74e8e4f",
-      "bytes": 5067
+      "sha256": "def5beafc1e6dfe9c2ad750c5000d3495d2a36eeeb0e40f0e217642ac5670ce8",
+      "bytes": 5190
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "020fcd0b54cf7799487c318076f216a33a40a9fbcaea17271ca0ebb7ecc74c9e",
       "bytes": 2046
     },
     "VALIDATION.md": {
-      "sha256": "d54191e5d1f5c6599371020ff0acd3884ea397aec8bf29fc9327770bf9254c71",
-      "bytes": 1764
+      "sha256": "204eed25359f8b7ba05a87b6360aa3d66dd22bd8737d3fcf2d8069d8c895884c",
+      "bytes": 2240
     },
     "code/LICENSE": {
       "sha256": "6fadf92eab529f576360720357593d184b41df43ab5de494cf9de0a7acd1f7ef",
@@ -33,6 +33,10 @@
     "code/README.md": {
       "sha256": "737db08495784b85aebd3404b4e6c48f7da0b04ad9c6e01ac81e5e95868f035a",
       "bytes": 2276
+    },
+    "code/REPRODUCE_DECODED.md": {
+      "sha256": "48a0185944d1ddfa948eb7c63a676c02d0c4e76f249c5aa8ddc2a235055427a0",
+      "bytes": 3153
     },
     "code/artifacts/gemma_sv/arxiv_v2_claims.json": {
       "sha256": "3a517903728c3465fa2ee2deea01de1897827cf5634a1b437388bbf337562f5b",
@@ -194,9 +198,25 @@
       "sha256": "a83eaa42d99549f9725c296f3c7db09489c0a0cf05cbee6f38ee8e9292923059",
       "bytes": 1160
     },
+    "code/gemma_sv/benchmarks/longmemeval_chat_all_history_replay_lock_v1.json": {
+      "sha256": "63e4d4dd4b3ed6db034e147aa23f53dd9af5fd82768c592ce96c059f5c37485b",
+      "bytes": 132321
+    },
     "code/gemma_sv/benchmarks/longmemeval_chat_census_v2.json": {
       "sha256": "83cddd3ad1ca4a269381bdae99dceb9c9ed0176eb7eb753e9bd077debc106340",
       "bytes": 21742
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_cluster_analysis_lock_v3.json": {
+      "sha256": "9e105cb11b382d9514cee7c1472ca4f20ee709f39f830b39d366ea25d97a7029",
+      "bytes": 3545
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_cohort_census_v3.json": {
+      "sha256": "7f8327f21a663be5a3734518803e5640ae564c559440b81d54c3dd2222bd9efa",
+      "bytes": 24620
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_cohort_v3.json": {
+      "sha256": "579096fed8b2a415e9c046b18c7e29c897cd4f317e7b18bf7af60ef1ae853294",
+      "bytes": 4274674
     },
     "code/gemma_sv/benchmarks/longmemeval_chat_confirmation_v1.json": {
       "sha256": "7e9f484c4eee8cceecec79bfc0721e1cfc7100092d29f5b29d1e96eca478bae1",
@@ -205,6 +225,10 @@
     "code/gemma_sv/benchmarks/longmemeval_chat_confirmation_v2.json": {
       "sha256": "aa980722a9630448063eb0b825156d406f88e6226fbc3800d72de8f290f69d6d",
       "bytes": 647547
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_decoded_summary_v2.json": {
+      "sha256": "f4f9a074e932265e11c7c941cd3300ea317a0934b85339ee85c396bf5c92d960",
+      "bytes": 286697
     },
     "code/gemma_sv/benchmarks/longmemeval_chat_development_v1.json": {
       "sha256": "2eb14e3af4f376dbf8858a7fa1ba5700de550604e7187afb363c03c727cf1f9f",
@@ -266,6 +290,34 @@
       "sha256": "226c00beeba29e7849cb0612e8dc8f8a789616a0813919798aab4de845c7008a",
       "bytes": 28553
     },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_census_summary_v2.json": {
+      "sha256": "b0af9048dde02cd3ecf5a74ac26b1a7a77694598e75e3da36e764abe10e32b6c",
+      "bytes": 8476
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_extension_lock_v2.json": {
+      "sha256": "1b254d8566925cd6c59e5e0737b01ffbe99254e7e9965dc9e544dda9c698c623",
+      "bytes": 24979
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_openai_authorization_v1.json": {
+      "sha256": "b8faa6d72f3622c809d3725ee410a998ef535032795c20912a4e155e66b3eac7",
+      "bytes": 8564
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_openai_authorization_v2.json": {
+      "sha256": "c65dbd9d56856df34f20897753b842e686f372aac5f4aa9f2f4c2644b3802df3",
+      "bytes": 11183
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_rubric_v1.json": {
+      "sha256": "021bd0e82fe6462088a5a1099b7e668cefcd348ef12715d574ab6ff46095041a",
+      "bytes": 6128
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_sample_lock_v1.json": {
+      "sha256": "ca8818f56290bacb1d5c34166ee46a425ce665d25cc7571b7615f521e6635b11",
+      "bytes": 34896
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_leakage_recall_summary_v1.json": {
+      "sha256": "16bf6bc174dcf32a199cf568c7a2eb6a99baaebe88400f5bdca87c8c2e6d624f",
+      "bytes": 4705
+    },
     "code/gemma_sv/benchmarks/longmemeval_chat_method_authorization_v1.json": {
       "sha256": "ecfb3fd3323be6e0c920d06394826d250da2326d12b58c930631a5ca8dd8f2c8",
       "bytes": 10797
@@ -282,9 +334,21 @@
       "sha256": "3ae6824087c05fca7777e6bb37445f4c31ed894f31884dd63d8142210e546f86",
       "bytes": 2137
     },
+    "code/gemma_sv/benchmarks/longmemeval_chat_response_generation_audit_v2_validation_v1.json": {
+      "sha256": "7fdb1533f29c4f37105d84bcce1e2efd9195f256ed32058b036ef6ed490c8085",
+      "bytes": 85754
+    },
     "code/gemma_sv/benchmarks/longmemeval_chat_response_generation_authorization_v1.json": {
       "sha256": "cef7edf0dda4a91278c59613c6a5b130aab09f8f588fe47d616897aca6ac9ef1",
       "bytes": 37959
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_response_generation_authorization_v2.json": {
+      "sha256": "eb062a2d4e7d7cb015c0cbbfe925aea10015ce45990c32d20fd5cabd021e6225",
+      "bytes": 173291
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_suffix_contamination_v1.json": {
+      "sha256": "4bb6c3c69bfe5b5be581d04238d19bddab18c2a2ad0350b30b8bd6f906afd1de",
+      "bytes": 158832
     },
     "code/gemma_sv/benchmarks/longmemeval_chat_suffix_disclosure_crosstab_human_adjudicated_v2.json": {
       "sha256": "2e5e5f09f411a464454265195726bc732b4bed3de12451319acea33bc867fa74",
@@ -294,9 +358,21 @@
       "sha256": "5a57c00aeac87dc951f38ac2eb0f2f45c01b297f48c8325ec17cde94111a9ab2",
       "bytes": 2368
     },
+    "code/gemma_sv/benchmarks/longmemeval_chat_v3_analysis_lock_v1.json": {
+      "sha256": "55349bb11869584a29bacab1b0dd6b6329b2ea5cc270a0b4be3648a9324bf7ce",
+      "bytes": 38529
+    },
     "code/gemma_sv/benchmarks/longmemeval_chat_v3_summary_v1.json": {
       "sha256": "04e7292977e7a8762cbe8e076e9a1f15e8db679e7edf33a26fc604ddb14ac185",
       "bytes": 1004438
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_v3_utility_authorization_v1.json": {
+      "sha256": "ff6977379064bd628a8c7373639b2dad8f9b10ffd38cdbd8f5e2a619a927bb41",
+      "bytes": 24027
+    },
+    "code/gemma_sv/benchmarks/longmemeval_chat_v3_utility_execution_authorization_v2.json": {
+      "sha256": "ff3a607f578767f016377c7add1adf9eadf02b1671bf83ad7c11e4d65ef0df24",
+      "bytes": 234791
     },
     "code/gemma_sv/benchmarks/mass_preservation_nu_sweep_v1.json": {
       "sha256": "1bc27aed0a4cb4be8f240b6e6e4466e5999158e6caaf63ef5028b83635137aa9",
@@ -309,6 +385,10 @@
     "code/gemma_sv/benchmarks/mass_preserving_boundary_v1.json": {
       "sha256": "2c9f198c597ce05fb579fce026de7ea624c15d6a7473ea2e7fb7f62a998f315d",
       "bytes": 1478
+    },
+    "code/gemma_sv/benchmarks/memops_longitudinal_v1.json": {
+      "sha256": "7239c94a12405d1a41e3f1ff87c0dc00f2897eac667377819c5fb31d74fff367",
+      "bytes": 2099192
     },
     "code/gemma_sv/benchmarks/persistent_bridge_v2.json": {
       "sha256": "bda891600137e11fd2496be2e0f6e69e58b375c3c60715eadd82ac30f6f7d173",
@@ -382,6 +462,14 @@
       "sha256": "841d136199e64482f8591699e229236fb55fdac51c549fd24160bd7f7b6325f8",
       "bytes": 28759
     },
+    "code/gemma_sv/build_longmemeval_chat_human_validation_v2.py": {
+      "sha256": "fca7d43ccc9e0947adc3eafedf17723221999d0cbb7e6f542ada03e90261d4d6",
+      "bytes": 20810
+    },
+    "code/gemma_sv/build_longmemeval_chat_suffix_disclosure_crosstab_v1.py": {
+      "sha256": "141c8e4a1e1a2ae5873e906b25a8f4747d1ac35190ca63851d9a5ed368c47fb1",
+      "bytes": 9886
+    },
     "code/gemma_sv/build_longmemeval_chat_suffix_disclosure_crosstab_v2.py": {
       "sha256": "b282857f8a4c280d520d66c9efa6a65ef40c5bf9babc528cadf405f4523f5b32",
       "bytes": 10582
@@ -422,6 +510,10 @@
       "sha256": "d2f75a764ccde680ef0c50da2124daaa39b3c4544376a637361554fa581eab4f",
       "bytes": 31124
     },
+    "code/gemma_sv/demo_server/audit_gemma_runtime_v2.py": {
+      "sha256": "b8e06485c49c7f7afc764a3ade68f533a8020a0aa820cd3101311a641fe7958c",
+      "bytes": 9374
+    },
     "code/gemma_sv/demo_server/certificate.py": {
       "sha256": "bd84f6d1a85f5b52dab29992d6e80aacea44cab7ad19a560955b97c6eaecae88",
       "bytes": 15663
@@ -439,8 +531,8 @@
       "bytes": 1759
     },
     "code/gemma_sv/demo_server/gemma_engine.py": {
-      "sha256": "621bff46951331ef32f9691c5d06d5ebef15b51d198fcbdf987733bb447e3325",
-      "bytes": 61457
+      "sha256": "c10c892934b34b195141622cfe8929074a61e7f30d7226f21410975ee617f411",
+      "bytes": 63627
     },
     "code/gemma_sv/demo_server/jobs.py": {
       "sha256": "82b5dd6c04147fc0de8e70cf4264e5dabdce2b8921190c513f16b9691df99f30",
@@ -578,6 +670,10 @@
       "sha256": "23d91fd38f88be53ed76ba1c16bafdb527718561602b6a7d80b0ffaa82fe2da3",
       "bytes": 40349
     },
+    "code/gemma_sv/eval_longmemeval_chat_v3_utility.py": {
+      "sha256": "2d30953209965bd65382a02297f7028c8a6d8c5c034dd670644869de45e1a708",
+      "bytes": 56338
+    },
     "code/gemma_sv/eval_longmemeval_deletion.py": {
       "sha256": "d9792c97a1cc58c48e1cb52bd02e469e0d0d43df42ce4967d03e95e7757e48bf",
       "bytes": 54159
@@ -662,6 +758,10 @@
       "sha256": "1bbb12411ee368c14e62c870f554dc1adabe12d6b4b745593808990ac6a31b5f",
       "bytes": 2201
     },
+    "code/gemma_sv/longmemeval_chat_all_history_replay.py": {
+      "sha256": "ba197fbe4b68572f6498a5d9152e05aa516a19d9b089ef13961d89b8a94da6ed",
+      "bytes": 23223
+    },
     "code/gemma_sv/longmemeval_chat_benchmark.py": {
       "sha256": "9a81fa0b35529b6395cab458fb957a122aca7d3a9cb35466c1c658ea7e7c54e6",
       "bytes": 85756
@@ -670,13 +770,45 @@
       "sha256": "e032233354b1259611370cb8b17f4e3977d04164c90deae5b5b6b245b7ef52a9",
       "bytes": 59757
     },
+    "code/gemma_sv/longmemeval_chat_cohort_v3.py": {
+      "sha256": "89443da4acef31cd6d9acdfd4fb37f51df25086b350441cbc9e13b23f195f986",
+      "bytes": 53427
+    },
     "code/gemma_sv/longmemeval_chat_geometry_fix.py": {
       "sha256": "31c9bb613f97c916c6b27d9d42e7a5c74d9f5b6bfb652672d7734e7b33591073",
       "bytes": 41419
     },
+    "code/gemma_sv/longmemeval_chat_leakage_recall_judge_protocol_v1.py": {
+      "sha256": "4a8e8e95df143190434825f2bc09c5d7f9513020aa18cfad35ffbc2ee0ae5902",
+      "bytes": 81246
+    },
+    "code/gemma_sv/longmemeval_chat_leakage_recall_openai_v1.py": {
+      "sha256": "ff1aac4517eeb1bef148159f1c2fddf44b0433b3c35c958a1d0debfe1a4a1ab4",
+      "bytes": 101635
+    },
+    "code/gemma_sv/longmemeval_chat_leakage_recall_openai_v2.py": {
+      "sha256": "30b5eacdeef866f1a85c8aaba2f70ffc72426f78cb1fcc7976897a522d24a5ca",
+      "bytes": 146861
+    },
+    "code/gemma_sv/longmemeval_chat_matcher_v1.py": {
+      "sha256": "1049227489ca66814f3dc23e8e24afc328ad4cc8a49006e5e5a410630905e55d",
+      "bytes": 10579
+    },
     "code/gemma_sv/longmemeval_chat_response_generation_audit.py": {
       "sha256": "5dbd7e1b2aefaac468034de32897bedbacdce6953e81844544ba3edbf63238c7",
       "bytes": 96924
+    },
+    "code/gemma_sv/longmemeval_chat_response_generation_audit_v2.py": {
+      "sha256": "70ef04cbca979b268b990ea58ff18fd04efdeff28345f890984fa75d562b879e",
+      "bytes": 86932
+    },
+    "code/gemma_sv/longmemeval_chat_suffix_contamination_v1.py": {
+      "sha256": "19823716243ec1d9ac3b2b84b8251c4a46982fda8cb85a9bca4c23ca505e9c24",
+      "bytes": 29930
+    },
+    "code/gemma_sv/longmemeval_chat_v3_utility_execution_protocol.py": {
+      "sha256": "7e5cd70d1bd6603eb18c8f287f26d28b76bd9708caefb89622b81fef11b8dc6b",
+      "bytes": 50436
     },
     "code/gemma_sv/longmemeval_deletion_benchmark.py": {
       "sha256": "6f79c12a8e11dae7ddb3eabcd96194145945c74efd56a9649cf75fb6e3c10c5c",
@@ -741,6 +873,10 @@
     "code/gemma_sv/paper/longmemeval_chatbot_compact16_macros.tex": {
       "sha256": "5e1c66366f77bb81851df314657e98424eadf244e747f9c04cad35de1abdad78",
       "bytes": 4017
+    },
+    "code/gemma_sv/parallel_certificate_v2.py": {
+      "sha256": "a2d583b83b5d4278152044c2b313ddcf5fc617316322ae54926ee698970b40de",
+      "bytes": 24279
     },
     "code/gemma_sv/persistent_bridge_demo.py": {
       "sha256": "61b58a16845f2e92fd672a3814f648462533589f3b0e842095d189c24b85e80c",
@@ -902,9 +1038,25 @@
       "sha256": "679acdadbcd112ce9319ec9c0412214063163b136c0e0e4b1c5399bcf7dadfae",
       "bytes": 8134
     },
+    "code/gemma_sv/summarize_longmemeval_chat_decoded_v2.py": {
+      "sha256": "7c4f279a0115061883f1fdeadd4b37d97b29cfd066ce18ac8858abbc42154397",
+      "bytes": 69218
+    },
+    "code/gemma_sv/summarize_longmemeval_chat_leakage_recall_census_v3.py": {
+      "sha256": "a71477a5ad2e5f176ead7cbf50e7941752403bb785a0586c23483e8e87e195cd",
+      "bytes": 54732
+    },
     "code/gemma_sv/summarize_longmemeval_chat_leakage_recall_census_v4.py": {
       "sha256": "3ac20a03342798d5cf86b40dd219aa7780d999420c226a97b51c2db1375ef056",
       "bytes": 29607
+    },
+    "code/gemma_sv/summarize_longmemeval_chat_v3.py": {
+      "sha256": "b44bb6b613a7d8a7a4c99fd7e5af399cdd8d92dfc759b9e906a566c39995687e",
+      "bytes": 104552
+    },
+    "code/gemma_sv/summarize_longmemeval_chat_v3_utility.py": {
+      "sha256": "c913ba9fe6619b6e910808347846e26940d9004e0574c181d148041b101fb8fc",
+      "bytes": 34226
     },
     "code/gemma_sv/summarize_multiseed.py": {
       "sha256": "1ebb46b9d9c39ea7c5d33205da249ddecad4902a7734c65c892d21af0f46e17f",
@@ -973,6 +1125,10 @@
     "code/gemma_sv/validate_longmemeval_chat_human_validation_primary_v2.py": {
       "sha256": "12ac98e713ca6eab19abb68796ca271602ff10a170e88f842404ba441dd259d4",
       "bytes": 13544
+    },
+    "code/gemma_sv/validate_longmemeval_chat_response_generation_audit_v2.py": {
+      "sha256": "933a1f31c8ae13ce383c93685c149cb38dd7cc9367e9b125ac26197be9b197f3",
+      "bytes": 42714
     },
     "code/gemma_sv/validate_real.py": {
       "sha256": "eb4cf0a75f71051d4045bb1b36cf2fd7cafceb7e1bf30bbc16035db3973586db",
@@ -1426,9 +1582,17 @@
       "sha256": "d2c6fb062ad120725e104697574ebe158c61d363a51c7f80a1adf3aec4035a78",
       "bytes": 13166
     },
+    "code/tests/test_longmemeval_chat_cohort_v3.py": {
+      "sha256": "e02c0f9b267a048b0f83b2b67d1df2ce63d541a1591bb5cb37e1b14f1807f82a",
+      "bytes": 7721
+    },
     "code/tests/test_longmemeval_chat_response_generation_audit.py": {
       "sha256": "897ef55fe565830d32596e5121b1e323802b6d5deee7152fedf633399ed960b6",
       "bytes": 28199
+    },
+    "code/tests/test_longmemeval_chat_response_generation_audit_v2.py": {
+      "sha256": "acdfa7f276a69305e53297f4a7e98d329132d4f26596af8ca130071a68b7b344",
+      "bytes": 26479
     },
     "code/tests/test_mimic_privacy.py": {
       "sha256": "aadeb3884facdd3e9b45a8e5bdb0c3f7930e250013242569581f46b989bcb6b0",
@@ -1497,6 +1661,10 @@
     "code/tests/test_split_scope_figures.py": {
       "sha256": "f538f5a6ae12e326c8640b91fbb41bd40893828fab2c1ce440443049eea8d23c",
       "bytes": 1141
+    },
+    "code/tests/test_summarize_longmemeval_chat_v3.py": {
+      "sha256": "70eb271b38944e6675fc816cbe9f3a954d3c86c9069f9329f2da7d4d977d5fe0",
+      "bytes": 14845
     },
     "code/tests/test_svr.py": {
       "sha256": "fb354a1dafda3cb7ddd75ad017ec92ae8640b46ad6681fd21d14fd6db7709ebe",
@@ -2188,5 +2356,137 @@
     "publication_tests_passed": 12,
     "source_and_secret_scan_findings": [],
     "source_modules_and_input_json_byte_identical": true
+  },
+  "decoded_pipeline_additions": {
+    "modules": [
+      "build_longmemeval_chat_human_validation_v2",
+      "build_longmemeval_chat_suffix_disclosure_crosstab_v1",
+      "data",
+      "demo_server",
+      "eval_context_erasure_qa",
+      "eval_longmemeval_chat",
+      "eval_longmemeval_chat_geometry_fix",
+      "eval_longmemeval_chat_geometry_methods",
+      "eval_longmemeval_chat_methods",
+      "eval_longmemeval_chat_v2",
+      "eval_longmemeval_chat_v3_utility",
+      "eval_longmemeval_deletion",
+      "eval_memops_longitudinal",
+      "eval_persistent_deletion_baselines",
+      "eval_robust_unlearning",
+      "longmemeval_chat_all_history_replay",
+      "longmemeval_chat_benchmark",
+      "longmemeval_chat_benchmark_v2",
+      "longmemeval_chat_cohort_v3",
+      "longmemeval_chat_geometry_fix",
+      "longmemeval_chat_leakage_recall_judge_protocol_v1",
+      "longmemeval_chat_leakage_recall_openai_v1",
+      "longmemeval_chat_leakage_recall_openai_v2",
+      "longmemeval_chat_matcher_v1",
+      "longmemeval_chat_response_generation_audit",
+      "longmemeval_chat_response_generation_audit_v2",
+      "longmemeval_chat_suffix_contamination_v1",
+      "longmemeval_chat_v3_utility_execution_protocol",
+      "longmemeval_deletion_benchmark",
+      "memops_longitudinal",
+      "persistent_deletion",
+      "rag_benchmark",
+      "recovery_protocol",
+      "robust_eval",
+      "summarize_longmemeval_chat_decoded_v2",
+      "summarize_longmemeval_chat_leakage_recall_census_v3",
+      "summarize_longmemeval_chat_v3",
+      "summarize_longmemeval_chat_v3_utility",
+      "validate_longmemeval_chat_response_generation_audit_v2"
+    ],
+    "source_files_added_or_verified": [
+      "gemma_sv/build_longmemeval_chat_suffix_disclosure_crosstab_v1.py",
+      "gemma_sv/summarize_longmemeval_chat_v3.py",
+      "gemma_sv/validate_longmemeval_chat_response_generation_audit_v2.py",
+      "gemma_sv/longmemeval_chat_response_generation_audit_v2.py",
+      "gemma_sv/longmemeval_chat_response_generation_audit.py",
+      "gemma_sv/persistent_deletion.py",
+      "gemma_sv/eval_robust_unlearning.py",
+      "gemma_sv/robust_eval.py",
+      "gemma_sv/longmemeval_chat_geometry_fix.py",
+      "gemma_sv/rag_benchmark.py",
+      "gemma_sv/longmemeval_deletion_benchmark.py",
+      "gemma_sv/longmemeval_chat_benchmark.py",
+      "gemma_sv/eval_longmemeval_chat_methods.py",
+      "gemma_sv/eval_persistent_deletion_baselines.py",
+      "gemma_sv/recovery_protocol.py",
+      "gemma_sv/eval_memops_longitudinal.py",
+      "gemma_sv/memops_longitudinal.py",
+      "gemma_sv/eval_longmemeval_chat.py",
+      "gemma_sv/eval_longmemeval_deletion.py",
+      "gemma_sv/eval_context_erasure_qa.py",
+      "gemma_sv/eval_longmemeval_chat_geometry_methods.py",
+      "gemma_sv/eval_longmemeval_chat_geometry_fix.py",
+      "gemma_sv/eval_longmemeval_chat_v2.py",
+      "gemma_sv/longmemeval_chat_benchmark_v2.py",
+      "gemma_sv/longmemeval_chat_cohort_v3.py",
+      "gemma_sv/summarize_longmemeval_chat_decoded_v2.py",
+      "gemma_sv/longmemeval_chat_suffix_contamination_v1.py",
+      "gemma_sv/longmemeval_chat_matcher_v1.py",
+      "gemma_sv/longmemeval_chat_leakage_recall_judge_protocol_v1.py",
+      "gemma_sv/build_longmemeval_chat_human_validation_v2.py",
+      "gemma_sv/summarize_longmemeval_chat_leakage_recall_census_v3.py",
+      "gemma_sv/summarize_longmemeval_chat_v3_utility.py",
+      "gemma_sv/longmemeval_chat_v3_utility_execution_protocol.py",
+      "gemma_sv/longmemeval_chat_all_history_replay.py",
+      "gemma_sv/eval_longmemeval_chat_v3_utility.py",
+      "gemma_sv/data.py",
+      "gemma_sv/longmemeval_chat_leakage_recall_openai_v2.py",
+      "gemma_sv/longmemeval_chat_leakage_recall_openai_v1.py",
+      "gemma_sv/benchmarks/longmemeval_chat_cohort_v3.json",
+      "gemma_sv/benchmarks/longmemeval_chat_decoded_summary_v2.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_census_summary_v2.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_extension_lock_v2.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_openai_authorization_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_openai_authorization_v2.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_rubric_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_sample_lock_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_leakage_recall_summary_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_response_generation_audit_v2_validation_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_response_generation_authorization_v2.json",
+      "gemma_sv/benchmarks/longmemeval_chat_suffix_contamination_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_v3_analysis_lock_v1.json",
+      "gemma_sv/benchmarks/longmemeval_chat_v3_utility_authorization_v1.json",
+      "gemma_sv/benchmarks/memops_longitudinal_v1.json"
+    ],
+    "json_candidate_count": 38,
+    "source_payload_key_matches": [],
+    "reviewed_nonpayload_reference_enum": [
+      "longmemeval_chat_cohort_v3.json",
+      "longmemeval_chat_v3_utility_execution_authorization_v2.json: fresh_raw_omission"
+    ],
+    "note": "All additions copied byte-for-byte. No output histories/responses or model files copied.",
+    "locked_implementation_hashes": {
+      "cp_svm/kernels.py": true,
+      "cp_svm/oneclass_fast.py": true,
+      "cp_svm/oneclass_incremental.py": true,
+      "gemma_sv/demo_server/audit_gemma_runtime_v2.py": true,
+      "gemma_sv/demo_server/certificate.py": true,
+      "gemma_sv/demo_server/gemma_engine.py": true,
+      "gemma_sv/eval_longmemeval_chat_methods.py": true,
+      "gemma_sv/eval_longmemeval_chat_v2.py": true,
+      "gemma_sv/longmemeval_chat_cohort_v3.py": true,
+      "gemma_sv/longmemeval_chat_response_generation_audit.py": true,
+      "gemma_sv/longmemeval_chat_response_generation_audit_v2.py": true,
+      "gemma_sv/parallel_certificate_v2.py": true
+    },
+    "historical_runtime_restoration": {
+      "gemma_sv/demo_server/audit_gemma_runtime_v2.py": "git commit 839e8de31d100db8d339ac69fb5c4bcb53c6eaed; exact recorded hash",
+      "gemma_sv/demo_server/gemma_engine.py": "verified journal evidence snapshot; exact recorded hash"
+    },
+    "test_portability_changes": [
+      "Mock-runtime response tests stub accelerator RNG seeding; do not test device RNG.",
+      "The historical lock equality test replays its recorded environment input because local OS/MPS availability changed. All production environment checks stay unchanged."
+    ],
+    "offline_contract_tests": {
+      "passed": 28,
+      "deselected_requires_upstream_assets": 5,
+      "failed": 0
+    }
   }
 }

@@ -1,0 +1,1013 @@
+{
+  "artifacts": {
+    "cohort": {
+      "file_sha256": "579096fed8b2a415e9c046b18c7e29c897cd4f317e7b18bf7af60ef1ae853294",
+      "integrity_sha256": "1f0cf1d560a90137a5c4b8ed57f4d48b53d2d9947ba0b5468f097f7305a3d051",
+      "payload_sha256": "3576bdb294bd88cc6bd4acfe5a6b8ce3969ac720144bca416f7f11823008f6a0"
+    },
+    "decoded_final": {
+      "file_sha256": "6032579fa2ac2e0d89485b4b1fadd23e1399b563e8b2f6ade780b0196a7cd75f",
+      "integrity_sha256": "331975ade07af2724d59a2e3900cfba5a7cb6f7bf5e8f0b3cac3d8e47f8cd904",
+      "payload_sha256": "673c03b41fb4488fd955d1d4ab04f262259b4650f0c21b3a9fa04c190bcd5143"
+    },
+    "matcher_implementation": {
+      "file_sha256": "1049227489ca66814f3dc23e8e24afc328ad4cc8a49006e5e5a410630905e55d"
+    },
+    "pinned_source_rows": {
+      "file_sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c",
+      "payload_sha256": "dfedcaeb1d4b83ded00da6323e8a57c5d0026bf800403314fb6d9f4bc18a9704"
+    }
+  },
+  "contains_judge_outputs": false,
+  "contains_model_generated_text": false,
+  "contains_source_identifiers": false,
+  "contains_source_text": false,
+  "design": {
+    "condition_strata": 4,
+    "presentation_seed": 2026082607,
+    "quota_transfer": false,
+    "selection_algorithm": "sha256_rank",
+    "selection_seed": 2026082606,
+    "total_units": 128,
+    "units_per_condition": 32,
+    "without_replacement": true
+  },
+  "human_preselection": {
+    "sample_indices": [
+      0,
+      10,
+      25,
+      27,
+      33,
+      34,
+      44,
+      48,
+      55,
+      63,
+      67,
+      74,
+      79,
+      82,
+      86,
+      112,
+      116,
+      119,
+      123,
+      127
+    ],
+    "selected_before_judge_outputs": true,
+    "selection_seed": 2026082608,
+    "total_units": 20,
+    "units_per_condition": 5
+  },
+  "instrument_validation_only": true,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "3313c9d501136b0fd9242243e0a11b52db9e81b0f0dff9c5f93f82a62830a9cc"
+  },
+  "protocol_hashes": {
+    "prompt_sha256": "eefdfcdd0b00dcad93bcac94fa1de88273a542d1efa87e461cddb2a250746dab",
+    "response_schema_sha256": "60b24683b4d34cb1d60304f821d3679299c6e2728c8482132d35fb0510e1e83a",
+    "rubric_integrity_sha256": "b5ffd2cfcf8fd9daf62dda77bfc585ae52b7504665f1b8e6a8e8acd596dfa5a9"
+  },
+  "samples": [
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 0,
+      "unit_binding_sha256": "7843af607b98b7d2b1c8eaddfed30957d7f3a649c30091df28f41eb9e9b44ca8"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 1,
+      "unit_binding_sha256": "bd6714ea1198b23c52275f19f415603bb1044df08074db49655a63384b1f9797"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 2,
+      "unit_binding_sha256": "cf84591336b636e7fcb9998f97777d68edbd81e6b8720c95d27eb86a9b33fda8"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 3,
+      "unit_binding_sha256": "ea0b7b614472f6b044af72d830a93e79c5e0116b6decb0d73ab6657f1dd5e5d6"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 4,
+      "unit_binding_sha256": "04e3188798f4dd68f726cb3a5d435f2a7bab48d3b11698108b8baae9bf13c106"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 5,
+      "unit_binding_sha256": "6e10f52d62fb6f09093781de580a32a28c01c201ab1edd3d8348d4bddb111289"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 6,
+      "unit_binding_sha256": "705e6fd4489babac47e578c55aabdceb185c71935818b5eb72ec512cc85337f2"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 7,
+      "unit_binding_sha256": "1775fc1eed9b991bab8532be3909902800c3b449665bf71b0e6ce598f880b36b"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 8,
+      "unit_binding_sha256": "9b934101151c51b0548c80afde865e04230d7c8c0df831d0a64dd519e6cb071a"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 9,
+      "unit_binding_sha256": "759c41aefdaaad02bbaa4ef806c616a0c84fcb660d1791de2dcd4473dc1c9b12"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 10,
+      "unit_binding_sha256": "5127e3a70b8e8b0974cfa323f07e18a88b9b5289f5df44ace54af15031a07680"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 11,
+      "unit_binding_sha256": "b6cbabfe10ee814799c3f3ba97dcce4b0b62fbb4143447d0c4f4183000f88f9e"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 12,
+      "unit_binding_sha256": "ff70c62fac121874bf00a71d4f783b1402249dfcc5148866ce0dc2492638a40b"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 13,
+      "unit_binding_sha256": "ce064fddf1935ff9bc89ccde4144635da10ec51a20c677b96adc573dab4cebf2"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 14,
+      "unit_binding_sha256": "eb5464a1f8552d02bfe7cc373f022f529f77de9d20b42afa3f9c134fd91ca30e"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 15,
+      "unit_binding_sha256": "8fd3ad55942d89e5fb250f6f02e6d95ac497cbaac87abeadf72f796edb8343ef"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 16,
+      "unit_binding_sha256": "dc066452e3a174c52d766faa8219ddd70af9a91e556b606942b4e29f9a3db727"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 17,
+      "unit_binding_sha256": "1be059e4e36a3521c3e6596c536c9ea7b24bec487edda16090688619332cf635"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 18,
+      "unit_binding_sha256": "878b8a2fa1bfacf495011e6b7164693df319eb5b51a874bf30856561a2b74e7b"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 19,
+      "unit_binding_sha256": "7098bda23214036c625ba1eb7e6d98b30046410f863b888a0f0a672ae56a81c8"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 20,
+      "unit_binding_sha256": "46b51a26deeb4a9ec225b7d276235ba251c45b9f2178322f635aa44f8da1b8d8"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 21,
+      "unit_binding_sha256": "c0a5038dde59ce908025d8cc7bf040b277dcbc5d1a0f3e3458b63c7f59706f13"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 22,
+      "unit_binding_sha256": "37a320b7880cad08d95ac7501ae8db7507e5a5059f69e9ddd08c1aeb8e374cca"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 23,
+      "unit_binding_sha256": "201680cf6a990a671d5368fe4f7ab119f5d0f8369567e0640f6d0a390ba7bb02"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 24,
+      "unit_binding_sha256": "d1ee0edf01edaa04a3510f06c49511f83498d316e84246dde38f18cb6dfdb5d3"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 25,
+      "unit_binding_sha256": "3dbcaad8065d8d2a6b2e1817c250ebbcec8d64b2304a1cb443211b8f05c577c5"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 26,
+      "unit_binding_sha256": "43a9ed7d4db626fa15d2545201ac605e630421234aaee7b6d5c1e85b028c82ff"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 27,
+      "unit_binding_sha256": "70a6953e1cc150995ff1ee8eec53212b045cd0001b44ddf4535e80f1d4db0467"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 28,
+      "unit_binding_sha256": "15e021f4c5774800ed4d2fe3982db4914970e8ef554da718403145424d549b28"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 29,
+      "unit_binding_sha256": "ba1ab8a612096d952a5822109bbb38658bde15baddf324ad889be7e71d30b852"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 30,
+      "unit_binding_sha256": "dd0074ac3ddfe6823dae354271c54fe1e58a45c5b96570224074968c320783db"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 31,
+      "unit_binding_sha256": "9a4b9db3dd4712b56d958b05f9d9cf3ff77b4979a7d198fe4618cf783c977413"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 32,
+      "unit_binding_sha256": "236a3a98c9774bcff9d215128173ae6a7d5473ee428c21b1b432842100cb66ef"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 33,
+      "unit_binding_sha256": "7d03cdcd1c5e4df3dee76818d6c4c24b98ec3aa76b4c2f792bd6bb51dba6e03a"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 34,
+      "unit_binding_sha256": "3d9ddf37a47cbd33ad5e13c127387b8cdd0dc0b014d30472e1513ea7c7edfdfc"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 35,
+      "unit_binding_sha256": "5a06aed4f32816393942de70c186e3e4755fa332a638409d737b9cb2ff9edb10"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 36,
+      "unit_binding_sha256": "9c68f486e75a54feb03b9d31e00797943b8612c52597a81ed4e48914b0986ce9"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 37,
+      "unit_binding_sha256": "73eafb926113243308d8ba33a96dd0df91d8ffd4b371823d1e168790d52deb97"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 38,
+      "unit_binding_sha256": "37e1a31b191b04d6228d323206b79c607641e5bb6d09492d0b9eb78a0ad25c9e"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 39,
+      "unit_binding_sha256": "3bc1b959dfeb4b83fe93af1125519bf6604197d9256762c423cf6c2dfe0bde90"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 40,
+      "unit_binding_sha256": "a5b3c473c1e1d538d69dd750396c2bce8260cb95fbb1573811a71bb303bdb293"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 41,
+      "unit_binding_sha256": "eddb67dfa65362dbaa0f4e3db7c71a37b8a92ed0365545933663c81c42ac6f6a"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 42,
+      "unit_binding_sha256": "29de2477dca47b85a761d2a5bdafe43390141060d4fb36411acb4affe132048c"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 43,
+      "unit_binding_sha256": "bba6a622edc48ac5a39de0184b8919b0d3da9c4f8a180a4f0c97d75b13c7f124"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 44,
+      "unit_binding_sha256": "4016b292da3718db9e0d55fbcc1173366828b42309fde7f12c55ee1b35628ac8"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 45,
+      "unit_binding_sha256": "33645f30f48847e2328cf16cff72ce0042b1548f693a98604792efe94508a66c"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 46,
+      "unit_binding_sha256": "bd1f1dbc7edddb1754715ece8f190cfd9251ca176d07601aa97bfeffdb6166c9"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 47,
+      "unit_binding_sha256": "aab40d2a5c88a37a3c200560687c6f2cb9b0e50242f4bee3e4d5c36a9e1c3dfa"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 48,
+      "unit_binding_sha256": "377eb6ca911b344c312c7abe783aa4239397deb43592275f36dfc9e02c4da128"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 49,
+      "unit_binding_sha256": "42ccacf5d7be814890fd1d8e02914438d907b6c8e7f881018e58856a577f0271"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 50,
+      "unit_binding_sha256": "44e791ee2b19c0206a12ed492e958f4aea55d0c786eb31743711e193f812e678"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 51,
+      "unit_binding_sha256": "b22ac409122d7aeee38c321b83b37d7230ae1eb35b69616870402daadcf74cc7"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 52,
+      "unit_binding_sha256": "e9ceddf4a5745d00422be1e5fd4582e3dbfb5dd5f0e1243ac29892a13dd0f4fe"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 53,
+      "unit_binding_sha256": "35af0b7a97497ab190a50b510f192ebe5662434df7cef8a911fbb2062d272eb7"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 54,
+      "unit_binding_sha256": "702138b5d28fa17f5dcd8dab94c5a248683d1cd8c3b8914bbfae6d765f795c74"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 55,
+      "unit_binding_sha256": "d1bb39f5e7c9ba005d7305d85e4c336d86cfd2eca1b0e949d3b6b99f733b731c"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 56,
+      "unit_binding_sha256": "8cf5f2ab6e9028251319f1833bd36c6a59cc8dc0530204b883372e155776a41e"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 57,
+      "unit_binding_sha256": "6f2d8ee153a228936aeed2344f7d433b2bbaba2c096986029b0200a7d1871d97"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 58,
+      "unit_binding_sha256": "cf10745f2cea9d390f20931de6b00bfc6a14fe02656e7fb544897ea7627412d0"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 59,
+      "unit_binding_sha256": "f0b918cc76339847e671d747d169672723b8837f35b931192ca95dc833e4a676"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 60,
+      "unit_binding_sha256": "5af4f60ab26e12c95e4211cc39ede75e22c3f9990d6270ed7b555e7bd0026d46"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 61,
+      "unit_binding_sha256": "1cb447bb0b14bddbac1ab97d10a76145ea6bb036d9968d3f7975d592c5179e77"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 62,
+      "unit_binding_sha256": "b39ae5721e75e590d2a09ab1f5bcc8994b86685750b63ba299a2e4485e2dff51"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 63,
+      "unit_binding_sha256": "e3f90f021e0aff436d54f35b4f5619748a1b6941443f4f203cec490f27761555"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 64,
+      "unit_binding_sha256": "2360852406c51c5f6a635260c372da2ca840db50deb717755fa2bbe3ce080b16"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 65,
+      "unit_binding_sha256": "a2734a10a9f59b1299c54d9f490105a6e0453eabaff27a876e8dffe904d6b7dd"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 66,
+      "unit_binding_sha256": "2a1265c10977a2b8cca2bbab684ce68ba92c0bb3650653366a9d1c275438152f"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 67,
+      "unit_binding_sha256": "8629a2998c97d100f4a4715450dc8a628af3bdb999c0edda43074b8075f66ad5"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 68,
+      "unit_binding_sha256": "99941481fac6e27c2d246beda35e4c24525e226009f6d6af53459537280efaf8"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 69,
+      "unit_binding_sha256": "a84b405a4892acfd1151060779b76997894ab8585aa1e0ae8b0ea0f9e80b6210"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 70,
+      "unit_binding_sha256": "80cc795877946de325e213ec95213df2c0228373bdc3f40fced60a5f97575415"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 71,
+      "unit_binding_sha256": "c435e6f4a14cf6330894d88fbf839b55664d87f09dc73c9aeb7f2bc123d43a48"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 72,
+      "unit_binding_sha256": "08c503cb1aed1eb0f113c486078eb8545c963bd3f40634a2a0949a411ee2e9f7"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 73,
+      "unit_binding_sha256": "4784727010e0bcff262f6b1c1c69f11575948c55a9848e81d339a65fb427825a"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 74,
+      "unit_binding_sha256": "650a2ce0efcc2d4ecaa2059ddcde5925c4af290587a0bb8f97ecd6608a0bf74a"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 75,
+      "unit_binding_sha256": "10e6b5ca38911fc83f53181c8632d45f2857bdb545e801ff5e040766856e3793"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 76,
+      "unit_binding_sha256": "d596fdbdaf4b62a4214c464f76db98681b2607fcba7aed854940bf4138d730c1"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 77,
+      "unit_binding_sha256": "f95bcc917b75fe83a69bdd4ffca0eb830ecad51de5060b4c649eb2d6d099340b"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 78,
+      "unit_binding_sha256": "848446353c9b6ae384b29d7a3c8508dbccb9e786d3273cb1172bdb181833771e"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 79,
+      "unit_binding_sha256": "7ee6a2026f2148f166da048dd8143823c7b49c458220ce4a1797134141e7a3ae"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 80,
+      "unit_binding_sha256": "9c49b22d9cac8ffda07958ef1c1f62a8d7686883cc0ca49455d528c613d97bd2"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 81,
+      "unit_binding_sha256": "979cb6921a6b76ae5f255e929edf52d9839af019a792f5f0c45c0318452e1673"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 82,
+      "unit_binding_sha256": "e44f32cc2217b531c3670f2c46ad050880161eb607c0a8065fef237ea80ab03e"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 83,
+      "unit_binding_sha256": "e20b097db612ecb8b960078e47c04ea99775e92ae757580db781c973ff914ff9"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 84,
+      "unit_binding_sha256": "3ff2ec6465fb998bff6f55d806c5dd87875c5bfe88b413ecaa05d9bdcf84d152"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 85,
+      "unit_binding_sha256": "05249586498171657d7325cd975f4a9aaca187be55cc0ba78be9c7d7bde087fb"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 86,
+      "unit_binding_sha256": "6cfface388247dff7ea0d29de6107f7b4573d674ddd24764e98b60a742593488"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 87,
+      "unit_binding_sha256": "d612c4dbeb22c65d8cf7cba0b9e9d80e5f9999db827c31cfca58bb04940ac72c"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 88,
+      "unit_binding_sha256": "ada39574741d54584a6df8d94999166805d32c42e99d7abafe15b8924552fb11"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 89,
+      "unit_binding_sha256": "013eba3c605e8711c5c05e859b166c005ffba69f23250f3434653809fcf18e51"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 90,
+      "unit_binding_sha256": "2ca0485a390b408ffbe768444a5540b2b6b5b3f999a707e2187c40b1b29c0756"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 91,
+      "unit_binding_sha256": "3879c802eb0245dfe368f42f064fd9be4f22ebe1fdcdbaabadb78494249d6a59"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 92,
+      "unit_binding_sha256": "3e4bad19a267170bddc0c28f521f6250e5a25342e05e67dbaab18183fcf46f0d"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 93,
+      "unit_binding_sha256": "621367cbf3a8255290dc0e8593c2a2d7af8276ff702345d9e82da47821c6910d"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 94,
+      "unit_binding_sha256": "9cc47501487333bad546b7c058233bde66671800bf832ac853ca0bb9136814eb"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 95,
+      "unit_binding_sha256": "59531dc2347b312b804f6dc1028feb708fe615399f94fe5e178cc3f3e062d781"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 96,
+      "unit_binding_sha256": "4823d499be43df9fb54c3e4db522cc16d57954a985412a611728516b89ece19e"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 97,
+      "unit_binding_sha256": "ad7b2eae9fc70557fe7b286316e950274ed756f3a882c3c75e88e464bbec071d"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 98,
+      "unit_binding_sha256": "d0e15319cbf90f4dd04a023feb3f7156baa50dcc837a3a697551118cc0b1730c"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 99,
+      "unit_binding_sha256": "096c24d42c303f780b5d6490d4dfd11b752cc670aef8dc19baa8875cb73dfa44"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 100,
+      "unit_binding_sha256": "979a6bb51c8b1cd41e8d378bd8383e5367734d07a3eb48e7748cd435a5c80e3c"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 101,
+      "unit_binding_sha256": "a12344560309dec1ece68fc0d62b82c97558ea8300c8336cda881354160fb533"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 102,
+      "unit_binding_sha256": "02f31766a20e13123050de6c817f2fc790d52c398e4920feaca00703572a72e7"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 103,
+      "unit_binding_sha256": "f92f4962aadb30f0b134b717e2f1e077b28b7c30a8c77b55160b81665cb522e9"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 104,
+      "unit_binding_sha256": "826b1bfae8a5da085945cfd7cb878b4053f878a699fc3e5c013ab37236a51d01"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 105,
+      "unit_binding_sha256": "891ef56c5b767d6b76642d6b3b5bf5b16f5ee2cd79ff7626c7fbb77481d1134c"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 106,
+      "unit_binding_sha256": "75aa5fe4ac8e097a0087ffd59770cfd08d3d73b90e07e730cdfe3254f1ebe538"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 107,
+      "unit_binding_sha256": "3b1d95efc67e5317e9cff9e3763df6d93c27b7130802c20be29d9e7ee601f731"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 108,
+      "unit_binding_sha256": "5ca396c36688e4eafde88dd0522d3d59f14f17b4ac756773bc34ab9afe237525"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 109,
+      "unit_binding_sha256": "f253a365788607116a4e7896846891cb02d5efd7672ed9cbc117e81b6c343a8b"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 110,
+      "unit_binding_sha256": "9a107cab42b897a292041095d53135708c319d36c9c4fd7ce6bb9c2dbd048552"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 111,
+      "unit_binding_sha256": "f4ead8e67c9d01586970c2e714760441f8b9cbda5fca1082457cbf301b68b9c5"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 112,
+      "unit_binding_sha256": "4459e7ec24d500c853aeadc2690fff4eebff586cc070807827d6df2c703f361c"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 113,
+      "unit_binding_sha256": "646473b694ddf454ed0f51ec6805fc079c850164da57e72b9fefdeba4e606f60"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 114,
+      "unit_binding_sha256": "a5b2c11001a54bcdc9b6d72264a17ae0426ec666c296f87aa0af92fb7c0ede51"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 115,
+      "unit_binding_sha256": "21af270c57e4c83371017ced4f76b944e18f366a01ba69b084c662d11226900d"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 116,
+      "unit_binding_sha256": "ba07917acf6c4d4d7c2545174f20306ca612d5af35510da0df08e07511ab9ca6"
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "sample_index": 117,
+      "unit_binding_sha256": "7959b94c74308eafaa9b08b90f06301aab9d2b257f696f27824d388da006bdf7"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 118,
+      "unit_binding_sha256": "92cdb64711f31e0bba83a59308b8badf51ca3f320206a7956194749dd2fe318a"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 119,
+      "unit_binding_sha256": "23abbd63617444e83aab2bc76ed583de93643f91d0535f9693275a2b42334e39"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 120,
+      "unit_binding_sha256": "8a418a3f0069f99677d281a1feb115c0faaebd65c34b90152b5b7ec6502caa87"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 121,
+      "unit_binding_sha256": "a08fbbdb674801973f71de9eaff2c10270a8b175264ccb81bfaa7856d6e6bc7b"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 122,
+      "unit_binding_sha256": "2c67f056eb71a342964e0f86956fd7ae123bc7f46ba360c24cda0fd0a5f447cc"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 123,
+      "unit_binding_sha256": "cf9fc50ba6050020aa62055d28e5cc32b31b1ec4b82baa5bc918a9b31444b2af"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 124,
+      "unit_binding_sha256": "99432b2e3f43280ddbe56ff8a46b52ee1ac5f8c68e70b22d8526b5240d9a9fc6"
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "sample_index": 125,
+      "unit_binding_sha256": "ab636e2fbdcdb5d7f4af9f01cd1d90018d75deee92bb44c0af56fa408cd2ce9f"
+    },
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "sample_index": 126,
+      "unit_binding_sha256": "7cf2eb9ad4fa2f335d5b5eaeda0b61a9d814a9c83b8a5720f715727895251ca5"
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "sample_index": 127,
+      "unit_binding_sha256": "ebdbe9c203ee62287dca696e7b1ca9be6f73ec4af7b1d0049137895966dfaf27"
+    }
+  ],
+  "schema": "gemma-sv-longmemeval-chat-leakage-recall-sample-lock-v1",
+  "schema_version": 1,
+  "status": "protocol-frozen-before-first-request",
+  "strata": [
+    {
+      "condition_ordinal": 0,
+      "inclusion_probability": 0.8,
+      "inclusion_weight": 1.25,
+      "matcher_clean_size": 40,
+      "matcher_positive_size": 56,
+      "population_size": 96,
+      "sample_size": 32
+    },
+    {
+      "condition_ordinal": 1,
+      "inclusion_probability": 0.3855421686746988,
+      "inclusion_weight": 2.59375,
+      "matcher_clean_size": 83,
+      "matcher_positive_size": 13,
+      "population_size": 96,
+      "sample_size": 32
+    },
+    {
+      "condition_ordinal": 2,
+      "inclusion_probability": 0.3902439024390244,
+      "inclusion_weight": 2.5625,
+      "matcher_clean_size": 82,
+      "matcher_positive_size": 14,
+      "population_size": 96,
+      "sample_size": 32
+    },
+    {
+      "condition_ordinal": 3,
+      "inclusion_probability": 0.6666666666666666,
+      "inclusion_weight": 1.5,
+      "matcher_clean_size": 48,
+      "matcher_positive_size": 48,
+      "population_size": 96,
+      "sample_size": 32
+    }
+  ]
+}

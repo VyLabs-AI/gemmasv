@@ -1484,6 +1484,62 @@ class GemmaDemoEngine(DemoEngine):
         session.phase = DemoPhase.ATTACKED
         return result
 
+    def retained_probe(self, session, *, prompt, target):
+        self._require_state(session)
+        if session.phase not in (DemoPhase.FORGOTTEN, DemoPhase.ATTACKED):
+            raise EngineError("forget_required")
+        if not prompt.strip() or len(prompt) > 1_000:
+            raise EngineError("retained_probe_invalid")
+        if not target.strip() or len(target) > 240:
+            raise EngineError("retained_target_invalid")
+
+        state = session.engine_state
+        deleted_memory = state.get("persistent_deleted")
+        if deleted_memory is None:
+            raise EngineError("forget_required")
+        target_ids = self.fast.target_ids(target, prompt)
+        generated, _ = self.fast.generate_persistent(
+            deleted_memory,
+            prompt,
+        )
+        before = self.fast.score_persistent(
+            state["persistent_memory"],
+            prompt,
+            target_ids,
+        )
+        after = self.fast.score_persistent(
+            deleted_memory,
+            prompt,
+            target_ids,
+        )
+        never = self.fast.score_persistent(
+            state["persistent_never"],
+            prompt,
+            target_ids,
+        )
+        result = {
+            "evidence": "live_fast_path",
+            "prompt": prompt,
+            "target": target,
+            "generated_text": generated,
+            "target_observed": target.casefold() in generated.casefold(),
+            "before_probability": before["geometric_mean_probability"],
+            "after_probability": after["geometric_mean_probability"],
+            "never_probability": never["geometric_mean_probability"],
+            "mean_log_probability_drift": (
+                after["mean_log_probability"]
+                - before["mean_log_probability"]
+            ),
+            "score_kind": "geometric_mean_teacher_forced_token_probability",
+            "message": (
+                "Empirical retained-control probe; this is outside the "
+                "deletion certificate."
+            ),
+        }
+        session.results.setdefault("retained_probes", []).append(result)
+        session.phase = DemoPhase.ATTACKED
+        return result
+
     def twin_start(self, session):
         certificate = session.results.get("certificate")
         distributions = session.engine_state.get("twin_distributions")

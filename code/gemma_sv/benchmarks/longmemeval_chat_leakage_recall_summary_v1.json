@@ -1,0 +1,148 @@
+{
+  "actual_usage": {
+    "input_tokens": 48517,
+    "output_tokens": 8640,
+    "responses_with_usage": 128,
+    "total_tokens": 57157
+  },
+  "actual_usage_cost": {
+    "actual_billing_may_differ": true,
+    "billing_charge_claimed": false,
+    "computed_from_actual_api_usage": true,
+    "currency": "USD",
+    "input_cost_usd": 0.0097034,
+    "input_usd_per_million_tokens": 0.2,
+    "output_cost_usd": 0.010368,
+    "output_usd_per_million_tokens": 1.2,
+    "total_cost_estimate_usd": 0.0200714
+  },
+  "bindings": {
+    "authorization_integrity_sha256": "262e93eef4e3f465a0d9c224e5188b43c6111d591fc6fb63ca4f2672d564c84b",
+    "local_ledger_integrity_sha256": "1ae88c6117aa3b0735152f40852d891756b62fa834768889e41ed1243f9bca8c",
+    "rubric_integrity_sha256": "b5ffd2cfcf8fd9daf62dda77bfc585ae52b7504665f1b8e6a8e8acd596dfa5a9",
+    "run_manifest_integrity_sha256": "1e689d10e351df0c14a9c583f5cc8cfff20acf426eb87a4c5fab4f73f1d8a983",
+    "sample_lock_integrity_sha256": "3313c9d501136b0fd9242243e0a11b52db9e81b0f0dff9c5f93f82a62830a9cc"
+  },
+  "contains_model_generated_text": false,
+  "contains_source_or_response_ids": false,
+  "contains_source_text": false,
+  "corrected_estimate": {
+    "bounds": {
+      "lower": "validated leak labels only",
+      "upper": "leak plus ambiguous, parse, transport, and missing outcomes"
+    },
+    "cluster_bootstrap_95_intervals": {
+      "corrected_leakage_rate_lower_bound_estimator": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.3059895833333333,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082610,
+        "upper": 0.4498697916666667
+      },
+      "corrected_leakage_rate_upper_bound_estimator": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.3138020833333333,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082610,
+        "upper": 0.4557291666666667
+      }
+    },
+    "overall": {
+      "corrected_leakage_rate_lower": 0.3795572916666667,
+      "corrected_leakage_rate_upper": 0.38671875,
+      "population_size": 384
+    },
+    "per_condition": [
+      {
+        "corrected_leakage_rate_lower": 0.6744791666666666,
+        "corrected_leakage_rate_upper": 0.6875,
+        "outcome_counts": {
+          "ambiguous": 1,
+          "leak": 7,
+          "missing": 0,
+          "no_leak": 24,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "stratum_ordinal": 0
+      },
+      {
+        "corrected_leakage_rate_lower": 0.13541666666666666,
+        "corrected_leakage_rate_upper": 0.13541666666666666,
+        "outcome_counts": {
+          "ambiguous": 0,
+          "leak": 0,
+          "missing": 0,
+          "no_leak": 32,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "stratum_ordinal": 1
+      },
+      {
+        "corrected_leakage_rate_lower": 0.14583333333333334,
+        "corrected_leakage_rate_upper": 0.14583333333333334,
+        "outcome_counts": {
+          "ambiguous": 0,
+          "leak": 0,
+          "missing": 0,
+          "no_leak": 32,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "stratum_ordinal": 2
+      },
+      {
+        "corrected_leakage_rate_lower": 0.5625,
+        "corrected_leakage_rate_upper": 0.578125,
+        "outcome_counts": {
+          "ambiguous": 1,
+          "leak": 4,
+          "missing": 0,
+          "no_leak": 27,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "stratum_ordinal": 3
+      }
+    ]
+  },
+  "coverage": {
+    "missing_unstarted_units": 0,
+    "one_pass": true,
+    "outcome_counts": {
+      "ambiguous": 2,
+      "leak": 11,
+      "missing": 0,
+      "no_leak": 115,
+      "parse_error": 0,
+      "transport_error": 0
+    },
+    "retries": 0,
+    "sample_units": 128,
+    "terminal_units": 128
+  },
+  "headline_semantic_scoring": false,
+  "instrument_validation_only": true,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "cfd0170beba9fc233e42d1aafccf4a7c515de328779a996939d452124cb8ece5"
+  },
+  "schema": "gemma-sv-longmemeval-chat-leakage-recall-openai-summary-v1",
+  "schema_version": 1,
+  "source_free": true,
+  "status": "source-free-summary"
+}

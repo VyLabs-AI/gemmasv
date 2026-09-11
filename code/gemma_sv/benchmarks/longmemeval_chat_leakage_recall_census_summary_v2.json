@@ -1,0 +1,230 @@
+{
+  "actual_usage": {
+    "combined": {
+      "input_tokens": 95672,
+      "output_tokens": 16065,
+      "responses_with_usage": 253,
+      "total_tokens": 111737
+    },
+    "v1": {
+      "input_tokens": 48517,
+      "output_tokens": 8640,
+      "responses_with_usage": 128,
+      "total_tokens": 57157
+    },
+    "v2_extension": {
+      "input_tokens": 47155,
+      "output_tokens": 7425,
+      "responses_with_usage": 125,
+      "total_tokens": 54580
+    }
+  },
+  "actual_usage_cost": {
+    "actual_billing_may_differ": true,
+    "billing_charge_claimed": false,
+    "computed_from_actual_api_usage": true,
+    "currency": "USD",
+    "input_cost_usd": 0.019134400000000003,
+    "input_usd_per_million_tokens": 0.2,
+    "output_cost_usd": 0.019278,
+    "output_usd_per_million_tokens": 1.2,
+    "total_cost_estimate_usd": 0.0384124
+  },
+  "bindings": {
+    "v1_run_manifest_integrity_sha256": "1e689d10e351df0c14a9c583f5cc8cfff20acf426eb87a4c5fab4f73f1d8a983",
+    "v1_source_free_summary_integrity_sha256": "cfd0170beba9fc233e42d1aafccf4a7c515de328779a996939d452124cb8ece5",
+    "v1_started_corpus_sha256": "c39c0b129d4c41a8a716448bc7c028dfc4a3b0a42ca40eb045539e9f56d8b13d",
+    "v1_terminal_corpus_sha256": "e8d6071215a9590f3d410c6eae03489c270f2dac753c9577cdd6b249e7b5f995",
+    "v2_authorization_integrity_sha256": "7340a0065134c38e2670f951d1fe1b370d31242262a697948a155415b1085d09",
+    "v2_extension_lock_integrity_sha256": "ab5345572ec0be737f8b9a9e03008eb0bca9ff2fe70813f7e85a3041ffe2fa5f",
+    "v2_local_ledger_integrity_sha256": "c75b691574f5e9e8381a54d69a8022230222440b24b75352b60f24076f4d8b5d",
+    "v2_run_manifest_integrity_sha256": "a29e32fac9ceef4888a28a2fc48d5c9ffc9cf3dbbbe1e5292819b1d4a932df4a",
+    "v2_started_corpus_sha256": "41b143172d3997ef856374d9cb94909384c7721557b59fdac8f90ef96fd4e12a",
+    "v2_terminal_corpus_sha256": "78b8cda11adf474f2b20e0e605c24665cae84b6f57bbd32fea14960c7b64a37d"
+  },
+  "census_estimate": {
+    "bounds": {
+      "lower": "original deterministic matcher positives plus clean-unit judge leaks",
+      "upper": "lower plus clean-unit ambiguous, parse, transport, and missing outcomes"
+    },
+    "cluster_bootstrap_95_intervals": {
+      "all_96_histories_covered": true,
+      "corrected_leakage_rate_lower": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.3151041666666667,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082701,
+        "upper": 0.4635416666666667
+      },
+      "corrected_leakage_rate_upper": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.3203125,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082701,
+        "upper": 0.4661458333333333
+      }
+    },
+    "design": "complete matcher-clean census",
+    "horvitz_thompson_sampling_weights_used": false,
+    "overall": {
+      "conservative_corrected_leakage_count_lower": 150,
+      "conservative_corrected_leakage_count_upper": 152,
+      "conservative_corrected_leakage_rate_lower": 0.390625,
+      "conservative_corrected_leakage_rate_upper": 0.3958333333333333,
+      "judge_ambiguous": 2,
+      "judge_failures": 0,
+      "judge_leaks": 19,
+      "judge_no_leak": 232,
+      "judged_clean_count": 253,
+      "matcher_clean_population": 253,
+      "original_deterministic_matcher_positives": 131,
+      "population_units": 384
+    },
+    "per_condition": [
+      {
+        "condition": "present",
+        "condition_ordinal": 0,
+        "conservative_corrected_leakage_count_lower": 67,
+        "conservative_corrected_leakage_count_upper": 68,
+        "conservative_corrected_leakage_rate_lower": 0.6979166666666666,
+        "conservative_corrected_leakage_rate_upper": 0.7083333333333334,
+        "histories": 96,
+        "judge_ambiguous": 1,
+        "judge_failure_breakdown": {
+          "missing": 0,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "judge_failures": 0,
+        "judge_leaks": 11,
+        "judge_no_leak": 28,
+        "judged_clean_count": 40,
+        "matcher_clean_population": 40,
+        "original_deterministic_matcher_positives": 56
+      },
+      {
+        "condition": "fresh rebuild",
+        "condition_ordinal": 1,
+        "conservative_corrected_leakage_count_lower": 13,
+        "conservative_corrected_leakage_count_upper": 13,
+        "conservative_corrected_leakage_rate_lower": 0.13541666666666666,
+        "conservative_corrected_leakage_rate_upper": 0.13541666666666666,
+        "histories": 96,
+        "judge_ambiguous": 0,
+        "judge_failure_breakdown": {
+          "missing": 0,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "judge_failures": 0,
+        "judge_leaks": 0,
+        "judge_no_leak": 83,
+        "judged_clean_count": 83,
+        "matcher_clean_population": 83,
+        "original_deterministic_matcher_positives": 13
+      },
+      {
+        "condition": "edited policy",
+        "condition_ordinal": 2,
+        "conservative_corrected_leakage_count_lower": 15,
+        "conservative_corrected_leakage_count_upper": 15,
+        "conservative_corrected_leakage_rate_lower": 0.15625,
+        "conservative_corrected_leakage_rate_upper": 0.15625,
+        "histories": 96,
+        "judge_ambiguous": 0,
+        "judge_failure_breakdown": {
+          "missing": 0,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "judge_failures": 0,
+        "judge_leaks": 1,
+        "judge_no_leak": 81,
+        "judged_clean_count": 82,
+        "matcher_clean_population": 82,
+        "original_deterministic_matcher_positives": 14
+      },
+      {
+        "condition": "prompt-only",
+        "condition_ordinal": 3,
+        "conservative_corrected_leakage_count_lower": 55,
+        "conservative_corrected_leakage_count_upper": 56,
+        "conservative_corrected_leakage_rate_lower": 0.5729166666666666,
+        "conservative_corrected_leakage_rate_upper": 0.5833333333333334,
+        "histories": 96,
+        "judge_ambiguous": 1,
+        "judge_failure_breakdown": {
+          "missing": 0,
+          "parse_error": 0,
+          "transport_error": 0
+        },
+        "judge_failures": 0,
+        "judge_leaks": 7,
+        "judge_no_leak": 40,
+        "judged_clean_count": 48,
+        "matcher_clean_population": 48,
+        "original_deterministic_matcher_positives": 48
+      }
+    ]
+  },
+  "contains_model_generated_text": false,
+  "contains_source_or_response_ids": false,
+  "contains_source_text": false,
+  "coverage": {
+    "all_matcher_clean_units_covered": true,
+    "clusters": 32,
+    "combined_judged_clean_units": 253,
+    "conditions": 4,
+    "histories": 96,
+    "matcher_clean_population": 253,
+    "outcome_counts": {
+      "ambiguous": 2,
+      "leak": 19,
+      "missing": 0,
+      "no_leak": 232,
+      "parse_error": 0,
+      "transport_error": 0
+    },
+    "passes_per_unit": 1,
+    "population_units": 384,
+    "retries": 0,
+    "v1_judged_clean_units": 128,
+    "v2_judged_clean_units": 125
+  },
+  "headline_semantic_scoring": false,
+  "human_spot_check": {
+    "not_used_in_census_estimate": true,
+    "remains_secondary": true,
+    "status": "pending"
+  },
+  "instrument_validation_only": true,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "2f51fd0609619b046b85d97df8a1e38c2e883ab30c24fbbbd515118fdd3afd84"
+  },
+  "post_hoc_after_v1_outcomes": true,
+  "rationale": "eliminate sampling uncertainty by completing the matcher-negative census",
+  "schema": "gemma-sv-longmemeval-chat-leakage-recall-openai-census-summary-v2",
+  "schema_version": 2,
+  "scope": {
+    "assumes_matcher_positives_are_true_leaks": true,
+    "judge_validates_matcher_recall_only": true,
+    "statement": "The judge validates deterministic-matcher recall on matcher-clean outputs only; matcher positives are assumed true leaks, so this census does not validate precision.",
+    "validates_precision": false
+  },
+  "source_free": true,
+  "status": "source-free-combined-census-summary"
+}

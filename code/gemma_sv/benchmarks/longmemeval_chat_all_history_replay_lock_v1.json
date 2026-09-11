@@ -1,0 +1,2800 @@
+{
+  "schema": "gemma-sv-longmemeval-chat-all-history-replay-lock-v1",
+  "schema_version": 1,
+  "status": "frozen-before-all-history-replay",
+  "contains_source_text": false,
+  "contains_source_identifiers": false,
+  "contains_token_arrays": false,
+  "contains_model_outputs": false,
+  "model_or_api_calls_made": 0,
+  "artifacts": {
+    "cohort": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_cohort_v3.json",
+      "file_sha256": "579096fed8b2a415e9c046b18c7e29c897cd4f317e7b18bf7af60ef1ae853294",
+      "payload_sha256": "3576bdb294bd88cc6bd4acfe5a6b8ce3969ac720144bca416f7f11823008f6a0",
+      "integrity_sha256": "1f0cf1d560a90137a5c4b8ed57f4d48b53d2d9947ba0b5468f097f7305a3d051",
+      "lock_sha256": null,
+      "immutable_input": true
+    },
+    "v3_analysis_lock": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_v3_analysis_lock_v1.json",
+      "file_sha256": "55349bb11869584a29bacab1b0dd6b6329b2ea5cc270a0b4be3648a9324bf7ce",
+      "payload_sha256": "e4be400e900f6527afa00eaf5196bc78485f8384a9d475dad5c2de356397f7bf",
+      "integrity_sha256": "cca547ed6970f5aad45a9dd8111592174d3ad8b4f462a84dfd02d62b770f8400",
+      "lock_sha256": null,
+      "immutable_input": true
+    },
+    "sealed_v2_validation": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_response_generation_audit_v2_validation_v1.json",
+      "file_sha256": "7fdb1533f29c4f37105d84bcce1e2efd9195f256ed32058b036ef6ed490c8085",
+      "payload_sha256": "8a09d1c94fe9a1dfea0feca50f4d9aeaa5faa1c82deba0b40dfc4946ace01da0",
+      "integrity_sha256": "2f164372ca68720a21fb47fcedfe3b8258b84a46a3d80e6e16954211f12b7608",
+      "lock_sha256": null,
+      "immutable_input": true
+    },
+    "frozen_suffix_scan": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_suffix_contamination_v1.json",
+      "file_sha256": "4bb6c3c69bfe5b5be581d04238d19bddab18c2a2ad0350b30b8bd6f906afd1de",
+      "payload_sha256": "47d0e7afc83828afb05ed8b5edc570d85684fa0290bf2a8539dc3974026a703e",
+      "integrity_sha256": "2f95a15dfb711b08c41b6ca67b716acf862d01ef8bfcb3fce33f5de365f75f27",
+      "lock_sha256": null,
+      "immutable_input": true
+    }
+  },
+  "implementation": {
+    "files": {
+      "gemma_sv/longmemeval_chat_all_history_replay.py": "ba197fbe4b68572f6498a5d9152e05aa516a19d9b089ef13961d89b8a94da6ed",
+      "gemma_sv/demo_server/all_history_replay_runtime_v3.py": "e3615c795feb0dd840c364fea927d38e486039374a7bdddfb4cf4d3562537a32",
+      "gemma_sv/demo_server/audit_gemma_runtime_v2.py": "b8e06485c49c7f7afc764a3ade68f533a8020a0aa820cd3101311a641fe7958c",
+      "gemma_sv/demo_server/gemma_engine.py": "c10c892934b34b195141622cfe8929074a61e7f30d7226f21410975ee617f411",
+      "gemma_sv/sv_global_attention.py": "58eaea66adefdd92ca4a2f5191be54b4a4061a70eee64a9c0e7ce9bd4ee43dc8",
+      "svattn/causal_sv_attention.py": "391b137c3b2c6ba16d9067e2ad5d4dcda0f7636c5e1223934bcfdd09be68a784"
+    },
+    "file_count": 6,
+    "files_sha256": "e527e023ebecb8cf4c47d9f99213f183e33d15d201f38a6377eee7466667386c",
+    "additive_runtime_subclasses_sealed_v2": true
+  },
+  "geometry": {
+    "target_clusters": 32,
+    "histories_per_cluster": 3,
+    "history_instances": 96,
+    "independent_analysis_n": 32,
+    "all_histories_planned": true
+  },
+  "replay_semantics": {
+    "condition_id": "frozen_suffix_replay",
+    "checkpoint": "immediately before complete owned token range",
+    "owned_ids_passed_to_replay_runtime": false,
+    "stored_suffix_source": "exact slice of original token history",
+    "suffix_token_order_preserved": true,
+    "incremental_tokens_per_model_step": 1,
+    "batch_multi_token_causal_shortcut_allowed": false,
+    "dependency_aware_never_ingested_history": false,
+    "disclosure": "Frozen-suffix replay is not a dependency-aware history generated as if the owned round had never been ingested.",
+    "stratified_by_frozen_suffix_scan": true
+  },
+  "bandwidth_schedule": {
+    "source": "prefix_checkpoint",
+    "fresh_rebuild_bandwidth_equivalence_assumed": false,
+    "reason": "SV kernel bandwidth is data-derived and frozen at prefill; a prefix checkpoint and one-shot omitted-history prefill generally observe different key sets.",
+    "silent_kpar_override_allowed": false,
+    "future_suffix_derived_override_allowed": false,
+    "per_layer_values_recorded_at_runtime": true
+  },
+  "state_contract": {
+    "checkpoint_fingerprint_before_and_after_required": true,
+    "checkpoint_must_remain_unchanged": true,
+    "fork_required": true,
+    "sv_sessions_mutable_only_during_suffix_replay": true,
+    "sv_sessions_snapshotted_and_refrozen_after_replay": true,
+    "returned_token_ids_equal_omitted_history": true,
+    "returned_token_count_equals_omitted_history": true,
+    "returned_input_digest_equals_omitted_history_sha256": true
+  },
+  "workload": {
+    "history_checkpoints": 96,
+    "stored_suffix_replays": 96,
+    "incremental_suffix_token_steps": 147367,
+    "minimum_suffix_token_steps": 1152,
+    "maximum_suffix_token_steps": 2812,
+    "owned_token_steps": 0,
+    "contaminated_suffix_histories": 24,
+    "clean_suffix_histories": 72
+  },
+  "plans": [
+    {
+      "history_index": 0,
+      "cluster_index": 0,
+      "variant_index": 0,
+      "history_binding_sha256": "31f7b2e786bf546ca2a1f664599c84a4ab077c6ecb4ddab032b6014b78ccd006",
+      "geometry": {
+        "original_token_count": 2596,
+        "prefix_token_count": 876,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1363,
+        "omitted_history_token_count": 2239,
+        "owned_start": 876,
+        "owned_end_exclusive": 1233,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "e3a2a5fd71383c12288e9ca6edcd3643c781a022ddf4821a938ecbcd1007ed3e",
+        "prefix_sha256": "22714e15742267e04ba378d357c558883ad9dfd59493459fd21d5b3ac9844386",
+        "owned_sha256": "32f131d78a26e1d0669508659f86e5dda7a47e2eb5a83a9c4f3852da669fe723",
+        "stored_suffix_sha256": "97cff86d39035ed604fa863c3a451118ad9bdc79d21f9937db6c8789b653864a",
+        "omitted_history_sha256": "9b273cb9318921d3edad4d893dbacd895de360c943c75237e4c9b204620ac336"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "aac0876caf86cc2dc9f0cf8aa137fd5f6fbbc870007c983c0eedd86f95857b26"
+    },
+    {
+      "history_index": 1,
+      "cluster_index": 0,
+      "variant_index": 1,
+      "history_binding_sha256": "a5d3663cbfc11aea988d570f8e0e2b4e3ea91d014a7e34a27d9e13b37d99ac84",
+      "geometry": {
+        "original_token_count": 2764,
+        "prefix_token_count": 876,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1531,
+        "omitted_history_token_count": 2407,
+        "owned_start": 876,
+        "owned_end_exclusive": 1233,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "a20092268ed39939ee30b327c5908e32e9658849425ad6fb875f5ae3a519217c",
+        "prefix_sha256": "22714e15742267e04ba378d357c558883ad9dfd59493459fd21d5b3ac9844386",
+        "owned_sha256": "32f131d78a26e1d0669508659f86e5dda7a47e2eb5a83a9c4f3852da669fe723",
+        "stored_suffix_sha256": "9bc53e8aca3c046570dfd16a4197b07367eac6a02f5364887cecc0326ee1d065",
+        "omitted_history_sha256": "690c891efa3e3e91e3176f9ff4adefbfb3d1638bc4c19189c8339c45d3fbe7d7"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "56381dc61df1fa356673a4b6f9a1c0050926f94c3a12f1cdecc114deb0074833"
+    },
+    {
+      "history_index": 2,
+      "cluster_index": 0,
+      "variant_index": 2,
+      "history_binding_sha256": "fea35989c1d06e2ffbdc47fd72179a1975a5ce2363a6f87ad3d404fbd85a148e",
+      "geometry": {
+        "original_token_count": 2941,
+        "prefix_token_count": 876,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1708,
+        "omitted_history_token_count": 2584,
+        "owned_start": 876,
+        "owned_end_exclusive": 1233,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "bd04e3fa9aa149f04e24544238fe8b9ad70147c8de7d89f0015ca23699e22356",
+        "prefix_sha256": "22714e15742267e04ba378d357c558883ad9dfd59493459fd21d5b3ac9844386",
+        "owned_sha256": "32f131d78a26e1d0669508659f86e5dda7a47e2eb5a83a9c4f3852da669fe723",
+        "stored_suffix_sha256": "930dddf1650ad022040c96e94dfb95fb27a5710ef2ff05bbe43c9ba2582d9301",
+        "omitted_history_sha256": "99136b14e17cc31a04c9a899273cbf29f256c8333a146aba7891815a32b10c60"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "c541e5299e2721ad265f4fcb41e89ec726fc9c1e46ae516b83c433d45baf27b4"
+    },
+    {
+      "history_index": 3,
+      "cluster_index": 1,
+      "variant_index": 0,
+      "history_binding_sha256": "4cda5a4bec88ee25b76b9ad4fefc9cd7a0f91f90af9493c207f571404daa3924",
+      "geometry": {
+        "original_token_count": 4601,
+        "prefix_token_count": 2187,
+        "owned_token_count": 845,
+        "stored_suffix_token_count": 1569,
+        "omitted_history_token_count": 3756,
+        "owned_start": 2187,
+        "owned_end_exclusive": 3032,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "4544e58747e93a86c4a1c315d3414a3c50785f5c4694639d88ec3845cc146dce",
+        "prefix_sha256": "75dac81936d03ac87e2a74e7cfe819ad8d9af74caa7edf75069a6249e45f5ac0",
+        "owned_sha256": "28f2befaa47fc357fe666f4df590024749ec3761e6a70b3846770191ea451e44",
+        "stored_suffix_sha256": "078cc2e099c00408012d0204647feb2ac1db06c3360184618bca110261c40078",
+        "omitted_history_sha256": "59640d2318eb9746b16c6539827ce0b3e842d05d34d2913d628e54f216bf6a05"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "81685f7b78770a131e8f8e738ffc39b84d7fd7b228aaada5de0b648f146f1f5a"
+    },
+    {
+      "history_index": 4,
+      "cluster_index": 1,
+      "variant_index": 1,
+      "history_binding_sha256": "e3a3445916a890f152b589aa901693c5114d3610799aa9daecb693880be28aed",
+      "geometry": {
+        "original_token_count": 4391,
+        "prefix_token_count": 2187,
+        "owned_token_count": 845,
+        "stored_suffix_token_count": 1359,
+        "omitted_history_token_count": 3546,
+        "owned_start": 2187,
+        "owned_end_exclusive": 3032,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "b734dc57e24edcb00442cf546f4871c4658d4c3f414627f806ff3161d8ccd1e7",
+        "prefix_sha256": "75dac81936d03ac87e2a74e7cfe819ad8d9af74caa7edf75069a6249e45f5ac0",
+        "owned_sha256": "28f2befaa47fc357fe666f4df590024749ec3761e6a70b3846770191ea451e44",
+        "stored_suffix_sha256": "3c274a4e18d1c063b1b6274f704b7ea87ff73e2552b2e1e5f6f1ef2375da27b7",
+        "omitted_history_sha256": "f507a0f73f918c2c6adc4b48d7f8750dc3fe2037116d4515aed0e8b8f4d21cee"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "fd977b870381e03d9c5c01ee9ce8090b4085f46874327cd2a0fa08691cf35b4f"
+    },
+    {
+      "history_index": 5,
+      "cluster_index": 1,
+      "variant_index": 2,
+      "history_binding_sha256": "d288dc28c81857df2f1742fd4a8b2a836fb6e0d951e2fcde85cd8ef1c37a6793",
+      "geometry": {
+        "original_token_count": 4252,
+        "prefix_token_count": 2187,
+        "owned_token_count": 845,
+        "stored_suffix_token_count": 1220,
+        "omitted_history_token_count": 3407,
+        "owned_start": 2187,
+        "owned_end_exclusive": 3032,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "9f31ae576e4407d5736774595129ba58b664c2df961792bda8c9827c5d412644",
+        "prefix_sha256": "75dac81936d03ac87e2a74e7cfe819ad8d9af74caa7edf75069a6249e45f5ac0",
+        "owned_sha256": "28f2befaa47fc357fe666f4df590024749ec3761e6a70b3846770191ea451e44",
+        "stored_suffix_sha256": "c554f6cc6f7a31540bd280723d9fe41ab227485aae5ae25ba8adc8976000578b",
+        "omitted_history_sha256": "b884a5577fee0073e749a9ecbe7f37bde89763b859b821c89150c9ff5dbd8d8f"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "532b85da8e3ba334cc916d31788abd742c6d96a59cfebe25955fef8d230ce798"
+    },
+    {
+      "history_index": 6,
+      "cluster_index": 2,
+      "variant_index": 0,
+      "history_binding_sha256": "7231d991ea7c2c1524d05c38ad57e96fbb2fdffb1f8f88fd449d831d3c12cb49",
+      "geometry": {
+        "original_token_count": 4534,
+        "prefix_token_count": 2151,
+        "owned_token_count": 752,
+        "stored_suffix_token_count": 1631,
+        "omitted_history_token_count": 3782,
+        "owned_start": 2151,
+        "owned_end_exclusive": 2903,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "ee032b4ee01cee5b3e59ab78ee271051c8451ff625b2e4516955b78abe7c32ea",
+        "prefix_sha256": "7ee4a09edb76dfb0a691243066bad509ac02ed66a57bb98cde072c97d429e0a1",
+        "owned_sha256": "18e31524568dbe72e74b0e8122fe8ceb23e97046debef69874a07d09df322624",
+        "stored_suffix_sha256": "a0e432d15f51fe6890ddbd132ad39f96491246ab79a688f8c452e3382f74339c",
+        "omitted_history_sha256": "99bb84ee3863ff00b31619ba811dc8c49bfc7180a7e398a180699e9502474407"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "9a0fc348804665c424c9ae568eaef9ec080959c1822cfea329edea2b77ef1a45"
+    },
+    {
+      "history_index": 7,
+      "cluster_index": 2,
+      "variant_index": 1,
+      "history_binding_sha256": "84754be9184836256062f905dd22914b3267dc90fd8d04e7ae35edb5ffc774f0",
+      "geometry": {
+        "original_token_count": 4213,
+        "prefix_token_count": 2151,
+        "owned_token_count": 752,
+        "stored_suffix_token_count": 1310,
+        "omitted_history_token_count": 3461,
+        "owned_start": 2151,
+        "owned_end_exclusive": 2903,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "7fb7579ce678b381569a95729b42c6e34f5c568a6e634149e1ef867219261da7",
+        "prefix_sha256": "7ee4a09edb76dfb0a691243066bad509ac02ed66a57bb98cde072c97d429e0a1",
+        "owned_sha256": "18e31524568dbe72e74b0e8122fe8ceb23e97046debef69874a07d09df322624",
+        "stored_suffix_sha256": "a8f0b6782dc69d06ad7e6363d1e2e26f234a96aa31f656603d87038f1540f5d4",
+        "omitted_history_sha256": "fa58951abdfed9dcb39c9a85208dc760b25c3eb686283f4906db42f7e5649fa7"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "fe2a16819cc98a805217e0ecd30a3e260565cf73dfa95ee242db8e115fff74d2"
+    },
+    {
+      "history_index": 8,
+      "cluster_index": 2,
+      "variant_index": 2,
+      "history_binding_sha256": "62baace50fb94db39456115c8581ca96043477c49f559fab47f021686c2d0675",
+      "geometry": {
+        "original_token_count": 4297,
+        "prefix_token_count": 2151,
+        "owned_token_count": 752,
+        "stored_suffix_token_count": 1394,
+        "omitted_history_token_count": 3545,
+        "owned_start": 2151,
+        "owned_end_exclusive": 2903,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "78d7fda7e6b6e6864e677f44253f7029e6c110b36531940908ff118aaee15989",
+        "prefix_sha256": "7ee4a09edb76dfb0a691243066bad509ac02ed66a57bb98cde072c97d429e0a1",
+        "owned_sha256": "18e31524568dbe72e74b0e8122fe8ceb23e97046debef69874a07d09df322624",
+        "stored_suffix_sha256": "d1221a74bfd6eb9a5f117ac3780e1151e665a39dc03c58c961790776a086cdb2",
+        "omitted_history_sha256": "272d8a0d9fca2dc6a6ba2e25f2f5946a533515aca81fc42fbcbab33c24c6bf03"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "39bc050327f8ecd6b1b45d6cf99f6439bb394e4c351dbdd8f275e1bc47fa4ac7"
+    },
+    {
+      "history_index": 9,
+      "cluster_index": 3,
+      "variant_index": 0,
+      "history_binding_sha256": "07363375f5245ad2dfb6366089ff0313fb01739aa81225825fdb381ef2193c15",
+      "geometry": {
+        "original_token_count": 3974,
+        "prefix_token_count": 1619,
+        "owned_token_count": 650,
+        "stored_suffix_token_count": 1705,
+        "omitted_history_token_count": 3324,
+        "owned_start": 1619,
+        "owned_end_exclusive": 2269,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "1e1d082c67d82ba002e1782741fb7321e1e914e99c3aa9decdcd174f66cf8ece",
+        "prefix_sha256": "ad3d05c050c948f63fc2c47382602b8347cb2945142d6331575b19004069266c",
+        "owned_sha256": "7f8c7aed80b6784ac913a000bc6fc3d8f182486cad2c79ccb7ba8a1d5330fd0d",
+        "stored_suffix_sha256": "4f3236f9c9d8c38b111290dcd5a6cdbf92dcff36e83bbd9dfbe3ab2cabbca8d1",
+        "omitted_history_sha256": "5fdbf7b7118f1ad6004322b8cce5d5532adf406bd8abafd229ce10b53400f8ff"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "dd5fc6a1a1ee48b572d4fe143b6fc255680f62b1513d781b4db7380ac8f695f7"
+    },
+    {
+      "history_index": 10,
+      "cluster_index": 3,
+      "variant_index": 1,
+      "history_binding_sha256": "ee3211c5a1100d340ff3294a06cafe2759d74838cf3b456c3762f6f938741af0",
+      "geometry": {
+        "original_token_count": 3916,
+        "prefix_token_count": 1619,
+        "owned_token_count": 650,
+        "stored_suffix_token_count": 1647,
+        "omitted_history_token_count": 3266,
+        "owned_start": 1619,
+        "owned_end_exclusive": 2269,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "7249f36f4a70de4b87d60f86f217a74d3297d63e97795939ca505c6e78529de7",
+        "prefix_sha256": "ad3d05c050c948f63fc2c47382602b8347cb2945142d6331575b19004069266c",
+        "owned_sha256": "7f8c7aed80b6784ac913a000bc6fc3d8f182486cad2c79ccb7ba8a1d5330fd0d",
+        "stored_suffix_sha256": "e1f84db5be5477f30879bead1214305ba97d51e0533488f5e7016bfda264c878",
+        "omitted_history_sha256": "79bac568d55b70e9cd9c86eadac3db9bbb1b850efba43f7adecb79896a37d449"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "858bcdfd15838a92c4bb946dd1d64b82128670136500fe7cfc62d0a90b87326d"
+    },
+    {
+      "history_index": 11,
+      "cluster_index": 3,
+      "variant_index": 2,
+      "history_binding_sha256": "21ef7a912a6e58a30ae4ebc0d75473174fc982204d92104a67730c7621b53704",
+      "geometry": {
+        "original_token_count": 3769,
+        "prefix_token_count": 1619,
+        "owned_token_count": 650,
+        "stored_suffix_token_count": 1500,
+        "omitted_history_token_count": 3119,
+        "owned_start": 1619,
+        "owned_end_exclusive": 2269,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "69579ba352dd7099faba2210b4dae1c538a75a4ceab9d3ce0346da610ca85d49",
+        "prefix_sha256": "ad3d05c050c948f63fc2c47382602b8347cb2945142d6331575b19004069266c",
+        "owned_sha256": "7f8c7aed80b6784ac913a000bc6fc3d8f182486cad2c79ccb7ba8a1d5330fd0d",
+        "stored_suffix_sha256": "415d0b8bb33ec726a28acf94b905eef307ddd9b7e5ebae88c77fbec6285e8bd1",
+        "omitted_history_sha256": "416a1e0c057cfcbd1ab881dd095cc2970680f0776cb596236af759c0c8612953"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "1fc6a6890a90b085d66bf4f00128c4c752b791d5c03d70ccf9580ee407061706"
+    },
+    {
+      "history_index": 12,
+      "cluster_index": 4,
+      "variant_index": 0,
+      "history_binding_sha256": "8831ae88686ab177f06e3e432c7c49024abdfa6b6bfc5bf1f29842ab55071a7f",
+      "geometry": {
+        "original_token_count": 3008,
+        "prefix_token_count": 1173,
+        "owned_token_count": 480,
+        "stored_suffix_token_count": 1355,
+        "omitted_history_token_count": 2528,
+        "owned_start": 1173,
+        "owned_end_exclusive": 1653,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "e10cb17a9e41e415a3ecfd281cd3d9c80738ee7b7298866d6fdfd83388708a79",
+        "prefix_sha256": "70466e10e58e2083574078ed68804d50ab6744cce710de98365b6a6b18be3070",
+        "owned_sha256": "22c4c9e07830e5194f52d1dc824f642249197fdce32516373d4eceae9b28308f",
+        "stored_suffix_sha256": "96f76ce59cb88245daf2ff9e578c47bb1dce6a8055d67098861f2ccd71131295",
+        "omitted_history_sha256": "69c171358565c4593643ea214bd67ea10725dee73b7ffa38bbdc14a5b38efd99"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "e20e31742a04e2a7c67323ea854181450378f003ed717cf49d2cad837bdaeb40"
+    },
+    {
+      "history_index": 13,
+      "cluster_index": 4,
+      "variant_index": 1,
+      "history_binding_sha256": "0a2c6adf0be8e4d8926a4a36eaf423d33e3c876cb40e0bf10c02f1b8de2ffb78",
+      "geometry": {
+        "original_token_count": 4465,
+        "prefix_token_count": 1173,
+        "owned_token_count": 480,
+        "stored_suffix_token_count": 2812,
+        "omitted_history_token_count": 3985,
+        "owned_start": 1173,
+        "owned_end_exclusive": 1653,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "be918ca58025c57efedee7a03706218232e155f4bb078449f088c3cb3bc7a24c",
+        "prefix_sha256": "70466e10e58e2083574078ed68804d50ab6744cce710de98365b6a6b18be3070",
+        "owned_sha256": "22c4c9e07830e5194f52d1dc824f642249197fdce32516373d4eceae9b28308f",
+        "stored_suffix_sha256": "40252f46a0006b6abbe14b60692be42f92c0fe4b9c18e388f938a29b0ed21d56",
+        "omitted_history_sha256": "dfd9545fc4eeef07f4446865e38d8ec52de4cb197d1e637527d0641c78c86367"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "629008c918f6313dac96d188434a6b68312d24153f7c5c4f0301d119c9591e59"
+    },
+    {
+      "history_index": 14,
+      "cluster_index": 4,
+      "variant_index": 2,
+      "history_binding_sha256": "909203f757bddffc249c06e3134fba67822e29264e6c8bec98fdc36f6f0efdd2",
+      "geometry": {
+        "original_token_count": 2990,
+        "prefix_token_count": 1173,
+        "owned_token_count": 480,
+        "stored_suffix_token_count": 1337,
+        "omitted_history_token_count": 2510,
+        "owned_start": 1173,
+        "owned_end_exclusive": 1653,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "3d74b50fb1a5d2dd6bfcd739defb9598903ea6a6d04640a396feed82eadb6665",
+        "prefix_sha256": "70466e10e58e2083574078ed68804d50ab6744cce710de98365b6a6b18be3070",
+        "owned_sha256": "22c4c9e07830e5194f52d1dc824f642249197fdce32516373d4eceae9b28308f",
+        "stored_suffix_sha256": "052ddcf4c2a1ffb93b068d0cd8b34c1b65f1fd897bb8da5bd182a8916ee2b394",
+        "omitted_history_sha256": "5c2d5728368590fa9fe0c6d3372f1c385e7749b5f9b7f3e85729521255977d7d"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "1bcfefd52abc0be41ede82e15a78c46e029850039abb59b6f886e4b12d7d616c"
+    },
+    {
+      "history_index": 15,
+      "cluster_index": 5,
+      "variant_index": 0,
+      "history_binding_sha256": "652c640dce5e8ddfbcda12511b90af49f2ef5d4de867cd65aa36413644c8d9e0",
+      "geometry": {
+        "original_token_count": 4130,
+        "prefix_token_count": 1996,
+        "owned_token_count": 693,
+        "stored_suffix_token_count": 1441,
+        "omitted_history_token_count": 3437,
+        "owned_start": 1996,
+        "owned_end_exclusive": 2689,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "508c5d31ca2d43148a77c630bb35eeb542fcf007aa045229a1cd9343b38ef1af",
+        "prefix_sha256": "620d7924d1d549a65422d8b10350468bf8df0a699df2b19e7d5087bd84af0eae",
+        "owned_sha256": "aff42e0c5f1e15b139a6e30a285c2d037d2265f86f4c92cf485146920fc388a3",
+        "stored_suffix_sha256": "40981fda9088f52e7f64d1c540cc2b0a8119ee7089137f26f0c25510216d12db",
+        "omitted_history_sha256": "6b5b5a2ab78b1b1321afd9b0584cf49bf48209441b63a71af1c71f3ce4fa1430"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "b4f25eb9e3558690860347a34c011f17d437ffbd7dbeee0b9a4a597fd034f960"
+    },
+    {
+      "history_index": 16,
+      "cluster_index": 5,
+      "variant_index": 1,
+      "history_binding_sha256": "454249583056000b6ec2561b25bdfca2f9098c2fce6d52fca4b6272d8085fbdb",
+      "geometry": {
+        "original_token_count": 4192,
+        "prefix_token_count": 1996,
+        "owned_token_count": 693,
+        "stored_suffix_token_count": 1503,
+        "omitted_history_token_count": 3499,
+        "owned_start": 1996,
+        "owned_end_exclusive": 2689,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "079e0286decf64530fa5d1f736aa210b96ec0ed4c149b8960cbe13c83916cbbe",
+        "prefix_sha256": "620d7924d1d549a65422d8b10350468bf8df0a699df2b19e7d5087bd84af0eae",
+        "owned_sha256": "aff42e0c5f1e15b139a6e30a285c2d037d2265f86f4c92cf485146920fc388a3",
+        "stored_suffix_sha256": "b0534079c0db8e56531be820db4d205dfff555909aa0b57b7408ac304df95ea8",
+        "omitted_history_sha256": "1b58c24788fc52652c56d61b6e39169812269ac237e61c432d3dde5ffe662c63"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "3952e078a840c4bc4a3fe641f2cd3a577bb34869e7325faab333a59669235380"
+    },
+    {
+      "history_index": 17,
+      "cluster_index": 5,
+      "variant_index": 2,
+      "history_binding_sha256": "8ac10b5220383e22cfca628c1e5a65a551a5a7db5facf4af707f1750a1781c46",
+      "geometry": {
+        "original_token_count": 4286,
+        "prefix_token_count": 1996,
+        "owned_token_count": 693,
+        "stored_suffix_token_count": 1597,
+        "omitted_history_token_count": 3593,
+        "owned_start": 1996,
+        "owned_end_exclusive": 2689,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "fc5bacccb6d2ce82fc26e6cb5b7045e113baceebb138ae214c4ec245057e00fe",
+        "prefix_sha256": "620d7924d1d549a65422d8b10350468bf8df0a699df2b19e7d5087bd84af0eae",
+        "owned_sha256": "aff42e0c5f1e15b139a6e30a285c2d037d2265f86f4c92cf485146920fc388a3",
+        "stored_suffix_sha256": "371905ba546363530887fda31f639815b3b400d9429021d7d3d7def2a6d01abd",
+        "omitted_history_sha256": "2f30c277524632d3619d5dbaae6e66ae542098020c70555804fe8c961697e9e0"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "3aa8082b003e406b253eed93d2553d8179d293210d425ace3d192d505d162900"
+    },
+    {
+      "history_index": 18,
+      "cluster_index": 6,
+      "variant_index": 0,
+      "history_binding_sha256": "613d3edc09a4b550bd5735009db221092ba983a18cee47d2adfd63004f285c1b",
+      "geometry": {
+        "original_token_count": 3451,
+        "prefix_token_count": 1541,
+        "owned_token_count": 665,
+        "stored_suffix_token_count": 1245,
+        "omitted_history_token_count": 2786,
+        "owned_start": 1541,
+        "owned_end_exclusive": 2206,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "15a52550521d058881e8bc015126a292db389189afca08cbf40bb2940e596d24",
+        "prefix_sha256": "3d3694b0c687ee0724eb7e200caeab6c673681f027e8e9196c4f49f69d463700",
+        "owned_sha256": "cdba24d8717a01665caa43943d6a1348da73300e3dbf86c0c0c2a0661ba2d7df",
+        "stored_suffix_sha256": "b8644c86337230179dc0657a6d16020d295e46807b51f0383a5c5c5c388a7472",
+        "omitted_history_sha256": "3a5e4f1bbb27b5b07ce09769a2f07e8619f9b5669aa807353eab53978b61b27f"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "b15b957de8d578b86566a08aef34afff5c44ffadde943354bfc827bd8c5bbcf2"
+    },
+    {
+      "history_index": 19,
+      "cluster_index": 6,
+      "variant_index": 1,
+      "history_binding_sha256": "1259709cf020dcd3385cb713cf9bd6422f64612d42f64c4b1566559ff4237245",
+      "geometry": {
+        "original_token_count": 3572,
+        "prefix_token_count": 1541,
+        "owned_token_count": 665,
+        "stored_suffix_token_count": 1366,
+        "omitted_history_token_count": 2907,
+        "owned_start": 1541,
+        "owned_end_exclusive": 2206,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "5936b4aab8a7b32de232b10059c6b3e237461fc475483c53ea131bd1bc5ace64",
+        "prefix_sha256": "3d3694b0c687ee0724eb7e200caeab6c673681f027e8e9196c4f49f69d463700",
+        "owned_sha256": "cdba24d8717a01665caa43943d6a1348da73300e3dbf86c0c0c2a0661ba2d7df",
+        "stored_suffix_sha256": "0188994118b463d3cb10dae5db3f93246fcc8e6734f1b0ec864df6c12fee8827",
+        "omitted_history_sha256": "2764efaec7237b0258c63e648a873ce215a3888f1c8d3a097bae7cb8e0d3af7d"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "c66200b324a2845155649bc81303de03fd1bfbbf8a35f2dac94c1de14ae7e59c"
+    },
+    {
+      "history_index": 20,
+      "cluster_index": 6,
+      "variant_index": 2,
+      "history_binding_sha256": "67fffc506b77cd2abeff89fec1aa769f21c57186d0927729be182153c82ef64b",
+      "geometry": {
+        "original_token_count": 3421,
+        "prefix_token_count": 1541,
+        "owned_token_count": 665,
+        "stored_suffix_token_count": 1215,
+        "omitted_history_token_count": 2756,
+        "owned_start": 1541,
+        "owned_end_exclusive": 2206,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "c73778ab7d0171af295fa35beb1f15f292cf7ba9d068efdb214eb717895d57f3",
+        "prefix_sha256": "3d3694b0c687ee0724eb7e200caeab6c673681f027e8e9196c4f49f69d463700",
+        "owned_sha256": "cdba24d8717a01665caa43943d6a1348da73300e3dbf86c0c0c2a0661ba2d7df",
+        "stored_suffix_sha256": "2b29d6770c1340adc248d87038fb736f5925f158c3ee8cb199b1b0be9ee1b679",
+        "omitted_history_sha256": "2f53b7d27e3c65c8b7d75fd7dcb0989b2c5b5b779e921b55c5bbfc64b7236fb1"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "a8cfeaedfbc43f669fdb773b4f7f4f169b6ee81f62d7e76eb625a663be723176"
+    },
+    {
+      "history_index": 21,
+      "cluster_index": 7,
+      "variant_index": 0,
+      "history_binding_sha256": "3636b4c3d4c7aff7b53f043aa52ae7120219a713fe34292357873b76bff38a1d",
+      "geometry": {
+        "original_token_count": 5247,
+        "prefix_token_count": 2470,
+        "owned_token_count": 928,
+        "stored_suffix_token_count": 1849,
+        "omitted_history_token_count": 4319,
+        "owned_start": 2470,
+        "owned_end_exclusive": 3398,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "2de54a749545fc451a35ab166fc36814231a49c9e009c81828b33e91a1494754",
+        "prefix_sha256": "b8ef7b564893179abd3d8fa661047bcdabff1c2c2007525085908a9471a2a80f",
+        "owned_sha256": "66396ab0ac7f7cce7dac7407d41b22147aea46068bc8c3aebf16361198a16b08",
+        "stored_suffix_sha256": "043f6a316053177908f1a968eefbfe2bafcf31ea57d08db052be5eb4f55c5ffb",
+        "omitted_history_sha256": "bd0104898cf60ff77e1d1de043d351b35ec984c2cea6cab231ac2a256c96da04"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "e450f95157de84319970fded7533b7237d54c484a00d9b16f1758855d03baa1d"
+    },
+    {
+      "history_index": 22,
+      "cluster_index": 7,
+      "variant_index": 1,
+      "history_binding_sha256": "34d547ee8d32810da05220da3d311e39bc57a0c8308740a4c476262ba4412977",
+      "geometry": {
+        "original_token_count": 4611,
+        "prefix_token_count": 2470,
+        "owned_token_count": 928,
+        "stored_suffix_token_count": 1213,
+        "omitted_history_token_count": 3683,
+        "owned_start": 2470,
+        "owned_end_exclusive": 3398,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "3e5820899bb7f31159ac0122ec70bfa88128027b84f9bd130ff38c9cb016907d",
+        "prefix_sha256": "b8ef7b564893179abd3d8fa661047bcdabff1c2c2007525085908a9471a2a80f",
+        "owned_sha256": "66396ab0ac7f7cce7dac7407d41b22147aea46068bc8c3aebf16361198a16b08",
+        "stored_suffix_sha256": "1e416b5366783e80c7704dd2818e642224e881b3f41e3c5fe35b81d0b8a8a6b6",
+        "omitted_history_sha256": "df5e1b885c5713d5291232c0c427088bfdeb3600473038569e0a65ff2da6ea64"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "a21977fbc1b30379d8af6bd99507945a4fb9085a18d185bcd485581a0264d09b"
+    },
+    {
+      "history_index": 23,
+      "cluster_index": 7,
+      "variant_index": 2,
+      "history_binding_sha256": "44f4409451300133b3974349ea290e5f1e5e1bbcf54650722512424d8893c330",
+      "geometry": {
+        "original_token_count": 4708,
+        "prefix_token_count": 2470,
+        "owned_token_count": 928,
+        "stored_suffix_token_count": 1310,
+        "omitted_history_token_count": 3780,
+        "owned_start": 2470,
+        "owned_end_exclusive": 3398,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "0cffdabf12f4e02108ef6060ce43bb30171b0979ffede51b2ce75ed8fc341622",
+        "prefix_sha256": "b8ef7b564893179abd3d8fa661047bcdabff1c2c2007525085908a9471a2a80f",
+        "owned_sha256": "66396ab0ac7f7cce7dac7407d41b22147aea46068bc8c3aebf16361198a16b08",
+        "stored_suffix_sha256": "2f12c0c96e2027b5fec769c975a880839612e2386d8d8233b139aed3c3238b2f",
+        "omitted_history_sha256": "f433cad7037e038d86530e1973fdcd85eea73a74099d5c7559b84bc0b0bf22f4"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "09d2a538d0eee594dc946ebd0f003d3a9ec44b26ac0235d4cf02b7731f6eadc8"
+    },
+    {
+      "history_index": 24,
+      "cluster_index": 8,
+      "variant_index": 0,
+      "history_binding_sha256": "675155ebb68a8e21b2a036ca556c0c17046854c401028969bcfc5e44fdd9f7e8",
+      "geometry": {
+        "original_token_count": 3135,
+        "prefix_token_count": 1344,
+        "owned_token_count": 466,
+        "stored_suffix_token_count": 1325,
+        "omitted_history_token_count": 2669,
+        "owned_start": 1344,
+        "owned_end_exclusive": 1810,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "5306959e112b627a16d5eac8b19aafa6e18cbca409321b694868eff7fcf03700",
+        "prefix_sha256": "0c35ecac2425cf16606898ace30f8f7b7ecaeeb228613ed61dd61952d7cd816b",
+        "owned_sha256": "853c06f5bc25ff75ba39c6d78f862ebb0749c200bd14cb4aeb086d50a273eb0b",
+        "stored_suffix_sha256": "616287e83b9b2c3cf83a1d53ea4c4764fc8759696215de6dbeaf3c6496c21202",
+        "omitted_history_sha256": "0eb51e9376523dce457c61c83c66a49966078c4b5f834ab0522ffd11b77d378e"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "ca15c9d6a948f28ee072e4dbf270a1ba47d50cbecd218982bebe821de1a30bf5"
+    },
+    {
+      "history_index": 25,
+      "cluster_index": 8,
+      "variant_index": 1,
+      "history_binding_sha256": "c50dfee1de6db248abc791653e67085d038f875a94912979e5843c7594ff8bfd",
+      "geometry": {
+        "original_token_count": 3452,
+        "prefix_token_count": 1344,
+        "owned_token_count": 466,
+        "stored_suffix_token_count": 1642,
+        "omitted_history_token_count": 2986,
+        "owned_start": 1344,
+        "owned_end_exclusive": 1810,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "be042cc67e0408305a95d12f3282c570bf96105ad3b0b154fdc1ee10d13f17b9",
+        "prefix_sha256": "0c35ecac2425cf16606898ace30f8f7b7ecaeeb228613ed61dd61952d7cd816b",
+        "owned_sha256": "853c06f5bc25ff75ba39c6d78f862ebb0749c200bd14cb4aeb086d50a273eb0b",
+        "stored_suffix_sha256": "bbd4f523d974358b6ba844e84665d44f57dab308ee7678b6f7b0a3c30d094f5c",
+        "omitted_history_sha256": "df93c8c175f229184acfe9283eb2f955414d401acd9b7fa3a8285c8d6a582930"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "e1368dfac506557337b1a5293423b4de2fb74a0387f3ed2ffd01479ff7bede45"
+    },
+    {
+      "history_index": 26,
+      "cluster_index": 8,
+      "variant_index": 2,
+      "history_binding_sha256": "56ca23d3475d3e80142ad9e65853107d1dfba64611fe266d81bb0285ca7db44d",
+      "geometry": {
+        "original_token_count": 3096,
+        "prefix_token_count": 1344,
+        "owned_token_count": 466,
+        "stored_suffix_token_count": 1286,
+        "omitted_history_token_count": 2630,
+        "owned_start": 1344,
+        "owned_end_exclusive": 1810,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "79062c3760fe233747ec122f3df3e96a267779eab384977c049c6ec828cd49a7",
+        "prefix_sha256": "0c35ecac2425cf16606898ace30f8f7b7ecaeeb228613ed61dd61952d7cd816b",
+        "owned_sha256": "853c06f5bc25ff75ba39c6d78f862ebb0749c200bd14cb4aeb086d50a273eb0b",
+        "stored_suffix_sha256": "69445cebeb641ad1c0c4ba7be03c8b77303636950d8047285d2e72e2dbd7a009",
+        "omitted_history_sha256": "486b59559c7204d6d96c1d48cec63ce6e9b4168883b27e8d2db0b5a73e8f9753"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "9890cbe13ff4411694dd4096acbd16270f410ce54833040d1b5db55f86d6d635"
+    },
+    {
+      "history_index": 27,
+      "cluster_index": 9,
+      "variant_index": 0,
+      "history_binding_sha256": "dd908e20dbfc3789cff08686c5c7d6513fe46eb860576d06a80eba1c273f9eee",
+      "geometry": {
+        "original_token_count": 3397,
+        "prefix_token_count": 1624,
+        "owned_token_count": 573,
+        "stored_suffix_token_count": 1200,
+        "omitted_history_token_count": 2824,
+        "owned_start": 1624,
+        "owned_end_exclusive": 2197,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "7a0e8785d9317f8803466da560b8ce751d10426c21c2097b2c62b4420d652344",
+        "prefix_sha256": "a2d1481765c07f010c9b10b40f548dab6c4c770705b1bf437a8102618bcb0663",
+        "owned_sha256": "939d983863047a1395c832cbd895444d5a895a184ce3257204ddb0039b301e07",
+        "stored_suffix_sha256": "4f458e3b6dca13f0c024b5d3d459ff430e01110c625063fe47a913af5c65e44d",
+        "omitted_history_sha256": "05e281909a6b3e56e900fdefd800b1f46a275a6e1c70b9d750c171410116bb83"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "fb23d91fea6f773892fc09952c6f4d8ea315fc8a62deeb83146b60c9225f9b30"
+    },
+    {
+      "history_index": 28,
+      "cluster_index": 9,
+      "variant_index": 1,
+      "history_binding_sha256": "68b14fb9917834473aa5c4c48e657a41d5793d145407d9338af41d7a1b69b684",
+      "geometry": {
+        "original_token_count": 3540,
+        "prefix_token_count": 1624,
+        "owned_token_count": 573,
+        "stored_suffix_token_count": 1343,
+        "omitted_history_token_count": 2967,
+        "owned_start": 1624,
+        "owned_end_exclusive": 2197,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "30c665d39c6c24a2034fc40be0f5911dc9500a67d55aebe490c92adb5f98e778",
+        "prefix_sha256": "a2d1481765c07f010c9b10b40f548dab6c4c770705b1bf437a8102618bcb0663",
+        "owned_sha256": "939d983863047a1395c832cbd895444d5a895a184ce3257204ddb0039b301e07",
+        "stored_suffix_sha256": "c857ccc221f0f65ff2cbf563c32d966994e07b0c15c3d1fb0bf4deec2fdb3fb0",
+        "omitted_history_sha256": "2cb776b69401ea4c51a21db45299e5f4668385b0d7de696153dea4d1f956c591"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "3bce4bf80f01d2b78a78df73658610472c04932d288f671f355db204bdf2fd42"
+    },
+    {
+      "history_index": 29,
+      "cluster_index": 9,
+      "variant_index": 2,
+      "history_binding_sha256": "3e07f0771701ae92a4a8754d0325f30190dff273ef38b5bec8cbbab306ad8b13",
+      "geometry": {
+        "original_token_count": 3534,
+        "prefix_token_count": 1624,
+        "owned_token_count": 573,
+        "stored_suffix_token_count": 1337,
+        "omitted_history_token_count": 2961,
+        "owned_start": 1624,
+        "owned_end_exclusive": 2197,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "7233d754d4c1dda6e2058c3a240cdf9b22a8349c4975a5119d7f1be6ba4fb625",
+        "prefix_sha256": "a2d1481765c07f010c9b10b40f548dab6c4c770705b1bf437a8102618bcb0663",
+        "owned_sha256": "939d983863047a1395c832cbd895444d5a895a184ce3257204ddb0039b301e07",
+        "stored_suffix_sha256": "500fd3c10b7966b7a80f96880891eb856c84f368628be7c366bf2ee9ce591ab7",
+        "omitted_history_sha256": "8aca6b8b2b0f0651ba240e2572b882e8101a051bacde10dc8769923924773d11"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "1d27c24bf0538f1decb6ca25bebbd942f646afbee9e8003dc5bd4e058f61ff04"
+    },
+    {
+      "history_index": 30,
+      "cluster_index": 10,
+      "variant_index": 0,
+      "history_binding_sha256": "12fb87b5f3c54d0ba15447d14bc68fea4a8da8020f3932566d40a948fb887f34",
+      "geometry": {
+        "original_token_count": 4151,
+        "prefix_token_count": 1746,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1683,
+        "omitted_history_token_count": 3429,
+        "owned_start": 1746,
+        "owned_end_exclusive": 2468,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "75fda095334024890af23e92d6c1c78deb5a523c14e75030eec3cd1daa7912fa",
+        "prefix_sha256": "6e9e2fc82e98a423c8580cf8bf7ca95285d747c8881f8d5e4eb5e999583cdb78",
+        "owned_sha256": "2a186d3fde8d4b45073dc74ebaf12f1866cdc907df70cd974b4cd4041ed3d661",
+        "stored_suffix_sha256": "f1b56db8b9a11a66d3f61cb1469c6a794b99858eb6c654d40f2a18861b20e99d",
+        "omitted_history_sha256": "de6117dacd8b97a0aac7249506127c69280a5e41d733b408cf06ee03e5676d5b"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "83a56f0acb216f50de973b059ff2ff0f5ced3ac73fc845f186b9341b3079490f"
+    },
+    {
+      "history_index": 31,
+      "cluster_index": 10,
+      "variant_index": 1,
+      "history_binding_sha256": "8c5ac5f7b61f339ff1bf3a46afeb50eec7aefabefb589a035cccfc1e2a31ffe3",
+      "geometry": {
+        "original_token_count": 4017,
+        "prefix_token_count": 1746,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1549,
+        "omitted_history_token_count": 3295,
+        "owned_start": 1746,
+        "owned_end_exclusive": 2468,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "4bd6b8a96b1adb0bec947c9a6617e97805b38afa0ce3efca790a6bb13171f4f1",
+        "prefix_sha256": "6e9e2fc82e98a423c8580cf8bf7ca95285d747c8881f8d5e4eb5e999583cdb78",
+        "owned_sha256": "2a186d3fde8d4b45073dc74ebaf12f1866cdc907df70cd974b4cd4041ed3d661",
+        "stored_suffix_sha256": "74d45a7cfc14e3642f89e7e0540ab7964197842e9ce085003c30624ddac96f9b",
+        "omitted_history_sha256": "ab013ea44c564d3ab2723dc829736f0a67e670e43f99ad8834f7dbad9613645e"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "c525ed871e2a9220b8fbc57eaf09bedb3ecf5cb384a366c0888511e011b459fb"
+    },
+    {
+      "history_index": 32,
+      "cluster_index": 10,
+      "variant_index": 2,
+      "history_binding_sha256": "1b2e2ba5418a3280df6ede3ac2a599781169a34c515edf280163ee0d8cfe6806",
+      "geometry": {
+        "original_token_count": 3904,
+        "prefix_token_count": 1746,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1436,
+        "omitted_history_token_count": 3182,
+        "owned_start": 1746,
+        "owned_end_exclusive": 2468,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "f64f857b07358f067d9ced9850a57b2cc7be210e45604107cc75de190a4e543f",
+        "prefix_sha256": "6e9e2fc82e98a423c8580cf8bf7ca95285d747c8881f8d5e4eb5e999583cdb78",
+        "owned_sha256": "2a186d3fde8d4b45073dc74ebaf12f1866cdc907df70cd974b4cd4041ed3d661",
+        "stored_suffix_sha256": "93097c3168ca33e56ede829b138b3a792c2af3cb4e9ddb9b03c9091398b9c1bd",
+        "omitted_history_sha256": "e4170127fa55308df82b2e23b0bfb77fe4e99ca6220d5e1328258d6b5e9f8cc1"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "c614abd2e4570497107ead53be7c5ed04b93b9ac65c479522967fda2b33c08cd"
+    },
+    {
+      "history_index": 33,
+      "cluster_index": 11,
+      "variant_index": 0,
+      "history_binding_sha256": "68851f8be16ab19df2702ebfef448610a0321151155f8fe526b0c083c4a1b69f",
+      "geometry": {
+        "original_token_count": 4191,
+        "prefix_token_count": 1691,
+        "owned_token_count": 615,
+        "stored_suffix_token_count": 1885,
+        "omitted_history_token_count": 3576,
+        "owned_start": 1691,
+        "owned_end_exclusive": 2306,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "6b4eadd5c52429423c81c9fa4918d444e100e97fef168a010fe874b989e09add",
+        "prefix_sha256": "fcd8f294c25b8af7c762229110aa917a571d0b077dbc13cb4aa906adb07b512f",
+        "owned_sha256": "56aeb0ddec875142e499b6b44e913d37279bb9c40b17435475dff21eb870b02c",
+        "stored_suffix_sha256": "e5bc28e5435a0160f2473f1c9472da310d63d82c2b0d53e7ec62bdfc4b4e900e",
+        "omitted_history_sha256": "bd52d504193a0c4e850313fb37630e941ee4dee2d21a856e4afdc5b3c6014349"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "7a4aaffa657594b2631c568b11fcaa92d39cdcc780223f85825eff87fe24d68f"
+    },
+    {
+      "history_index": 34,
+      "cluster_index": 11,
+      "variant_index": 1,
+      "history_binding_sha256": "bec7877cd12d6a3454968530ab22ad698768348c4daa5b01528c9a7cbcfdd7a2",
+      "geometry": {
+        "original_token_count": 4221,
+        "prefix_token_count": 1691,
+        "owned_token_count": 615,
+        "stored_suffix_token_count": 1915,
+        "omitted_history_token_count": 3606,
+        "owned_start": 1691,
+        "owned_end_exclusive": 2306,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "1f752b32cc13ce02aa2832d036c2b56b420334b27b7c0a116cd5d1c4d0dbf72e",
+        "prefix_sha256": "fcd8f294c25b8af7c762229110aa917a571d0b077dbc13cb4aa906adb07b512f",
+        "owned_sha256": "56aeb0ddec875142e499b6b44e913d37279bb9c40b17435475dff21eb870b02c",
+        "stored_suffix_sha256": "3cebac93bd2c791975f54af4e83f38705211c38bcaa74480a121c3d90585a152",
+        "omitted_history_sha256": "00591bb1b61e3f4d119e5bd8565ba80a8f12ecdb63c777a3e874ead63f91a532"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "b681e51d3bba6d5b7eecd779a448055f18a1fb1a4cf01b62edb75c3211881717"
+    },
+    {
+      "history_index": 35,
+      "cluster_index": 11,
+      "variant_index": 2,
+      "history_binding_sha256": "21406848ecaff38f711300b7f883a20bb0238846eaa989a63dcfc7940cc49634",
+      "geometry": {
+        "original_token_count": 4513,
+        "prefix_token_count": 1691,
+        "owned_token_count": 615,
+        "stored_suffix_token_count": 2207,
+        "omitted_history_token_count": 3898,
+        "owned_start": 1691,
+        "owned_end_exclusive": 2306,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "8747d9592e8946551cd90f220b06cf28977b712089ec615d8c5d21d704c04821",
+        "prefix_sha256": "fcd8f294c25b8af7c762229110aa917a571d0b077dbc13cb4aa906adb07b512f",
+        "owned_sha256": "56aeb0ddec875142e499b6b44e913d37279bb9c40b17435475dff21eb870b02c",
+        "stored_suffix_sha256": "4b3a4fa8b13c1a2b5131c047a42456207f8299a51c37ce8f4e1cca74ae12de78",
+        "omitted_history_sha256": "2decb9e65a2a0a1b88fb7dff5dd4653ad61c9d15312dc3d6277585c7e3443b14"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "97e7487296dcaf3fb322320cf5653d031e839f38d8554a502dcb73e988ed81e0"
+    },
+    {
+      "history_index": 36,
+      "cluster_index": 12,
+      "variant_index": 0,
+      "history_binding_sha256": "27c20617b98018783332859ccfbbf9e7a5a871ee1f8da182ea0c28d335ef0be6",
+      "geometry": {
+        "original_token_count": 3570,
+        "prefix_token_count": 1721,
+        "owned_token_count": 697,
+        "stored_suffix_token_count": 1152,
+        "omitted_history_token_count": 2873,
+        "owned_start": 1721,
+        "owned_end_exclusive": 2418,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "85422699dfb1b159ce430e97ac4e686f0704008c9bd7aedd9cfbb393ea5a2ce6",
+        "prefix_sha256": "c19d2e3255ea90d81754cbdb260702cf97668a31eda158f2b4df71e603257c36",
+        "owned_sha256": "6ca8179eba74556cedfc3d2ad841f4b99cca2235bcb1154e2ea8c7c26b4ca391",
+        "stored_suffix_sha256": "a351dcd31b0b6e6b7e6b61a509417e4e6449cc7579751bbccc8268a990834ad3",
+        "omitted_history_sha256": "02cb293390ae4cc88c4a9bd36bd1e2800ab05426a0e5bfe3f89680eedb8d66f8"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "f091eb1d193f384b5e4ce169136a1c4f8d554e470b28ef23b682062e2b38b7c9"
+    },
+    {
+      "history_index": 37,
+      "cluster_index": 12,
+      "variant_index": 1,
+      "history_binding_sha256": "616a16a88c3c6535f22f5d4ecc48c2e0979c8146b56ce5e70cfdce7ece0b2955",
+      "geometry": {
+        "original_token_count": 3910,
+        "prefix_token_count": 1721,
+        "owned_token_count": 697,
+        "stored_suffix_token_count": 1492,
+        "omitted_history_token_count": 3213,
+        "owned_start": 1721,
+        "owned_end_exclusive": 2418,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "704256a3c7865cd9bb9a502b160d2a8bef36e8c16f88393a9bbff2b2bda9242f",
+        "prefix_sha256": "c19d2e3255ea90d81754cbdb260702cf97668a31eda158f2b4df71e603257c36",
+        "owned_sha256": "6ca8179eba74556cedfc3d2ad841f4b99cca2235bcb1154e2ea8c7c26b4ca391",
+        "stored_suffix_sha256": "92fcb113808453a1602819f3670f9f1a6efb9629fe22b7d8e28bd8bd784c62bd",
+        "omitted_history_sha256": "30eb5d7edcc0bbdc909ad993fa62bca47cbdc5ac707e47f174edf535cd874a05"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "e6f3e389c06fd07777452667aedd8ecb3a730be91c7cfda2d5a1f543ff4dd6fb"
+    },
+    {
+      "history_index": 38,
+      "cluster_index": 12,
+      "variant_index": 2,
+      "history_binding_sha256": "2110044916a0ab3ba45e0f5a2d2bb1ea669d45767d56b3bfb76431d53fb772f2",
+      "geometry": {
+        "original_token_count": 3618,
+        "prefix_token_count": 1721,
+        "owned_token_count": 697,
+        "stored_suffix_token_count": 1200,
+        "omitted_history_token_count": 2921,
+        "owned_start": 1721,
+        "owned_end_exclusive": 2418,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "92d9208d2364f14cf183823a7e7854c8416f91c0f996f03538d421c784527224",
+        "prefix_sha256": "c19d2e3255ea90d81754cbdb260702cf97668a31eda158f2b4df71e603257c36",
+        "owned_sha256": "6ca8179eba74556cedfc3d2ad841f4b99cca2235bcb1154e2ea8c7c26b4ca391",
+        "stored_suffix_sha256": "098ec8726969052af11c8fbebe1158a4bc07bd01b8f159c96a5a63bc030e5b3e",
+        "omitted_history_sha256": "491ce9f57f2b79bcb68f736e170273162e612b0f242f6d782e97cd4817d7a44f"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "64879b297fee01ed7fdf25a25669e359e7418e527f5d13dd8297f7fe273bba17"
+    },
+    {
+      "history_index": 39,
+      "cluster_index": 13,
+      "variant_index": 0,
+      "history_binding_sha256": "260a857b82932bc79efdbf65a0eb900c8e1cd5c61a102d6ae02e0a89d544a208",
+      "geometry": {
+        "original_token_count": 2339,
+        "prefix_token_count": 652,
+        "owned_token_count": 267,
+        "stored_suffix_token_count": 1420,
+        "omitted_history_token_count": 2072,
+        "owned_start": 652,
+        "owned_end_exclusive": 919,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "305bb5889bf58e99dc88c50d06287c68702e15ec80b8076dab59e5f77676a924",
+        "prefix_sha256": "d529ed25460d920d90b9d6f14f722a0d95249e1fcad99ecea462569c04ac0801",
+        "owned_sha256": "85713449856b91ec163c45ec31a005f53971f173134dc9bd316ff2edcaa98f3c",
+        "stored_suffix_sha256": "e715b16e3e702566bbb7b1d73738e6c273d29d5562e527783db14a01068934ec",
+        "omitted_history_sha256": "5f337131b12211120d2fe5579c3a3aaddacc92b63e4ac1fcdd2d8baf4a49e7ff"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "1e68d7400ec8692f8b4b2367959f9b4d7c196828555078411a30246e4ba9b455"
+    },
+    {
+      "history_index": 40,
+      "cluster_index": 13,
+      "variant_index": 1,
+      "history_binding_sha256": "32fcb57cf24e1d35017f1388e9cf695756c9cf37ec15acb5c4c8df3b391b81c9",
+      "geometry": {
+        "original_token_count": 2356,
+        "prefix_token_count": 652,
+        "owned_token_count": 267,
+        "stored_suffix_token_count": 1437,
+        "omitted_history_token_count": 2089,
+        "owned_start": 652,
+        "owned_end_exclusive": 919,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "143630fd1336f366f9c246e42d313a7e75daf613ac73c60eb5846059daf266d9",
+        "prefix_sha256": "d529ed25460d920d90b9d6f14f722a0d95249e1fcad99ecea462569c04ac0801",
+        "owned_sha256": "85713449856b91ec163c45ec31a005f53971f173134dc9bd316ff2edcaa98f3c",
+        "stored_suffix_sha256": "99abde48de2dd7fbb0828debfae4ef6948af38d04dbd18c61f45ad6c8b011991",
+        "omitted_history_sha256": "25131496ade466be0af6cb799f7b5b1b679fbcd60caeee730ae3173900c417cb"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "9cbebadd554d3068fa023d3f065fe74150892f798b07bffbca4115a8ce14afaf"
+    },
+    {
+      "history_index": 41,
+      "cluster_index": 13,
+      "variant_index": 2,
+      "history_binding_sha256": "eae8ac23c33e2ab387d2b6177a021ed702e099506abdf7f1a4dbc72e9d379bf7",
+      "geometry": {
+        "original_token_count": 2674,
+        "prefix_token_count": 652,
+        "owned_token_count": 267,
+        "stored_suffix_token_count": 1755,
+        "omitted_history_token_count": 2407,
+        "owned_start": 652,
+        "owned_end_exclusive": 919,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "42a61f1c14a76cae0c0953e20ea310528a300ed57f8ce61aad3dd344848a413c",
+        "prefix_sha256": "d529ed25460d920d90b9d6f14f722a0d95249e1fcad99ecea462569c04ac0801",
+        "owned_sha256": "85713449856b91ec163c45ec31a005f53971f173134dc9bd316ff2edcaa98f3c",
+        "stored_suffix_sha256": "61853021a49b0d43eb1604484c4a5a035eceb581fa536eeca094e0121c2c7801",
+        "omitted_history_sha256": "f97df202f1abfacb286f1a641ef06be16d0079cde78b10099b60af496dcf7567"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "3b321b6b72f17e09d25c9988ea4b4eba3c24bfd1de665decb077dbf9bbefeade"
+    },
+    {
+      "history_index": 42,
+      "cluster_index": 14,
+      "variant_index": 0,
+      "history_binding_sha256": "e61ae70ca202d59889fa45a7c734e429af23519692db28d1ba327ea8f9b84a66",
+      "geometry": {
+        "original_token_count": 4740,
+        "prefix_token_count": 2224,
+        "owned_token_count": 771,
+        "stored_suffix_token_count": 1745,
+        "omitted_history_token_count": 3969,
+        "owned_start": 2224,
+        "owned_end_exclusive": 2995,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "3af9479f75dbcd6b48a68f1f2b5c73b0335f4c4c31c8e8dad3269055d4a8a223",
+        "prefix_sha256": "8cc1a7598efe455ae391f368768d67cc308f75b96a55f0d81db43adf4c47e4a6",
+        "owned_sha256": "1005f08583cd23236bce5766a8c6968c83faa129a49ba95cf6661ffb217910e6",
+        "stored_suffix_sha256": "4dc850f6e68b1b0e845908203952a3e9940114a299c05062ff131d829c60b5a2",
+        "omitted_history_sha256": "1f6cfe9fb84459e134c2ba8a64b5ae153cc6ef009061cb29ec19a2d858ceaa45"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "35289c56b65eb7fbca15454c31cb1dcb8f50281e5242d57f6a5b98dfe8c8def3"
+    },
+    {
+      "history_index": 43,
+      "cluster_index": 14,
+      "variant_index": 1,
+      "history_binding_sha256": "bc81a09588862ccad7cd1199f2ea21da09aa2909dcf2ef2fc114bc07e970b0dd",
+      "geometry": {
+        "original_token_count": 4563,
+        "prefix_token_count": 2224,
+        "owned_token_count": 771,
+        "stored_suffix_token_count": 1568,
+        "omitted_history_token_count": 3792,
+        "owned_start": 2224,
+        "owned_end_exclusive": 2995,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "bd39be3a4b40a39e15b47c41d15a813e5795fca7d41ed6bb4a279acf9b920301",
+        "prefix_sha256": "8cc1a7598efe455ae391f368768d67cc308f75b96a55f0d81db43adf4c47e4a6",
+        "owned_sha256": "1005f08583cd23236bce5766a8c6968c83faa129a49ba95cf6661ffb217910e6",
+        "stored_suffix_sha256": "d701f9862fed5bcd1a5a237eac5b61481a420c764a023315e267af02fb326685",
+        "omitted_history_sha256": "7437548d2f6c4c4eefaf7189859914c09e45f0693e829d007a1cf6d7bc187ebc"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "8d2fa7baa89534791ea8beeed50fb9352f9bb283f5d35eff8cab064d4bf25d2c"
+    },
+    {
+      "history_index": 44,
+      "cluster_index": 14,
+      "variant_index": 2,
+      "history_binding_sha256": "655803a0030714f47fee03a674705ed98a1c1624783d56f455d58520288fdc89",
+      "geometry": {
+        "original_token_count": 4487,
+        "prefix_token_count": 2224,
+        "owned_token_count": 771,
+        "stored_suffix_token_count": 1492,
+        "omitted_history_token_count": 3716,
+        "owned_start": 2224,
+        "owned_end_exclusive": 2995,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "99ff45cf8506c17934ac46ebb321c3de471318e4ac2a4842ecbc2fa23666ca20",
+        "prefix_sha256": "8cc1a7598efe455ae391f368768d67cc308f75b96a55f0d81db43adf4c47e4a6",
+        "owned_sha256": "1005f08583cd23236bce5766a8c6968c83faa129a49ba95cf6661ffb217910e6",
+        "stored_suffix_sha256": "d4825e527c1d9ac9803ad91d980f204afc2d0df4e99aa3b102723f968612b835",
+        "omitted_history_sha256": "4b6855e969bcc67b83fae97c15a5d69b04bf8f31cbfa72f908f6ffa10e69859e"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "f459ebc09db78a3988d32c01409f98c58285e2c326be95c45f5aee41faca4de4"
+    },
+    {
+      "history_index": 45,
+      "cluster_index": 15,
+      "variant_index": 0,
+      "history_binding_sha256": "2272f4358e8093cd948cbded39e961905a56a9e8caa7a2a64b81cfbff5f52b32",
+      "geometry": {
+        "original_token_count": 3745,
+        "prefix_token_count": 1499,
+        "owned_token_count": 613,
+        "stored_suffix_token_count": 1633,
+        "omitted_history_token_count": 3132,
+        "owned_start": 1499,
+        "owned_end_exclusive": 2112,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "62026beb7ff7ba241a899269b20049bba5a186cfd0d78c409ae00e95a6e35317",
+        "prefix_sha256": "a538ce27eae766099e69fc0cad16f8364b4dc2f3aee7cb527f78337b0672dc8a",
+        "owned_sha256": "73b15d365106352289e049c7509017c90fcd8906f67296c0c337771c71e6f96b",
+        "stored_suffix_sha256": "d7ed4bce0a9348364b27c09e00c454387f2806b741cfa880f572bcf02e06b42d",
+        "omitted_history_sha256": "26e9448115cea4cc2f5c4d66cf87d7827b7b8e064e8ca07de61b36f43621634c"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "2adc1f14b569cd5e3c44f9cd545cb9ee0fe44dbfcd744976267569634bf54be5"
+    },
+    {
+      "history_index": 46,
+      "cluster_index": 15,
+      "variant_index": 1,
+      "history_binding_sha256": "57f78b705f0738ad9d2f0aecb9fd528146dc294ad386adf1180927d6841e592b",
+      "geometry": {
+        "original_token_count": 3332,
+        "prefix_token_count": 1499,
+        "owned_token_count": 613,
+        "stored_suffix_token_count": 1220,
+        "omitted_history_token_count": 2719,
+        "owned_start": 1499,
+        "owned_end_exclusive": 2112,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "53a7a2fd4887ac70ca09cac13dda309f5a1c619f3033028eddc345ca2dd1c435",
+        "prefix_sha256": "a538ce27eae766099e69fc0cad16f8364b4dc2f3aee7cb527f78337b0672dc8a",
+        "owned_sha256": "73b15d365106352289e049c7509017c90fcd8906f67296c0c337771c71e6f96b",
+        "stored_suffix_sha256": "936e82c7f8025468100c7ebe1a66eda8e35dc38d43ad542d9910269f13442fc7",
+        "omitted_history_sha256": "9ff198a34921bd54ad9d207b328453c090b3b591e9c9bcc545306b41b72463d4"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "62780befa1564379e8ff7c2bdf0c2b2195910c3a07bd72f7ab789f72805305c7"
+    },
+    {
+      "history_index": 47,
+      "cluster_index": 15,
+      "variant_index": 2,
+      "history_binding_sha256": "f4b2ac2e3b4b1d31976134218905eb910a98346b6dabce450f47b9ff3b3cbad7",
+      "geometry": {
+        "original_token_count": 3839,
+        "prefix_token_count": 1499,
+        "owned_token_count": 613,
+        "stored_suffix_token_count": 1727,
+        "omitted_history_token_count": 3226,
+        "owned_start": 1499,
+        "owned_end_exclusive": 2112,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "1634921ece8d508c2d37c8a0d0955d647bed527770bdda440aaa692a367f87e6",
+        "prefix_sha256": "a538ce27eae766099e69fc0cad16f8364b4dc2f3aee7cb527f78337b0672dc8a",
+        "owned_sha256": "73b15d365106352289e049c7509017c90fcd8906f67296c0c337771c71e6f96b",
+        "stored_suffix_sha256": "0af24476eee268ec6b87f2fff9705edb0c9932624726bec3ca67d614a1374fea",
+        "omitted_history_sha256": "ccd88294c0ad8d57defe17617db910453e6d3b3846b1e29f6b4d87a837a7b198"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "9213344c52003168ab967a57e5f47e7b2ecd3e04741e3c7757c8cd94b9bd6e5e"
+    },
+    {
+      "history_index": 48,
+      "cluster_index": 16,
+      "variant_index": 0,
+      "history_binding_sha256": "4647cbca8b5ee351d0e4bf078fd77eb7b8eee5fa1742b081bb71ddeb3239523c",
+      "geometry": {
+        "original_token_count": 4153,
+        "prefix_token_count": 1837,
+        "owned_token_count": 724,
+        "stored_suffix_token_count": 1592,
+        "omitted_history_token_count": 3429,
+        "owned_start": 1837,
+        "owned_end_exclusive": 2561,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "159e93687cab1e2b338ea10d2e7c6f150ffe0f93a4d535bf7bc4e475b9665e30",
+        "prefix_sha256": "cd6e25e94a33e0121d395bb413a215ccb3991ead06d79afac1141558bbefc09c",
+        "owned_sha256": "864cee62f9e7984e4470e0c497d30c0ef2efd5aacb37a4f7ff50b22d533d12ce",
+        "stored_suffix_sha256": "45e756163ad0eee0d3ff70ffce7680d5e6f311fb17fda3c380d6894a22107ce2",
+        "omitted_history_sha256": "52330f10f80fc0f60c413218067e296a60257972f359eccfe862328fa6e58e47"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "103aaca8c83e0e5ec5e277aacbf75f6552c0606760d1fba5dd67bf3f55f1d993"
+    },
+    {
+      "history_index": 49,
+      "cluster_index": 16,
+      "variant_index": 1,
+      "history_binding_sha256": "1ab771ba941e30c8bd0453e0b6082eeb3ec5ace713dead8f9920300564cf1086",
+      "geometry": {
+        "original_token_count": 3992,
+        "prefix_token_count": 1837,
+        "owned_token_count": 724,
+        "stored_suffix_token_count": 1431,
+        "omitted_history_token_count": 3268,
+        "owned_start": 1837,
+        "owned_end_exclusive": 2561,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "829821b963960686c6e03e631e37608a5ff0509a3a9de385f4c483229204c2e7",
+        "prefix_sha256": "cd6e25e94a33e0121d395bb413a215ccb3991ead06d79afac1141558bbefc09c",
+        "owned_sha256": "864cee62f9e7984e4470e0c497d30c0ef2efd5aacb37a4f7ff50b22d533d12ce",
+        "stored_suffix_sha256": "5d1b7138a239c9d01b618e59fc110229ecaf485c178795919783afbc73a1988d",
+        "omitted_history_sha256": "88d54fcb8695ee00275c300799f6a77f64ffafb39ed88e94ab34736285051ccc"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "6adc20528c596e7cedda17caddaa07f7b96c2b2c96cb65d8b42c69a7efda398b"
+    },
+    {
+      "history_index": 50,
+      "cluster_index": 16,
+      "variant_index": 2,
+      "history_binding_sha256": "b39124b3164e167b6a25ed9005ae99dfe3e7ef008b5e5553eeda4458f6b6533b",
+      "geometry": {
+        "original_token_count": 4088,
+        "prefix_token_count": 1837,
+        "owned_token_count": 724,
+        "stored_suffix_token_count": 1527,
+        "omitted_history_token_count": 3364,
+        "owned_start": 1837,
+        "owned_end_exclusive": 2561,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "3d6f2adbfb70bd3566fbe21bcee529e5f32ee017d34a0aed13f4754e264376ed",
+        "prefix_sha256": "cd6e25e94a33e0121d395bb413a215ccb3991ead06d79afac1141558bbefc09c",
+        "owned_sha256": "864cee62f9e7984e4470e0c497d30c0ef2efd5aacb37a4f7ff50b22d533d12ce",
+        "stored_suffix_sha256": "43361d442a3f09bef326973ea668044160f47c201c29c0de0603382ad686f09c",
+        "omitted_history_sha256": "2e45d3cc3ae169eb1270aa60113222a3ede423e9464af1d192affe79720aeb67"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "6bafff0373ec9878c86f6f0710c6743b0a7b318bc344f50587d429a65afebd1e"
+    },
+    {
+      "history_index": 51,
+      "cluster_index": 17,
+      "variant_index": 0,
+      "history_binding_sha256": "46e36cbf6e60a7a817f7c792c3ff2a800f41be0533af078faf29c5cb3bf9eebf",
+      "geometry": {
+        "original_token_count": 2670,
+        "prefix_token_count": 993,
+        "owned_token_count": 456,
+        "stored_suffix_token_count": 1221,
+        "omitted_history_token_count": 2214,
+        "owned_start": 993,
+        "owned_end_exclusive": 1449,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "3de30130e3a5ae8403ae07d430205d76b285b8f6bba6e18b6af9eae7d58a59ff",
+        "prefix_sha256": "34a2e114ff9e78c9c31970ac7a08218ed7b092aa4a41c6e236f91a470f8a4035",
+        "owned_sha256": "51121b6de8c57b3fa9716853f289f8b1669b43697db1dbf0cf41a5430f328ae3",
+        "stored_suffix_sha256": "76195ca2a05b11fa6a575b94d5053de7ffc5660cc22587370218b5ae0cca5648",
+        "omitted_history_sha256": "e75657b439125a0c9d1fefcbf24c846a9e52f2c07fc0d3979991e7d20a8ac2a3"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "691f7f92863542795dd27da4a2be58c05274d1047cfb6541036955f1a3ab5676"
+    },
+    {
+      "history_index": 52,
+      "cluster_index": 17,
+      "variant_index": 1,
+      "history_binding_sha256": "b7f488af2405ff2bae0522232eed55c82463580b8eef90a9e179935a87d0ad33",
+      "geometry": {
+        "original_token_count": 2731,
+        "prefix_token_count": 993,
+        "owned_token_count": 456,
+        "stored_suffix_token_count": 1282,
+        "omitted_history_token_count": 2275,
+        "owned_start": 993,
+        "owned_end_exclusive": 1449,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "e5f3a0cf48d2e5fb00fe27ac696e6de6b6321bdb32b603c08628f7247f337944",
+        "prefix_sha256": "34a2e114ff9e78c9c31970ac7a08218ed7b092aa4a41c6e236f91a470f8a4035",
+        "owned_sha256": "51121b6de8c57b3fa9716853f289f8b1669b43697db1dbf0cf41a5430f328ae3",
+        "stored_suffix_sha256": "7a5fc98e224d838206886710c57f26875ec1995f8eb21c410d78bbfc23d1ef37",
+        "omitted_history_sha256": "fe05308dda8f0c29c69412177ff632d4e5d3ec9c98e4b0eb8115956cee42fc5f"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "a8cdef2237de26af77b1ba99dbb2ca204c9a0a27106458b7e293060b37ab35c2"
+    },
+    {
+      "history_index": 53,
+      "cluster_index": 17,
+      "variant_index": 2,
+      "history_binding_sha256": "b420dc8904e642eecb45b2c6aa06a2a92f0d81c65981da354250ae369346a080",
+      "geometry": {
+        "original_token_count": 3973,
+        "prefix_token_count": 993,
+        "owned_token_count": 456,
+        "stored_suffix_token_count": 2524,
+        "omitted_history_token_count": 3517,
+        "owned_start": 993,
+        "owned_end_exclusive": 1449,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "63da6a108b568746f3914e3f19cdd406ff0944bbb19265b2d2ffe0a70b6ec955",
+        "prefix_sha256": "34a2e114ff9e78c9c31970ac7a08218ed7b092aa4a41c6e236f91a470f8a4035",
+        "owned_sha256": "51121b6de8c57b3fa9716853f289f8b1669b43697db1dbf0cf41a5430f328ae3",
+        "stored_suffix_sha256": "dad3bf05df7354ad343ffdc0e7a163c19745b0ed0852ce41f636cdb41e7b1bfb",
+        "omitted_history_sha256": "9cccbfbef3ce8b64dc7623e06164ea19942f2fbb3744500e56e6eb3da84bf11a"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "76465d9f2a3f3890153fce83e3402dbab3dac27f92ae89969db9693e40aadca3"
+    },
+    {
+      "history_index": 54,
+      "cluster_index": 18,
+      "variant_index": 0,
+      "history_binding_sha256": "6b3e6a662aec75c330a9dceb00927d1cd815a641eeb367af155fbd195ee42727",
+      "geometry": {
+        "original_token_count": 4165,
+        "prefix_token_count": 1915,
+        "owned_token_count": 835,
+        "stored_suffix_token_count": 1415,
+        "omitted_history_token_count": 3330,
+        "owned_start": 1915,
+        "owned_end_exclusive": 2750,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "a66a16e7f9f13ab2f87c1c18b33715e3997f331a468f02d219683c0ef1683cf4",
+        "prefix_sha256": "a109dcaeb5a319dec65264f90a9c346e2654a883ddd6ee870e2defbc1c8ef65e",
+        "owned_sha256": "51047edb6bdcaa1ad98bce399ae0158b7536108d006656a6e609a492f2f7453c",
+        "stored_suffix_sha256": "19c8708045c4b7f7727bb0986b7fd5ecf5672ede882f804f47cb5dac7be22f2d",
+        "omitted_history_sha256": "68427fe216d51147e949e0f642d997e0822c309903847c4853840ebc61ffce71"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "897c476282e1be28479d49f58a12e0014a64278f8dfa98c114b1510bc0af7a4e"
+    },
+    {
+      "history_index": 55,
+      "cluster_index": 18,
+      "variant_index": 1,
+      "history_binding_sha256": "f687eaee517da73129186cbaecd4d9f0411cc4db8d8c005680a6aac221686bcc",
+      "geometry": {
+        "original_token_count": 4027,
+        "prefix_token_count": 1915,
+        "owned_token_count": 835,
+        "stored_suffix_token_count": 1277,
+        "omitted_history_token_count": 3192,
+        "owned_start": 1915,
+        "owned_end_exclusive": 2750,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "664a97597a2b1b59bc39073c24fcf254972f3246a6cde1e59c1bac9763fd9ad1",
+        "prefix_sha256": "a109dcaeb5a319dec65264f90a9c346e2654a883ddd6ee870e2defbc1c8ef65e",
+        "owned_sha256": "51047edb6bdcaa1ad98bce399ae0158b7536108d006656a6e609a492f2f7453c",
+        "stored_suffix_sha256": "7f0752a497c7443d80bfcfef2e84c38a962feb38eb53cb2f3b4ab76e2a60306b",
+        "omitted_history_sha256": "3a51fb0efb08eb705e887c17ec4ce3e70d71856a4f04495ca36f554fc04df222"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "1261a2009ccb6b22452a950e77f593b132b65db4bd89c2b747ce1211c2baf860"
+    },
+    {
+      "history_index": 56,
+      "cluster_index": 18,
+      "variant_index": 2,
+      "history_binding_sha256": "bd1a66f3b46af95c63eca9c69ca214402e61f25096fb75cf481bf194e9dec5fc",
+      "geometry": {
+        "original_token_count": 4386,
+        "prefix_token_count": 1915,
+        "owned_token_count": 835,
+        "stored_suffix_token_count": 1636,
+        "omitted_history_token_count": 3551,
+        "owned_start": 1915,
+        "owned_end_exclusive": 2750,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "4cc81f1d0eb0b2d23504f00e225e7140413828223eadd3f9fad43221ee0d1d30",
+        "prefix_sha256": "a109dcaeb5a319dec65264f90a9c346e2654a883ddd6ee870e2defbc1c8ef65e",
+        "owned_sha256": "51047edb6bdcaa1ad98bce399ae0158b7536108d006656a6e609a492f2f7453c",
+        "stored_suffix_sha256": "80a4ad4dff00bb7005122172833a0975f5db9f5d7d20618c249f48870a6c42b8",
+        "omitted_history_sha256": "85e90f34c51657280807fc298580d788a568aab479aeac0d74070c705c0cadaa"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "bcfddc671998e97278eb46118a460e8cbdb66dc455dd604c9d16ad8680c6e20b"
+    },
+    {
+      "history_index": 57,
+      "cluster_index": 19,
+      "variant_index": 0,
+      "history_binding_sha256": "281784b8ebacc62f549d9912588db559f96d4964a682a7dee8a7827d9dc56e30",
+      "geometry": {
+        "original_token_count": 3671,
+        "prefix_token_count": 1672,
+        "owned_token_count": 511,
+        "stored_suffix_token_count": 1488,
+        "omitted_history_token_count": 3160,
+        "owned_start": 1672,
+        "owned_end_exclusive": 2183,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "19f90df42037c608cb70a3e73fcaeb169eb959abee6edcc2b7a72ee9fe9caee4",
+        "prefix_sha256": "369a3daa7399835c833625e3e022f48a6930e74ac573024ac587ed6a9900ae61",
+        "owned_sha256": "39177024dabc3a9522bb75e1b47ee354661cdc28e60a5cd6ff27cc5ad021a63f",
+        "stored_suffix_sha256": "fa8dae12ea71cd09d5324134bcb2f5cbcd7a7f05b4eb73a798316bc799914825",
+        "omitted_history_sha256": "7e42eed46dbd539c470a9fd64ae67eeb5fa65a776485f31051ac1719e54174a2"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "305bd8aad03df95a634fc70e433c8496db3ef5dbacea02d645173894ca1d1309"
+    },
+    {
+      "history_index": 58,
+      "cluster_index": 19,
+      "variant_index": 1,
+      "history_binding_sha256": "76a12d554e5b11e8071e3657985fb931cd5e635b4f613f83937f4b6dc2c2957f",
+      "geometry": {
+        "original_token_count": 3435,
+        "prefix_token_count": 1672,
+        "owned_token_count": 511,
+        "stored_suffix_token_count": 1252,
+        "omitted_history_token_count": 2924,
+        "owned_start": 1672,
+        "owned_end_exclusive": 2183,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "30e6ccb1fcf744e169263ccaa4c2b31af2ad92968eb9998e1d84348fb6e2436f",
+        "prefix_sha256": "369a3daa7399835c833625e3e022f48a6930e74ac573024ac587ed6a9900ae61",
+        "owned_sha256": "39177024dabc3a9522bb75e1b47ee354661cdc28e60a5cd6ff27cc5ad021a63f",
+        "stored_suffix_sha256": "8c9881e59cbc53b13020509e945c07d30a6c3d7c5ff6eab8202aaa82ccd41ab4",
+        "omitted_history_sha256": "09212f8fc2c960f092d98b4c721a41885d7c59d244cb48e4adb425403b6df44a"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "7e2d022fab9f49219e6e12128e9b209d46debb4ba6f7305e1dcec4b5a0250634"
+    },
+    {
+      "history_index": 59,
+      "cluster_index": 19,
+      "variant_index": 2,
+      "history_binding_sha256": "4cca74747ab9192cb637e23347cc9bb0ce9ffb0e5bd5a551548e9f5d493c17ae",
+      "geometry": {
+        "original_token_count": 3784,
+        "prefix_token_count": 1672,
+        "owned_token_count": 511,
+        "stored_suffix_token_count": 1601,
+        "omitted_history_token_count": 3273,
+        "owned_start": 1672,
+        "owned_end_exclusive": 2183,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "4e5c3cf191be73652a34df8a9e6fff16034edc2c4dd30ed96b8fa05b907278f3",
+        "prefix_sha256": "369a3daa7399835c833625e3e022f48a6930e74ac573024ac587ed6a9900ae61",
+        "owned_sha256": "39177024dabc3a9522bb75e1b47ee354661cdc28e60a5cd6ff27cc5ad021a63f",
+        "stored_suffix_sha256": "60d27b27ac412e6fbd3218c7390d322446fa6a384830b19633ceb3b8db3a3641",
+        "omitted_history_sha256": "e57aaeddb4f9f6e92b9c5c78f7f0c8f3b76b69b4751fae498f747420b0a16c94"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "e3cfa0a11f8a53a22f5e5348bd6b1da3279327a5ef8dfbc38f36b6dc090964ed"
+    },
+    {
+      "history_index": 60,
+      "cluster_index": 20,
+      "variant_index": 0,
+      "history_binding_sha256": "8ae6f4f99e7c1143f108a0f8a9058b81f4426c9c7e635779bb34bc3d6290f081",
+      "geometry": {
+        "original_token_count": 4470,
+        "prefix_token_count": 2215,
+        "owned_token_count": 690,
+        "stored_suffix_token_count": 1565,
+        "omitted_history_token_count": 3780,
+        "owned_start": 2215,
+        "owned_end_exclusive": 2905,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "82b71ba324820c5babdd42f9c994cbdd1528e45a52cf30e8b8f877a7acc711a8",
+        "prefix_sha256": "6d3655a5f60ba2bc5790b9b31a6bf875c33528582ed224233773a4b1d4e710b0",
+        "owned_sha256": "7aee869f1052824aaecd98ed9eef19b972546064b4e0c3abacdc679114865cd8",
+        "stored_suffix_sha256": "a83bb8da47466e62ff894337a46fd35798329c6fb984859c398a86b1f3603ba7",
+        "omitted_history_sha256": "47c30893550ee1f1ea14cd0a6d97d32ed9dc8864d1e9c3025f059395c1bb7e16"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "98748f76d05407432c0377c5b0a22ce5f6b01b6c074c2cde033547668e2cab42"
+    },
+    {
+      "history_index": 61,
+      "cluster_index": 20,
+      "variant_index": 1,
+      "history_binding_sha256": "18dd8225e088a4066762cdef494e1211a36975e98932fcc9932e50d2e6a78cd5",
+      "geometry": {
+        "original_token_count": 4615,
+        "prefix_token_count": 2215,
+        "owned_token_count": 690,
+        "stored_suffix_token_count": 1710,
+        "omitted_history_token_count": 3925,
+        "owned_start": 2215,
+        "owned_end_exclusive": 2905,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "c83e992f013e0e7804351eefa3632ea4deaa248cb8ccc07672c88f73ca12a0a4",
+        "prefix_sha256": "6d3655a5f60ba2bc5790b9b31a6bf875c33528582ed224233773a4b1d4e710b0",
+        "owned_sha256": "7aee869f1052824aaecd98ed9eef19b972546064b4e0c3abacdc679114865cd8",
+        "stored_suffix_sha256": "44d27d25cbdf28ac57cef3550f5db9d8f93c93bcf2843a126468634a212297ee",
+        "omitted_history_sha256": "37d50604b9a5ecf07103a27fd57a722a11b011a41299fe7a35815bbb2f01d400"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "759d63d0ac791cebe4beeb6ad21425c8b7c286b7295528b7c51f2f42ccea6ed5"
+    },
+    {
+      "history_index": 62,
+      "cluster_index": 20,
+      "variant_index": 2,
+      "history_binding_sha256": "145e530e022feb99df9c88cdedd29d833dfe0bd9873b3f63251785d7f08e6b63",
+      "geometry": {
+        "original_token_count": 4072,
+        "prefix_token_count": 2215,
+        "owned_token_count": 690,
+        "stored_suffix_token_count": 1167,
+        "omitted_history_token_count": 3382,
+        "owned_start": 2215,
+        "owned_end_exclusive": 2905,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "d55d8a3fe57680ccc672df81112a108b1332e2ca5bdf4b7d1e3e01a1656eb2e9",
+        "prefix_sha256": "6d3655a5f60ba2bc5790b9b31a6bf875c33528582ed224233773a4b1d4e710b0",
+        "owned_sha256": "7aee869f1052824aaecd98ed9eef19b972546064b4e0c3abacdc679114865cd8",
+        "stored_suffix_sha256": "9af5f2d416255e995ab557f07905c3e14cfff2e1c7f4cac83258f3e03f025c61",
+        "omitted_history_sha256": "b774055f8e925a6e9f72fe9cf12b1406dcf8e9c07f2f631485b881e9382c17ee"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "99b5cf2b8b92ba93873cb581968b34ab30732ca8017910cf675b43986f900609"
+    },
+    {
+      "history_index": 63,
+      "cluster_index": 21,
+      "variant_index": 0,
+      "history_binding_sha256": "6e2e8e164164cf93514ea6bbcf58b86cf287d1e671e8728cb76f2abcc17ba1d4",
+      "geometry": {
+        "original_token_count": 4147,
+        "prefix_token_count": 1713,
+        "owned_token_count": 660,
+        "stored_suffix_token_count": 1774,
+        "omitted_history_token_count": 3487,
+        "owned_start": 1713,
+        "owned_end_exclusive": 2373,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "67ab9bb7fe03a76d8485fb7b60b9c65f6397c180e5f09fe426ef3a919bf452f6",
+        "prefix_sha256": "35e47169aceebbb619a0dfc7642f73c8c9ab43bb2a25b29ef57bb80a45332aee",
+        "owned_sha256": "9d2afad105743a9748111363f5d70b1a3951da2bf288a20d1dd62a63d3010d9b",
+        "stored_suffix_sha256": "a01e2e190aeef10314b9f3c6f758191e98045cdb6b3d3ea34da8e66da9b8234f",
+        "omitted_history_sha256": "d27acff65015d2386f81be1fb3189eca4a2a83960af9f8c3252c47c37903f3dd"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "44317be81a8543219555052040757cb29f1a97e0cd731fb6ce87a5cec6d56578"
+    },
+    {
+      "history_index": 64,
+      "cluster_index": 21,
+      "variant_index": 1,
+      "history_binding_sha256": "07c358adf30e42815dc0f259a6aa05cd6d9313c05f7bf9836320c2c5c0581a7a",
+      "geometry": {
+        "original_token_count": 3633,
+        "prefix_token_count": 1713,
+        "owned_token_count": 660,
+        "stored_suffix_token_count": 1260,
+        "omitted_history_token_count": 2973,
+        "owned_start": 1713,
+        "owned_end_exclusive": 2373,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "6e7ba901745bac02d5f205b4e7b323f8591b506a098d4c3cf721cee6a32f0886",
+        "prefix_sha256": "35e47169aceebbb619a0dfc7642f73c8c9ab43bb2a25b29ef57bb80a45332aee",
+        "owned_sha256": "9d2afad105743a9748111363f5d70b1a3951da2bf288a20d1dd62a63d3010d9b",
+        "stored_suffix_sha256": "2c4975ccbab7577d03a2511b30aeb44430f71b149163611a10af71e0f5e14869",
+        "omitted_history_sha256": "111eb4a7d355f0ee1fdf27f714ebb0139afda1f8715e842fe164d213bf971059"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "dcd1457e5da9291391a4c78f2893f0c37d9b71886050d016f51731713b7c875f"
+    },
+    {
+      "history_index": 65,
+      "cluster_index": 21,
+      "variant_index": 2,
+      "history_binding_sha256": "7e5cde5411b7f8661aaee6af18db5733d538153f038bc3f01006e10fb17a8e3e",
+      "geometry": {
+        "original_token_count": 3605,
+        "prefix_token_count": 1713,
+        "owned_token_count": 660,
+        "stored_suffix_token_count": 1232,
+        "omitted_history_token_count": 2945,
+        "owned_start": 1713,
+        "owned_end_exclusive": 2373,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "21588a644666481292a81c5fdca6b32526c3d601e1fd9ae2740183dcba11e666",
+        "prefix_sha256": "35e47169aceebbb619a0dfc7642f73c8c9ab43bb2a25b29ef57bb80a45332aee",
+        "owned_sha256": "9d2afad105743a9748111363f5d70b1a3951da2bf288a20d1dd62a63d3010d9b",
+        "stored_suffix_sha256": "16555a16390a44fa0ada6195fac0f8eb0dcf991135c0a509c7fc4fcffc1edd47",
+        "omitted_history_sha256": "a7c381e741ddb95f527922dbca452cee969858956815f2566a34bb2404430241"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "24068954dc0de4955ab91ee08a3eb4e2f06e690e0c629cc4548dfcef182966bd"
+    },
+    {
+      "history_index": 66,
+      "cluster_index": 22,
+      "variant_index": 0,
+      "history_binding_sha256": "e7e8811d68a64a00e42915dc0164b98ae8a0ef8c8cf5fa69f6d0d7bb421c5255",
+      "geometry": {
+        "original_token_count": 2820,
+        "prefix_token_count": 991,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1472,
+        "omitted_history_token_count": 2463,
+        "owned_start": 991,
+        "owned_end_exclusive": 1348,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "d65498faf70a4b62e2f5df23afc89604408160b3e6b03f3c73ed6c8c006413a1",
+        "prefix_sha256": "b1b7126568ada98d9d168ae9bf10562fc93b9c8e32ed40582cdbeeec8b94eb80",
+        "owned_sha256": "3b1a324ace2e6ff58a46333a9b80575bd4a09129bf212db4601251402c425cf8",
+        "stored_suffix_sha256": "af4df1cd09190e546aefb25bfd21b22305430e1b56d16ca237d03cbf798bf5f1",
+        "omitted_history_sha256": "2fb5860ea82b8c22c5759557927368237b082e6fdcad0a27c093fbfdf600cc08"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "cf5f4347589d9827fa2697facfca066155ff308291df0adcd726c18b6db65e2a"
+    },
+    {
+      "history_index": 67,
+      "cluster_index": 22,
+      "variant_index": 1,
+      "history_binding_sha256": "743e796dc47c6d230a0bb89ecff7fbc421afc4a6d821832cb69a0ee329caaada",
+      "geometry": {
+        "original_token_count": 2806,
+        "prefix_token_count": 991,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1458,
+        "omitted_history_token_count": 2449,
+        "owned_start": 991,
+        "owned_end_exclusive": 1348,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "2ec28f7aef817da18c93385361769f45766202153e06ffcadf5508b47f3ac692",
+        "prefix_sha256": "b1b7126568ada98d9d168ae9bf10562fc93b9c8e32ed40582cdbeeec8b94eb80",
+        "owned_sha256": "3b1a324ace2e6ff58a46333a9b80575bd4a09129bf212db4601251402c425cf8",
+        "stored_suffix_sha256": "04de7ba333bf99eb6025f7b4417272902cd6cf94a34f31edfbd54626d4e40f43",
+        "omitted_history_sha256": "ec8b4f248d4bf8bc49f2d22e1e35c67da949a1a059eada9c8c646c2e0309be17"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "07f01362ae0216fcb69502d6e01807f95cc0af260a560135e238d63d452064d3"
+    },
+    {
+      "history_index": 68,
+      "cluster_index": 22,
+      "variant_index": 2,
+      "history_binding_sha256": "e43cb7ee2b8e27d79e761623a0a523d97d5de67bb843f5ce3ae1a11888b46107",
+      "geometry": {
+        "original_token_count": 2758,
+        "prefix_token_count": 991,
+        "owned_token_count": 357,
+        "stored_suffix_token_count": 1410,
+        "omitted_history_token_count": 2401,
+        "owned_start": 991,
+        "owned_end_exclusive": 1348,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "1fce7a07161dfe363ee35f52a5ba390db03e5c8b5e80457f29e94d53efe4f5d2",
+        "prefix_sha256": "b1b7126568ada98d9d168ae9bf10562fc93b9c8e32ed40582cdbeeec8b94eb80",
+        "owned_sha256": "3b1a324ace2e6ff58a46333a9b80575bd4a09129bf212db4601251402c425cf8",
+        "stored_suffix_sha256": "7ca59773af3147b1938539b3374bbf0c6d0ff112dda734c219c0add37b516b97",
+        "omitted_history_sha256": "ad5c43602a8ab7244c8fd5266c92f1c45b15816f7ea3d47d3a3926bc7ad8c6b8"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "03f015ea6dc8d94ff26276c674835bb97f003f8cf72c7bb0422ed9597fe4dfcd"
+    },
+    {
+      "history_index": 69,
+      "cluster_index": 23,
+      "variant_index": 0,
+      "history_binding_sha256": "49f0e6824fbc8ae6af52484bf0d331a2ba2a2933475fe2e95b4cf7af20facbab",
+      "geometry": {
+        "original_token_count": 4249,
+        "prefix_token_count": 1786,
+        "owned_token_count": 643,
+        "stored_suffix_token_count": 1820,
+        "omitted_history_token_count": 3606,
+        "owned_start": 1786,
+        "owned_end_exclusive": 2429,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "6734dfb9ffb03ce2271004a1d3bd6820b2440dea9ab099cc59dfda069019370e",
+        "prefix_sha256": "ee95228793a74db84b4a7c4a1ec55af3a0812577c8f59d1f43814759d170711a",
+        "owned_sha256": "421e4d57c479a1f032f0616624a98afcc95f36ab558ec4e8df74054599af3e79",
+        "stored_suffix_sha256": "e30696ee7691e83bb6e8735c532c124d8b470f2154f767e1b425076dbfdf7797",
+        "omitted_history_sha256": "6923388b4df0db9ffc4dda2b8e10e076b32335b0097d739e0da100c76846d5d6"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "9bf7b8ea8a9fc86f7e242b7f05d32a6a933de80ce7afdab52c48fa29264936a8"
+    },
+    {
+      "history_index": 70,
+      "cluster_index": 23,
+      "variant_index": 1,
+      "history_binding_sha256": "1ccc9a7c05ba181965746a4404ec58858624a9f277d0a1535ce9487937ec26e0",
+      "geometry": {
+        "original_token_count": 3920,
+        "prefix_token_count": 1786,
+        "owned_token_count": 643,
+        "stored_suffix_token_count": 1491,
+        "omitted_history_token_count": 3277,
+        "owned_start": 1786,
+        "owned_end_exclusive": 2429,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "2738b6ed35171d2a51f9bd715e31a6051eb6cf870929722cdbf1a7ea895ef779",
+        "prefix_sha256": "ee95228793a74db84b4a7c4a1ec55af3a0812577c8f59d1f43814759d170711a",
+        "owned_sha256": "421e4d57c479a1f032f0616624a98afcc95f36ab558ec4e8df74054599af3e79",
+        "stored_suffix_sha256": "870ac51a945b5673a5f4feaac625b6cf99e105fb547c38d54d62b7798730944b",
+        "omitted_history_sha256": "3634296568c5e8eee161f1623ca4ab0997a17e23f0b4d1bd5c9527422e6eac8e"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "5410110f4b1b4a63146d58141eff8426d024cb37b509007473ded33928855b2c"
+    },
+    {
+      "history_index": 71,
+      "cluster_index": 23,
+      "variant_index": 2,
+      "history_binding_sha256": "f22520e8628d94f73805dfc1da23ef091f1868d211729b0bf8f318be7e71c9d6",
+      "geometry": {
+        "original_token_count": 3913,
+        "prefix_token_count": 1786,
+        "owned_token_count": 643,
+        "stored_suffix_token_count": 1484,
+        "omitted_history_token_count": 3270,
+        "owned_start": 1786,
+        "owned_end_exclusive": 2429,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "f6f1ceab3e4b0f6629eb93375ef2d510128b6bec5a0f88fe8f2348ec7c15d61d",
+        "prefix_sha256": "ee95228793a74db84b4a7c4a1ec55af3a0812577c8f59d1f43814759d170711a",
+        "owned_sha256": "421e4d57c479a1f032f0616624a98afcc95f36ab558ec4e8df74054599af3e79",
+        "stored_suffix_sha256": "d250e756158beb7a7924eea8f571557f9bc563cda7a76984c6586403fb329fc7",
+        "omitted_history_sha256": "e1cabc99c0dc0c848d9065370c9c78729e0399659836a9e6c9a9339105cff982"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "6c24d1a0684fccbf31c29b19e4f3a27f4ccad63bf235840ef499a2abf4f07380"
+    },
+    {
+      "history_index": 72,
+      "cluster_index": 24,
+      "variant_index": 0,
+      "history_binding_sha256": "4d790d499609d768a921252830778c5ec3b1ef74c0b70e54ee3b7622a58c4947",
+      "geometry": {
+        "original_token_count": 3160,
+        "prefix_token_count": 1189,
+        "owned_token_count": 405,
+        "stored_suffix_token_count": 1566,
+        "omitted_history_token_count": 2755,
+        "owned_start": 1189,
+        "owned_end_exclusive": 1594,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "0b98168ce44d7a0f7865fce14896841f3808fd610468b3554e4f6caa68e94a63",
+        "prefix_sha256": "7f507b431973b62537ff84c4d68c114e34351e4b8a6d19fcbec86a28ba6fd320",
+        "owned_sha256": "34213d685fa6f029950822378a283ee90234871d686af18ca7eafdf67672b263",
+        "stored_suffix_sha256": "d06db2a45e532add2ad68e6d48c8dce4fd15196e5571a26f8c37323f5ff4a9ba",
+        "omitted_history_sha256": "ee58ef759d6479d092c0c7e7aecf41f2adfdc91143539f641f26bf4099794597"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "5f4bd7f46b4f6d81db62238b45e5ebdd8840c2eed8619ddcf20bf9673f0fa2cc"
+    },
+    {
+      "history_index": 73,
+      "cluster_index": 24,
+      "variant_index": 1,
+      "history_binding_sha256": "3468edb08dfbff375a3d1eb05105a2e7f5331751727ccbe221b03841526cc66b",
+      "geometry": {
+        "original_token_count": 3290,
+        "prefix_token_count": 1189,
+        "owned_token_count": 405,
+        "stored_suffix_token_count": 1696,
+        "omitted_history_token_count": 2885,
+        "owned_start": 1189,
+        "owned_end_exclusive": 1594,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "c3f21b0f04b0d4aa3d57281365f6fc8a44f25cb5a6f9f920bbb42a9dd6c1b8a4",
+        "prefix_sha256": "7f507b431973b62537ff84c4d68c114e34351e4b8a6d19fcbec86a28ba6fd320",
+        "owned_sha256": "34213d685fa6f029950822378a283ee90234871d686af18ca7eafdf67672b263",
+        "stored_suffix_sha256": "d21498b04e0afd83b351d8d06c97eae45dc318019dba0abc9bd5573cbba98d7b",
+        "omitted_history_sha256": "b99f0ed83eff159ba307efe8b9484a3dab34a5fb157d8c01c3ba5d7eb32ccc15"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "23ee33fba5e74388e1b7d413eb0dc8a8f219074ff27b4460b83c1a4790d1c870"
+    },
+    {
+      "history_index": 74,
+      "cluster_index": 24,
+      "variant_index": 2,
+      "history_binding_sha256": "1528499d9cf65deec1617208e9e5ce93e3b482978fe78322b2b55eaba909c721",
+      "geometry": {
+        "original_token_count": 3038,
+        "prefix_token_count": 1189,
+        "owned_token_count": 405,
+        "stored_suffix_token_count": 1444,
+        "omitted_history_token_count": 2633,
+        "owned_start": 1189,
+        "owned_end_exclusive": 1594,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "5a6529e8ace43ea450f8dcf55f48ed975d1ac05d414d65ef8c52291856b210ed",
+        "prefix_sha256": "7f507b431973b62537ff84c4d68c114e34351e4b8a6d19fcbec86a28ba6fd320",
+        "owned_sha256": "34213d685fa6f029950822378a283ee90234871d686af18ca7eafdf67672b263",
+        "stored_suffix_sha256": "04db88e2a06fd92fa2f38abec79856286637c8e3fab6242a1d68c4d52e098a49",
+        "omitted_history_sha256": "c8fa15a6f53323bf84125a552764d7226173a9a1d332812b7df01773ae89658d"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "4f09bcc6974e5c0072d9620c3f4331f9096091066ef7f604f1719d8f95bea906"
+    },
+    {
+      "history_index": 75,
+      "cluster_index": 25,
+      "variant_index": 0,
+      "history_binding_sha256": "9fd6e399cb96333bcd8ff5f5f0f720a3872292d3bbea7a941d59c1c0aea1b133",
+      "geometry": {
+        "original_token_count": 3456,
+        "prefix_token_count": 1435,
+        "owned_token_count": 607,
+        "stored_suffix_token_count": 1414,
+        "omitted_history_token_count": 2849,
+        "owned_start": 1435,
+        "owned_end_exclusive": 2042,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "5db3d62b78a5b92b838a119190c5dab99c1f87507310bb9ba554f0b9a889f410",
+        "prefix_sha256": "25a9c9cf838c5043824c3aefede1f8eb2e509702c02ba54448d6cd8c9791b4ec",
+        "owned_sha256": "cfb7f327a0842551414169f550fcd6a8ed62600485a061e63df3132f9c4c6c10",
+        "stored_suffix_sha256": "736b4f425b9eb13d1e814b4b0aa319bd8695b72dcd66a9cca408e0c6dbc9232c",
+        "omitted_history_sha256": "f26480ae6088737cd7abb9df3a7132111cf825f9c2a6b96cffb2fc3f379cf800"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "a2a65109ab938ebe38f0fe0b14b51ab28b392200154ad596998648a78c465e7e"
+    },
+    {
+      "history_index": 76,
+      "cluster_index": 25,
+      "variant_index": 1,
+      "history_binding_sha256": "bba1aad15d74fc86f1049e48db3e2a7882a258ce11616301b41917cce3684a8a",
+      "geometry": {
+        "original_token_count": 3700,
+        "prefix_token_count": 1435,
+        "owned_token_count": 607,
+        "stored_suffix_token_count": 1658,
+        "omitted_history_token_count": 3093,
+        "owned_start": 1435,
+        "owned_end_exclusive": 2042,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "c42fc8eff20c7065a51a22ab1fcc99ed85d3021ccbf3278989a1bb8fa8b77535",
+        "prefix_sha256": "25a9c9cf838c5043824c3aefede1f8eb2e509702c02ba54448d6cd8c9791b4ec",
+        "owned_sha256": "cfb7f327a0842551414169f550fcd6a8ed62600485a061e63df3132f9c4c6c10",
+        "stored_suffix_sha256": "2499b0e7f26fd94f431a39ebc0e7e71f5061a2163ab07ede5a7df33c4b04e794",
+        "omitted_history_sha256": "6b472e9d3ee3449aa80afe6ec4739b1ab204d1256e8f0d3209b9137e7ba08ab9"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "2816da5168c2f61fd3272e693cf5ddf761d8190651cde7cdc566f658724762c5"
+    },
+    {
+      "history_index": 77,
+      "cluster_index": 25,
+      "variant_index": 2,
+      "history_binding_sha256": "6d859ffbfac5255c67cb11d69c6aed2eb44d19c52ac28e0bde9f4386ba6b5f4d",
+      "geometry": {
+        "original_token_count": 3548,
+        "prefix_token_count": 1435,
+        "owned_token_count": 607,
+        "stored_suffix_token_count": 1506,
+        "omitted_history_token_count": 2941,
+        "owned_start": 1435,
+        "owned_end_exclusive": 2042,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "c133917462ac82bd00472474da2e52f6ab4be4eab11c91e9273b9b84c4bc6234",
+        "prefix_sha256": "25a9c9cf838c5043824c3aefede1f8eb2e509702c02ba54448d6cd8c9791b4ec",
+        "owned_sha256": "cfb7f327a0842551414169f550fcd6a8ed62600485a061e63df3132f9c4c6c10",
+        "stored_suffix_sha256": "6b9fbf5bfc6ddf4e7737f7e65ae3e45290ae346c29105f0fb3c58b85b099f65e",
+        "omitted_history_sha256": "e343c25c3efb0c4b3ea9a82a7ac7db109c79c25fb22f12acfaf8b6fa6fca1e5c"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "edfa5ce7c563a905eda6397c63183afc3cf0d3e64f8e4708ea487b1334e4e9cb"
+    },
+    {
+      "history_index": 78,
+      "cluster_index": 26,
+      "variant_index": 0,
+      "history_binding_sha256": "cde307746c7aea34c36ce7594cd5db1c94adc4077d852a0a84fbae7e3f677bbc",
+      "geometry": {
+        "original_token_count": 3768,
+        "prefix_token_count": 1726,
+        "owned_token_count": 608,
+        "stored_suffix_token_count": 1434,
+        "omitted_history_token_count": 3160,
+        "owned_start": 1726,
+        "owned_end_exclusive": 2334,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "fa13e7ebfc1db12ff3ce90041ede247eea8188234bf93f9d34677491e466ddfc",
+        "prefix_sha256": "2ef9a92c782711cc7ac9e8a2ebf1fbff053fbdbb51b4a0a71b48433cc7c0b404",
+        "owned_sha256": "5dd79de28da4fbb2797310ea82286e4ca5069a6fa018ff505093be0c1cf1520f",
+        "stored_suffix_sha256": "5a0a996a4c0eae23388b4043cd8db30473a43f8952d3c3726c4dc80ee82fc995",
+        "omitted_history_sha256": "c500546e0572c5800f73aeeaa6f9bb7446a4e62beaa96e54a79732813cf6e633"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "ec42b09d62a60c80224728412e8331c77d7f52837236c67f1c953c2b673b1312"
+    },
+    {
+      "history_index": 79,
+      "cluster_index": 26,
+      "variant_index": 1,
+      "history_binding_sha256": "971f240d1f95fc4490a52f0e85c5e0fce44430c9d1f78b1554f04d97172175dc",
+      "geometry": {
+        "original_token_count": 4007,
+        "prefix_token_count": 1726,
+        "owned_token_count": 608,
+        "stored_suffix_token_count": 1673,
+        "omitted_history_token_count": 3399,
+        "owned_start": 1726,
+        "owned_end_exclusive": 2334,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "ae8caf8e96d119b26a5a34a62611f9436e7f7f080f8d0e6c9d70a96bfb66478b",
+        "prefix_sha256": "2ef9a92c782711cc7ac9e8a2ebf1fbff053fbdbb51b4a0a71b48433cc7c0b404",
+        "owned_sha256": "5dd79de28da4fbb2797310ea82286e4ca5069a6fa018ff505093be0c1cf1520f",
+        "stored_suffix_sha256": "645e79d0e3426b808550de3e262537830c6f0db6b9b93a2f560c54ae65e05757",
+        "omitted_history_sha256": "69ac814e564d090876870e6206d4073ead193fc09bae39f80176b491c70f0876"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "67048915d2a285f48309114dc5252a6b1894eb1b60a9822f11eaa16b15b61c4c"
+    },
+    {
+      "history_index": 80,
+      "cluster_index": 26,
+      "variant_index": 2,
+      "history_binding_sha256": "82415e686023edae9dc79603dd5acfd6d05913fb3a59a12561fd441f7ecb634b",
+      "geometry": {
+        "original_token_count": 3784,
+        "prefix_token_count": 1726,
+        "owned_token_count": 608,
+        "stored_suffix_token_count": 1450,
+        "omitted_history_token_count": 3176,
+        "owned_start": 1726,
+        "owned_end_exclusive": 2334,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "2041f1a8f44094e6a4f9ae6380e69e6e0f3d63ff3785998e98bfb164290084bd",
+        "prefix_sha256": "2ef9a92c782711cc7ac9e8a2ebf1fbff053fbdbb51b4a0a71b48433cc7c0b404",
+        "owned_sha256": "5dd79de28da4fbb2797310ea82286e4ca5069a6fa018ff505093be0c1cf1520f",
+        "stored_suffix_sha256": "a8f20d984cb8eb5e332b5719fe2d8a8eec2af615b85bdd94d7b6a8efd32ea7e8",
+        "omitted_history_sha256": "7e22ce45b43c54c02cecc83926fc228e32e59e4e7874bdf20be84b57de2e554a"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "dacb4090dda8adb03bf2cd4605e7e1ed64607c80e20215acf8e9fe6ffde48f3c"
+    },
+    {
+      "history_index": 81,
+      "cluster_index": 27,
+      "variant_index": 0,
+      "history_binding_sha256": "0969f4151fc62a6569d0f784157a17be326d9455a2be2efd3681e7177817066d",
+      "geometry": {
+        "original_token_count": 3884,
+        "prefix_token_count": 1668,
+        "owned_token_count": 533,
+        "stored_suffix_token_count": 1683,
+        "omitted_history_token_count": 3351,
+        "owned_start": 1668,
+        "owned_end_exclusive": 2201,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "f5dde5e5eb3f25a8ebceef1126c3e0f9f4785900822c8e2b5df101f32385427c",
+        "prefix_sha256": "cb2985d1763b5409c6af2f0a3afbe4a95f9cde97bef284b799070c8b0472a467",
+        "owned_sha256": "6b2a0c04a3bd633c9fd35368c4213297e7e355a52e5044b73bd187eae9ca1fae",
+        "stored_suffix_sha256": "0ad884bb2aa0719eeb19f6bd01995a2e5d130825e6de67495bebe90c21ce8d5c",
+        "omitted_history_sha256": "6c486719ba16957cfcb58229b57b0e25e9c658fcc80e5b0a28d25a8e4f5ecd4e"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "5d282a4615b7b26e059a461753699269275da39856dcd1df2561b79f3d20b0a6"
+    },
+    {
+      "history_index": 82,
+      "cluster_index": 27,
+      "variant_index": 1,
+      "history_binding_sha256": "3522b19dc310f2497a2c867310ace703bdb54b60f81dbd9abebfaf8855f59d95",
+      "geometry": {
+        "original_token_count": 3784,
+        "prefix_token_count": 1668,
+        "owned_token_count": 533,
+        "stored_suffix_token_count": 1583,
+        "omitted_history_token_count": 3251,
+        "owned_start": 1668,
+        "owned_end_exclusive": 2201,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "06c79ea828c8f4f55fd78e834c531b0daee9c83afdaf2cacdb038f389a429bd0",
+        "prefix_sha256": "cb2985d1763b5409c6af2f0a3afbe4a95f9cde97bef284b799070c8b0472a467",
+        "owned_sha256": "6b2a0c04a3bd633c9fd35368c4213297e7e355a52e5044b73bd187eae9ca1fae",
+        "stored_suffix_sha256": "93599602fbb9613e2ab0f117ef7b9d3c49a5d24a2959d08ee4c6a926f32bd620",
+        "omitted_history_sha256": "29ea32b9553b9c4d2c3b6f96256973ae723c153747fb1a0f1ed0c840369ee783"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "67eba1339e2a1c03570f91fd8d8c5ec1289115298822a4db2683848c22213f80"
+    },
+    {
+      "history_index": 83,
+      "cluster_index": 27,
+      "variant_index": 2,
+      "history_binding_sha256": "936862f812ea07a36b27cfb49f1cf53fecff5a13cfba1ee4f8b617fa3426d9cb",
+      "geometry": {
+        "original_token_count": 3891,
+        "prefix_token_count": 1668,
+        "owned_token_count": 533,
+        "stored_suffix_token_count": 1690,
+        "omitted_history_token_count": 3358,
+        "owned_start": 1668,
+        "owned_end_exclusive": 2201,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "ab5c18e2b8ecd49c9da7b2b6cb48582e6e766ab1103a8e77eefa996817733e67",
+        "prefix_sha256": "cb2985d1763b5409c6af2f0a3afbe4a95f9cde97bef284b799070c8b0472a467",
+        "owned_sha256": "6b2a0c04a3bd633c9fd35368c4213297e7e355a52e5044b73bd187eae9ca1fae",
+        "stored_suffix_sha256": "b22dc3958c1efe0341ee82bb053054053fcd61741a4c4a7155d8589c5eb0554c",
+        "omitted_history_sha256": "372f82bbf75a292c055820096dc4d8bcd337a8d9e7375b68df3194f5d4f4c33e"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "329e74fd0ae33fba2e2ce5991b8f34455498832e1b4e44b3c8633d9d7bb5a5cf"
+    },
+    {
+      "history_index": 84,
+      "cluster_index": 28,
+      "variant_index": 0,
+      "history_binding_sha256": "b267d1f0a905f11d8dc71ddbcf4a93bd11ee5333287a41ee27c66581a51aac29",
+      "geometry": {
+        "original_token_count": 3764,
+        "prefix_token_count": 1591,
+        "owned_token_count": 638,
+        "stored_suffix_token_count": 1535,
+        "omitted_history_token_count": 3126,
+        "owned_start": 1591,
+        "owned_end_exclusive": 2229,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "7be012c232c84095a77d6a3b273aa5b656b2c5eddf589a0b96d5648612e4bab2",
+        "prefix_sha256": "8ddc51500e7516fef67dd15a780797b46fc129799aecc7a80848dcb24529ba67",
+        "owned_sha256": "9a249036d98387b53abd6d88c2b68b6c6b5b82785071477c751957c20ccadad8",
+        "stored_suffix_sha256": "0d8463b30eaf4f7f9dd92320834ea3e70f112ba8b4f39c8165c8c434ef11375a",
+        "omitted_history_sha256": "f2453adcfb1610484f9bdbf3ad61525925e3cb0b71137b4d048ef1ff8b04ecee"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "091ec5e87d73a79776e7aa43cf93b4442b4af3e7feeb073b79153ba71fd08597"
+    },
+    {
+      "history_index": 85,
+      "cluster_index": 28,
+      "variant_index": 1,
+      "history_binding_sha256": "ede4818f95bde5e3f917863dc3af57c59e8fe606dd6116d5f1d7dbe536649105",
+      "geometry": {
+        "original_token_count": 3876,
+        "prefix_token_count": 1591,
+        "owned_token_count": 638,
+        "stored_suffix_token_count": 1647,
+        "omitted_history_token_count": 3238,
+        "owned_start": 1591,
+        "owned_end_exclusive": 2229,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "306d2f8c47c7c0aaa41f02421daac8ee39a0c8c1472b890b44e506dfe8d6ee14",
+        "prefix_sha256": "8ddc51500e7516fef67dd15a780797b46fc129799aecc7a80848dcb24529ba67",
+        "owned_sha256": "9a249036d98387b53abd6d88c2b68b6c6b5b82785071477c751957c20ccadad8",
+        "stored_suffix_sha256": "2f3a7983c04f8055cc6e9561d223bb1a1ce512ad7815c7a151111f548d2f34d8",
+        "omitted_history_sha256": "0745fa442815d545f42fa15faa5e79ae90758d1986849f4734da01b4a91fc175"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "030a079bece9b7e213efb01a2453cbdde558e9dc3294d55cd8379f54f4c86ae6"
+    },
+    {
+      "history_index": 86,
+      "cluster_index": 28,
+      "variant_index": 2,
+      "history_binding_sha256": "25ef32d9900403b6c918c380f8751a1d72731860ef2bdf9427fd267ba88767af",
+      "geometry": {
+        "original_token_count": 3928,
+        "prefix_token_count": 1591,
+        "owned_token_count": 638,
+        "stored_suffix_token_count": 1699,
+        "omitted_history_token_count": 3290,
+        "owned_start": 1591,
+        "owned_end_exclusive": 2229,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "e4d53e66291f8c0653be10bcb3c22cb1e48228392483cd71358523caa6c80e57",
+        "prefix_sha256": "8ddc51500e7516fef67dd15a780797b46fc129799aecc7a80848dcb24529ba67",
+        "owned_sha256": "9a249036d98387b53abd6d88c2b68b6c6b5b82785071477c751957c20ccadad8",
+        "stored_suffix_sha256": "b9e74474985165795b50bb682822b1b80f05ba7182896e414ebbdbdc288b1176",
+        "omitted_history_sha256": "9c3ca890c2770831316fd2a531775dc141dde8b93a7e29b6336130188b022005"
+      },
+      "suffix_scan_stratum": "contaminated",
+      "plan_sha256": "f05e5e2b8841eba4e913651dd5eda9a97fc691372b8853402a77134ce907ba34"
+    },
+    {
+      "history_index": 87,
+      "cluster_index": 29,
+      "variant_index": 0,
+      "history_binding_sha256": "2178320edb8542ee2e4b7dc80f4c1ec64b26d10d94aca48fe7b5d256acce82d3",
+      "geometry": {
+        "original_token_count": 4029,
+        "prefix_token_count": 1735,
+        "owned_token_count": 720,
+        "stored_suffix_token_count": 1574,
+        "omitted_history_token_count": 3309,
+        "owned_start": 1735,
+        "owned_end_exclusive": 2455,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "e29dae1007b4c9bd08980941f6c0a07239cf994a33c5daa95f73c35d954781ee",
+        "prefix_sha256": "21b65c68ac2dec7f74fee22d33e7e592f41c7c5bbb29baa0fc74d1ab9e7b2dea",
+        "owned_sha256": "eace5c8e451b4ce3ec585ab14efc0ea899b7fc576b7972beb01814e130710845",
+        "stored_suffix_sha256": "575a25b1ca5b4f45bfebdf9e2caa3be75fd9fe96e88336e96e4ccd41ff31be95",
+        "omitted_history_sha256": "494de88a04b46e26b7f946e0c25ac2abbe54d0db3d4b691062b872854f8db5e4"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "6d901b6bded254d834a6abe16b7c8366e4bbd19e9e59587ed8fdbf850d22a2c4"
+    },
+    {
+      "history_index": 88,
+      "cluster_index": 29,
+      "variant_index": 1,
+      "history_binding_sha256": "f68791f66d76fc7de25b8ccbeb5de718248d6d8f484e6a6400bb98d232fc7c8a",
+      "geometry": {
+        "original_token_count": 3852,
+        "prefix_token_count": 1735,
+        "owned_token_count": 720,
+        "stored_suffix_token_count": 1397,
+        "omitted_history_token_count": 3132,
+        "owned_start": 1735,
+        "owned_end_exclusive": 2455,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "af27fb973c4584ce141820ab31e6ced4d7e4e1c9ff18a1617a341d02a3f5235f",
+        "prefix_sha256": "21b65c68ac2dec7f74fee22d33e7e592f41c7c5bbb29baa0fc74d1ab9e7b2dea",
+        "owned_sha256": "eace5c8e451b4ce3ec585ab14efc0ea899b7fc576b7972beb01814e130710845",
+        "stored_suffix_sha256": "e4f65bdd1201db64cc0efeab929ce0bddff94286a123a5c668ac65d584f75065",
+        "omitted_history_sha256": "9c73103b5753e8f13b03c7101cee4e71a237fe08bb2c461b3fc1400646db3f82"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "5f4c3f00496aa18c9168945861f218e363b8d55446a138f47e54d2bd3d0ab34c"
+    },
+    {
+      "history_index": 89,
+      "cluster_index": 29,
+      "variant_index": 2,
+      "history_binding_sha256": "19d4c958c6aad278a9123e61775c0924a8af623818301c534af73dd1216e9395",
+      "geometry": {
+        "original_token_count": 4090,
+        "prefix_token_count": 1735,
+        "owned_token_count": 720,
+        "stored_suffix_token_count": 1635,
+        "omitted_history_token_count": 3370,
+        "owned_start": 1735,
+        "owned_end_exclusive": 2455,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "42667741578f12d428997d3994aa6c7d72dca6bd5801547f4fd0314d40e586f2",
+        "prefix_sha256": "21b65c68ac2dec7f74fee22d33e7e592f41c7c5bbb29baa0fc74d1ab9e7b2dea",
+        "owned_sha256": "eace5c8e451b4ce3ec585ab14efc0ea899b7fc576b7972beb01814e130710845",
+        "stored_suffix_sha256": "9cf19e1202cf2dce12d504bc1fdb456bfadd7447674db585ce1fd1cf64b1bab6",
+        "omitted_history_sha256": "3b9ea8d3302141739529e26fe0749a1e2c647957fbeac0d8a52636ef3e24187c"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "48051bc69e58c47003a769ae91c131cac56e07b4b3ea65f9a88e0a186815a73b"
+    },
+    {
+      "history_index": 90,
+      "cluster_index": 30,
+      "variant_index": 0,
+      "history_binding_sha256": "69f1a19344f78c4144eae67adba70de4fdd80e9c23b8c47fed779dbd1f8d1c7c",
+      "geometry": {
+        "original_token_count": 4047,
+        "prefix_token_count": 2129,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1196,
+        "omitted_history_token_count": 3325,
+        "owned_start": 2129,
+        "owned_end_exclusive": 2851,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "dab11b9f750a90352af3da9a9dfd91854aaa9e5891e42cbdd530262d2524078a",
+        "prefix_sha256": "61866ceaf5b56fc557637964b37ece0d8b75417783a73aa19f1f393a0106e242",
+        "owned_sha256": "2e9d8386f2e108c6173febfeb6d6aaf0fbc8280dca5c8fd8a1d41c46cd5dcf85",
+        "stored_suffix_sha256": "d1862407e4764e6e94dffbe0a74cffef7c58015baed8c90abf35bdb94bdafa56",
+        "omitted_history_sha256": "12c46b6ec0fdce46bd74bdbe8ecc0084f6cff90a159627bec36a34ad183e2972"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "6033223f46f5d698aec0c3e7d12eac77c0c2433d22b4f9ae3be8013e450af071"
+    },
+    {
+      "history_index": 91,
+      "cluster_index": 30,
+      "variant_index": 1,
+      "history_binding_sha256": "fa81cb77af4a24dc2ec476b1c784b716ea2370cfe23d1f5481acaa02c95aee85",
+      "geometry": {
+        "original_token_count": 4510,
+        "prefix_token_count": 2129,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1659,
+        "omitted_history_token_count": 3788,
+        "owned_start": 2129,
+        "owned_end_exclusive": 2851,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "13b23894c3a0e7bd67eb8f90e3ac5f4058904e783b2d109e226fdc6e48847b4d",
+        "prefix_sha256": "61866ceaf5b56fc557637964b37ece0d8b75417783a73aa19f1f393a0106e242",
+        "owned_sha256": "2e9d8386f2e108c6173febfeb6d6aaf0fbc8280dca5c8fd8a1d41c46cd5dcf85",
+        "stored_suffix_sha256": "2c0111940d79f99e9e160cadbc6dc328c02357a5f8f6ca6266723f66a3507736",
+        "omitted_history_sha256": "4999e964a262f4194374ebb964aaf8ec22be58372a3fae760364d80409576b19"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "25ab91f3c82cfcbe33e5980e89d6dbe67586dd01f855dd42eb5372c2634dd7d9"
+    },
+    {
+      "history_index": 92,
+      "cluster_index": 30,
+      "variant_index": 2,
+      "history_binding_sha256": "c836e8afc099ae3f3ae0047d7a8dd69d866cdc6ab5e137c890bdd8c6988b475d",
+      "geometry": {
+        "original_token_count": 4311,
+        "prefix_token_count": 2129,
+        "owned_token_count": 722,
+        "stored_suffix_token_count": 1460,
+        "omitted_history_token_count": 3589,
+        "owned_start": 2129,
+        "owned_end_exclusive": 2851,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "cbc5d9eb0f1018ead709dbc9bba9fff3bbd3716cc5bf2e17a6071c604678f6d8",
+        "prefix_sha256": "61866ceaf5b56fc557637964b37ece0d8b75417783a73aa19f1f393a0106e242",
+        "owned_sha256": "2e9d8386f2e108c6173febfeb6d6aaf0fbc8280dca5c8fd8a1d41c46cd5dcf85",
+        "stored_suffix_sha256": "a1cbcbd90819ee26ee29a10efa780962fb13b39d57dadc27ea80b64cb8232ffc",
+        "omitted_history_sha256": "cb4a65576eb069e83adfe152f1ce7404735eed302558048c81242dd986954005"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "d937766c3397dcb347ad1dcbbd1e203e02000660cc0317796e164d355a9de65e"
+    },
+    {
+      "history_index": 93,
+      "cluster_index": 31,
+      "variant_index": 0,
+      "history_binding_sha256": "e3cf718193cff7e8eb326946e169daa0e0e48aede1e627c62d1adf5057d93b56",
+      "geometry": {
+        "original_token_count": 2847,
+        "prefix_token_count": 1057,
+        "owned_token_count": 331,
+        "stored_suffix_token_count": 1459,
+        "omitted_history_token_count": 2516,
+        "owned_start": 1057,
+        "owned_end_exclusive": 1388,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "343d2f0b079c702e4a65fc861c85f0610920188b408e356aac60b041a7ded4dc",
+        "prefix_sha256": "b8ef03e6f2b25821ce186c88e4176341c421b0df6d51082bad1eef808277e02b",
+        "owned_sha256": "a93d9347565ee057bb1b82a956bf580ec7f7505d98e716be61475cca8fbbc490",
+        "stored_suffix_sha256": "34ef03b33cf946f1d5c99d250bb2120dba36d0f4fcfac19dce16b9cadb300c2d",
+        "omitted_history_sha256": "3b73838e0b547e196241a280d0ca2d5ece65efdffe17b7476ce6493bfadd5984"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "9bb07655a6109a8ed59147041257969e108bf8a777e211795460b38dd3b2fb90"
+    },
+    {
+      "history_index": 94,
+      "cluster_index": 31,
+      "variant_index": 1,
+      "history_binding_sha256": "bb7305951c78b56fc36379fb1144b51e0b56862aa447e387d7cfc19eb153f411",
+      "geometry": {
+        "original_token_count": 3001,
+        "prefix_token_count": 1057,
+        "owned_token_count": 331,
+        "stored_suffix_token_count": 1613,
+        "omitted_history_token_count": 2670,
+        "owned_start": 1057,
+        "owned_end_exclusive": 1388,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "cf47d8fed3fef6ad8b41bc457af8dcc4ad8dae8b6122dc8c05487c0f213d191e",
+        "prefix_sha256": "b8ef03e6f2b25821ce186c88e4176341c421b0df6d51082bad1eef808277e02b",
+        "owned_sha256": "a93d9347565ee057bb1b82a956bf580ec7f7505d98e716be61475cca8fbbc490",
+        "stored_suffix_sha256": "99a00a41ba0a7b9542c11c8146a6550f5ab3b173ce782ff717eb3fa9b427a329",
+        "omitted_history_sha256": "adcf112f6e7d2a8d8e4ceb3d3463189a706a9fa286be1aef78b7a484343549d7"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "216f5fb81e485da2e4da864801c93062642cee1d12ede2b8a952e7fd8a8d6e2c"
+    },
+    {
+      "history_index": 95,
+      "cluster_index": 31,
+      "variant_index": 2,
+      "history_binding_sha256": "8c0be2764ce57cb50684e04e21f8d0981bc7e40d2d8e0203473e632fcd737d7a",
+      "geometry": {
+        "original_token_count": 4166,
+        "prefix_token_count": 1057,
+        "owned_token_count": 331,
+        "stored_suffix_token_count": 2778,
+        "omitted_history_token_count": 3835,
+        "owned_start": 1057,
+        "owned_end_exclusive": 1388,
+        "owned_range_complete_and_contiguous": true,
+        "original_equals_prefix_owned_suffix": true,
+        "omitted_equals_prefix_suffix": true,
+        "stored_suffix_sliced_from_original": true
+      },
+      "hashes": {
+        "original_sha256": "a372a13ed8ea7b52bf7a64f14da23c21cbb5235837f9334516a5a13e2fc21fb4",
+        "prefix_sha256": "b8ef03e6f2b25821ce186c88e4176341c421b0df6d51082bad1eef808277e02b",
+        "owned_sha256": "a93d9347565ee057bb1b82a956bf580ec7f7505d98e716be61475cca8fbbc490",
+        "stored_suffix_sha256": "a0f4637bd5d3be84b70093825fdda4f4fb68150b8e21ba8596f99aca2e109170",
+        "omitted_history_sha256": "8260c425a52d1287a282514d1c0a633876bb24afea956dc91152578a7340edfb"
+      },
+      "suffix_scan_stratum": "clean",
+      "plan_sha256": "ff5a608252470782e8d585ac0fb965ea43a4c7db0f846644d2d9416b47c83767"
+    }
+  ],
+  "plans_sha256": "301fb3560a394f3bbb55b7f3ad2e2c3650415db483cf43d1e492a4748d0feaec",
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "0b50e1c68a4e73201b0a1f56b74ebc2f6c900d7f453b804131982885efa36a6e"
+  }
+}

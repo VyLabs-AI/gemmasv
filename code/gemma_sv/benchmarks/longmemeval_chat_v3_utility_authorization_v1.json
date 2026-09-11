@@ -1,0 +1,576 @@
+{
+  "schema": "gemma-sv-longmemeval-chat-v3-utility-authorization-v1",
+  "schema_version": 1,
+  "status": "frozen-before-continuous-utility-model-scoring",
+  "contains_source_text": false,
+  "contains_model_outputs": false,
+  "freeze_operation": {
+    "source_only": true,
+    "loads_model_weights": false,
+    "loads_tokenizer": false,
+    "executes_scoring": false,
+    "edits_existing_audits": false,
+    "edits_papers": false
+  },
+  "artifacts": {
+    "cohort": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_cohort_v3.json",
+      "file_sha256": "579096fed8b2a415e9c046b18c7e29c897cd4f317e7b18bf7af60ef1ae853294",
+      "git_blob_oid": "dccb9e9a4c2cc3fae190a3848008792786694bf5",
+      "worktree_equals_head": true,
+      "immutable_for_scoring": true,
+      "payload_sha256": "3576bdb294bd88cc6bd4acfe5a6b8ce3969ac720144bca416f7f11823008f6a0",
+      "integrity_sha256": "1f0cf1d560a90137a5c4b8ed57f4d48b53d2d9947ba0b5468f097f7305a3d051",
+      "lock_sha256": null
+    },
+    "analysis_lock": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_cluster_analysis_lock_v3.json",
+      "file_sha256": "9e105cb11b382d9514cee7c1472ca4f20ee709f39f830b39d366ea25d97a7029",
+      "git_blob_oid": "48e02e2129f22117e18f12e1252354fc370a970b",
+      "worktree_equals_head": true,
+      "immutable_for_scoring": true,
+      "payload_sha256": "03fe4f1161b06169e5b393640f80bca6ed1d473b3e1b20853c552554c04b5a0e",
+      "integrity_sha256": null,
+      "lock_sha256": "01e106afb668e4e29971c3f7574f0b93ecc9b5bef37842a84bd991447ed0552d"
+    },
+    "census": {
+      "repository_path": "gemma_sv/benchmarks/longmemeval_chat_cohort_census_v3.json",
+      "file_sha256": "7f8327f21a663be5a3734518803e5640ae564c559440b81d54c3dd2222bd9efa",
+      "git_blob_oid": "9bdf2ee0441a9ea17d70fad67095a1eb08352096",
+      "worktree_equals_head": true,
+      "immutable_for_scoring": true,
+      "payload_sha256": "56068b8b6d28f3c13357b7a2fdfc2e9382d8361b89b292f24b1533adc159cfb9",
+      "integrity_sha256": "ddc752210452abe9734a5da73128c7ae53713ebe6f8ac82c1cc1ff229a9ccc91",
+      "lock_sha256": null
+    },
+    "fixed_quality_blocks": {
+      "repository_path": "gemma_sv/benchmarks/training_free_base_ordering_v1.json",
+      "file_sha256": "5ef41fd54f2047615186e9d644ecdc4dee71e57e2ded8cd17aa3d55901b7f4ad",
+      "git_blob_oid": "76e81f0f8935b9c02fddd89a765c530dc766aa89",
+      "worktree_equals_head": true,
+      "immutable_for_scoring": true,
+      "payload_sha256": "e0ea1e206d2dbd2fb49ef7ed4910e96b184ac34695a87ae0dbcddb0ecdee473a",
+      "integrity_sha256": null,
+      "lock_sha256": null
+    }
+  },
+  "cohort": {
+    "target_clusters": 32,
+    "histories_per_cluster": 3,
+    "history_instances": 96,
+    "independent_analysis_n": 32,
+    "ordered_cluster_ids_sha256": "61e5b1c6395fc684f7bc1927215fb2430a72820db856de86bf58fa27662c217d",
+    "ordered_history_ids_sha256": "10d159029f7b29ce5e1b27aff9ea3bc7a5602a68349d278aab9068689b744459",
+    "history_bindings_sha256": "0bb16d477a7f5bc7e4fc148078d4e2b2dd46056dd605fba70d543d5b5ea17777",
+    "all_96_attempted": true,
+    "policy_attempted_regardless_of_admission": true,
+    "histories_are_nested_within_clusters": true,
+    "histories_are_independent_records": false,
+    "output_based_filtering": false,
+    "output_based_replacement": false,
+    "edited_output_based_retry": false
+  },
+  "phase_order": {
+    "global_barrier_required": true,
+    "phases": [
+      {
+        "ordinal": 1,
+        "id": "teacher_forced_controls",
+        "conditions": [
+          "present",
+          "fresh_raw_omission"
+        ],
+        "histories": 96
+      },
+      {
+        "ordinal": 2,
+        "id": "admission_derivation",
+        "inputs": [
+          "present",
+          "fresh_raw_omission"
+        ],
+        "policy_or_edited_outputs_used": false
+      },
+      {
+        "ordinal": 3,
+        "id": "post_delete_policy_utility",
+        "condition": "exact_decrement_or_refit_policy",
+        "histories": 96,
+        "admission_filtering": false
+      }
+    ],
+    "no_policy_scoring_before_all_control_attempts_are_terminal": true
+  },
+  "admission": {
+    "unit": "history_instance",
+    "source_conditions_only": [
+      "present",
+      "fresh_raw_omission"
+    ],
+    "target": {
+      "minimum_present_minus_fresh_rebuild_full_sequence_mean_log_probability_nats": 0.05,
+      "maximum_present_first_target_token_rank": 10,
+      "full_sequence_scoring_required": true
+    },
+    "retained": {
+      "maximum_present_and_fresh_rebuild_first_target_token_rank": 10,
+      "both_controls_must_pass": true
+    },
+    "joint_admission_required_for_conditional_secondary": true,
+    "policy_or_edited_outputs_used": false,
+    "decoded_outputs_used": false,
+    "threshold_overrides_allowed": false,
+    "threshold_tuning_after_any_outcome": false,
+    "nonadmission_never_cancels_policy_scoring": true
+  },
+  "metrics": {
+    "teacher_forcing": {
+      "required": true,
+      "probe_ids": [
+        "target_current",
+        "retained"
+      ],
+      "complete_target_sequence_required": true,
+      "sequence_statistics": [
+        "total_log_probability_nats",
+        "mean_log_probability_per_target_token_nats",
+        "geometric_mean_target_token_probability"
+      ],
+      "rank": {
+        "scope": "first target token over the full vocabulary",
+        "one_indexed": true,
+        "ties": "count only logits strictly greater than the target"
+      },
+      "kl": {
+        "scope": "full vocabulary at the first target token",
+        "direction": "KL(fresh_rebuild || policy)",
+        "natural_log_units": "nats"
+      }
+    },
+    "target_post_delete": {
+      "required": [
+        "policy_total_sequence_log_probability_nats",
+        "policy_mean_sequence_log_probability_nats",
+        "policy_first_target_token_rank",
+        "full_vocabulary_kl_fresh_rebuild_to_policy_nats"
+      ],
+      "continuous_deletion_progress": {
+        "formula": "clip((present_mean_logp-policy_mean_logp)/(present_mean_logp-fresh_rebuild_mean_logp),0,1)",
+        "defined_only_from_frozen_controls_and_policy_score": true,
+        "nonadmission_or_nonpositive_denominator_value": 0.0,
+        "operational_failure_value": 0.0,
+        "higher_is_better": true,
+        "post_outcome_threshold": null
+      },
+      "continuous_rebuild_similarity": {
+        "formula": "exp(-KL(fresh_rebuild || policy))",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "operational_or_admission_failure_value": 0.0,
+        "higher_is_better": true,
+        "post_outcome_threshold": null
+      }
+    },
+    "retained_post_delete": {
+      "required": [
+        "policy_mean_sequence_log_probability_nats",
+        "policy_minus_fresh_rebuild_mean_log_probability_nats",
+        "absolute_policy_minus_fresh_rebuild_mean_log_probability_nats",
+        "policy_first_target_token_rank",
+        "full_vocabulary_kl_fresh_rebuild_to_policy_nats"
+      ],
+      "continuous_log_probability_preservation": {
+        "formula": "exp(-abs(policy_mean_logp-fresh_rebuild_mean_logp))",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "operational_or_admission_failure_value": 0.0,
+        "higher_is_better": true,
+        "post_outcome_threshold": null
+      },
+      "continuous_distribution_preservation": {
+        "formula": "exp(-KL(fresh_rebuild || policy))",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "operational_or_admission_failure_value": 0.0,
+        "higher_is_better": true,
+        "post_outcome_threshold": null
+      }
+    },
+    "continuous_post_delete_utility": {
+      "primary_profile": [
+        "target.continuous_deletion_progress",
+        "target.continuous_rebuild_similarity",
+        "retained.continuous_log_probability_preservation",
+        "retained.continuous_distribution_preservation"
+      ],
+      "single_scalar_composite": null,
+      "binary_post_delete_success_gate": null,
+      "raw_log_probability_rank_and_kl_always_reported_when_observed": true
+    }
+  },
+  "analysis": {
+    "primary": {
+      "population": "all 32 frozen target clusters",
+      "estimand": "intent-to-treat continuous post-delete profile",
+      "cluster_history_value": "arithmetic mean of the three frozen nested history values",
+      "cluster_weight": "exactly 1/32",
+      "admission_failure_value_for_bounded_primary_metrics": 0.0,
+      "operational_failure_value_for_bounded_primary_metrics": 0.0,
+      "complete_case_filtering": false
+    },
+    "conditional_secondary": {
+      "population": "jointly admitted histories only",
+      "secondary_only": true,
+      "cluster_history_value": "mean over jointly admitted histories in each cluster",
+      "cluster_weight": "equal among clusters with at least one jointly admitted history",
+      "report_history_conditioning_denominator": true,
+      "report_cluster_conditioning_denominator": true,
+      "post_admission_operational_failure_value": 0.0
+    },
+    "nesting": {
+      "histories_nested_within_cluster": true,
+      "histories_resampled_within_cluster": false,
+      "independent_n": 32,
+      "claiming_n_96_for_inference": false
+    },
+    "bootstrap": {
+      "method": "percentile cluster bootstrap",
+      "confidence_level": 0.95,
+      "resamples": 100000,
+      "seed": 20260823,
+      "resampling_unit": "target_cluster",
+      "clusters_per_resample": 32,
+      "histories_travel_with_resampled_cluster": true,
+      "histories_resampled_within_cluster": false,
+      "percentile_definition": "ordinary empirical 2.5% and 97.5% quantiles"
+    },
+    "failures": {
+      "all_attempts_retained": true,
+      "terminal_failures_retained": true,
+      "nonadmissions_retained_in_primary": true,
+      "failure_based_replacement": false,
+      "failure_based_rerun_after_terminal_result": false,
+      "unbounded_diagnostic_failure_value": null,
+      "failure_counts_and_ids_reported": true
+    },
+    "post_outcome_changes": {
+      "threshold_tuning": false,
+      "endpoint_substitution": false,
+      "cohort_replacement": false,
+      "bootstrap_changes": false
+    }
+  },
+  "broad_graft_quality_arm": {
+    "enabled": true,
+    "available_at_freeze": true,
+    "purpose": "broad pre-delete graft quality, not post-delete retained utility",
+    "comparison": "ungrafted versus training-free-grafted exact 4B-IT checkpoint",
+    "deletion_state_scored": false,
+    "dataset": {
+      "id": "Salesforce/wikitext/wikitext-103-raw-v1",
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+      "split": "test",
+      "blocks": 400,
+      "sequence_length": 512,
+      "selection": "first 400 consecutive nonoverlapping packed test blocks",
+      "token_ids_sha256": "4e227e266e15e5d735b5ed3569d828c37b80db6503c2896e6e96a7092c385fdd",
+      "token_hash_must_match_before_model_scoring": true
+    },
+    "metrics": {
+      "paired_block_mean_nll": true,
+      "base_and_graft_perplexity": true,
+      "relative_perplexity_cost_percent": true,
+      "contiguous_group_size": 20,
+      "blocks_are_independent_replicates": false,
+      "contiguous_groups_are_descriptive_only": true
+    },
+    "separation_from_cohort_utility": {
+      "combined_scalar_forbidden": true,
+      "quality_arm_admission_effect": null,
+      "quality_arm_cohort_filtering_effect": null,
+      "retained_utility_reference": "fresh raw-history-omitted rebuild for the paired retained probe",
+      "graft_quality_reference": "ungrafted same checkpoint on fixed WikiText blocks"
+    }
+  },
+  "runtime": {
+    "model": {
+      "id": "google/gemma-3-4b-it",
+      "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "adapter": null,
+      "arm": "it_native_chat_training_free_graft"
+    },
+    "tokenizer": {
+      "id": "google/gemma-3-4b-it",
+      "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "use_fast": true
+    },
+    "execution": {
+      "device": "mps",
+      "dtype": "float32",
+      "one_model_runtime": true,
+      "accelerator_execution": "serialized",
+      "local_files_only": true,
+      "network_access": false,
+      "mps_built": true,
+      "mps_available": true
+    },
+    "graft": {
+      "enabled": true,
+      "window": 1024,
+      "nu": 0.7,
+      "chunk": 128,
+      "readout": "softmax",
+      "preserve_prefix_mass": true,
+      "per_boundary_box": true,
+      "training_steps": 0
+    },
+    "policy": {
+      "condition_id": "exact_decrement_or_refit_policy",
+      "fixed_c": true,
+      "full_repack_fallback_allowed": false,
+      "per_head_refit_fallback_inside_exact_policy_allowed": true,
+      "separate_refit_state_is_not_the_evaluated_policy": true
+    },
+    "determinism": {
+      "solver_seed": 0,
+      "evaluation_seed": 0,
+      "deterministic_algorithms_required": true,
+      "deterministic_warn_only": false,
+      "certificate_backend": "process",
+      "certificate_start_method": "spawn",
+      "certificate_workers": 8,
+      "certificate_worker_blas_threads": 1
+    },
+    "platform": {
+      "system": "Darwin",
+      "release": "25.5.0",
+      "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:39:42 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6031",
+      "machine": "arm64",
+      "processor": "arm",
+      "python_implementation": "CPython",
+      "python_version": "3.11.14",
+      "python_compiler": "Clang 17.0.0 (clang-1700.4.4.1)"
+    },
+    "packages": {
+      "accelerate": "1.14.0",
+      "clarabel": "0.11.1",
+      "cvxpy": "1.9.2",
+      "datasets": "5.0.0",
+      "huggingface-hub": "1.20.1",
+      "mlx": "0.32.0",
+      "numpy": "2.4.6",
+      "safetensors": "0.8.0",
+      "scipy": "1.17.1",
+      "sentencepiece": "0.2.1",
+      "tokenizers": "0.22.2",
+      "torch": "2.12.1",
+      "torch_git_version": "7269437d655783a26cba32aa88195b741ff496aa",
+      "transformers": "5.12.1"
+    },
+    "environment_controls": {
+      "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+      "PYTORCH_MPS_LOW_WATERMARK_RATIO": null,
+      "PYTORCH_MPS_FAST_MATH": null,
+      "PYTORCH_MPS_PREFER_METAL": null,
+      "PYTORCH_ENABLE_MPS_FALLBACK": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "overrides_allowed": false,
+    "exact_environment_match_required_before_scoring": true
+  },
+  "authorization": {
+    "future_model_scoring_authorized_only_after_commit": true,
+    "authorization_and_protocol_must_be_committed_at_head": true,
+    "all_bound_artifacts_and_implementation_files_must_match_head": true,
+    "exact_acknowledgement_required": "I_ACKNOWLEDGE_FROZEN_LONGMEMEVAL_V3_CONTINUOUS_UTILITY_SCORING",
+    "this_module_has_no_scoring_entrypoint": true,
+    "live_experiment_executed_by_freeze": false
+  },
+  "implementation": {
+    "authorization_protocol": {
+      "repository_path": "gemma_sv/longmemeval_chat_v3_utility_protocol.py",
+      "file_sha256": "0454478491f6fe217b1ded0c5b15657eb59caafa44706bd7182a1cc86ba4bcb2",
+      "must_be_committed_with_authorization_before_scoring": true
+    },
+    "scoring_primitives": {
+      "kind": "exact-committed-git-blob-closure",
+      "files": {
+        "cp_svm/kernels.py": {
+          "file_sha256": "bb5b4312ad010db8e8695b70df7c44c7945b769fb623dd897037e2530381e7a7",
+          "git_blob_oid": "3653c4545f55d91e88398e227a9c9ee1a60d6414"
+        },
+        "cp_svm/oneclass_fast.py": {
+          "file_sha256": "5e4659c1c81c4232c246c24d1b8867bce9654a0f041b3855976ef2cb97384fb7",
+          "git_blob_oid": "b72458b10911993325c2f73155e368e044bc1708"
+        },
+        "cp_svm/oneclass_incremental.py": {
+          "file_sha256": "616ef5cf9fe95115d469addf0e4a1e7c72c1ffa49beb29d6f9295c4a329f79fb",
+          "git_blob_oid": "4ffa052958d781834b640fd23ec17fc2874c33e2"
+        },
+        "gemma_sv/__init__.py": {
+          "file_sha256": "bb714c7f9bea3e1d85f24a937feb437fe39d3790814786ecd1d5b5be1a778432",
+          "git_blob_oid": "e2c31d2222e2e310ca3121d23177b2c4a915f6be"
+        },
+        "gemma_sv/data.py": {
+          "file_sha256": "cd9767fa5e825458d35bd4231629700709c9c10471e9b641bb055043f43efd8b",
+          "git_blob_oid": "1bda6f5407368ed7bba7f9c2dcb4bb537151c8ee"
+        },
+        "gemma_sv/demo_server/audit_gemma_runtime_v2.py": {
+          "file_sha256": "b8e06485c49c7f7afc764a3ade68f533a8020a0aa820cd3101311a641fe7958c",
+          "git_blob_oid": "410971423aff5e6f4200c0730e97f68d94412435"
+        },
+        "gemma_sv/demo_server/certificate.py": {
+          "file_sha256": "bd84f6d1a85f5b52dab29992d6e80aacea44cab7ad19a560955b97c6eaecae88",
+          "git_blob_oid": "1d35c6886e5563bb7e58636bdc6d5ffdf01a425d"
+        },
+        "gemma_sv/demo_server/contract.py": {
+          "file_sha256": "360c8b7323b0e454901e2afc8ca73869925b7d1e35867b0a2e0a064d851cf939",
+          "git_blob_oid": "2454f3132efd39d8717378ce9f3ffa2ffbf6a346"
+        },
+        "gemma_sv/demo_server/engine.py": {
+          "file_sha256": "9fe966ac2d32c8a1f1446516d74c0bf403fecc1dd53416d41ee952d3922f48fb",
+          "git_blob_oid": "8a9e6978fdc42b811b07122a335337e23bd742c4"
+        },
+        "gemma_sv/demo_server/gate_context.py": {
+          "file_sha256": "43f8dc2416418bab7eb1ad8f2b563de196867fd477977c594ac494a3bd224dd8",
+          "git_blob_oid": "53405eadc4f3a1df0723a6bce0c3d2a7471cfa23"
+        },
+        "gemma_sv/demo_server/gemma_engine.py": {
+          "file_sha256": "c10c892934b34b195141622cfe8929074a61e7f30d7226f21410975ee617f411",
+          "git_blob_oid": "622d8e6dd2f052a900e8707a5d055d3da4e931f4"
+        },
+        "gemma_sv/demo_server/scenarios.py": {
+          "file_sha256": "b5e3d551b62e43ae5a685bff17ddb5f17e7aaca7485ad63aedc256de1bc2338a",
+          "git_blob_oid": "6f52e4b52a8e4a99084c70d7a9172450d253b4b2"
+        },
+        "gemma_sv/demo_server/span.py": {
+          "file_sha256": "49f2dec92794fd7dee59f8a34363dea526f6909b974b1830f9e13313bd81f107",
+          "git_blob_oid": "091aaa4f517b41687e3981f7b72f2ca826e1b649"
+        },
+        "gemma_sv/demo_server/state.py": {
+          "file_sha256": "6e8bacfbd3b725fea967bf844508bc5cdb7b8c239be0d01fe8953c1bd79aa666",
+          "git_blob_oid": "a86c8e78838d4f16b2c8c949653c71c36a185471"
+        },
+        "gemma_sv/eval_context_erasure_qa.py": {
+          "file_sha256": "f58a58a2c3ac2f709da377a7c0ad75265ae2e7a7b811a711f909569694a19ccc",
+          "git_blob_oid": "c31818d09031fb653025a1f5e1a5f7a4ad7bbd98"
+        },
+        "gemma_sv/eval_longmemeval_chat.py": {
+          "file_sha256": "cda1d96d539b351ac32357588f5c6993bdfca082e70bcf81bfdd7fdf3cae0efe",
+          "git_blob_oid": "2e47f2db3832d6ce97466dd9841c48d634e7a2ce"
+        },
+        "gemma_sv/eval_longmemeval_chat_methods.py": {
+          "file_sha256": "2e3dd9f25070831c03eabecc9e1ec36ce2269d5f811281574c79d4595dbda9b1",
+          "git_blob_oid": "d691b52728ae93a89f269c1f9a4d67f24c2cd592"
+        },
+        "gemma_sv/eval_longmemeval_chat_v2.py": {
+          "file_sha256": "23d91fd38f88be53ed76ba1c16bafdb527718561602b6a7d80b0ffaa82fe2da3",
+          "git_blob_oid": "74bc6967df8f2d84320d88e2b74d02819170a09e"
+        },
+        "gemma_sv/eval_longmemeval_deletion.py": {
+          "file_sha256": "d9792c97a1cc58c48e1cb52bd02e469e0d0d43df42ce4967d03e95e7757e48bf",
+          "git_blob_oid": "940f99143bc6990e93e900bb41b0dbf363646e6a"
+        },
+        "gemma_sv/eval_memops_longitudinal.py": {
+          "file_sha256": "d0f5b3cd5be71fbb2021783acc92e48ef463919b636bba3b00a6a988e9288f4e",
+          "git_blob_oid": "dd3f3f889ccaeb3fa7e440c38525f5a02854cb6c"
+        },
+        "gemma_sv/eval_persistent_deletion_baselines.py": {
+          "file_sha256": "a30122d96d69a9f0a649a716b0a4f59bc6e3f4165117fa0819021a5bcdff21c2",
+          "git_blob_oid": "57df4080e94a61b061d3897b20db753a2cd1aec1"
+        },
+        "gemma_sv/eval_training_free_quality.py": {
+          "file_sha256": "3e2dcdba73d16867df6d1d3e0393f69d8682c6273d6ea749da9887f1c2490102",
+          "git_blob_oid": "ce3169d9bd3dba88268e8a8645cc6268bf876f32"
+        },
+        "gemma_sv/graft.py": {
+          "file_sha256": "6218aa93902a59b97699af504530ea545f3059ca7383c9401e36227822307523",
+          "git_blob_oid": "20cef27366ce2db122dc501b8954d706c7d7be73"
+        },
+        "gemma_sv/layer_select.py": {
+          "file_sha256": "1bbb12411ee368c14e62c870f554dc1adabe12d6b4b745593808990ac6a31b5f",
+          "git_blob_oid": "c12148fecd934c5eef37e274c91d449accb81d77"
+        },
+        "gemma_sv/longmemeval_chat_benchmark.py": {
+          "file_sha256": "9a81fa0b35529b6395cab458fb957a122aca7d3a9cb35466c1c658ea7e7c54e6",
+          "git_blob_oid": "627ca8f8e9615e723ab5784695f76921ec878e89"
+        },
+        "gemma_sv/longmemeval_chat_benchmark_v2.py": {
+          "file_sha256": "e032233354b1259611370cb8b17f4e3977d04164c90deae5b5b6b245b7ef52a9",
+          "git_blob_oid": "48d2b840a4cc321e057f0cfe854a2572beed63b1"
+        },
+        "gemma_sv/longmemeval_chat_cohort_v3.py": {
+          "file_sha256": "89443da4acef31cd6d9acdfd4fb37f51df25086b350441cbc9e13b23f195f986",
+          "git_blob_oid": "c8111c0db5e29b80c631f76d91f94e72ef0e4c67"
+        },
+        "gemma_sv/longmemeval_deletion_benchmark.py": {
+          "file_sha256": "6f79c12a8e11dae7ddb3eabcd96194145945c74efd56a9649cf75fb6e3c10c5c",
+          "git_blob_oid": "9a7e4708f799469ff70c62dc8fc0ab39971336b6"
+        },
+        "gemma_sv/parallel_certificate_v2.py": {
+          "file_sha256": "a2d583b83b5d4278152044c2b313ddcf5fc617316322ae54926ee698970b40de",
+          "git_blob_oid": "3cbcee5b3ad07afac581139db87e3c8f43a9ebfe"
+        },
+        "gemma_sv/persistent_deletion.py": {
+          "file_sha256": "78abb13c7d7634a1b364762298eea0306dc8a4bf32f86568fe6ddd1235fef6cc",
+          "git_blob_oid": "b367f5eaed350175d8fd4676d3c6cf3cd6d1ae8b"
+        },
+        "gemma_sv/rag_benchmark.py": {
+          "file_sha256": "e30c8de7ed34d6b1394c93eda3778e375de089656cd2ce49527374740c77e3b1",
+          "git_blob_oid": "48ba0f608b2e83a68c503a70879bca73d585f752"
+        },
+        "gemma_sv/recovery_protocol.py": {
+          "file_sha256": "053cb614771ae4f6e7aa2c562bac7987a307604200f7243afff1e23dd33cfa9f",
+          "git_blob_oid": "d8adc8b3753ed2f38c11c2b80b757c5cf75827ad"
+        },
+        "gemma_sv/recovery_state.py": {
+          "file_sha256": "94acd957361317defed63ee1918850cf02e0f5c975533a4c4e280d7df1f00f3c",
+          "git_blob_oid": "2d29279fb3680c4e0dba4c708f1bcd1760f9e23b"
+        },
+        "gemma_sv/sv_global_attention.py": {
+          "file_sha256": "58eaea66adefdd92ca4a2f5191be54b4a4061a70eee64a9c0e7ce9bd4ee43dc8",
+          "git_blob_oid": "a048ee366012197522acfbb9ecd746412752d57e"
+        },
+        "svattn/causal_sv_attention.py": {
+          "file_sha256": "391b137c3b2c6ba16d9067e2ad5d4dcda0f7636c5e1223934bcfdd09be68a784",
+          "git_blob_oid": "9110b634a4dd4b873cc2a8f7883e652257f68d46"
+        },
+        "svattn/diff_svdd.py": {
+          "file_sha256": "32d2f9e0e613380da533a31f9b9caef433a796b668b179e319a27ffe07d7223c",
+          "git_blob_oid": "53e1a649a5d2da63526ff59d2e713283eaf9c3cc"
+        },
+        "svattn/fast_diff_svdd.py": {
+          "file_sha256": "3d734d5c892c79c4dcd039e74fef280379459986a41b3fcd5b530123902efcd2",
+          "git_blob_oid": "f914a32f4fe52c5d2857e4cc1b6d8b995d9e76c2"
+        },
+        "svattn/mlx_svdd.py": {
+          "file_sha256": "d5c2f54a7a7ae4a42e31b567f418fa5174d7fdd00f3840e39bbde78c7a58a53f",
+          "git_blob_oid": "c67c776df2f3a349611c4d4fea8b3ab0f97389dd"
+        },
+        "svattn/sv_attention.py": {
+          "file_sha256": "91db52bc0694de4544a24a5459d8d61c4557632356095dc3b40610a910405cad",
+          "git_blob_oid": "baac78e504e3654e2f1e6b43a5f8918e0fff66e2"
+        }
+      },
+      "file_count": 39,
+      "files_sha256": "3cb84f82bfffd64d673a14dd055a2f8dcf7233c456bea16fcad65d9afbb60d92",
+      "all_worktree_files_equal_head": true,
+      "override_allowed": false
+    }
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "0b2f1ecc715b225f7a55a952b14aa1b4aa2420b386c306dbba0e4066384d490d"
+  }
+}

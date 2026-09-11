@@ -14,6 +14,8 @@ At the tested 4B configuration, admission matched the base model on 6 of 8 recor
 - `journal_manuscript/`: the Neurocomputing manuscript, including both additional journal studies.
 - `RELEASE_MANIFEST.json`: file hashes and provenance for this reviewed release snapshot.
 
+The completed decoded-study pipeline and exact historical runtime bindings are documented in `code/REPRODUCE_DECODED.md`.
+
 The code directory is a documented paper snapshot. It is not a mirror of ongoing experiments or the separate evolving assistant-demo application. The journal evidence contains the exact selected execution snapshot used by its additional studies; that frozen code is not silently overlaid onto the earlier implementation.
 
 ## Quick checks without model inference
