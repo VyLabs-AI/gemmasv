@@ -48,29 +48,14 @@ python -m pip freeze --all > environment-lock.txt
 python -VV >> environment-lock.txt
 ```
 
-The model identifiers used by the paper are:
-
-- `google/gemma-3-1b-pt`, `google/gemma-3-4b-pt`, and
-  `google/gemma-3-12b-pt`;
-- `mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit`.
-
-The reference Gemma-3-1B cache resolved to Hugging Face snapshot
-`fcf18a2a879aab110ca39f8bffbccd5d49d8eb29`; the Kimi 8-bit snapshot resolved
-to `553a7a5673491df2b2d38f7380188a9d8e9f9a66`. Reproduction reports should
+The Gemma model identifiers are `google/gemma-3-1b-pt`,
+`google/gemma-3-4b-pt`, `google/gemma-3-12b-pt`, and
+`google/gemma-3-4b-it`. Protocol files record their applicable revisions.
+The reference Gemma-3-1B cache resolved to
+`fcf18a2a879aab110ca39f8bffbccd5d49d8eb29`. Reproduction reports should
 retain the resolved model revision, adapter hash, package lock, device, dtype,
-and framework versions. Model weights and adapters are not included in release
-archives.
+and framework versions. Model weights and adapters are not distributed.
 
-The 48B Kimi rerun used an internally copied snapshot whose 11
-content-addressed blobs were verified against their SHA-256 filenames.
-`mlx_lm.load(..., lazy=True)` was required: eager
-`mx.eval(model.parameters())` over a cold external cache repeatedly triggered a
-Metal command-buffer abort. The one-token preflight is:
-
-```bash
-python -m kimi_sv.smoke_model --model /local/snapshot
-```
-
-It must pass before the paper-scale separability command is launched.
-
-Credentialed MIMIC data never enters environment locks or release artifacts.
+The version list above records the original host. FastAPI, Uvicorn and HTTPX
+were used by a separate service and are not installed by the offline result
+requirements in this trimmed repository.

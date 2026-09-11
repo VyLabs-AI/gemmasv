@@ -22,7 +22,7 @@ case "$MODE" in
   --quick)
     echo "=== random-model graft smoke test ==="
     "$PY" -m gemma_sv.smoke_test
-    echo "=== complete demo tests ==="
+    echo "=== model-runtime state contracts ==="
     "$PY" -m pytest tests/test_demo_*.py -p no:cacheprovider -q
     ;;
   --paper)

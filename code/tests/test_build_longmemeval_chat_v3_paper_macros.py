@@ -28,8 +28,8 @@ ADJUDICATED = (
     / "longmemeval_chat_leakage_recall_census_human_adjudicated_v4.json"
 )
 COMMITTED_MACROS = (
-    REPOSITORY.parent
-    / "paper/longmemeval_chat_v3_decoded_macros.tex"
+    REPOSITORY
+    / "tests/expected/longmemeval_chat_v3_decoded_macros.tex"
 )
 MACRO_RE = re.compile(
     r"\\providecommand\{\\(?P<name>[A-Za-z]+)\}"

@@ -12,7 +12,7 @@ python -m gemma_sv.build_longmemeval_chat_suffix_disclosure_crosstab_v2 --check
 python -m pytest tests/test_build_longmemeval_chat_v3_paper_macros.py tests/test_build_longmemeval_chat_suffix_disclosure_crosstab_v2.py -q
 ```
 
-The tests reconstruct the actual committed numeric TeX macros under `../paper/`, using the exact hash-bound decoded summary, immutable model-judge census and human-adjudicated derivative. They do not need raw conversations, response sets or a model.
+The tests reconstruct the committed numeric fixtures under `tests/expected/`, using the exact hash-bound decoded summary, immutable model-judge census and human-adjudicated derivative. They do not need raw conversations, response sets or a model.
 
 ## Inspect or rerun the original pipeline
 

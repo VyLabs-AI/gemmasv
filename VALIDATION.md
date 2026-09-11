@@ -1,16 +1,35 @@
 # Release validation
 
-Checked 11 September 2026 from this staged snapshot, without model inference:
+Checked 11 September 2026 after trimming the repository to result reproduction.
+No model inference or new experiment was run.
 
-- The journal bundle verifier matched all 110 distributed payload files with zero unexpected files.
-- The original three-file pytest command passed 34 tests and skipped 3 optional local-artifact checks, with no failures. The two added publication-test files passed all 12 tests, validating the exact decoded and suffix macros against their hash-bound inputs.
-- Both documented journal numerical reanalyses exactly reproduced their saved scientific payloads. Only execution provenance and completion timestamps were excluded from the comparison.
-- All released Python files parsed successfully.
-- Original and independently rebuilt TeX archives produced identical extracted text and rendered pages. The 23-page journal PDF and all 19 pages of the public archive passed build checks; the journal pages were visually reviewed.
-- The stage includes no weights, source conversation collections, token arrays, credential patterns or credentialed clinical data. Legacy synthetic demo fixtures remain explicitly synthetic.
+- The frozen study bundle verifier matched all 110 payload files with no
+  unexpected files. Every frozen study file is byte-identical to the preceding
+  release, including its two manifests and original execution snapshots.
+- Result reconstruction and exact solver checks passed 46 tests. Three tests
+  requiring original local source artifacts were skipped.
+- The completed decoded-pipeline suite passed 28 offline tests. Five cases
+  requiring original upstream sources or model/tokenizer assets were excluded.
+- All 12 implementation files bound by the historical response-generation
+  authorization retained their exact SHA-256 values.
+- All retained Python sources parse. The three numerical fixtures were moved
+  byte-for-byte from the former paper directories; only their test paths changed.
+- Paper bundles, Node rendering dependencies, Kimi/Qwen utilities, independent
+  SV experiments and hosted-demo UI/API were removed. Runtime dependencies used
+  by Gemma experiments and existing licenses were retained.
 
-The snapshot's cp_svm solver files and core Gemma gate modules are byte-identical to the canonical workspace. The three changed svattn solver modules differ only in explanatory docstrings. Optional generation checkpointing and the live assistant demo have evolved separately; this snapshot records the paper implementation rather than silently substituting those later tools. The journal study preserves its separate exact execution snapshot.
+`code/gemma_sv/reproducibility/run_quick.sh` runs the verified 46-test and
+28-test commands. The earlier broader legacy suite was also attempted: the
+optional MLX RNG test reported that this sandbox has no Metal device, and a
+subsequent accelerator certificate test aborted during device initialization.
+Those accelerator checks are not part of the supported offline command and
+are not recorded as passing. Their historical production code is unchanged.
 
-These checks verify packaging, saved-result analysis, and implemented contracts. They do not independently rerun the model experiments or supply independent human verification of scientific conclusions.
+The preceding release exactly reproduced both saved study analyses; their
+analyzers and measured inputs remain unchanged. These checks establish package
+integrity and source-free result reconstruction. They do not independently
+rerun model experiments, reproduce private review packets, or establish
+scientific conclusions beyond the measured scope.
 
-The completed decoded pipeline was then added with all 12 original implementation fingerprints matched exactly. Its 28 offline contract tests passed, checking the 96-history cohort, clustered analysis and mocked response runner; five cases requiring upstream source/model assets were excluded. The standalone test adaptations isolate GPU seeding for fake runtimes and replay the historical environment input; production checks are unchanged. See `code/REPRODUCE_DECODED.md`.
+The repository preserves its existing Git history. The current manuscript is
+cited through one arXiv record; manuscript compilation is outside release scope.

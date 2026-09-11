@@ -15,26 +15,18 @@ else
 fi
 
 "$PY" -m pytest \
-  tests/test_binary.py \
+  tests/test_boundary_evidence_publication_v3.py \
+  tests/test_publish_longmemeval_chat_result.py \
   tests/test_exactness.py \
-  tests/test_fast_solver.py \
-  tests/test_forgetting_rigor.py \
-  tests/test_gemma_multiseed_summary.py \
-  tests/test_musique_rag_benchmark.py \
-  tests/test_proxy_precision_sweep.py \
-  tests/test_ruler_erasure_benchmark.py \
-  tests/test_svr.py \
-  tests/test_demo_certificate.py \
-  tests/test_demo_contract.py \
-  tests/test_demo_gate_context.py \
-  tests/test_demo_span.py \
-  tests/test_demo_state.py \
-  tests/test_demo_api.py \
-  tests/test_demo_static.py \
-  tests/test_mimic_privacy.py \
-  tests/test_robust_eval.py \
-  -p no:cacheprovider \
-  -q
+  tests/test_build_longmemeval_chat_v3_paper_macros.py \
+  tests/test_build_longmemeval_chat_suffix_disclosure_crosstab_v2.py \
+  -p no:cacheprovider -q
 
-echo "Gemma contract and replay verification passed."
+"$PY" -m pytest \
+  tests/test_longmemeval_chat_cohort_v3.py \
+  tests/test_summarize_longmemeval_chat_v3.py \
+  tests/test_longmemeval_chat_response_generation_audit_v2.py \
+  -k 'not rebuild_is_value and not rehydration and not real_exact and not real_sample and not real_outputs' \
+  -p no:cacheprovider -q
 
+echo "Gemma offline result and contract verification passed."

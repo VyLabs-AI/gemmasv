@@ -8,8 +8,8 @@ from gemma_sv import build_longmemeval_chat_suffix_disclosure_crosstab_v2 as cro
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 COMMITTED_MACROS = (
-    REPOSITORY.parent
-    / "paper/longmemeval_chat_suffix_disclosure_macros.tex"
+    REPOSITORY
+    / "tests/expected/longmemeval_chat_suffix_disclosure_macros.tex"
 )
 
 

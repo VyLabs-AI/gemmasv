@@ -18,7 +18,7 @@ COMPACT_PATH = (
     / "longmemeval_chat_geometry_methods_compact16_v1.json"
 )
 MACROS_PATH = (
-    ROOT / "gemma_sv" / "paper" / "longmemeval_chatbot_compact16_macros.tex"
+    ROOT / "tests" / "expected" / "longmemeval_chatbot_compact16_macros.tex"
 )
 
 

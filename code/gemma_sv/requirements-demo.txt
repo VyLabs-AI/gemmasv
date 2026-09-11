@@ -1,6 +1,0 @@
--r requirements-full.txt
-
-# Optional accelerator packages for the hosted model path. The current
-# PyTorch/MPS engine does not require MLX, but benchmark utilities may.
-mlx>=0.32; platform_system == "Darwin"
-mlx[cuda12]>=0.32; platform_system == "Linux"
