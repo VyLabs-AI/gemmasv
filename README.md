@@ -41,6 +41,10 @@ See `journal_evidence/README.md` for pinned model/dataset revisions and inferenc
 
 Each paper directory is a self-contained TeX package with embedded figure PDFs, editable SVGs and a frozen bibliography. Compile `main.tex` with Tectonic, or XeLaTeX/BibTeX followed by two XeLaTeX passes. The arXiv manuscript and journal extension are distinct documents.
 
+## Optional figure-tool dependencies
+
+The historical `code/paper_viz/package-lock.json` preserves the figure-tool environment. GitHub reports 13 dependency advisories as of September 11, 2026 (4 high, 8 moderate, 1 low), affecting transitive `fast-uri` 3.1.5, `hono` 4.12.33 and `qs` 6.15.3. These Node dependencies are unnecessary for the Python evidence checks, numerical reanalysis or TeX builds above. The included figure scripts run locally and do not start an HTTP or MCP service; use only trusted local figure inputs. Do not deploy the historical dependency tree as a network service. A deployment should update and validate its dependencies separately from this frozen research snapshot.
+
 ## Data and release boundaries
 
 This repository excludes real source conversations, full generated response collections, token arrays, model weights, credentials and private review ledgers. Explicitly synthetic demonstration fixtures and the selected fictitious TOFU illustration remain labeled as such. Source-free flags and aggregates summarize measured model behavior; they are not new synthetic training data. Original benchmark inputs are obtained from TOFU and LongMemEval. The retained-answer study is a post hoc reanalysis using existing deterministic matching flags; it is not a semantic-correctness evaluation or an equivalence study.
