@@ -1,0 +1,107 @@
+{
+ "schema": "gemma-sv-lira-record-bootstrap-v1",
+ "contains_source_text": false,
+ "method": "records resampled with replacement; pooled Mann-Whitney AUC of the condition's held-out likelihood ratios against the never-stored draws; percentile 95% interval",
+ "cohorts": {
+  "six_record": {
+   "source_file": "outputs/gemma_sv_boundary_attack_suite/lira.json",
+   "source_sha256": "bf08327e3250bacbcbee8bb3c3b3839d598faf03880dbac8fca35a958665f2c6",
+   "n_records": 6,
+   "held_out_draws_per_record": 32,
+   "bootstrap_draws": 10000,
+   "seed": 0,
+   "conditions": {
+    "masked_refit": {
+     "pooled_auc": 0.5343967013888888,
+     "record_bootstrap_ci95": [
+      0.5128851996527778,
+      0.60107421875
+     ],
+     "within_record_auc_min": 0.4736328125,
+     "within_record_auc_max": 0.7607421875,
+     "within_record_auc_median": 0.69921875
+    },
+    "decay": {
+     "pooled_auc": 0.586181640625,
+     "record_bootstrap_ci95": [
+      0.5294053819444444,
+      0.748779296875
+     ],
+     "within_record_auc_min": 0.43359375,
+     "within_record_auc_max": 0.9951171875,
+     "within_record_auc_median": 0.85546875
+    },
+    "icul": {
+     "pooled_auc": 1.0,
+     "record_bootstrap_ci95": [
+      1.0,
+      1.0
+     ],
+     "within_record_auc_min": 1.0,
+     "within_record_auc_max": 1.0,
+     "within_record_auc_median": 1.0
+    },
+    "present": {
+     "pooled_auc": 1.0,
+     "record_bootstrap_ci95": [
+      1.0,
+      1.0
+     ],
+     "within_record_auc_min": 1.0,
+     "within_record_auc_max": 1.0,
+     "within_record_auc_median": 1.0
+    }
+   }
+  },
+  "broad": {
+   "source_file": "outputs/gemma_sv_lira_broad/lira.json",
+   "source_sha256": "33870321668d30806a6d93ebf4a8f286b793b676089fcb3fe7f46c5b822061a2",
+   "n_records": 16,
+   "held_out_draws_per_record": 32,
+   "bootstrap_draws": 10000,
+   "seed": 0,
+   "conditions": {
+    "masked_refit": {
+     "pooled_auc": 0.517303466796875,
+     "record_bootstrap_ci95": [
+      0.5157394409179688,
+      0.5387916564941406
+     ],
+     "within_record_auc_min": 0.52734375,
+     "within_record_auc_max": 0.7333984375,
+     "within_record_auc_median": 0.671875
+    },
+    "decay": {
+     "pooled_auc": 0.5560073852539062,
+     "record_bootstrap_ci95": [
+      0.5417098999023438,
+      0.6133804321289062
+     ],
+     "within_record_auc_min": 0.451171875,
+     "within_record_auc_max": 0.9970703125,
+     "within_record_auc_median": 0.8076171875
+    },
+    "icul": {
+     "pooled_auc": 1.0,
+     "record_bootstrap_ci95": [
+      1.0,
+      1.0
+     ],
+     "within_record_auc_min": 1.0,
+     "within_record_auc_max": 1.0,
+     "within_record_auc_median": 1.0
+    },
+    "present": {
+     "pooled_auc": 0.99993896484375,
+     "record_bootstrap_ci95": [
+      0.9996337890625,
+      1.0
+     ],
+     "within_record_auc_min": 1.0,
+     "within_record_auc_max": 1.0,
+     "within_record_auc_median": 1.0
+    }
+   }
+  }
+ }
+}

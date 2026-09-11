@@ -1,0 +1,37 @@
+{
+  "name": "whole_record_lira_broad_v1",
+  "version": 1,
+  "dataset": "locuslab/TOFU",
+  "forget_split": "forget10",
+  "retain_split": "retain90",
+  "selection_policy": {
+    "description": "Separate broad LiRA substrate: all twenty 20-row forget10 blocks, with fixed field offsets 1, 2, and 4 and the corresponding retain90 block start. Every record is attempted; recall admission is reported and never causes replacement.",
+    "role": "corrected-config membership-inference breadth check",
+    "fixed_before_evaluation": true,
+    "block_starts": [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380],
+    "field_offsets": [1, 2, 4],
+    "retain_offset": 0
+  },
+  "records": [
+    {"record_id": "tofu-lira-000", "forget_indices": [1, 2, 4], "retain_index": 0},
+    {"record_id": "tofu-lira-020", "forget_indices": [21, 22, 24], "retain_index": 20},
+    {"record_id": "tofu-lira-040", "forget_indices": [41, 42, 44], "retain_index": 40},
+    {"record_id": "tofu-lira-060", "forget_indices": [61, 62, 64], "retain_index": 60},
+    {"record_id": "tofu-lira-080", "forget_indices": [81, 82, 84], "retain_index": 80},
+    {"record_id": "tofu-lira-100", "forget_indices": [101, 102, 104], "retain_index": 100},
+    {"record_id": "tofu-lira-120", "forget_indices": [121, 122, 124], "retain_index": 120},
+    {"record_id": "tofu-lira-140", "forget_indices": [141, 142, 144], "retain_index": 140},
+    {"record_id": "tofu-lira-160", "forget_indices": [161, 162, 164], "retain_index": 160},
+    {"record_id": "tofu-lira-180", "forget_indices": [181, 182, 184], "retain_index": 180},
+    {"record_id": "tofu-lira-200", "forget_indices": [201, 202, 204], "retain_index": 200},
+    {"record_id": "tofu-lira-220", "forget_indices": [221, 222, 224], "retain_index": 220},
+    {"record_id": "tofu-lira-240", "forget_indices": [241, 242, 244], "retain_index": 240},
+    {"record_id": "tofu-lira-260", "forget_indices": [261, 262, 264], "retain_index": 260},
+    {"record_id": "tofu-lira-280", "forget_indices": [281, 282, 284], "retain_index": 280},
+    {"record_id": "tofu-lira-300", "forget_indices": [301, 302, 304], "retain_index": 300},
+    {"record_id": "tofu-lira-320", "forget_indices": [321, 322, 324], "retain_index": 320},
+    {"record_id": "tofu-lira-340", "forget_indices": [341, 342, 344], "retain_index": 340},
+    {"record_id": "tofu-lira-360", "forget_indices": [361, 362, 364], "retain_index": 360},
+    {"record_id": "tofu-lira-380", "forget_indices": [381, 382, 384], "retain_index": 380}
+  ]
+}

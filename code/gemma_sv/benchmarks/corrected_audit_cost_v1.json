@@ -1,0 +1,25 @@
+{
+  "schema": "gemma-sv-corrected-audit-cost-v1",
+  "status": "derived-from-hash-bound-corrected-reports",
+  "configuration": "mass_preserving_boundary_v1",
+  "scope": "Probe-level scoring time for already-constructed exact, retained-key-refit, and decay states. Excludes model loading, prefill, state construction, decrement/refit construction, and any full-repack comparator.",
+  "one_b": {
+    "source": "outputs/gemma_sv_boundary_certificate_sweep/1b.json",
+    "source_sha256": "0594b52faf2aded7aab7460197d3b2c90f52826e583f02d981fe65674ff37aff",
+    "probes": 32,
+    "total_seconds": 561.4693650413537,
+    "median_seconds": 16.042078021040652,
+    "minimum_seconds": 9.493883291026577,
+    "maximum_seconds": 30.197689749998972
+  },
+  "four_b": {
+    "source": "outputs/gemma_sv_boundary_certificate_sweep/4b.json",
+    "source_sha256": "d41fe201d8c4beb5b311938ef59ad395995722fe3be615478feb8eb2e0feec5e",
+    "probes": 32,
+    "total_seconds": 2354.631345666712,
+    "median_seconds": 66.6045249790186,
+    "minimum_seconds": 40.924229500000365,
+    "maximum_seconds": 127.71681658294983
+  },
+  "interpretation": "These values characterize audit scoring cost, not deletion latency or speedup. The current verifier constructs the fixed-C_b retained-key refit before attempting decrement, and no corrected-configuration paired decrement-versus-full-repack timing benchmark exists."
+}

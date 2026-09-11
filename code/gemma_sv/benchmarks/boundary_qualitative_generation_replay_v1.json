@@ -1,0 +1,61 @@
+{
+  "bindings": {
+    "boundary_attack_suite_config_file_sha256": "478ea669cd4c7681996eb523b6fb8e712f4af98a38ca6748692b86617bb49ec8",
+    "evaluator_file_sha256": "a3bfc29c42a4304c6bd1cd035cbb029159c57f7898760b476112bda310ea8a94",
+    "qualitative_bundle_file_sha256": "5d68c945cd74f8a65ed58edf0db105abe9ef4208a9bb2ea398a5355789974b46",
+    "qualitative_bundle_integrity_sha256": "b0e7a1a5b9f5f83aa6e9e04255f21450dcb5f65f742336ff6d3927231a3471d1",
+    "requirements_file_sha256": "e834d4c856b36b5bc3b1d25f9af956ebc8ec22f80bcdbc8820ae10404f6dd4b0",
+    "supplemental_replay_file_sha256": "30dc59298ef9ebd5bb2c4e87b14ff7f54148e939398b85d3df413825d4a3d189",
+    "whole_record_manifest_file_sha256": "40f25b73e23ea33e2f7b70924e703d9ab4c1cd0476b35023a830f28d1ccc8daa"
+  },
+  "configuration": {
+    "batch_size": 8,
+    "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+    "max_new_tokens": 64,
+    "model_id": "google/gemma-3-4b-pt",
+    "model_revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+    "save_generations": true,
+    "seed": 0,
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "environment": {
+    "datasets": "5.0.0",
+    "mps_available": true,
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "python": "3.11.14",
+    "torch": "2.12.1",
+    "transformers": "5.12.1"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "eacc5a6d507d2ad5ed0a8b74ba24e6fa4fd199abb845fd205830b242373edd6c"
+  },
+  "interpretation": "supplemental qualitative replay under the recorded environment; strings were not retained by the original run and are not represented as recovered original bytes",
+  "quantitative_evidence_replaced": false,
+  "schema": "gemma-sv-boundary-qualitative-generation-replay-v1",
+  "schema_version": 1,
+  "selection": {
+    "conditions": [
+      "present",
+      "decrement",
+      "icul",
+      "never"
+    ],
+    "field_index": 1,
+    "manifest_index": 6,
+    "samples": 24
+  },
+  "source_free": true,
+  "status": "validated-source-free-supplemental-replay-binding",
+  "validation": {
+    "all_composite_score_prefixes_match_frozen_shards": true,
+    "all_field_exact_score_prefixes_match_frozen_shards": true,
+    "edited_never_identical_wording_available": false,
+    "explicit_icul_refusal_available": false,
+    "selected_query_non_floor_leaking": true
+  }
+}

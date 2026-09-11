@@ -1,0 +1,176 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bourtoule et~al.(2021)Bourtoule, Chandrasekaran, Choquette-Choo, Jia,
+  Travers, Zhang, Lie, and Papernot]{sisa}
+Lucas Bourtoule, Varun Chandrasekaran, Christopher~A. Choquette-Choo, Hengrui
+  Jia, Adelin Travers, Baiwu Zhang, David Lie, and Nicolas Papernot.
+\newblock Machine unlearning.
+\newblock In \emph{IEEE Symposium on Security and Privacy (S\&P)}, 2021.
+\newblock URL \url{https://arxiv.org/abs/1912.03817}.
+
+\bibitem[Cao \& Yang(2015)Cao and Yang]{caoyang}
+Yinzhi Cao and Junfeng Yang.
+\newblock Towards making systems forget with machine unlearning.
+\newblock In \emph{IEEE Symposium on Security and Privacy (S\&P)}, 2015.
+\newblock URL \url{https://doi.org/10.1109/SP.2015.35}.
+
+\bibitem[Carlini et~al.(2022)Carlini, Chien, Nasr, Song, Terzis, and
+  Tramer]{lira}
+Nicholas Carlini, Steve Chien, Milad Nasr, Shuang Song, Andreas Terzis, and
+  Florian Tramer.
+\newblock Membership inference attacks from first principles.
+\newblock In \emph{IEEE Symposium on Security and Privacy (S\&P)}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2112.03570}.
+
+\bibitem[Cauwenberghs \& Poggio(2000)Cauwenberghs and Poggio]{cp2000}
+Gert Cauwenberghs and Tomaso Poggio.
+\newblock Incremental and decremental support vector machine learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2000.
+\newblock URL
+  \url{https://papers.nips.cc/paper_files/paper/2000/hash/155fa09596c7e18e50b58eb7e0c6ccb4-Abstract.html}.
+
+\bibitem[{Gemma Team, Google DeepMind}(2025)]{gemma3}
+{Gemma Team, Google DeepMind}.
+\newblock Gemma 3 technical report.
+\newblock \emph{arXiv preprint arXiv:2503.19786}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2503.19786}.
+
+\bibitem[Hu et~al.(2024)Hu, Fu, Wu, and Smith]{relearn}
+Shengyuan Hu, Yiwei Fu, Zhiwei~Steven Wu, and Virginia Smith.
+\newblock Unlearning or obfuscating? jogging the memory of unlearned {LLMs} via
+  benign relearning.
+\newblock \emph{arXiv preprint arXiv:2406.13356}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.13356}.
+
+\bibitem[Laguna et~al.(2026)Laguna, da~Silva~Gon{\c{c}}alves, Vandenhirtz,
+  Ryser, Cannistraci, and Vogt]{munkey}
+Sonia Laguna, Jorge da~Silva~Gon{\c{c}}alves, Moritz Vandenhirtz, Alain Ryser,
+  Irene Cannistraci, and Julia~E. Vogt.
+\newblock Rethinking machine unlearning: Models designed to forget via key
+  deletion.
+\newblock In \emph{ICLR 2026 Workshop on Test-Time Updates (TTU)}, 2026.
+\newblock URL \url{https://openreview.net/forum?id=IjJUrgd5cS}.
+\newblock Oral presentation.
+
+\bibitem[Lewis et~al.(2020)Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal,
+  K\"uttler, Lewis, Yih, Rockt\"aschel, Riedel, and Kiela]{rag}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K\"uttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt\"aschel, Sebastian Riedel, and Douwe Kiela.
+\newblock Retrieval-augmented generation for knowledge-intensive {NLP} tasks.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2020.
+\newblock URL \url{https://arxiv.org/abs/2005.11401}.
+
+\bibitem[Li et~al.(2024)Li, Pan, Gopal, Yue, Berrios, et~al.]{wmdp}
+Nathaniel Li, Alexander Pan, Anjali Gopal, Summer Yue, Daniel Berrios, et~al.
+\newblock The {WMDP} benchmark: Measuring and reducing malicious use with
+  unlearning.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2403.03218}.
+
+\bibitem[Lynch et~al.(2024)Lynch, Guo, Ewart, Casper, and
+  Hadfield-Menell]{lynch}
+Aengus Lynch, Phillip Guo, Aidan Ewart, Stephen Casper, and Dylan
+  Hadfield-Menell.
+\newblock Eight methods to evaluate robust unlearning in {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2402.16835}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.16835}.
+
+\bibitem[Maini et~al.(2024)Maini, Feng, Schwarzschild, Lipton, and
+  Kolter]{tofu}
+Pratyush Maini, Zhili Feng, Avi Schwarzschild, Zachary~C. Lipton, and J.~Zico
+  Kolter.
+\newblock {TOFU}: A task of fictitious unlearning for {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2401.06121}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2401.06121}.
+
+\bibitem[Pawelczyk et~al.(2024)Pawelczyk, Neel, and Lakkaraju]{icul}
+Martin Pawelczyk, Seth Neel, and Himabindu Lakkaraju.
+\newblock In-context unlearning: Language models as few-shot unlearners.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2024.
+\newblock URL \url{https://proceedings.mlr.press/v235/pawelczyk24a.html}.
+
+\bibitem[Ramesh(2026{\natexlab{a}})]{kdaomission}
+Vishwajith Ramesh.
+\newblock Exact record omission in delta attention: A transport criterion, its
+  cost, and a replay certificate.
+\newblock \emph{arXiv preprint arXiv:2609.06872}, 2026{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2609.06872}.
+
+\bibitem[Ramesh(2026{\natexlab{b}})]{svattn}
+Vishwajith Ramesh.
+\newblock What a deletion certificate covers, and where it expires: Auditable
+  removal from a support-vector memory.
+\newblock \emph{arXiv preprint arXiv:2607.12204}, 2026{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2607.12204}.
+
+\bibitem[Reisizadeh et~al.(2025)Reisizadeh, Ruan, Chen, Pal, Liu, and
+  Hong]{leakk}
+Hadi Reisizadeh, Jiajun Ruan, Yiwei Chen, Soumyadeep Pal, Sijia Liu, and Mingyi
+  Hong.
+\newblock Leak@$k$: Unlearning does not make {LLMs} forget under probabilistic
+  decoding.
+\newblock \emph{arXiv preprint arXiv:2511.04934}, 2025.
+
+\bibitem[Shi et~al.(2025)Shi, Lee, Huang, Malladi, Zhao, Holtzman, Liu,
+  Zettlemoyer, Smith, and Zhang]{muse}
+Weijia Shi, Jaechan Lee, Yangsibo Huang, Sadhika Malladi, Jieyu Zhao, Ari
+  Holtzman, Daogao Liu, Luke Zettlemoyer, Noah~A. Smith, and Chiyuan Zhang.
+\newblock {MUSE}: Machine unlearning six-way evaluation for language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2407.06460}.
+
+\bibitem[Tax \& Duin(2004)Tax and Duin]{svdd}
+David M.~J. Tax and Robert P.~W. Duin.
+\newblock Support vector data description.
+\newblock \emph{Machine Learning}, 54\penalty0 (1):\penalty0 45--66, 2004.
+\newblock URL \url{https://doi.org/10.1023/B:MACH.0000008084.60811.49}.
+
+\bibitem[Thaker et~al.(2024)Thaker, Hu, Kale, Maurya, Wu, and Smith]{thaker}
+Pratiksha Thaker, Shengyuan Hu, Neil Kale, Yash Maurya, Zhiwei~Steven Wu, and
+  Virginia Smith.
+\newblock Position: {LLM} unlearning benchmarks are weak measures of progress.
+\newblock \emph{arXiv preprint arXiv:2410.02879}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.02879}.
+
+\bibitem[Wu et~al.(2025{\natexlab{a}})Wu, Wang, Yu, Zhang, Chang, and
+  Yu]{longmemeval}
+Di~Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei Chang, and Dong Yu.
+\newblock {LongMemEval}: Benchmarking chat assistants on long-term interactive
+  memory.
+\newblock In \emph{International Conference on Learning Representations},
+  2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2410.10813}.
+
+\bibitem[Wu et~al.(2025{\natexlab{b}})Wu, Pang, Liu, and Wu]{snapshot}
+Xiaoyu Wu, Yifei Pang, Terrance Liu, and Zhiwei~Steven Wu.
+\newblock Unlearned but not forgotten: Data extraction after exact unlearning
+  in {LLM}.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  2025{\natexlab{b}}.
+\newblock URL \url{https://openreview.net/forum?id=BpAx3OuNOr}.
+
+\bibitem[Xu et~al.(2026)Xu, Yue, Liu, Ye, Zheng, Hu, Du, and Hu]{reversibility}
+Xiaoyu Xu, Xiang Yue, Yang Liu, Qingqing Ye, Huadi Zheng, Peizhao Hu, Minxin
+  Du, and Haibo Hu.
+\newblock Unlearning isn't deletion: Investigating reversibility of machine
+  unlearning in {LLMs}.
+\newblock In \emph{International Conference on Machine Learning}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2505.16831}.
+
+\bibitem[Zhang et~al.(2024)Zhang, Lin, Bai, and Mei]{zhang2024npo}
+Ruiqi Zhang, Licong Lin, Yu~Bai, and Song Mei.
+\newblock Negative preference optimization: From catastrophic collapse to
+  effective unlearning.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=MXLBXjQkmb}.
+
+\end{thebibliography}

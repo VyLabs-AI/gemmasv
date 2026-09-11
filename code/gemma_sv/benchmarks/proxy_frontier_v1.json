@@ -1,0 +1,120 @@
+{
+  "calibration": {
+    "context_violations": 0,
+    "contexts": 12,
+    "fallback_rate": 0.08333333333333333,
+    "fallbacks": 1,
+    "max_kl_refit64_to_hybrid_nats": 4.269284981229183e-06,
+    "mean_end_to_end_seconds": 14.277115489836433,
+    "mean_query_seconds": 10.765660565996464,
+    "mean_retained_abs_drift_nats": 0.0006560168331516772,
+    "mean_update_seconds": 3.511454923839968,
+    "observation_summary": {
+      "contexts": 12,
+      "max_solver_residuals": {
+        "box_violation": 0.0,
+        "duality_gap": 9.855421624575117e-06,
+        "equality": 9.8496675491333e-06,
+        "kkt": 0.0005130868143375933,
+        "projected_gradient": 0.0005526068731635677
+      },
+      "process_peak_resident_bytes": 19366379520,
+      "raw_proxy_max_kl_refit64_nats": 0.005403377378894004,
+      "raw_proxy_mean_context_max_kl_refit64_nats": 0.0004509101217965527,
+      "raw_proxy_mean_retained_abs_drift_nats": 0.01689871345181578
+    },
+    "policy": {
+      "fista_iterations": 160,
+      "max_reference_kl_nats": 0.001,
+      "partition_cutoff": 0.0003,
+      "residual_cutoff": 0.003
+    }
+  },
+  "claim_scope": "residual-qualified approximation; not a certificate",
+  "contains_model_weights": false,
+  "contains_source_text": false,
+  "evaluation": "gemma_sv_proxy_frontier_compact",
+  "grid": {
+    "fista_iterations": [
+      20,
+      40,
+      80,
+      160,
+      320,
+      640,
+      1280
+    ],
+    "partition_cutoffs": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "residual_cutoffs": [
+      1e-05,
+      3e-05,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003
+    ]
+  },
+  "manifest": {
+    "path": "gemma_sv/benchmarks/whole_record_synthetic_v1.json",
+    "sha256": "b0940f7acbffaa1157f56e6c8f35490bdecef5bbf380c81f8f106f5b982a7b9c"
+  },
+  "power_iteration_seed_rule": "10000 * (adapter_index + 1) + record_index; reset before each policy",
+  "schema_version": 1,
+  "selected_policy": {
+    "fista_iterations": 160,
+    "max_reference_kl_nats": 0.001,
+    "partition_cutoff": 0.0003,
+    "residual_cutoff": 0.003
+  },
+  "selection_rule": "fastest nontrivial calibration policy (at least one qualified proxy context) with zero context violations of max KL(refit64 || hybrid) <= 1e-3",
+  "source_report_sha256": "72e01f30f9bd5959ad6d20a16b36b87a2b70eb87e1d7f6ae3d5364e4e800542a",
+  "split": {
+    "calibration_indices": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "locked_before_evaluation": true,
+    "validation_indices": [
+      1,
+      3,
+      5,
+      7
+    ]
+  },
+  "validation": {
+    "context_violations": 0,
+    "contexts": 12,
+    "fallback_rate": 0.16666666666666666,
+    "fallbacks": 2,
+    "max_kl_refit64_to_hybrid_nats": 4.882493883973308e-06,
+    "mean_end_to_end_seconds": 17.975659146010003,
+    "mean_retained_abs_drift_nats": 0.0005545084571089524,
+    "observation_summary": {
+      "contexts": 12,
+      "max_solver_residuals": {
+        "box_violation": 6.57713683863137e-12,
+        "duality_gap": 9.841023036624708e-06,
+        "equality": 9.834766387939453e-06,
+        "kkt": 0.0005854350186305091,
+        "projected_gradient": 0.0005306885573364956
+      },
+      "process_peak_resident_bytes": 19509477376,
+      "raw_proxy_max_kl_refit64_nats": 4.882493883973308e-06,
+      "raw_proxy_mean_context_max_kl_refit64_nats": 9.135724451731674e-07,
+      "raw_proxy_mean_retained_abs_drift_nats": 0.0005990406512187499
+    },
+    "policy": {
+      "fista_iterations": 160,
+      "max_reference_kl_nats": 0.001,
+      "partition_cutoff": 0.0003,
+      "residual_cutoff": 0.003
+    }
+  }
+}

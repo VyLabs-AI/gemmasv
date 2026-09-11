@@ -1,0 +1,803 @@
+{
+  "artifacts": {
+    "core_manifest": {
+      "canonical_repository_path": "gemma_sv/benchmarks/longmemeval_chat_confirmation_v1.json",
+      "file_sha256": "7e9f484c4eee8cceecec79bfc0721e1cfc7100092d29f5b29d1e96eca478bae1"
+    },
+    "final_report": {
+      "canonical_repository_path": "outputs/gemma_sv_rag/longmemeval_chat_geometry_methods_finalized_v1.json",
+      "file_sha256": "a7d0582d7d5aa6832320852f0b80e79799621d6520ebef5f7a44eeea0e327fb6",
+      "immutable_input": true,
+      "payload_sha256": "d6c4348975a912652fb1f2e153d8e314f3455ca4efcf6e9e565451b703804dac"
+    },
+    "geometry_manifest": {
+      "canonical_repository_path": "gemma_sv/benchmarks/longmemeval_chat_geometry_corrected_v1.json",
+      "file_sha256": "df10404a5b11491791638190f61b52e30e667d17601819a99925181885bde480",
+      "integrity_sha256": "04fb39a23cbe5e31ed652c0ff8d412df1ab2072999760fba81f7de95dee1a4db"
+    },
+    "method_lock": {
+      "canonical_repository_path": "gemma_sv/benchmarks/longmemeval_chat_geometry_method_authorization_v1.json",
+      "file_sha256": "e965f3c5569e0833a32912b2d8537672af2c7123c89dc943fd671cf9d1f78a5c",
+      "integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+      "payload_sha256": "2fc805cf5ffc4eaf3a321c17ec31be4e356f042c4310fb7d07cddae8fb33df20"
+    }
+  },
+  "attempt_policy": {
+    "all_records_conditions_and_probes_preallocated": true,
+    "atomic_claim": "os.mkdir",
+    "attempts_authorized": 1,
+    "canonical_claim_workspace_path": "outputs/gemma_sv_rag/longmemeval_chat_response_generation_audit_v1.claim",
+    "marker_filename": "marker.json",
+    "no_outcome_based_filtering": true,
+    "overwrite_allowed": false,
+    "persistent_claim": true,
+    "resume_allowed": false,
+    "retry_after_process_abort_allowed": false
+  },
+  "cohort": {
+    "admission_bindings": [
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      }
+    ],
+    "admission_bindings_sha256": "73ac4ab004621df1019ebd920148333699a8f27d67f7e302a558446eef42e6d8",
+    "all_records_without_replacement": true,
+    "joint10": {
+      "record_ids": [
+        "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+        "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+        "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+        "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+        "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+        "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+        "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+        "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+        "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      ],
+      "record_ids_sha256": "9c2646d60522518dbbb71a8e6662d77d1ed5b10108353b27cc1b4cb32f4d3aa1",
+      "records": 10,
+      "selected_before_generated_outcomes": true,
+      "source": "predeclared_geometry_joint10"
+    },
+    "ordered_record_ids": [
+      "longmemeval-constrained-chat-v1-b199148256341f460e9fe175",
+      "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+      "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a",
+      "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+      "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5",
+      "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+      "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+      "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+      "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+      "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+      "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+      "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce",
+      "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+      "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+      "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+      "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+    ],
+    "ordered_record_ids_sha256": "6e19753386922c925f322130146b98d0e05d07b274dba512388fc2641cb7d2af",
+    "records": 16
+  },
+  "conditions": {
+    "condition_ids": [
+      "present",
+      "fresh_raw_omission",
+      "token_row_repack",
+      "exact_decrement",
+      "fixed_c_refit",
+      "fp32_proxy",
+      "decay_0_01",
+      "prompt_suppression"
+    ],
+    "condition_ids_sha256": "1cd44502dff45b3642070f643508f1c926b7bd57cb18c14afcaa619513bb8425",
+    "excluded_condition_ids": [
+      "cache_delete_shift"
+    ],
+    "executed_condition_ids": [
+      "present",
+      "fresh_raw_omission",
+      "fp32_proxy",
+      "decay_0_01",
+      "exact_decrement",
+      "fixed_c_refit",
+      "prompt_suppression"
+    ],
+    "token_row_alias": {
+      "additional_model_execution": false,
+      "alias_of": "fresh_raw_omission",
+      "condition_id": "token_row_repack",
+      "identical_registered_turn_token_ids_required": true
+    }
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "generation": {
+    "algorithm": "direct-step greedy argmax",
+    "do_sample": false,
+    "exact_repeat_token_and_response_match_required": true,
+    "global_seed": 0,
+    "include_terminal_stop_in_token_hash": true,
+    "max_new_tokens": 64,
+    "num_beams": 1,
+    "planned_workload": {
+      "executed_conditions_per_record": 7,
+      "generation_calls": 448,
+      "maximum_generated_token_steps": 28672,
+      "probes_per_condition": 2,
+      "records": 16,
+      "repeat_generations_per_probe": 2
+    },
+    "repeat_generations": 2,
+    "response_decoder": {
+      "clean_up_tokenization_spaces": false,
+      "encoding": "UTF-8",
+      "skip_special_tokens": true
+    },
+    "stop_token_ids": [
+      1,
+      106
+    ],
+    "teacher_forced_scores_used_to_infer_text": false,
+    "temperature": null,
+    "token_hash_serialization": "canonical-json-integer-array",
+    "top_k": null,
+    "top_p": null,
+    "torch_deterministic_algorithms": true,
+    "torch_deterministic_warn_only": false
+  },
+  "generation_implementation": {
+    "file_count": 27,
+    "files": {
+      "cp_svm/__init__.py": "af2da16c33ef7647ae5135fbb7fe9e644f11ec5fba0890d89a1e5a36277a7d8a",
+      "cp_svm/kernels.py": "bb5b4312ad010db8e8695b70df7c44c7945b769fb623dd897037e2530381e7a7",
+      "cp_svm/oneclass_fast.py": "5e4659c1c81c4232c246c24d1b8867bce9654a0f041b3855976ef2cb97384fb7",
+      "cp_svm/oneclass_incremental.py": "616ef5cf9fe95115d469addf0e4a1e7c72c1ffa49beb29d6f9295c4a329f79fb",
+      "demo_server/certificate.py": "bd84f6d1a85f5b52dab29992d6e80aacea44cab7ad19a560955b97c6eaecae88",
+      "demo_server/gate_context.py": "43f8dc2416418bab7eb1ad8f2b563de196867fd477977c594ac494a3bd224dd8",
+      "demo_server/gemma_engine.py": "621bff46951331ef32f9691c5d06d5ebef15b51d198fcbdf987733bb447e3325",
+      "eval_longmemeval_chat.py": "cda1d96d539b351ac32357588f5c6993bdfca082e70bcf81bfdd7fdf3cae0efe",
+      "eval_longmemeval_chat_geometry_fix.py": "36abebd22d8fa90e8588ee7128b4a6913ae0b953bbc06f5266b756c2fec8bdec",
+      "eval_longmemeval_chat_geometry_methods.py": "a1842fca25cbcd8a14dea75f400049829603fda11a4d7ae9c68e76237efd1b83",
+      "eval_longmemeval_chat_methods.py": "2e3dd9f25070831c03eabecc9e1ec36ce2269d5f811281574c79d4595dbda9b1",
+      "eval_longmemeval_chat_v2.py": "23d91fd38f88be53ed76ba1c16bafdb527718561602b6a7d80b0ffaa82fe2da3",
+      "eval_memops_longitudinal.py": "d0f5b3cd5be71fbb2021783acc92e48ef463919b636bba3b00a6a988e9288f4e",
+      "eval_persistent_deletion_baselines.py": "a30122d96d69a9f0a649a716b0a4f59bc6e3f4165117fa0819021a5bcdff21c2",
+      "gemma_sv/__init__.py": "bb714c7f9bea3e1d85f24a937feb437fe39d3790814786ecd1d5b5be1a778432",
+      "graft.py": "6218aa93902a59b97699af504530ea545f3059ca7383c9401e36227822307523",
+      "layer_select.py": "1bbb12411ee368c14e62c870f554dc1adabe12d6b4b745593808990ac6a31b5f",
+      "longmemeval_chat_benchmark.py": "9a81fa0b35529b6395cab458fb957a122aca7d3a9cb35466c1c658ea7e7c54e6",
+      "longmemeval_chat_geometry_fix.py": "31c9bb613f97c916c6b27d9d42e7a5c74d9f5b6bfb652672d7734e7b33591073",
+      "longmemeval_chat_response_generation_audit.py": "5dbd7e1b2aefaac468034de32897bedbacdce6953e81844544ba3edbf63238c7",
+      "longmemeval_deletion_benchmark.py": "6f79c12a8e11dae7ddb3eabcd96194145945c74efd56a9649cf75fb6e3c10c5c",
+      "persistent_deletion.py": "78abb13c7d7634a1b364762298eea0306dc8a4bf32f86568fe6ddd1235fef6cc",
+      "recovery_state.py": "94acd957361317defed63ee1918850cf02e0f5c975533a4c4e280d7df1f00f3c",
+      "sv_global_attention.py": "58eaea66adefdd92ca4a2f5191be54b4a4061a70eee64a9c0e7ce9bd4ee43dc8",
+      "svattn/__init__.py": "c7e34ba986f16e234a4c9eac9a5cd194c9103d3c595c01591f2982cae4531a59",
+      "svattn/causal_sv_attention.py": "391b137c3b2c6ba16d9067e2ad5d4dcda0f7636c5e1223934bcfdd09be68a784",
+      "svattn/mlx_svdd.py": "d5c2f54a7a7ae4a42e31b567f418fa5174d7fdd00f3840e39bbde78c7a58a53f"
+    },
+    "files_sha256": "3fa4f879fdbf33c66759019f1ea789d0ba1435ffdced89c47fbc81d5120194d3"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "8c1677e7b2f83d8d7f5dbaacd07ac9d4c9e784b9a05c21da8d200aa9e691b29a"
+  },
+  "output_policy": {
+    "atomic_first_writer": true,
+    "canonical_workspace_path": "outputs/gemma_sv_rag/longmemeval_chat_response_generation_audit_v1.json",
+    "contains_model_generated_text": true,
+    "contains_source_text": true,
+    "local_only": true,
+    "release_authorized": false,
+    "separate_from_final_report_and_certificate": true,
+    "source_bearing": true
+  },
+  "presentation_case": {
+    "authorized_position": 2,
+    "projection_must_remain_source_bearing_local_only": true,
+    "projection_release_authorized": false,
+    "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+    "selected_before_generated_outcomes": true,
+    "selected_in_this_pre_run_lock": true
+  },
+  "privacy_and_scope": {
+    "credential_fields_forbidden": true,
+    "decoded_strings_exhaust_extractability": false,
+    "environment_variables_not_serialized": true,
+    "leak_audit": "exact registered-answer substring, exact source-response substring, control-instruction echo, and chat-boundary checks",
+    "longmemeval": {
+      "artifact_sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c",
+      "dataset_id": "xiaowu0162/longmemeval-cleaned",
+      "dataset_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+      "license": "MIT",
+      "public_provenance": true,
+      "repository": "xiaowu0162/LongMemEval",
+      "repository_revision": "9e0b455f4ef0e2ab8f2e582289761153549043fc"
+    },
+    "offline_cached_model_and_data_only": true,
+    "post_hoc_audit_not_original_certificate": true,
+    "post_hoc_audit_not_original_report": true
+  },
+  "prompt_contract": {
+    "base_probe_bytes": [
+      {
+        "probes": [
+          {
+            "answer_sha256": "d9c66545434480eb07a76f90c5b38b8deebe8d778904ac63ab277eede69eae27",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "124c7bc06b3fb95916a1995686d4cbe011c12d62ab3450e1980537a6d8a1d7ce",
+            "question_sha256": "08bd87bfeb7a485d2f0b2f82c73aeb1a0bce8fbbc8ed6739c6ed380b8bbf87be",
+            "target_token_count": 11,
+            "target_token_ids_sha256": "e9b58f3de6e5033e3f7c8965cd0190b17e9f26da5b26adb7efc3a635ebd2915a"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "9d67766e8b32fa9c5ceb6bd0be9283e04bd0bc001eca2c636aa5272e846c1b94",
+            "question_sha256": "b1fa5c21afdb58604d92f4a9d891c9e339c0b79ba4418f669512b51da60495b7",
+            "target_token_count": 1,
+            "target_token_ids_sha256": "5e3bce2bb1942bfa6e77ec0cbcda21f4365646e0ddbaf7b7e0e77ae634ac659f"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "0cdacfd9bbfcb04e391adb716f3e2aaaabc2d47ce137e94880379345dcf35cfb",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "b763ca6b741a9edae85449174024a86601e123f38469b51c1480faf8dbf84a46",
+            "question_sha256": "91c33e02ac13543ef2e14229e0a9a402b27563d2df51844ff1dd6bde73f3d3e9",
+            "target_token_count": 12,
+            "target_token_ids_sha256": "86a5e5cedd7c63a41dc591140cf0e50a6b0020b97df901cef3afa234b9109239"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "42e7e4f92f9a771398f779c96644861ffd9b30a122d6ff9c8c52cee39d00d7f0",
+            "question_sha256": "c6cc82ba46189558daf42a449f2d993323027257c8eac9e7561a7bf91285c974",
+            "target_token_count": 1,
+            "target_token_ids_sha256": "f00a9078169c4df51f772f772eed00121a6fa90100c26aebbebd88dfe49c0d0d"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "9d4113b33044d3529a09ef98a52fed7b7d3a216b363f209d3e49db7bf2b9adb4",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "5ef08b647cf81c6bff9ad78e9289f518cbff2d1265e18343d2dac8f4a9d5a7f4",
+            "question_sha256": "b66bd823f733007599507e43d288f9c2624b105e9573578b2f77f89119fb3fc3",
+            "target_token_count": 10,
+            "target_token_ids_sha256": "547c9d9734bda33d722e840ef09230d5b3c73f88ba59ffa73ab93fb4d15e022a"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "284b7e6d788f363f910f7beb1910473e23ce9d6c871f1ce0f31f22a982d48ad4",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "3a70c1df164c96d27d024a93379fc9e41274279c0ddbefb2d50e6b7186582e02",
+            "question_sha256": "96aad668d6bf2a0d67d9a5c84180cc2586a999c45c986b5d72e6def6ea9df68c",
+            "target_token_count": 3,
+            "target_token_ids_sha256": "d0f93317cb8ba51053cbfcd4b7dc292740aaf352d6db98bdd0228ecbc9d87a1c"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "93309f0c008afd73427faa0481e756eab4f1f6dfaa3b1e81d09b7c4082634b24",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "15584a60389334f920b07e22d6c8c1d30c1858a776978ddbd357be7c32609ce3",
+            "question_sha256": "471a41ab1d5ab516fdffa008ff329dbc09470f46e359b43f02d6c874e04cfc12",
+            "target_token_count": 2,
+            "target_token_ids_sha256": "4294bbaef50686ab8f1d6b4e87237221b355308ff1c127b9a79037cf1d4c7b14"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "33504bc00b0d75d01ed8b9e6a719c29328dbec21edaf73279ef0c04865e97786",
+            "question_sha256": "d41ff93ee5625fb9ef90c4c01e0b30b68b03066a60d169521448860d1ca9b511",
+            "target_token_count": 2,
+            "target_token_ids_sha256": "05895d93284f5eb942adb1df1bbfe5baebc263d1f57965e94797a487011b82cd"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "4f97c7b2f72ccbd5b317fdf08f3e2b3ae494659c45c8f337641d7515aa30d3b9",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "4354cea3383b72bbcf4a8d00352345fe00126be41a775b81b641091ea3b1d451",
+            "question_sha256": "7d80c90003295fb2be505e9ab649a63f705e5770eab5a3cc2f195e8cdf21121f",
+            "target_token_count": 6,
+            "target_token_ids_sha256": "20db7306c449de8dba310864678a5f56686661e48fe4ca5e8d0a854099e055cf"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "19577c82b8fa62c32a0e24b38446c160110ec264e692f6ed61f2ce1f2688262e",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "7e5957770a85425cac5933b38eade086372dc750b97d05ef74bd87d77bc876cb",
+            "question_sha256": "5e640b5851b7f0629a4fbbdbb59fed36bdac4295c0b7062027a6d477aff0ebae",
+            "target_token_count": 8,
+            "target_token_ids_sha256": "7e2f0f81e3f1ef888686b27ef5b1e1ef132aa0b5d0f5ed0224a04a9279a13561"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "765dc5e51cbd55fb18b2f3d5444d04b0f88d946bf5f9300e17ff069ad3a3ec2e",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "8052fa74da7a61a84b3838bb708948202bc0d069e9c4ea6fea9edf4342d6f57b",
+            "question_sha256": "d365312dac7dd4de76306604ac27d36b30eb6c2063f33943eeca7c9ecded8533",
+            "target_token_count": 4,
+            "target_token_ids_sha256": "dc32e271f7dd8a8d2e1a7f119255fcb46e3609e399275659407d9665b6f5fab2"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "71da5107827f76ceb975a201e58ee61600ac82c3d80eec3c685a3859dddfd4e7",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "3dd1bd667d045f1ca397c0f6125096508b7a254bc1b6c691420f3b65f4789527",
+            "question_sha256": "57b36c2c2911bd29b6cd6c2ebf95b87e1b0908bb4754485dffc08a1dc3786390",
+            "target_token_count": 2,
+            "target_token_ids_sha256": "2cbe72e275c450981d67f05008361f555ec06d3883e28bba7eff5694dbc29797"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "222b0bd51fcef7e65c2e62db2ed65457013bab56be6fafeb19ee11d453153c80",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "ce28124cc2ffaabb9cb5dac345e26502f10aeb56eb5ae837ac2bebed1a696d0e",
+            "question_sha256": "db851467ceaff699be6bd7ad9c8bfa15069e844fc75e05a5968b12b85936c7f2",
+            "target_token_count": 1,
+            "target_token_ids_sha256": "3f2d7614a8cea64a72b390cb7307702aa0cc92ec0e1f6fd40daf4bfd778f89a5"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "a037a7dfaf26abe1265bd5d51447be3bb1fdaef7c4c7a14bcf0d819818fb80b0",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "14e6b751b008ca9f16b2a627e430be6664a857bf29ef2fe1bede131a6944fb5f",
+            "question_sha256": "4a84a2174bbc50aef0c41f3022e19976fd786a43f2d537be5acb1aba1e986ca2",
+            "target_token_count": 4,
+            "target_token_ids_sha256": "64fe10e8cf66c36d8956ad88e217ab492d449b31618af066c69300a3c7f125a9"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "fcc3820811c77ca9c288d77e2f37e76d1f1f76f112182f558b6c0349b41ff4b3",
+            "question_sha256": "2e8e9f47730ad000069d2e5ed926ab71234a4df6d628326306afc660671a5b18",
+            "target_token_count": 2,
+            "target_token_ids_sha256": "9389c1781db522b1f0abb977cceb2f8317c4ddd6d4beb414b9b9e87584faf4c7"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+      },
+      {
+        "probes": [
+          {
+            "answer_sha256": "302aceaf374d912449dbf8fec85a46dddd8a197cb1b0933e9af196dedf2e68c9",
+            "kind": "deleted",
+            "probe_id": "target_current",
+            "prompt_utf8_sha256": "932102d40e2987e998817e4ffb587a683199da3b8915b92a112f8556fe702be3",
+            "question_sha256": "2673956f19e83371a1d03718c9f4cc858e9b6b3da02cf3d6c0cffa5e171069ba",
+            "target_token_count": 2,
+            "target_token_ids_sha256": "bfe3d930ab13984c7d648ac3b376f076dec02a3bb75f122738a271d995a08ffe"
+          },
+          {
+            "answer_sha256": "e048b4544e5ee676b49a2eb24d1fd703694190ea4f87b5dbd53914f774102a48",
+            "kind": "retained",
+            "probe_id": "retained",
+            "prompt_utf8_sha256": "54feff2c12cf966be6f85db932f76f519453e123a1bd868148282492b0163947",
+            "question_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+            "target_token_count": 22,
+            "target_token_ids_sha256": "bf01d1fca611c468cf3dbb2a1557d51e839a197d7f416fffff525b964a736e2c"
+          }
+        ],
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      }
+    ],
+    "base_probe_bytes_sha256": "d4187f448666a90694221d1e434e74050a8bae5570490eeb5248bf0ffa674c30",
+    "chat_serialization": {
+      "assistant_role_token": "<start_of_turn>model",
+      "complete_turn_terminator": "<end_of_turn>",
+      "constrained_instruction": "Reply with only the remembered value, without explanation.",
+      "format": "gemma-registered-turns-v1",
+      "query_is_incremental_user_turn": true,
+      "query_response_contract": "bare remembered value",
+      "session_date_prefix": "[Session date: {official date}]",
+      "single_bos": true,
+      "user_role_token": "<start_of_turn>user"
+    },
+    "chat_serialization_sha256": "c14f7dcac1bf219915ed43234136a0ae6d9377a9743bd1246f2feef6a91beafd",
+    "target_free_prompt_suppression": {
+      "insertion": "insert instruction plus LF immediately before the single constrained instruction inside the registered user turn",
+      "instruction_utf8_bytes": 161,
+      "instruction_utf8_sha256": "862de664931a050c84c694bc5c68938cdff6f92f3cc41fcee6582dcbecf839d0",
+      "target_answer_substring_forbidden": true,
+      "transformation_implementation_bound": true
+    },
+    "tokenization": {
+      "add_special_tokens": false,
+      "encoding": "UTF-8"
+    }
+  },
+  "runtime": {
+    "environment": {
+      "packages": {
+        "accelerate": "1.14.0",
+        "cvxpy": "1.9.2",
+        "huggingface-hub": "1.20.1",
+        "numpy": "2.4.6",
+        "safetensors": "0.8.0",
+        "scipy": "1.17.1",
+        "tokenizers": "0.22.2",
+        "torch": "2.12.1",
+        "transformers": "5.12.1"
+      },
+      "platform": {
+        "machine": "arm64",
+        "python_implementation": "CPython",
+        "python_version": "3.11.14",
+        "release": "25.5.0",
+        "system": "Darwin"
+      },
+      "torch": {
+        "git_version": "7269437d655783a26cba32aa88195b741ff496aa",
+        "mps_available": true,
+        "mps_built": true
+      }
+    },
+    "method_runtime": {
+      "adapter": null,
+      "arm": "it_native_chat_training_free_graft",
+      "chunk": 128,
+      "device": "mps",
+      "dtype": "float32",
+      "evaluation_seed": 0,
+      "graft_enabled": true,
+      "model_id": "google/gemma-3-4b-it",
+      "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "nu": 0.7,
+      "per_boundary_box": true,
+      "preserve_prefix_mass": true,
+      "readout": "softmax",
+      "solver_seed": 0,
+      "training_steps": 0,
+      "window": 1024
+    },
+    "model_and_tokenizer": {
+      "credential_material_passed_by_audit_code": false,
+      "local_files_only": true,
+      "metadata_file_sha256": {
+        "added_tokens.json": "50b2f405ba56a26d4913fd772089992252d7f942123cc0a034d96424221ba946",
+        "config.json": "9059f680f4dbd1957f35cb44b9fdd6948f4792db7a7a35ee353ea42e68adf7ff",
+        "generation_config.json": "fd9324becc53c4be610db39e13a613006f09fd6ef71a95fb6320dc33157490a3",
+        "model.safetensors.index.json": "77f4b67de084c31c7bcd373b039908108eee6c6181607e6d53da730e5f0bc659",
+        "special_tokens_map.json": "2f7b0adf4fb469770bb1490e3e35df87b1dc578246c5e7e6fc76ecf33213a397",
+        "tokenizer.json": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+        "tokenizer_config.json": "bfe25c2735e395407beb78456ea9a6984a1f00d8c16fa04a8b75f2a614cf53e1"
+      },
+      "model_id": "google/gemma-3-4b-it",
+      "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "network_access": false,
+      "tokenizer_backend_sha256": "c1a087240686a7d141101217051f76d5cd4cbe2b6093e3c3553fb26dcc4d0e9a",
+      "tokenizer_bos_token_id": 2,
+      "tokenizer_eos_token_id": 1,
+      "tokenizer_fast_required": true,
+      "tokenizer_id": "google/gemma-3-4b-it",
+      "tokenizer_length": 262145,
+      "tokenizer_pad_token_id": 0,
+      "tokenizer_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "tokenizer_vocab_size": 262144
+    }
+  },
+  "schema": "gemma-sv-longmemeval-chat-response-generation-authorization-lock-v1",
+  "schema_version": 1,
+  "source_bearing_output_authorized": true,
+  "status": "frozen-before-post-hoc-response-generation"
+}

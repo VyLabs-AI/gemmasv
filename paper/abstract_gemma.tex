@@ -1,0 +1,18 @@
+An assistant can stop repeating a fact without removing it from memory.
+To study this difference, we install a support-vector gate in frozen
+Gemma~3 and record which stored keys and values belong to each exchange.
+A deletion request excludes the exchange's rows from the long-range readout
+and recalculates the gate on what remains. We check this operation against
+an independent refit, then compare it with running the model again on the
+conversation without the exchange. This second comparison matters because
+the exchange may already have influenced surviving memory rows.
+At 4B, the gated model passed checks for recall and feasible deletion on the
+same six of eight records admitted by the base model, at a perplexity cost
+under 2\%. Admission fell at the smaller and larger
+checkpoints with the same configuration. The edited memory agreed closely
+with the local refit on the registered probes, and the model disclosed fewer
+deleted answers than when simply instructed to forget. However, an attack
+evaluated separately for each record could still distinguish edited memory
+from memory that never stored the record. Excluding an exchange's own rows
+therefore provides a way to edit and audit conversation memory, while leaving
+a measurable difference from rebuilding it without that exchange.

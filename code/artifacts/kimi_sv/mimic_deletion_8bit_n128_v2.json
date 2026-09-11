@@ -1,0 +1,390 @@
+{
+  "evaluation": "local aggregate MIMIC-IV-Ext-CDS whole-record replay deletion on a Kimi Linear hybrid",
+  "contains_source_text": false,
+  "contains_source_identifiers": false,
+  "generations_produced": false,
+  "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+  "host": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "source_rows": {
+    "rows_scanned": 132,
+    "complete_rows_seen": 128
+  },
+  "selection_policy": {
+    "description": "first N complete initial_assessment_info.csv rows after a deterministic skip, in file order, projected to chief complaint / arrival transport / disposition; raw identifiers never read",
+    "records": 128,
+    "skip": 0,
+    "fixed_before_evaluation": true
+  },
+  "admission": {
+    "min_signal_nats": 0.05,
+    "max_first_token_rank": 10,
+    "attempted": 9,
+    "admitted": 9,
+    "admission_rate": 1.0
+  },
+  "context": {
+    "records": 128,
+    "tokens": 3248
+  },
+  "exactness": {
+    "admitted_with_zero_residual": 9,
+    "logit_residual": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "state_residual": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  "efficacy": {
+    "note": "field metrics score each value from its own stem, isolating it from shared record formatting; body metrics score the whole record body",
+    "recallable_fields_per_record": {
+      "mean": 2.111111111111111,
+      "median": 2.0,
+      "max": 3.0,
+      "min": 1.0
+    },
+    "body_lift_present_nats": {
+      "mean": 0.9452686870381152,
+      "median": 0.9005444175318668,
+      "max": 1.4786109129587808,
+      "min": 0.35866573878696983
+    },
+    "body_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "field_lift_present_nats": {
+      "mean": 2.0198413735344296,
+      "median": 2.053314765294393,
+      "max": 4.055614471435547,
+      "min": 0.4207228819529215
+    },
+    "field_max_abs_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "field_worst_rank_present": {
+      "mean": 1.0,
+      "median": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "field_worst_rank_after_deletion": {
+      "mean": 165.77777777777777,
+      "median": 26.0,
+      "max": 1043.0,
+      "min": 2.0
+    },
+    "field_best_rank_after_deletion": {
+      "mean": 2.111111111111111,
+      "median": 1.0,
+      "max": 9.0,
+      "min": 1.0
+    },
+    "field_probability_present": {
+      "mean": 0.9940928364241565,
+      "median": 0.997584879398346,
+      "max": 0.9988276362419128,
+      "min": 0.9753749072551727
+    },
+    "field_probability_after_deletion": {
+      "mean": 0.30871655118709085,
+      "median": 0.29725541919469833,
+      "max": 0.47146154094783316,
+      "min": 0.01715826615691185
+    }
+  },
+  "specificity": {
+    "retained_max_abs_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "retained_worst_rank_present": {
+      "mean": 3.0,
+      "median": 3.0,
+      "max": 3.0,
+      "min": 3.0
+    },
+    "retained_worst_rank_after_deletion": {
+      "mean": 3.0,
+      "median": 3.0,
+      "max": 3.0,
+      "min": 3.0
+    }
+  },
+  "cost": {
+    "replay_seconds": {
+      "mean": 3.4873973656859665,
+      "median": 3.5336382081732154,
+      "max": 6.702415249310434,
+      "min": 4.9209222197532654e-05
+    },
+    "rebuild_seconds": {
+      "mean": 6.770518981334236,
+      "median": 6.756026124581695,
+      "max": 6.810108666308224,
+      "min": 6.746553583070636
+    },
+    "replayed_tokens": {
+      "mean": 1593.0,
+      "median": 1579.0,
+      "max": 3202.0,
+      "min": 0.0
+    },
+    "checkpoint_bytes_per_boundary": 43417600
+  },
+  "per_position": [
+    {
+      "victim_position": 0,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 3202,
+      "replay_seconds": 6.702415249310434,
+      "rebuild_seconds": 6.791606707498431
+    },
+    {
+      "victim_position": 16,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 2784,
+      "replay_seconds": 6.077799334190786,
+      "rebuild_seconds": 6.810108666308224
+    },
+    {
+      "victim_position": 32,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 2375,
+      "replay_seconds": 5.163707125000656,
+      "rebuild_seconds": 6.746553583070636
+    },
+    {
+      "victim_position": 48,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 1981,
+      "replay_seconds": 4.367960540577769,
+      "rebuild_seconds": 6.748363375663757
+    },
+    {
+      "victim_position": 64,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 1579,
+      "replay_seconds": 3.5336382081732154,
+      "rebuild_seconds": 6.756026124581695
+    },
+    {
+      "victim_position": 79,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 1204,
+      "replay_seconds": 2.72715612500906,
+      "rebuild_seconds": 6.805051791481674
+    },
+    {
+      "victim_position": 95,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 801,
+      "replay_seconds": 1.8434877498075366,
+      "rebuild_seconds": 6.7537049585953355
+    },
+    {
+      "victim_position": 111,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 411,
+      "replay_seconds": 0.9703627498820424,
+      "rebuild_seconds": 6.772448999807239
+    },
+    {
+      "victim_position": 127,
+      "admitted": true,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 0,
+      "replay_seconds": 4.9209222197532654e-05,
+      "rebuild_seconds": 6.7508066250011325
+    }
+  ],
+  "checkpoint_tradeoff": {
+    "latency_model": {
+      "kind": "linear fit to measured replay timings",
+      "seconds_per_token": 0.0021130699660164304,
+      "intercept_seconds": 0.12127690982179325,
+      "r_squared": 0.9983637577970138
+    },
+    "dense_token_count_max_deviation": 0.0,
+    "spacings": [
+      {
+        "interval_records": 1,
+        "checkpoint_count": 129,
+        "storage_bytes": 5600870400,
+        "storage_gib": 5.216217041015625,
+        "replayed_tokens": {
+          "mean": 1594.59375,
+          "median": 1591.0,
+          "max": 3202.0,
+          "min": 0.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 3.4907650709443057,
+          "median": 3.4831712257539342,
+          "max": 6.887326941006403,
+          "min": 0.12127690982179325
+        }
+      },
+      {
+        "interval_records": 2,
+        "checkpoint_count": 65,
+        "storage_bytes": 2822144000,
+        "storage_gib": 2.628326416015625,
+        "replayed_tokens": {
+          "mean": 1607.0625,
+          "median": 1603.5,
+          "max": 3202.0,
+          "min": 27.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 3.517112412083073,
+          "median": 3.5095846003291395,
+          "max": 6.887326941006403,
+          "min": 0.17832979890423686
+        }
+      },
+      {
+        "interval_records": 4,
+        "checkpoint_count": 33,
+        "storage_bytes": 1432780800,
+        "storage_gib": 1.334381103515625,
+        "replayed_tokens": {
+          "mean": 1632.234375,
+          "median": 1630.5,
+          "max": 3206.0,
+          "min": 81.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 3.570302345133893,
+          "median": 3.5666374894115833,
+          "max": 6.895779220870469,
+          "min": 0.2924355770691241
+        }
+      },
+      {
+        "interval_records": 8,
+        "checkpoint_count": 17,
+        "storage_bytes": 738099200,
+        "storage_gib": 0.687408447265625,
+        "replayed_tokens": {
+          "mean": 1682.078125,
+          "median": 1679.5,
+          "max": 3206.0,
+          "min": 177.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 3.6756256762525243,
+          "median": 3.670177917746388,
+          "max": 6.895779220870469,
+          "min": 0.4952902938067014
+        }
+      },
+      {
+        "interval_records": 16,
+        "checkpoint_count": 9,
+        "storage_bytes": 390758400,
+        "storage_gib": 0.363922119140625,
+        "replayed_tokens": {
+          "mean": 1783.015625,
+          "median": 1778.5,
+          "max": 3207.0,
+          "min": 380.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 3.8889136759473075,
+          "median": 3.879371844382015,
+          "max": 6.897892290836485,
+          "min": 0.9242434969080369
+        }
+      },
+      {
+        "interval_records": 32,
+        "checkpoint_count": 5,
+        "storage_bytes": 217088000,
+        "storage_gib": 0.202178955078125,
+        "replayed_tokens": {
+          "mean": 1984.265625,
+          "median": 1978.0,
+          "max": 3207.0,
+          "min": 770.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 4.314169006608115,
+          "median": 4.300929302602293,
+          "max": 6.897892290836485,
+          "min": 1.7483407836544447
+        }
+      },
+      {
+        "interval_records": 64,
+        "checkpoint_count": 3,
+        "storage_bytes": 130252800,
+        "storage_gib": 0.121307373046875,
+        "replayed_tokens": {
+          "mean": 2391.265625,
+          "median": 2390.0,
+          "max": 3207.0,
+          "min": 1570.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 5.174188482776802,
+          "median": 5.1715141286010615,
+          "max": 6.897892290836485,
+          "min": 3.4387967564675894
+        }
+      },
+      {
+        "interval_records": 128,
+        "checkpoint_count": 2,
+        "storage_bytes": 86835200,
+        "storage_gib": 0.08087158203125,
+        "replayed_tokens": {
+          "mean": 3204.765625,
+          "median": 3205.0,
+          "max": 3208.0,
+          "min": 3197.0
+        },
+        "estimated_replay_seconds": {
+          "mean": 6.893170900131167,
+          "median": 6.893666150904452,
+          "max": 6.900005360802502,
+          "min": 6.876761591176321
+        }
+      }
+    ],
+    "timing_status": "estimated from measured dense replay timings; token counts are exact"
+  }
+}

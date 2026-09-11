@@ -1,0 +1,11 @@
+-r requirements-core.txt
+
+# Live Gemma graft, recovery, and evaluation.
+torch>=2.4
+transformers==5.12.1
+accelerate>=0.34
+datasets>=2.20
+peft>=0.13
+sentencepiece>=0.2
+huggingface_hub>=0.25
+

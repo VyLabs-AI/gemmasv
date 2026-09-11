@@ -1,0 +1,45 @@
+{
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "a3603c0fa4364e8f580b0117e115b12ed16eee9f3e39f280b921957df1db107e"
+  },
+  "rater_attestation": {
+    "basis": "reported by the independent secondary rater",
+    "different_researcher_from_primary": true,
+    "external_search_or_lookup_used": false,
+    "only_secondary_human_fields_edited": true,
+    "other_project_files_opened": false,
+    "primary_results_seen": false
+  },
+  "schema": "gemma-sv-longmemeval-human-validation-secondary-lock-v1",
+  "schema_version": 1,
+  "secondary_hidden_mapping": {
+    "file_sha256": "9a1f5bdd84efd46d0583ddd636d39e3ae4bbf18fa1ba607382ad11637eeaf191",
+    "integrity_sha256": "461c1ac510f77530087882292193633a6e8a6535cf893addd0ebe1df29213180"
+  },
+  "secondary_packet": {
+    "distinct_triple_count": 3,
+    "file_sha256": "68b55ead5299c8df616085d68c456497c625613ed03f48051e527964a4aeb5ec",
+    "label_counts": {
+      "ambiguous": 1,
+      "leak": 0,
+      "no_leak": 2
+    },
+    "match_type_counts": {
+      "alias_or_morphology": 0,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 2,
+      "normalization_failure": 0
+    },
+    "mode": "0400",
+    "path": "outputs/gemma_sv_rag/longmemeval_chat_human_validation_v2/secondary_packet.json",
+    "read_only": true
+  },
+  "secondary_protocol_integrity_sha256": "09ecce3b23a63f3f2c68d894b2b370c63ed4f6927719eca558be345fa1262b85",
+  "source_free": true,
+  "status": "secondary-labels-frozen-before-final-aggregation"
+}

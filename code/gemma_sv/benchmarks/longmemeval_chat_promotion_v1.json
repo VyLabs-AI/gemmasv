@@ -1,0 +1,56 @@
+{
+  "confirmation_manifest_integrity_sha256": "48eb12371e677bc18732f900049dcdfc5791f31344a1f4dfbcfcf06bcfe07ce5",
+  "confirmation_policy": {
+    "admission_thresholds": {
+      "maximum_retained_first_token_rank_in_present_and_raw_omission": 10,
+      "maximum_target_present_first_token_rank": 10,
+      "minimum_target_present_minus_fresh_raw_omission_nats": 0.05
+    },
+    "attempt_every_frozen_record": true,
+    "model_or_prompt_changes_forbidden": true,
+    "no_replacement": true,
+    "records": 16,
+    "selection_uses_confirmation_outputs": false,
+    "threshold_overrides_allowed": false
+  },
+  "contains_source_text": false,
+  "decision": {
+    "adapter": null,
+    "arm": "it_native_chat_training_free_graft",
+    "chunk": 128,
+    "device": "mps",
+    "dtype": "float32",
+    "evaluation_seed": 0,
+    "graft_enabled": true,
+    "model_id": "google/gemma-3-4b-it",
+    "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+    "nu": 0.7,
+    "per_boundary_box": true,
+    "preserve_prefix_mass": true,
+    "readout": "softmax",
+    "solver_seed": 0,
+    "training_steps": 0,
+    "window": 1024
+  },
+  "development_evidence": {
+    "arm": "it_native_chat_training_free_graft",
+    "attempted_records": 15,
+    "completed_records": 15,
+    "frozen_records": 15,
+    "implementation_contract_sha256": "b5172e56413092ce6929540aa978215378944d4a21efbb231bd263ee3af7faeb",
+    "joint_admitted": 9,
+    "record_failures": 0,
+    "report_schema": "gemma-sv-longmemeval-chat-admission-evaluation-v1",
+    "report_sha256": "b84414e5e4fae9bb91755613590f790ac660acbcd21d346f0345927632679f0a",
+    "report_status": "completed"
+  },
+  "development_manifest_integrity_sha256": "2e49e26ef6911024830594a88e186b2d77229a9a3feed3630ce83da074e232a7",
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "2c737bba5051a7b56fac369d6bf16898a0b7225289d68eaa842431f062d6234e"
+  },
+  "policy_lock_sha256": "5ff9da549494ab273c7656546d27dcb0bf2922932abb4632a6aef3d1b4fa393c",
+  "schema": "gemma-sv-longmemeval-chat-promotion-lock-v1",
+  "selection_uses_confirmation_outputs": false,
+  "status": "frozen-before-confirmation-model-scoring"
+}

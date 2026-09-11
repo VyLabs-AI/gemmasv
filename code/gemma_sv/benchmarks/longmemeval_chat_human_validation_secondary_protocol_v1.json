@@ -1,0 +1,44 @@
+{
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "controlled_unblinding": {
+    "unblinding_ledger_file_sha256": "5563b74aa82651aa2376fe65323105ed4cc9cb017dc18b81e9490b6a72642efb",
+    "unblinding_ledger_integrity_sha256": "f55a794b797c83d745d947b38b80febbea1684343b101dcf417dbb2f9256d2b0"
+  },
+  "design": {
+    "agreement_statistic_prohibited": true,
+    "conditions_hidden": true,
+    "duplicate_multiplicities_hidden": true,
+    "identical_triples_presented_once": true,
+    "luna_labels_hidden": true,
+    "primary_labels_hidden": true,
+    "secondary_rater_blinded": true,
+    "selection_roles_hidden": true,
+    "third_rater_for_human_disagreement": true
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "09ecce3b23a63f3f2c68d894b2b370c63ed4f6927719eca558be345fa1262b85"
+  },
+  "primary_lock_integrity_sha256": "aaa7b17c077cf5713b6d1e7b61f951ebea46dad09cdc2d579467f60169f99d4c",
+  "schema": "gemma-sv-longmemeval-human-validation-secondary-protocol-v1",
+  "schema_version": 1,
+  "selection": {
+    "duplicate_occurrences_collapsed": 1,
+    "primary_ambiguous_units": 1,
+    "primary_luna_disagreement_units": 3,
+    "secondary_distinct_triples": 3,
+    "secondary_triple_bindings_sha256": "0c16e57515d24f704002e98dc7192cd6a8ecc82357b7849fc6ec32bebb72a7a1",
+    "selected_primary_review_ids_sha256": "f75d2c6d36bce02ac21209095435d57676c3deacfeb04ad22f217b3072a4b402",
+    "selected_primary_units": 4
+  },
+  "source_free": true,
+  "status": "frozen-before-secondary-human-labels",
+  "supplemental_luna_ambiguous_outputs": {
+    "count": 2,
+    "included_in_primary_endpoint": false,
+    "included_in_secondary_packet": false,
+    "status": "separate-supplement-not-generated"
+  }
+}

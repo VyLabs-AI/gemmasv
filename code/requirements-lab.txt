@@ -1,0 +1,7 @@
+# Isolated lab-meeting launcher: static replay plus optional Gemini resolver.
+# It does not load local Gemma weights or run deletion inference.
+fastapi==0.139.0
+uvicorn[standard]==0.51.0
+httpx>=0.28
+google-genai>=2.19,<3
+python-dotenv>=1.2,<2

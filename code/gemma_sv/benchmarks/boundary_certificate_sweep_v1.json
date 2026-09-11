@@ -1,0 +1,36 @@
+{
+  "name": "boundary_certificate_sweep_v1",
+  "version": 1,
+  "status": "frozen-before-execution",
+  "configuration": "mass_preserving_boundary_v1",
+  "manifest": "whole_record_confirm_v2.json",
+  "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "include_rejected_recall_records": true,
+  "records": 8,
+  "probes_per_record": 4,
+  "models": [
+    {
+      "scale": "1b",
+      "id": "google/gemma-3-1b-pt",
+      "revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+      "window": 512,
+      "prefix_fillers": 8
+    },
+    {
+      "scale": "4b",
+      "id": "google/gemma-3-4b-pt",
+      "revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+      "window": 1024,
+      "prefix_fillers": 11
+    }
+  ],
+  "certificate": {
+    "precision": "float64",
+    "reference": "retained-key refit at the identical frozen C for each boundary",
+    "maximum_kl_target": 1e-06,
+    "report_every_record": true,
+    "report_fallbacks": true,
+    "resume": true
+  },
+  "retention_policy": "Run and retain all eight records at both scales regardless of recall admission, conditioning, fallback count, or KL."
+}

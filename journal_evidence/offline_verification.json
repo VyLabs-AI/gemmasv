@@ -1,0 +1,45 @@
+{
+  "all_copied_files_match_originals": true,
+  "credential_pattern_scan_matches": 0,
+  "distributed_frozen_files_match_original_provenance": 38,
+  "full_529_file_and_cache_audit_replayed_here": false,
+  "model_or_gpu_inference_calls": 0,
+  "numpy": "2.4.6",
+  "offline_analyses": [
+    {
+      "all_provenance_hashes_match": true,
+      "ignored_for_portability": [
+        "provenance"
+      ],
+      "note": "Only provenance timestamps/absolute paths and completion time may differ; scientific payload compared exactly.",
+      "numerical_and_descriptive_payload_identical": true,
+      "original": "outputs/journal_studies/gemmasv/main_analysis_20260906_v1/paired_analysis.json",
+      "original_sha256": "1649059366c1d36a7d8662b00404be26d42c9e82d0e5b9f5811869436fd6f70a"
+    },
+    {
+      "all_provenance_hashes_match": true,
+      "ignored_for_portability": [
+        "completed_utc",
+        "provenance"
+      ],
+      "note": "Only provenance timestamps/absolute paths and completion time may differ; scientific payload compared exactly.",
+      "numerical_and_descriptive_payload_identical": true,
+      "original": "outputs/journal_studies/gemmasv/decoded_retained_posthoc_20260906_v1/retained_correctness.json",
+      "original_sha256": "ef2a666d9930e29ca89584171a059b1d8061dd75be7a418b760dc26a48a9f26f"
+    }
+  ],
+  "omitted_frozen_snapshot_files": 491,
+  "original_full_snapshot_files": 529,
+  "potential_source_payload_key_matches": 0,
+  "python": "3.11.14 (main, Oct  9 2025, 16:16:55) [Clang 17.0.0 (clang-1700.4.4.1)]",
+  "python_files_parsed": 80,
+  "source_summary_flags": {
+    "contains_model_generated_text": false,
+    "contains_source_identifiers": false,
+    "contains_source_text": false,
+    "contains_token_arrays": false
+  },
+  "source_text_in_main_result": false,
+  "validation_scope": "Integrity, explicit payload allowlist, static syntax, and existing-result reanalysis; no new model inference or numerical study rerun.",
+  "verified_utc": "2026-09-07T02:35:10.569606+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "boundary_lira_broad_v1",
+  "version": 1,
+  "status": "frozen-before-admission-outcomes",
+  "configuration": "mass_preserving_boundary_v1",
+  "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "model": {
+    "id": "google/gemma-3-4b-pt",
+    "revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d"
+  },
+  "manifest": "whole_record_lira_broad_v1.json",
+  "selection_rule": "Primary LiRA aggregation uses every record passing the unchanged strict whole-record admission gates; all attempted records and rejection reasons remain in the admission report.",
+  "lira": {
+    "shadow_draws_per_side": 32,
+    "held_out_draws_per_target": 32,
+    "seed": 0
+  },
+  "retention_policy": "Do not replace records, change gates, or alter shadow/test counts after admission or LiRA outcomes."
+}

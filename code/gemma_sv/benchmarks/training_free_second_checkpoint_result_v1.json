@@ -1,0 +1,341 @@
+{
+  "configuration": {
+    "chunk": 128,
+    "nu": 0.7,
+    "per_boundary_box": true,
+    "preserve_prefix_mass": true,
+    "sha256": "2c9f198c597ce05fb579fce026de7ea624c15d6a7473ea2e7fb7f62a998f315d",
+    "solver_seed": 0,
+    "source": "mass_preserving_boundary_v1.json",
+    "training_steps": 0
+  },
+  "confirmation": {
+    "graft": {
+      "admitted": 5,
+      "attempted": 8,
+      "fixed_c_feasible": 8,
+      "records": [
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 0,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 1,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 2,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 3,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": false,
+          "fixed_c_feasible": true,
+          "manifest_index": 4,
+          "rejection_reasons": [
+            "field_1:secret_lift"
+          ]
+        },
+        {
+          "admitted": false,
+          "fixed_c_feasible": true,
+          "manifest_index": 5,
+          "rejection_reasons": [
+            "field_1:rank"
+          ]
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 6,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": false,
+          "fixed_c_feasible": true,
+          "manifest_index": 7,
+          "rejection_reasons": [
+            "field_0:rank"
+          ]
+        }
+      ]
+    },
+    "manifest": "whole_record_confirm_v2.json",
+    "sha256": "40f25b73e23ea33e2f7b70924e703d9ab4c1cd0476b35023a830f28d1ccc8daa",
+    "ungrafted": {
+      "admitted": 6,
+      "attempted": 8,
+      "fixed_c_feasible": 8,
+      "records": [
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 0,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 1,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 2,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 3,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": false,
+          "fixed_c_feasible": true,
+          "manifest_index": 4,
+          "rejection_reasons": [
+            "field_1:secret_lift"
+          ]
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 5,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": true,
+          "fixed_c_feasible": true,
+          "manifest_index": 6,
+          "rejection_reasons": []
+        },
+        {
+          "admitted": false,
+          "fixed_c_feasible": true,
+          "manifest_index": 7,
+          "rejection_reasons": [
+            "field_0:rank"
+          ]
+        }
+      ]
+    }
+  },
+  "model": {
+    "id": "google/gemma-3-12b-pt",
+    "revision": "295efb63d01a7017928f273a94ebb86105c9526f"
+  },
+  "predeclaration": {
+    "path": "training_free_second_checkpoint_v1.json",
+    "sha256": "c0fcf3ddc3c0021c822d76db79f54aeba48ba92d9cc2d2216a91aa7b8ee4a31a"
+  },
+  "quality": {
+    "evaluation": {
+      "blocks": 400,
+      "dataset": "Salesforce/wikitext/wikitext-103-raw-v1",
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+      "seq_len": 512,
+      "split": "test",
+      "token_ids_sha256": "4e227e266e15e5d735b5ed3569d828c37b80db6503c2896e6e96a7092c385fdd"
+    },
+    "summary": {
+      "base_perplexity": 22.203771068878737,
+      "block_cost_percent": {
+        "median": 8.938075607329996,
+        "p2_5": -0.7569120708001208,
+        "p97_5": 40.28646455695983
+      },
+      "blocks": 400,
+      "blocks_are_independent_replicates": false,
+      "checkpoint_count": 1,
+      "contiguous_groups": {
+        "fraction_positive": 1.0,
+        "group_size": 20,
+        "interpretation": "descriptive dispersion across fixed contiguous block groups; not an iid confidence interval",
+        "maximum_cost_percent": 23.4082163173606,
+        "median_cost_percent": 11.457533956091808,
+        "minimum_cost_percent": 6.8220957732757,
+        "n": 20,
+        "p2_5_cost_percent": 6.956773333675999,
+        "p97_5_cost_percent": 20.445792506421665,
+        "q1_cost_percent": 9.351614799688598,
+        "q3_cost_percent": 13.099303631907315,
+        "rows": [
+          {
+            "base_nll": 3.08158078789711,
+            "end_block_exclusive": 20,
+            "graft_nll": 3.1996318817138674,
+            "relative_cost_percent": 12.530160585256967,
+            "start_block": 0
+          },
+          {
+            "base_nll": 2.9612629890441893,
+            "end_block_exclusive": 40,
+            "graft_nll": 3.038419473171234,
+            "relative_cost_percent": 8.021109905843337,
+            "start_block": 20
+          },
+          {
+            "base_nll": 3.0857608199119566,
+            "end_block_exclusive": 60,
+            "graft_nll": 3.1645448327064516,
+            "relative_cost_percent": 8.197060502385975,
+            "start_block": 40
+          },
+          {
+            "base_nll": 3.1534046649932863,
+            "end_block_exclusive": 80,
+            "graft_nll": 3.2456957399845123,
+            "relative_cost_percent": 9.668399291085446,
+            "start_block": 60
+          },
+          {
+            "base_nll": 3.1544303417205812,
+            "end_block_exclusive": 100,
+            "graft_nll": 3.275964391231537,
+            "relative_cost_percent": 12.922781492542502,
+            "start_block": 80
+          },
+          {
+            "base_nll": 3.4755558371543884,
+            "end_block_exclusive": 120,
+            "graft_nll": 3.6096759557724,
+            "relative_cost_percent": 14.353017065902893,
+            "start_block": 100
+          },
+          {
+            "base_nll": 3.115250992774963,
+            "end_block_exclusive": 140,
+            "graft_nll": 3.2193863451480866,
+            "relative_cost_percent": 10.975065213491995,
+            "start_block": 120
+          },
+          {
+            "base_nll": 2.414053183794022,
+            "end_block_exclusive": 160,
+            "graft_nll": 2.482698518037796,
+            "relative_cost_percent": 7.105627479381593,
+            "start_block": 140
+          },
+          {
+            "base_nll": 3.227765953540802,
+            "end_block_exclusive": 180,
+            "graft_nll": 3.386234736442566,
+            "relative_cost_percent": 17.17153461012075,
+            "start_block": 160
+          },
+          {
+            "base_nll": 3.0707068920135496,
+            "end_block_exclusive": 200,
+            "graft_nll": 3.1901658892631533,
+            "relative_cost_percent": 12.688703765198753,
+            "start_block": 180
+          },
+          {
+            "base_nll": 2.8923151552677155,
+            "end_block_exclusive": 220,
+            "graft_nll": 2.9583097636699676,
+            "relative_cost_percent": 6.8220957732757,
+            "start_block": 200
+          },
+          {
+            "base_nll": 2.818355494737625,
+            "end_block_exclusive": 240,
+            "graft_nll": 2.946122920513153,
+            "relative_cost_percent": 13.628870050001748,
+            "start_block": 220
+          },
+          {
+            "base_nll": 3.005167543888092,
+            "end_block_exclusive": 260,
+            "graft_nll": 3.115883982181549,
+            "relative_cost_percent": 11.707810136686343,
+            "start_block": 240
+          },
+          {
+            "base_nll": 2.9472004413604735,
+            "end_block_exclusive": 280,
+            "graft_nll": 3.03739572763443,
+            "relative_cost_percent": 9.438798178960642,
+            "start_block": 260
+          },
+          {
+            "base_nll": 3.174995017051697,
+            "end_block_exclusive": 300,
+            "graft_nll": 3.3122101426124573,
+            "relative_cost_percent": 14.70748871078813,
+            "start_block": 280
+          },
+          {
+            "base_nll": 3.278997540473938,
+            "end_block_exclusive": 320,
+            "graft_nll": 3.37294864654541,
+            "relative_cost_percent": 9.850603432856929,
+            "start_block": 300
+          },
+          {
+            "base_nll": 3.2487656712532043,
+            "end_block_exclusive": 340,
+            "graft_nll": 3.335769307613373,
+            "relative_cost_percent": 9.09006466187246,
+            "start_block": 320
+          },
+          {
+            "base_nll": 2.858322077989578,
+            "end_block_exclusive": 360,
+            "graft_nll": 2.96528337597847,
+            "relative_cost_percent": 11.289118251893724,
+            "start_block": 340
+          },
+          {
+            "base_nll": 3.988402760028839,
+            "end_block_exclusive": 380,
+            "graft_nll": 4.198730266094207,
+            "relative_cost_percent": 23.4082163173606,
+            "start_block": 360
+          },
+          {
+            "base_nll": 3.05294868350029,
+            "end_block_exclusive": 400,
+            "graft_nll": 3.1629320442676545,
+            "relative_cost_percent": 11.62594966028989,
+            "start_block": 380
+          }
+        ],
+        "sample_sd_cost_percent": 3.8442919873239103
+      },
+      "graft_perplexity": 24.801402327328915,
+      "independent_training_seeds": 0,
+      "inferential_interval": null,
+      "relative_cost_percent": 11.699054410136089
+    },
+    "token_hash_matches_predeclaration": true
+  },
+  "reporting_policy": {
+    "change_recipe_after_outcomes": false,
+    "grouped_quality_statistics": "descriptive only",
+    "inferential_interval": false,
+    "replace_or_remove_records": false,
+    "retain_all_primary_outcomes": true,
+    "token_hash_mismatch": "Retain the result, disclose the mismatch, and do not claim identical token blocks across scales."
+  },
+  "schema": "gemma-sv-training-free-second-checkpoint-result-v1",
+  "source_reports": {
+    "graft_admission_sha256": "11b0b285894aadcde5900363d4a6abc6915d5f72ba300b31f4d5085fe3b94962",
+    "quality_sha256": "89e85999662cdeeafd57c4734449e8824426924ccd14fe40229fbad2ae0c1fd4",
+    "ungrafted_admission_sha256": "f644a1ef2162d9ae5827696744a466e0de5c581f9192a66cf0527ecff265ee5a"
+  },
+  "status": "complete-predeclared-primary-outcomes"
+}

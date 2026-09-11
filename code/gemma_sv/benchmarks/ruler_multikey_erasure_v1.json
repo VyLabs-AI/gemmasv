@@ -1,0 +1,1632 @@
+{
+  "contains_source_text": false,
+  "erasure_adaptation": {
+    "description": "one later conflicting value for the queried key is the owned span; literal deletion restores the earlier gold needle",
+    "natural_qa_trigger": {
+      "joint_admission": "0/8",
+      "manifest_integrity_sha256": "b066a00b9472ba17831b6defeca375bafd8a491053632d1d3f93ae685466d5ee",
+      "primary_target_admission": "1/8",
+      "retained_availability": "1/8"
+    },
+    "post_hoc_selection": false
+  },
+  "generation": {
+    "fixed_before_model_evaluation": true,
+    "minimum_tokens": 1024,
+    "minimum_tokens_after_owned": 512,
+    "model_outputs_used": false,
+    "records": 8,
+    "seed": 271828
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "4a64a5477f4933bc3423627fd3f475f4b5c42bc8d3d49e08d9c1589656132e31"
+  },
+  "official_task_parameters": {
+    "num_needle_k": 4,
+    "num_needle_q": 1,
+    "num_needle_v": 1,
+    "type_haystack": "essay",
+    "type_needle_k": "words",
+    "type_needle_v": "numbers"
+  },
+  "provenance": {
+    "license": "Apache-2.0",
+    "repository": "NVIDIA/RULER",
+    "revision": "ab17b7853df4e0a30b78cd5d2b463ac7dff6ee13",
+    "task": "niah_multikey_1"
+  },
+  "records": [
+    {
+      "context": {
+        "edited_text_sha256": "70361f87621e61ffd60a2fe684d742e18247c673538e7ff66b459c8ef86aab3f",
+        "edited_token_count": 1100,
+        "edited_token_ids_sha256": "fa99b79b32758845c620408e7677143b8bc93e043a06fa6bba8028af90654f49",
+        "literal_token_edit": true,
+        "original_text_sha256": "ac66157a612dbaef3df7d328798390de84bf4e3b33a320bd66d4de3fd595fb14",
+        "original_token_count": 1118,
+        "original_token_ids_sha256": "3d6ad9d8fb005192e6a3b87f3b7db67eba724ac728b64f6f1fd483646e7d5fef",
+        "ownership": {
+          "answer_character_span": [
+            2030,
+            2037
+          ],
+          "deletion_ranges": [
+            {
+              "end": 496,
+              "start": 478
+            }
+          ],
+          "forget_positions": [
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484,
+            485,
+            486,
+            487,
+            488,
+            489,
+            490,
+            491,
+            492,
+            493,
+            494,
+            495
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "ec755ba68b28269cd539977166607d01026231f88308bad56dc4fc91ef693164",
+          "owned_character_span": [
+            1985,
+            2038
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1988,
+              "position": 478,
+              "start": 1985
+            },
+            {
+              "end": 1996,
+              "position": 479,
+              "start": 1988
+            },
+            {
+              "end": 2002,
+              "position": 480,
+              "start": 1996
+            },
+            {
+              "end": 2009,
+              "position": 481,
+              "start": 2002
+            },
+            {
+              "end": 2013,
+              "position": 482,
+              "start": 2009
+            },
+            {
+              "end": 2020,
+              "position": 483,
+              "start": 2013
+            },
+            {
+              "end": 2023,
+              "position": 484,
+              "start": 2020
+            },
+            {
+              "end": 2026,
+              "position": 485,
+              "start": 2023
+            },
+            {
+              "end": 2029,
+              "position": 486,
+              "start": 2026
+            },
+            {
+              "end": 2030,
+              "position": 487,
+              "start": 2029
+            },
+            {
+              "end": 2031,
+              "position": 488,
+              "start": 2030
+            },
+            {
+              "end": 2032,
+              "position": 489,
+              "start": 2031
+            },
+            {
+              "end": 2033,
+              "position": 490,
+              "start": 2032
+            },
+            {
+              "end": 2034,
+              "position": 491,
+              "start": 2033
+            },
+            {
+              "end": 2035,
+              "position": 492,
+              "start": 2034
+            },
+            {
+              "end": 2036,
+              "position": 493,
+              "start": 2035
+            },
+            {
+              "end": 2037,
+              "position": 494,
+              "start": 2036
+            },
+            {
+              "end": 2038,
+              "position": 495,
+              "start": 2037
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1246,
+            1300
+          ],
+          "edited_token_positions": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312
+          ],
+          "token_count": 18,
+          "token_positions": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312
+          ]
+        },
+        "tokens_after_owned_span": 623
+      },
+      "distractor_answer_sha256": "7b368e4c212951cffecd8a88fa13b49e8945e4963f4001303f0123d025a14486",
+      "generator_index": 0,
+      "gold_answer_sha256": "155ff62392909276c16964817b58133320755c1acbfdfa42debfe2c4daca04be",
+      "gold_character_span": [
+        540,
+        593
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "53ae753e76a4eccde551df0b9a890d7b0ac8ef19975a1bc17c1add0abca00594",
+      "record_id": "ruler-50acf534eea8aab093f45a13",
+      "retained_answer_sha256": "b5da4f18c32ef949c36bdf9ed7880a1fbf758781d1b604fa7070e6f38509a03a",
+      "retained_question_sha256": "dbb3e0e090428f088b57174f8d0fbc3a073b6a327708ef6b75f4b712dab7ec0c"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "c6a736aa2dd9cfb2013512e162839b009074342fc00d8803feec3d47a1ad0cc4",
+        "edited_token_count": 1070,
+        "edited_token_ids_sha256": "5ad13ba743b6b5516611fdd557f9855828454a5d4d0d5284056ef856941a9dac",
+        "literal_token_edit": true,
+        "original_text_sha256": "65f256d0cc1781b4db0b6c91a2c0858c68b2779222b4a050592ec94bdad1f3b8",
+        "original_token_count": 1087,
+        "original_token_ids_sha256": "bea8aee7154a042f39db5c3b8847b875e16d523d28570209817523540f216266",
+        "ownership": {
+          "answer_character_span": [
+            1966,
+            1973
+          ],
+          "deletion_ranges": [
+            {
+              "end": 470,
+              "start": 453
+            }
+          ],
+          "forget_positions": [
+            453,
+            454,
+            455,
+            456,
+            457,
+            458,
+            459,
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "37e3778d9025d386fd49f5baf0907736abf63bd8d4b6c6f423e3e9ce661154ae",
+          "owned_character_span": [
+            1920,
+            1974
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1923,
+              "position": 453,
+              "start": 1920
+            },
+            {
+              "end": 1931,
+              "position": 454,
+              "start": 1923
+            },
+            {
+              "end": 1937,
+              "position": 455,
+              "start": 1931
+            },
+            {
+              "end": 1944,
+              "position": 456,
+              "start": 1937
+            },
+            {
+              "end": 1948,
+              "position": 457,
+              "start": 1944
+            },
+            {
+              "end": 1955,
+              "position": 458,
+              "start": 1948
+            },
+            {
+              "end": 1962,
+              "position": 459,
+              "start": 1955
+            },
+            {
+              "end": 1965,
+              "position": 460,
+              "start": 1962
+            },
+            {
+              "end": 1966,
+              "position": 461,
+              "start": 1965
+            },
+            {
+              "end": 1967,
+              "position": 462,
+              "start": 1966
+            },
+            {
+              "end": 1968,
+              "position": 463,
+              "start": 1967
+            },
+            {
+              "end": 1969,
+              "position": 464,
+              "start": 1968
+            },
+            {
+              "end": 1970,
+              "position": 465,
+              "start": 1969
+            },
+            {
+              "end": 1971,
+              "position": 466,
+              "start": 1970
+            },
+            {
+              "end": 1972,
+              "position": 467,
+              "start": 1971
+            },
+            {
+              "end": 1973,
+              "position": 468,
+              "start": 1972
+            },
+            {
+              "end": 1974,
+              "position": 469,
+              "start": 1973
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1211,
+            1265
+          ],
+          "edited_token_positions": [
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298
+          ],
+          "token_count": 17,
+          "token_positions": [
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298
+          ]
+        },
+        "tokens_after_owned_span": 618
+      },
+      "distractor_answer_sha256": "96eccdb61035bcf312c098ce8f61c7b1a08e7296d68644e2293f20de1a051642",
+      "generator_index": 1,
+      "gold_answer_sha256": "3ec532ca26620208885feb86b7133a3420b0dd51bfe8b08d1d2ca962110bcc51",
+      "gold_character_span": [
+        514,
+        568
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "779503e46fa1de61dfcb63aefd567ff66423286d1c1f5949713b0c77f068e74d",
+      "record_id": "ruler-0020deb52fdedf8a1505e158",
+      "retained_answer_sha256": "cc0ea6c65c24c37af501448a3549616bd12da3762b86fcdab413be7f19c94148",
+      "retained_question_sha256": "b63091e93d361cf50a26a86dfd8192a37b471021eec919cabc9cd88f23000590"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "29423f5aee23c4dd3caaf43dfa7f58cb6e9533aef16a23e345551170cd4034b2",
+        "edited_token_count": 1094,
+        "edited_token_ids_sha256": "f0a7776ef48e683b3578edb1c3aba833d39c132631b51e13b43f7ca6736d74cb",
+        "literal_token_edit": true,
+        "original_text_sha256": "219a0c06b92c0a0893c6e6b734ededf177762c5eb547414c63fb8e280febd18a",
+        "original_token_count": 1111,
+        "original_token_ids_sha256": "97494d9e7658dda25e0a505b0a174067a70cc60a79159bd8041af83b4a837b29",
+        "ownership": {
+          "answer_character_span": [
+            2007,
+            2014
+          ],
+          "deletion_ranges": [
+            {
+              "end": 485,
+              "start": 468
+            }
+          ],
+          "forget_positions": [
+            468,
+            469,
+            470,
+            471,
+            472,
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "0dd53496d4b13e2897731e40e3a2c19f87857019b2093d77fc1423be9ffa68f0",
+          "owned_character_span": [
+            1958,
+            2015
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1961,
+              "position": 468,
+              "start": 1958
+            },
+            {
+              "end": 1969,
+              "position": 469,
+              "start": 1961
+            },
+            {
+              "end": 1975,
+              "position": 470,
+              "start": 1969
+            },
+            {
+              "end": 1982,
+              "position": 471,
+              "start": 1975
+            },
+            {
+              "end": 1986,
+              "position": 472,
+              "start": 1982
+            },
+            {
+              "end": 1994,
+              "position": 473,
+              "start": 1986
+            },
+            {
+              "end": 2003,
+              "position": 474,
+              "start": 1994
+            },
+            {
+              "end": 2006,
+              "position": 475,
+              "start": 2003
+            },
+            {
+              "end": 2007,
+              "position": 476,
+              "start": 2006
+            },
+            {
+              "end": 2008,
+              "position": 477,
+              "start": 2007
+            },
+            {
+              "end": 2009,
+              "position": 478,
+              "start": 2008
+            },
+            {
+              "end": 2010,
+              "position": 479,
+              "start": 2009
+            },
+            {
+              "end": 2011,
+              "position": 480,
+              "start": 2010
+            },
+            {
+              "end": 2012,
+              "position": 481,
+              "start": 2011
+            },
+            {
+              "end": 2013,
+              "position": 482,
+              "start": 2012
+            },
+            {
+              "end": 2014,
+              "position": 483,
+              "start": 2013
+            },
+            {
+              "end": 2015,
+              "position": 484,
+              "start": 2014
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1249,
+            1304
+          ],
+          "edited_token_positions": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312
+          ],
+          "token_count": 18,
+          "token_positions": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312
+          ]
+        },
+        "tokens_after_owned_span": 627
+      },
+      "distractor_answer_sha256": "bb43b14607f117212a7290fb981c3a6085b65440903050c71cfec88e217fd704",
+      "generator_index": 2,
+      "gold_answer_sha256": "799d4b6daad9235091c027300116f26d0ac422d008051730c36490e2025176c3",
+      "gold_character_span": [
+        527,
+        584
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "c6b62db36a178f3180310b5700108035286bf857be4e2b895578799ed963f132",
+      "record_id": "ruler-9085929b492f45327966f970",
+      "retained_answer_sha256": "7c464ebb22a0afa3b7165407db27d1abea9a0fbf09483c1e76735332a002b5ec",
+      "retained_question_sha256": "e66667adaa1254051d3c68bdb2b7903c3261d4016027ef9d35d6e1ebaaa83e62"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "0572902d541dcde276f8aea549d51ca091f4eff9e8ca5a320befedcaba3c20cc",
+        "edited_token_count": 1087,
+        "edited_token_ids_sha256": "efdf123845f487e78eeddf9e2a5b51b8b47dbb5b61f80d30dd7d67025249b3a8",
+        "literal_token_edit": true,
+        "original_text_sha256": "61b16a05d34043e5318a517cf28d8f2ca7630c93faa7294cda52e09ce4fe5fe9",
+        "original_token_count": 1105,
+        "original_token_ids_sha256": "5f6bf5f76f2d1fc81c65ecd7f0630ca80ac0723b429433027795ef9652549ffd",
+        "ownership": {
+          "answer_character_span": [
+            2013,
+            2020
+          ],
+          "deletion_ranges": [
+            {
+              "end": 491,
+              "start": 473
+            }
+          ],
+          "forget_positions": [
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484,
+            485,
+            486,
+            487,
+            488,
+            489,
+            490
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "03452f924d5d04405a7d4ea738f18ecc5d2c70c8dab3828a541a8f59c3f462bd",
+          "owned_character_span": [
+            1967,
+            2021
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1970,
+              "position": 473,
+              "start": 1967
+            },
+            {
+              "end": 1978,
+              "position": 474,
+              "start": 1970
+            },
+            {
+              "end": 1984,
+              "position": 475,
+              "start": 1978
+            },
+            {
+              "end": 1991,
+              "position": 476,
+              "start": 1984
+            },
+            {
+              "end": 1995,
+              "position": 477,
+              "start": 1991
+            },
+            {
+              "end": 2000,
+              "position": 478,
+              "start": 1995
+            },
+            {
+              "end": 2003,
+              "position": 479,
+              "start": 2000
+            },
+            {
+              "end": 2009,
+              "position": 480,
+              "start": 2003
+            },
+            {
+              "end": 2012,
+              "position": 481,
+              "start": 2009
+            },
+            {
+              "end": 2013,
+              "position": 482,
+              "start": 2012
+            },
+            {
+              "end": 2014,
+              "position": 483,
+              "start": 2013
+            },
+            {
+              "end": 2015,
+              "position": 484,
+              "start": 2014
+            },
+            {
+              "end": 2016,
+              "position": 485,
+              "start": 2015
+            },
+            {
+              "end": 2017,
+              "position": 486,
+              "start": 2016
+            },
+            {
+              "end": 2018,
+              "position": 487,
+              "start": 2017
+            },
+            {
+              "end": 2019,
+              "position": 488,
+              "start": 2018
+            },
+            {
+              "end": 2020,
+              "position": 489,
+              "start": 2019
+            },
+            {
+              "end": 2021,
+              "position": 490,
+              "start": 2020
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1255,
+            1309
+          ],
+          "edited_token_positions": [
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313
+          ],
+          "token_count": 17,
+          "token_positions": [
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313
+          ]
+        },
+        "tokens_after_owned_span": 615
+      },
+      "distractor_answer_sha256": "a237e3bdbadcfffa64b76865047f27ea0ce5a3da655f570502d7d0cee843bf8c",
+      "generator_index": 3,
+      "gold_answer_sha256": "9d1356b17a13631de65e290af6ee0d08e1499a8a99ef09737cea02a2140eb18f",
+      "gold_character_span": [
+        533,
+        587
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "8f7ea958db995dd091534b8cef50f1c867053234b5809ec9676e5c70cac77b57",
+      "record_id": "ruler-c6c8ebbcc8270b6048193362",
+      "retained_answer_sha256": "4d8ea297038fc1660e46752b9730bc980f486eb7f221249a95debe1d0d84a617",
+      "retained_question_sha256": "0f78292d95b0988931c82695339509bb913180a6e013d9f117657a41bf488540"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "9a5d54b51be160e9b51dc61ddb1ec5defc9bd3b2a2e3b95f47e0546ddcc0e649",
+        "edited_token_count": 1082,
+        "edited_token_ids_sha256": "422324217e77692d24f6d81985d4e2d31c663f163fb65b427912144c31745a0d",
+        "literal_token_edit": true,
+        "original_text_sha256": "8d1a39c16bc3b3b6078a7c7ab6965dbbe043cc91e8a14ee59a83b2259c6b101a",
+        "original_token_count": 1100,
+        "original_token_ids_sha256": "eb928a661e51d78d39a79040b23c1938a2f13951137875d435717feb302df0dd",
+        "ownership": {
+          "answer_character_span": [
+            1976,
+            1983
+          ],
+          "deletion_ranges": [
+            {
+              "end": 479,
+              "start": 461
+            }
+          ],
+          "forget_positions": [
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            470,
+            471,
+            472,
+            473,
+            474,
+            475,
+            476,
+            477,
+            478
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "62cea5527d163b57b74583c05010eaec5b523aafc9482d40012ddc4d6e11c2fd",
+          "owned_character_span": [
+            1928,
+            1984
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1931,
+              "position": 461,
+              "start": 1928
+            },
+            {
+              "end": 1939,
+              "position": 462,
+              "start": 1931
+            },
+            {
+              "end": 1945,
+              "position": 463,
+              "start": 1939
+            },
+            {
+              "end": 1952,
+              "position": 464,
+              "start": 1945
+            },
+            {
+              "end": 1956,
+              "position": 465,
+              "start": 1952
+            },
+            {
+              "end": 1961,
+              "position": 466,
+              "start": 1956
+            },
+            {
+              "end": 1964,
+              "position": 467,
+              "start": 1961
+            },
+            {
+              "end": 1972,
+              "position": 468,
+              "start": 1964
+            },
+            {
+              "end": 1975,
+              "position": 469,
+              "start": 1972
+            },
+            {
+              "end": 1976,
+              "position": 470,
+              "start": 1975
+            },
+            {
+              "end": 1977,
+              "position": 471,
+              "start": 1976
+            },
+            {
+              "end": 1978,
+              "position": 472,
+              "start": 1977
+            },
+            {
+              "end": 1979,
+              "position": 473,
+              "start": 1978
+            },
+            {
+              "end": 1980,
+              "position": 474,
+              "start": 1979
+            },
+            {
+              "end": 1981,
+              "position": 475,
+              "start": 1980
+            },
+            {
+              "end": 1982,
+              "position": 476,
+              "start": 1981
+            },
+            {
+              "end": 1983,
+              "position": 477,
+              "start": 1982
+            },
+            {
+              "end": 1984,
+              "position": 478,
+              "start": 1983
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1235,
+            1289
+          ],
+          "edited_token_positions": [
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305
+          ],
+          "token_count": 17,
+          "token_positions": [
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305
+          ]
+        },
+        "tokens_after_owned_span": 622
+      },
+      "distractor_answer_sha256": "075ab2e70ea22b516d3b4ecb3c9ba02495eb8146211f0724585a900d164aeb54",
+      "generator_index": 4,
+      "gold_answer_sha256": "a8231589a667278f21f5ae853e48dc636da90e1ecb401dee5e6d49f890b34e00",
+      "gold_character_span": [
+        527,
+        583
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "3e71cbdafdde69a973b1f82467780e95e3b8c168d9fa6c7dd3246b531f8cc94b",
+      "record_id": "ruler-7aefd9df9b66a6cf5901cd99",
+      "retained_answer_sha256": "88b8b8901197a8fb905389fdb29fb4f42713040cae6397c3c0eaf0fc517135c9",
+      "retained_question_sha256": "c3abcb80297e03af35cd4612e84af8737dd179c348c263926f97d8c5580d69f7"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "9bd30d1d8affb43f50d76f86a9d0344a74f363daeb51dbd77b20764de7d5def3",
+        "edited_token_count": 1087,
+        "edited_token_ids_sha256": "d92462e22d1bbd8bd5ea63599d4d8871f886859f8fb6d4345bbabdd2c1e30c63",
+        "literal_token_edit": true,
+        "original_text_sha256": "af8aae3a73e0bf278841f17feadc4254e257796a734a40bc39c228c4095feeb2",
+        "original_token_count": 1104,
+        "original_token_ids_sha256": "a0811f6c2974cf75b238b272a98d380fcf6248e1d628b7e261783cda89f6f0a6",
+        "ownership": {
+          "answer_character_span": [
+            2008,
+            2015
+          ],
+          "deletion_ranges": [
+            {
+              "end": 485,
+              "start": 468
+            }
+          ],
+          "forget_positions": [
+            468,
+            469,
+            470,
+            471,
+            472,
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "756e65f6e4f7031741485a0bd73b24839c07ec5c1b17c5331101a5105da785a2",
+          "owned_character_span": [
+            1964,
+            2016
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1967,
+              "position": 468,
+              "start": 1964
+            },
+            {
+              "end": 1975,
+              "position": 469,
+              "start": 1967
+            },
+            {
+              "end": 1981,
+              "position": 470,
+              "start": 1975
+            },
+            {
+              "end": 1988,
+              "position": 471,
+              "start": 1981
+            },
+            {
+              "end": 1992,
+              "position": 472,
+              "start": 1988
+            },
+            {
+              "end": 1997,
+              "position": 473,
+              "start": 1992
+            },
+            {
+              "end": 2004,
+              "position": 474,
+              "start": 1997
+            },
+            {
+              "end": 2007,
+              "position": 475,
+              "start": 2004
+            },
+            {
+              "end": 2008,
+              "position": 476,
+              "start": 2007
+            },
+            {
+              "end": 2009,
+              "position": 477,
+              "start": 2008
+            },
+            {
+              "end": 2010,
+              "position": 478,
+              "start": 2009
+            },
+            {
+              "end": 2011,
+              "position": 479,
+              "start": 2010
+            },
+            {
+              "end": 2012,
+              "position": 480,
+              "start": 2011
+            },
+            {
+              "end": 2013,
+              "position": 481,
+              "start": 2012
+            },
+            {
+              "end": 2014,
+              "position": 482,
+              "start": 2013
+            },
+            {
+              "end": 2015,
+              "position": 483,
+              "start": 2014
+            },
+            {
+              "end": 2016,
+              "position": 484,
+              "start": 2015
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1235,
+            1288
+          ],
+          "edited_token_positions": [
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306
+          ],
+          "token_count": 17,
+          "token_positions": [
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306
+          ]
+        },
+        "tokens_after_owned_span": 620
+      },
+      "distractor_answer_sha256": "fdded17715ac333cafd675e7ba6476bc7c0de999628e752c7515ad5c4ebbe299",
+      "generator_index": 5,
+      "gold_answer_sha256": "93150c6e1b948c34bfc1d74bbf72db67b6f479a9a6f391bb796b9a0004a65252",
+      "gold_character_span": [
+        527,
+        579
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "64811cc5263903674d30384ecd0456c17266eff6e2f62ef669fd7df7814ad0f0",
+      "record_id": "ruler-66aabad410d2a58c3f039307",
+      "retained_answer_sha256": "2779fcea9ca565c8f9cf4b11db42ebefd6672efd4889cbfea8bfe93186b49d05",
+      "retained_question_sha256": "5b553b05b09d3bb20c8d4138c120483fc9f2bcb032aa4943d377eb97ef19744d"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "22d1b26aa4fc1d3f56fb5d4ab8dad1451dce770d2cd19cb0bbd5b2236911f1c5",
+        "edited_token_count": 1092,
+        "edited_token_ids_sha256": "a5685430c7d539f37115e37d920a470b5244111fc99fdc1a82faf7f377b7e81c",
+        "literal_token_edit": true,
+        "original_text_sha256": "53a1684fb7b13534be372eafa75b844f0206bd377321710830a42804507dd15b",
+        "original_token_count": 1109,
+        "original_token_ids_sha256": "a1559c5c82b087cd445b825bf5c9ea8ad06f3a67d947882ef1a102fe91cd215f",
+        "ownership": {
+          "answer_character_span": [
+            2023,
+            2030
+          ],
+          "deletion_ranges": [
+            {
+              "end": 492,
+              "start": 475
+            }
+          ],
+          "forget_positions": [
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484,
+            485,
+            486,
+            487,
+            488,
+            489,
+            490,
+            491
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "d5da39c00f5c645a17899fe95bd84839fbb9fb11d7476f5535b50cf80ebb2cbd",
+          "owned_character_span": [
+            1976,
+            2031
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1979,
+              "position": 475,
+              "start": 1976
+            },
+            {
+              "end": 1987,
+              "position": 476,
+              "start": 1979
+            },
+            {
+              "end": 1993,
+              "position": 477,
+              "start": 1987
+            },
+            {
+              "end": 2000,
+              "position": 478,
+              "start": 1993
+            },
+            {
+              "end": 2004,
+              "position": 479,
+              "start": 2000
+            },
+            {
+              "end": 2011,
+              "position": 480,
+              "start": 2004
+            },
+            {
+              "end": 2019,
+              "position": 481,
+              "start": 2011
+            },
+            {
+              "end": 2022,
+              "position": 482,
+              "start": 2019
+            },
+            {
+              "end": 2023,
+              "position": 483,
+              "start": 2022
+            },
+            {
+              "end": 2024,
+              "position": 484,
+              "start": 2023
+            },
+            {
+              "end": 2025,
+              "position": 485,
+              "start": 2024
+            },
+            {
+              "end": 2026,
+              "position": 486,
+              "start": 2025
+            },
+            {
+              "end": 2027,
+              "position": 487,
+              "start": 2026
+            },
+            {
+              "end": 2028,
+              "position": 488,
+              "start": 2027
+            },
+            {
+              "end": 2029,
+              "position": 489,
+              "start": 2028
+            },
+            {
+              "end": 2030,
+              "position": 490,
+              "start": 2029
+            },
+            {
+              "end": 2031,
+              "position": 491,
+              "start": 2030
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1249,
+            1303
+          ],
+          "edited_token_positions": [
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ],
+          "token_count": 18,
+          "token_positions": [
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ]
+        },
+        "tokens_after_owned_span": 618
+      },
+      "distractor_answer_sha256": "17d9a84f91a9e20d9d411d8896ed01846e0d401fbef77d5b0e05d862b162f021",
+      "generator_index": 6,
+      "gold_answer_sha256": "de1d708a96628f0083b749198debb4f60872ffec5f8ea3b90c3f69d0f11890fa",
+      "gold_character_span": [
+        517,
+        572
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "f1ca45cbf44bf5e5fe62675598d9549e1d0b436b05178f681d787ef77f6f08e8",
+      "record_id": "ruler-df6cbc65011ea40c6d9e814b",
+      "retained_answer_sha256": "7c2483dcd5f83f8194a893591a807d5d9be4df5fb778e1461cf4bad7fd656560",
+      "retained_question_sha256": "6d68c43696946333ce54d8cdd1ac1020dbbf4013c431aa2da1c94c5ee7c4b4d4"
+    },
+    {
+      "context": {
+        "edited_text_sha256": "3a5f80748fba6b268b8e9a8dce199d85b9df8af305a67dfffc72cbe99bcbf421",
+        "edited_token_count": 1076,
+        "edited_token_ids_sha256": "deb7c42af15a2a550eb51b6c1761e02207e0946ca89e84f8956ee0f0b0909933",
+        "literal_token_edit": true,
+        "original_text_sha256": "09064edd436453359f6ede0b620e7f446ee652756ca3e7849dc66060fe2c481f",
+        "original_token_count": 1094,
+        "original_token_ids_sha256": "05206aa41a2d43cc150b8c2710bc8e79b806b14a383bc8d1e6ff86812b1b2ad7",
+        "ownership": {
+          "answer_character_span": [
+            1992,
+            1999
+          ],
+          "deletion_ranges": [
+            {
+              "end": 482,
+              "start": 464
+            }
+          ],
+          "forget_positions": [
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            470,
+            471,
+            472,
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481
+          ],
+          "mapping": "positive character-overlap from tokenizer offset_mapping",
+          "offset_mapping_sha256": "3039a6bc4640529054ca1d430d3169abf13d362f5b60ad3644b8681d4d2bfc1b",
+          "owned_character_span": [
+            1946,
+            2000
+          ],
+          "owned_token_offsets": [
+            {
+              "end": 1949,
+              "position": 464,
+              "start": 1946
+            },
+            {
+              "end": 1957,
+              "position": 465,
+              "start": 1949
+            },
+            {
+              "end": 1963,
+              "position": 466,
+              "start": 1957
+            },
+            {
+              "end": 1970,
+              "position": 467,
+              "start": 1963
+            },
+            {
+              "end": 1974,
+              "position": 468,
+              "start": 1970
+            },
+            {
+              "end": 1980,
+              "position": 469,
+              "start": 1974
+            },
+            {
+              "end": 1982,
+              "position": 470,
+              "start": 1980
+            },
+            {
+              "end": 1988,
+              "position": 471,
+              "start": 1982
+            },
+            {
+              "end": 1991,
+              "position": 472,
+              "start": 1988
+            },
+            {
+              "end": 1992,
+              "position": 473,
+              "start": 1991
+            },
+            {
+              "end": 1993,
+              "position": 474,
+              "start": 1992
+            },
+            {
+              "end": 1994,
+              "position": 475,
+              "start": 1993
+            },
+            {
+              "end": 1995,
+              "position": 476,
+              "start": 1994
+            },
+            {
+              "end": 1996,
+              "position": 477,
+              "start": 1995
+            },
+            {
+              "end": 1997,
+              "position": 478,
+              "start": 1996
+            },
+            {
+              "end": 1998,
+              "position": 479,
+              "start": 1997
+            },
+            {
+              "end": 1999,
+              "position": 480,
+              "start": 1998
+            },
+            {
+              "end": 2000,
+              "position": 481,
+              "start": 1999
+            }
+          ]
+        },
+        "package_schema": "gemma-sv-rag-context-v1",
+        "retained": {
+          "character_span": [
+            1244,
+            1299
+          ],
+          "edited_token_positions": [
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308
+          ],
+          "token_count": 18,
+          "token_positions": [
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308
+          ]
+        },
+        "tokens_after_owned_span": 613
+      },
+      "distractor_answer_sha256": "9217a1a26b55915960c974568c4b052bf98fed8467f1c89477b2d648a782cff9",
+      "generator_index": 7,
+      "gold_answer_sha256": "c7841d88b3b9c815fb5f1a42e86daf18336c49dd00edc700c12cdb599791107f",
+      "gold_character_span": [
+        524,
+        578
+      ],
+      "noise_sentences": 64,
+      "question_sha256": "dbb3e0e090428f088b57174f8d0fbc3a073b6a327708ef6b75f4b712dab7ec0c",
+      "record_id": "ruler-f8760787457da9ce94a265e9",
+      "retained_answer_sha256": "2f4c98dd4dc7fc4294be7cb6f039277aeb2d1562ac0366a6802a468de690d324",
+      "retained_question_sha256": "d74f3d8e3cf94b28594403ee5d7953648f5ac551b1c76a0ec17018ffbb0ff3bb"
+    }
+  ],
+  "schema": "gemma-sv-ruler-erasure-manifest-v1",
+  "schema_version": 1,
+  "tokenizer": {
+    "model_id": "google/gemma-3-1b-pt",
+    "offset_mapping_required": true,
+    "revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29"
+  }
+}

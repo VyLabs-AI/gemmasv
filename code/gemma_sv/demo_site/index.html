@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive demonstration of exact deletion from a language model's persistent in-context memory.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https: http://127.0.0.1:* http://localhost:*; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <title>Exact deletion from persistent in-context memory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="page-head">
+      <h1>Teach a language model to forget</h1>
+      <p class="subtitle">
+        Interactive demonstration of exact deletion from persistent in-context memory
+        &middot; Gemma-3-4B with an SV long-range memory graft
+      </p>
+      <div class="status-row">
+        <span class="runtime-status" id="runtime-status" role="status">checking compute&hellip;</span>
+        <button class="text-button" id="purge-session" type="button" disabled>purge session</button>
+      </div>
+      <p class="abstract">
+        This is a mechanism demo, not a chatbot benchmark: a fictional conversation is placed
+        in long-term context memory, one indexed field or complete record is recalled and
+        deleted, and the resulting memory is compared with a retained-key refit without
+        exactly those owned token positions.
+        <strong>Use synthetic information only</strong> &mdash; never a real password, key, or
+        patient record. Sessions are ephemeral and can be purged at any time.
+      </p>
+    </header>
+
+    <section class="explainer" aria-labelledby="explainer-title">
+      <p class="eyebrow">Before you try it</p>
+      <h2 id="explainer-title">Think of the model&rsquo;s memory as a filing cabinet</h2>
+      <p class="explainer-lead">
+        A long conversation has already been filed away. Later, someone says:
+        <em>remove this diagnosis field</em>, <em>revoke this incident attribute</em>,
+        or <em>delete every field in this record</em>.
+        Hiding the answer is not enough&mdash;we want to know whether the selected memory
+        entries were actually removed.
+      </p>
+
+      <div class="explain-flow" aria-label="Four-step deletion process">
+        <article>
+          <span class="step-number">1</span>
+          <h3>Store a conversation</h3>
+          <p>The old turns sit beyond Gemma&rsquo;s local window, inside the grafted long-range memory.</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>Prove it remembers</h3>
+          <p>Ask registered questions. The demo proceeds only if the model can retrieve every selected field.</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>Delete the selected field or record</h3>
+          <p>The selected memory entries are decremented. The source conversation and Gemma&rsquo;s weights are not silently rewritten.</p>
+        </article>
+        <article>
+          <span class="step-number">4</span>
+          <h3>Compare with &ldquo;never stored&rdquo;</h3>
+          <p>We independently refit the retained memory keys without the selected positions and compare the two output distributions.</p>
+        </article>
+      </div>
+
+      <div class="evidence-explainer">
+        <div>
+          <strong>Behavioral evidence</strong>
+          <p>Does recall fall to its never-stored floor, even when an adversarial prompt tries to recover it?</p>
+        </div>
+        <div>
+          <strong>Certificate</strong>
+          <p>At each registered question, how close is deletion to refitting without the selected scope? The full-vocabulary KL is shown.</p>
+        </div>
+      </div>
+
+      <details class="scope-details">
+        <summary>What this does&mdash;and does not&mdash;prove</summary>
+        <ul>
+          <li>It certifies the grafted long-range memory at one registered audit question.</li>
+          <li>Other prompts are empirical attacks, not part of that certificate.</li>
+          <li>Purging an entire patient and all ingestion-time imprint requires the slower full-repack path.</li>
+          <li>It does not erase pretrained weights, external logs, backups, or copies supplied later.</li>
+        </ul>
+      </details>
+    </section>
+
+    <div class="mode-banner hidden" id="mode-banner" role="status"></div>
+
+    <section class="demo-intro" aria-labelledby="demo-title">
+      <p class="eyebrow">Interactive walkthrough</p>
+      <h2 id="demo-title">Choose a fictional record, then watch all four steps</h2>
+      <p>Static replay starts with the validated 4B patient field. A live backend also exposes all eight predeclared whole-record candidates, including both disclosed 1B admission failures.</p>
+    </section>
+
+    <section class="chat" aria-label="Deletion audit conversation">
+      <div class="transcript" id="transcript" aria-live="polite"></div>
+      <div class="chip-row" id="chip-row"></div>
+      <form class="composer" id="composer">
+        <textarea id="composer-input" rows="2" maxlength="1000" spellcheck="false"
+          placeholder="Tell the model one clearly fictional fact&hellip;"></textarea>
+        <button class="send-button" id="send-button" type="submit">Send</button>
+      </form>
+    </section>
+
+    <section class="notes">
+      <h2>What &ldquo;exact&rdquo; means here</h2>
+      <ul>
+        <li><strong>The object:</strong> one indexed field or complete owned record in the grafted long-range context memory.
+          Gemma&rsquo;s pretrained weights are not being edited.</li>
+        <li><strong>The check:</strong> incremental deletion versus refitting the same retained
+          memory keys without that exact scope, reported as a float64 output KL at the registered
+          question.</li>
+        <li><strong>The boundary:</strong> other prompts are empirical stress tests. A fully
+          repacked context, cached-neighbor imprint, saved pre-deletion outputs, external
+          backups, and attacker-supplied copies are not covered by that certificate.</li>
+      </ul>
+      <p class="method-note" id="method-note">
+        Questions are sent to the base model as completion probes
+        (<code>Question: &hellip; Answer:</code>); answers are scored teacher-forced on the
+        marked span against a repacked never-told floor.
+      </p>
+    </section>
+
+    <footer>
+      <p id="identity-copy">Anonymous research demonstration.</p>
+      <p>No analytics. The static page stores nothing and sends nothing without a live backend.</p>
+    </footer>
+  </main>
+
+  <div class="mark-popover hidden" id="mark-popover" role="dialog">
+    <button type="button" id="mark-confirm"></button>
+  </div>
+  <div class="toast hidden" id="toast" role="alert"></div>
+</body>
+</html>

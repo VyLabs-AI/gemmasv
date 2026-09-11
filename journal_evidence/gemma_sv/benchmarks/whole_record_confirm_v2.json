@@ -1,0 +1,25 @@
+{
+  "name": "whole_record_confirm_v2",
+  "version": 1,
+  "dataset": "locuslab/TOFU",
+  "forget_split": "forget10",
+  "retain_split": "retain90",
+  "selection_policy": {
+    "description": "Final untouched confirmation cohort for mass_preserving_boundary_v1. It exhausts the four previously unused 20-row forget10 blocks and takes two disjoint, predetermined three-field groups per block. No source row is shared with prior whole-record manifests, and no record may be inspected, replaced, or removed after evaluation.",
+    "role": "final-recipe-confirmation",
+    "fixed_before_evaluation": true,
+    "block_starts": [320, 340, 360, 380],
+    "field_offset_groups": [[1, 2, 4], [6, 7, 9]],
+    "retain_offsets": [0, 5]
+  },
+  "records": [
+    {"record_id": "tofu-final-320-a", "forget_indices": [321, 322, 324], "retain_index": 320},
+    {"record_id": "tofu-final-320-b", "forget_indices": [326, 327, 329], "retain_index": 325},
+    {"record_id": "tofu-final-340-a", "forget_indices": [341, 342, 344], "retain_index": 340},
+    {"record_id": "tofu-final-340-b", "forget_indices": [346, 347, 349], "retain_index": 345},
+    {"record_id": "tofu-final-360-a", "forget_indices": [361, 362, 364], "retain_index": 360},
+    {"record_id": "tofu-final-360-b", "forget_indices": [366, 367, 369], "retain_index": 365},
+    {"record_id": "tofu-final-380-a", "forget_indices": [381, 382, 384], "retain_index": 380},
+    {"record_id": "tofu-final-380-b", "forget_indices": [386, 387, 389], "retain_index": 385}
+  ]
+}

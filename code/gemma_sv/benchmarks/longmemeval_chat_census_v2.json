@@ -1,0 +1,461 @@
+{
+  "audit": [
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "7f57f07178c678d37ee1a79e9670a3af7235d403023d0ea522b10629d4163247",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-7cabbb68fab2fe5b07f758a4",
+      "status": "selected",
+      "target_source_id_sha256": "c9264783fe8d930affe74ca11321c42f967badb72d7570cba72a45a3632e22eb",
+      "tokens_strictly_after_owned": 1449
+    },
+    {
+      "all_role_source_count": 5,
+      "all_role_source_ids_sha256": "9f85c6b7b5f427008edaf7a19f2a34b1bb01209e9fb236b897b81a3b76a98adf",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-61a9459f71ea1badfb0af7ff",
+      "status": "selected",
+      "target_source_id_sha256": "7b82913cfda15b353d1f72f2ca34dc30c1eb3f9d15afdda51d33b59f085dbba9",
+      "tokens_strictly_after_owned": 1266
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "bf8ca433e21fee6c25dfd2e5bf82e1fd6dcf46d745fbb306d6a90d677a1279f9",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-a794906e35f231980c876620",
+      "status": "selected",
+      "target_source_id_sha256": "59c8784e3f1e667bdc3757a7751d049c96ce579b84954071f2514db2b72daf18",
+      "tokens_strictly_after_owned": 1401
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "eb53b679f75749f7b1e590033495becc2a54ff999b5b7ce226d5df348760f907",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-675d6b3a2bd1a23f25e8e0ab",
+      "status": "selected",
+      "target_source_id_sha256": "3a8f147d92757d885db09786680d71a29907f9ac6d9493662aba1cb2a7af6d33",
+      "tokens_strictly_after_owned": 1994
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "c71535e6f4a113c5d1b9fda8cd4a1663440b962a776ca5d90ebe60447e619776",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-3dcb113f7cfd0e5d187b5c4a",
+      "status": "selected",
+      "target_source_id_sha256": "49bea5d01a298d010a0921d77f69c1db195502318c68e5f3a2bafbfe613efb92",
+      "tokens_strictly_after_owned": 1418
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "a27615c0b9d860c2cf66393b41f9278969a9f912b5a92d1744638cb4e62f0e0c",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-4a319db8d54772d2517668d3",
+      "status": "selected",
+      "target_source_id_sha256": "0abc816f198ce5b24e18cb61bdb95544cd1aa49f523cab4cd825160cc3be6090",
+      "tokens_strictly_after_owned": 1669
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "534da7aa0c2af49cb20b3a3cb2901162caa2daee79377f9227836014d5a42ce7",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-554f4efa60834ab02670bb69",
+      "status": "selected",
+      "target_source_id_sha256": "9cda80d3e7d15ccaf40d0e9693ba109d3eedd347a88488ab3dbd80892503e067",
+      "tokens_strictly_after_owned": 1415
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "acbee669ff32b68bae78538424de15b6db476ba08d74dc4b262c89c537343998",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-72e80bf9788c4cc02224b4f0",
+      "status": "selected",
+      "target_source_id_sha256": "543124d4c47bf41496e0ca43cc5dbf0b14269644399f485391d5949692461cae",
+      "tokens_strictly_after_owned": 1156
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "daf13a15c33d335ffab66326fe0e45f2d0df166d15a15ad8e0d51fc621906193",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-4d5d6ec7e72f893c85abc2b5",
+      "status": "selected",
+      "target_source_id_sha256": "65d909cdc6b62661eb242ae8f2cac83cbaebb708c10f478d68946535f3f74de6",
+      "tokens_strictly_after_owned": 1377
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "573e091f647d9892770f74726f4c960cabfb517ea325d1d569226db40b1ce645",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-7dca4f5b01ef6b2e156d6de2",
+      "status": "selected",
+      "target_source_id_sha256": "7851097e459438e3403a538d742e8eb286517f849ba91e9b2e8a99b029ed44b1",
+      "tokens_strictly_after_owned": 1778
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "fa7377aefabcbb7fb7c42c797f2f4f845f767c3bbbaa19d837a4166df6c4446b",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-c4b208770c6cdc4e8427bc9b",
+      "status": "selected",
+      "target_source_id_sha256": "a94e4283c459486f7077db9b178071ca46dea71344c5808ebd369d5ce72ab745",
+      "tokens_strictly_after_owned": 1450
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "7c497d69688fee503a7b944efeed3a3a93ea27d2e7a8b0e8d985eba21c504547",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-898bff741fd9d15a42d7eb51",
+      "status": "selected",
+      "target_source_id_sha256": "979ca2de1344a13344f483de0ee97b6c711242dc69b204f7d680efb811569816",
+      "tokens_strictly_after_owned": 1468
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "f2844523493da697578a2f701afd7f001113d13f2c087401a5bcb25fc19115d6",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-1b83485d5022dfbef2b0fad2",
+      "status": "selected",
+      "target_source_id_sha256": "97775fc39d072af9afb23da2f8349783dfd6444b317355749410bec52cfec8ed",
+      "tokens_strictly_after_owned": 1438
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "aa059a7712516a0aa357bd17c614e917b6ffd5b5c583c1939d5951b44a2b8040",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-36061b295e185fd8b3803a52",
+      "status": "selected",
+      "target_source_id_sha256": "ec9351b2313bc8099ffe31fad2622d76ebeedcd474ff725c5272ebafa08d57e4",
+      "tokens_strictly_after_owned": 1537
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "e2fc9ae1ef321ca47264d8d5286eeca6b4334789970ae9126f6c8ef6c10e1f1c",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-92bf8193275eabd7e480c824",
+      "status": "selected",
+      "target_source_id_sha256": "9970e5c7145b699bea74407c1c23f5712e4e78da5a2ef89c30a9193ee7c38560",
+      "tokens_strictly_after_owned": 1613
+    },
+    {
+      "all_role_source_count": 5,
+      "all_role_source_ids_sha256": "78119d9874e36f9403e6c12a0915b598ddaef69d133f2a61a5c3f811a8fd29c8",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "source_only_greedy_disjoint_selection",
+      "record_id": "longmemeval-constrained-chat-v2-7869ce6c220f5aac79d945cf",
+      "status": "selected",
+      "target_source_id_sha256": "173d41b763b256c4903d550014539b321daaac0069d3b48f9bfe40106c8975eb",
+      "tokens_strictly_after_owned": 1372
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "764dd5dd415b7ad6c03b327e5ed038b1df11202c113446988530a17a5b8542a2",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-014e6ac4b03c800d990a422a",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "8a65b51512db1aa8a159658d06cd2f28bdd4e515c656e71fee11c4ac623f5d6f",
+      "tokens_strictly_after_owned": 1458
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "02e36ac8b775b721d9fd4ca7db2d41557fb25a8108b6f034cd78c0de7de86297",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-a733d4422b4e02bbe584bcdd",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "448ceadbcfc0f4dfa73ee4e83a6dceaba293119f69b7140a30d63462a428bf8f",
+      "tokens_strictly_after_owned": 1235
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "719a8e56d6cf187da57e4a0159f4c4da4c014878d052100599f65956e3779be3",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-5313d7cce95b97221d3c0500",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "85270392bd1d455e3865a83244e15b43cd063b75a085dd2f5e83b46b3be745e2",
+      "tokens_strictly_after_owned": 1262
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "2b9c3bf66a2ed18676ed36a2354f1ef672626136f19cf45fb02b7ef299de884e",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-1624c0fe08206374f7eaf841",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "b510406626cd85d097cc7b3c86a7e6a3afaee80740a568eb4296da218d3754c1",
+      "tokens_strictly_after_owned": 1321
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "d7464a358693b303c374aa4c50cd557d669be7f12c711bdb105e294c22f3349f",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-e69580a04c8b8795f2223158",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "c727f1ac9bfb8b7e522cd1a8cd4187acaba359177d641e1e156577b6e9691826",
+      "tokens_strictly_after_owned": 1226
+    },
+    {
+      "model_outputs_used": false,
+      "reason": "source_packaging_manifesterror",
+      "status": "ineligible",
+      "target_source_id_sha256": "73310e0a656e303188a5794070dbef09d06a2f22708f991ec12360b5891343f9"
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "19917f5707ab67fdbc4e627d3a0c61525ad6b5fc4c572860c8de498b3c9f4cea",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-266cf2a18d06f39df58bbb55",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "3a255c812fecc70622b7b8f57cd10769d2fe862b65e5b2bb9283722d1ff9d548",
+      "tokens_strictly_after_owned": 1417
+    },
+    {
+      "all_role_source_count": 5,
+      "all_role_source_ids_sha256": "c209a9532c18149eea5e727a9a8532c1ede18de301838444a6c718cc51b6b9ff",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-eac6e5c47163ebd9e393226f",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "9c999af218dda506a6a3507b88cb03bc5ab5c93d73e7e4a18ce06a7c22d62356",
+      "tokens_strictly_after_owned": 1507
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "0bffb282b9b6ecef264f61b8cd8db124214febb4003ab0d0449d5d1fe788e4af",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-a4387017c7776775f4a67914",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "e1faec9bef6409c5d3b7a904ad79a9133af888833dab10114eabd8e6034a0931",
+      "tokens_strictly_after_owned": 1491
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "6cc0a7bc09d429b06f9dd26a8779c672a54855d7710ec51821d55c3ab594ceef",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-721ac2d9469ea756f48839ed",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "dedd4328b72656a8f433b175e7e5fa1465968416135f16634918631396299b4a",
+      "tokens_strictly_after_owned": 1432
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "719f29636dfed48731829b15e89293e63f602dff58801ddf09f125b0c7a5bb64",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-75cd14f74358c4a3bc732ed6",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "6b54fb10d073863c477c76ddc0c1790143cea33353bee947b46f4febc159c01a",
+      "tokens_strictly_after_owned": 1563
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "3d8ca5e85ab7ebf1d33e562f509a30aa831c4adb115a66374c98222b6ebb3fd8",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-d901b4e1e7543f0823347285",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "41ccdf0576773e48d0486e389e9bfe56f4a3cd1674666505bfd880721cf85ea0",
+      "tokens_strictly_after_owned": 1249
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "828333cd661dfc6a32f258e75b21f8610c80431b5cd91e212dd950f77501d4bd",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-0fdc0e1afd18ad97595e35bf",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "71be65cc6bf0b81e3f233a42dcea91173b5faa957507a572a6188b6e6f1a3074",
+      "tokens_strictly_after_owned": 1564
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "5ffc81fc67c6bffec2fbe00daf921c61e235a3e78773246069e1a10810a80d94",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-d2957c8fc0a72926042e9196",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "e2b2f50dd2b3d4ae6ec18a578568245882a10f2299ca4aa3096b9f3d68c51984",
+      "tokens_strictly_after_owned": 1288
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "cbc6b5f7cf6a4d323b1e580b3e62e76acbacc441d6eeb926d1fac153596f73dd",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-2af70df242299fc3df712395",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "ee5eb9a271f27ce52b47e68ae03feeb948e502a08a22231bc5a462e07ee6f938",
+      "tokens_strictly_after_owned": 1199
+    },
+    {
+      "model_outputs_used": false,
+      "reason": "owned_round_infeasible",
+      "status": "ineligible",
+      "target_source_id_sha256": "b25994f3e2762f2fab964db3fd48579a5a4a92297b7df0513a4f77ef0be99a89"
+    },
+    {
+      "model_outputs_used": false,
+      "reason": "context_ceiling_infeasible",
+      "status": "ineligible",
+      "target_source_id_sha256": "1265c5205fe3e1cae9edceae312eedbedf3ff3025d17459701dea18e90fccd74"
+    },
+    {
+      "all_role_source_count": 4,
+      "all_role_source_ids_sha256": "3a5dd2e261e6c30e421d30e2112265113a6d5fd120855b98623b2510935300b0",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-aece589e94f7c66a67373be3",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "e19648ee136de2560046776f2b0b304ac6d67f4706dd3eab4d7848ae3c87af67",
+      "tokens_strictly_after_owned": 1549
+    },
+    {
+      "all_role_source_count": 5,
+      "all_role_source_ids_sha256": "08247688a1790ac4ec3d2fb049c9e9de350f60239afe2d73927622ceb596bfc6",
+      "base_tail_minimum_tokens": 1152,
+      "model_outputs_used": false,
+      "reason": "cohort_capacity_reached",
+      "record_id": "longmemeval-constrained-chat-v2-684f89762840d0ef979bedc6",
+      "status": "eligible_not_selected",
+      "target_source_id_sha256": "066aa99f83c9c3119c920f2fdf6eb421ede6f7040a48c0a91ed1b939b8fd7098",
+      "tokens_strictly_after_owned": 1635
+    },
+    {
+      "model_outputs_used": false,
+      "reason": "owned_round_infeasible",
+      "status": "ineligible",
+      "target_source_id_sha256": "61953da86d2cbb4d91f0d41466831655cc2ac902baeaa500591acc58b50e5319"
+    }
+  ],
+  "audit_reason_counts": {
+    "cohort_capacity_reached": 16,
+    "context_ceiling_infeasible": 1,
+    "owned_round_infeasible": 2,
+    "source_only_greedy_disjoint_selection": 16,
+    "source_packaging_manifesterror": 1
+  },
+  "audit_sha256": "e82f99184e01fac78dfca0c37d4046e41032d19cd7f8780f2eea406dbcc5b8f3",
+  "audit_status_counts": {
+    "eligible_not_selected": 16,
+    "ineligible": 4,
+    "selected": 16
+  },
+  "candidate_count": 36,
+  "contains_source_text": false,
+  "eligible_source_only_candidates": 32,
+  "exposure_counts": {
+    "full_oracle_rows": 500,
+    "scored_v1_confirmation_all_role_sources": 33,
+    "scored_v1_development_all_role_sources": 32,
+    "total_exposed_all_role_sources": 65,
+    "untouched_rows": 435
+  },
+  "geometry": {
+    "fixed_c_infeasible_records": 0,
+    "full_repack_required_records": 0,
+    "maximum_runtime_total_token_bound": 4762,
+    "maximum_tokens_strictly_after_owned": 1994,
+    "minimum_runtime_total_token_bound": 2587,
+    "minimum_tokens_strictly_after_owned": 1156,
+    "selected_span_inside_local_window_records": 0
+  },
+  "ineligible_source_only_candidates": 4,
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "17e915d941d16b0b73e2e72dc35f973ea8d110e27dedeca92238f37f759d8b0e"
+  },
+  "manifest_integrity_sha256": "4821ecf3ef37c004da1142199e6a84de5dd183b78059136347897f96afa21bdb",
+  "policy_bindings": {
+    "admission_policy": {
+      "maximum_retained_first_token_rank_in_present_and_raw": 10,
+      "maximum_target_present_first_token_rank": 10,
+      "minimum_target_present_minus_raw_full_sequence_mean_logprob_nats": 0.05,
+      "target_full_sequence_scoring_required": true,
+      "target_metric": "present_minus_fresh_raw_omission_full_sequence_mean_logprob_nats",
+      "threshold_overrides_allowed": false
+    },
+    "admission_policy_sha256": "5fd86063c4904ac5257494f0b109010896a535971abd1064ae65540b0f3cd7da",
+    "candidate_limit": null,
+    "manifest_audit_sha256": "e82f99184e01fac78dfca0c37d4046e41032d19cd7f8780f2eea406dbcc5b8f3",
+    "no_replacement": true,
+    "one_record_per_source_across_all_roles": true,
+    "selection_contract_sha256": "686079ea851595810cd93780d89da427a2f19c6dc39d59f23953ee831559a3a8",
+    "selection_seed": 20260823
+  },
+  "policy_lock_sha256": "02d6d85641a93f3c756455c7e540040e5349b8ef4327ee16da60fda38f101aca",
+  "requested_records": 16,
+  "schema": "gemma-sv-longmemeval-chat-eligibility-census-v2",
+  "selected_all_role_source_count": 66,
+  "selected_all_role_source_ids_sha256": "865a4b38b9dbcf706ee80afddc03067d6d1a287f8a2e5316863cf3ab9c8703d0",
+  "selected_record_ids": [
+    "longmemeval-constrained-chat-v2-7cabbb68fab2fe5b07f758a4",
+    "longmemeval-constrained-chat-v2-61a9459f71ea1badfb0af7ff",
+    "longmemeval-constrained-chat-v2-a794906e35f231980c876620",
+    "longmemeval-constrained-chat-v2-675d6b3a2bd1a23f25e8e0ab",
+    "longmemeval-constrained-chat-v2-3dcb113f7cfd0e5d187b5c4a",
+    "longmemeval-constrained-chat-v2-4a319db8d54772d2517668d3",
+    "longmemeval-constrained-chat-v2-554f4efa60834ab02670bb69",
+    "longmemeval-constrained-chat-v2-72e80bf9788c4cc02224b4f0",
+    "longmemeval-constrained-chat-v2-4d5d6ec7e72f893c85abc2b5",
+    "longmemeval-constrained-chat-v2-7dca4f5b01ef6b2e156d6de2",
+    "longmemeval-constrained-chat-v2-c4b208770c6cdc4e8427bc9b",
+    "longmemeval-constrained-chat-v2-898bff741fd9d15a42d7eb51",
+    "longmemeval-constrained-chat-v2-1b83485d5022dfbef2b0fad2",
+    "longmemeval-constrained-chat-v2-36061b295e185fd8b3803a52",
+    "longmemeval-constrained-chat-v2-92bf8193275eabd7e480c824",
+    "longmemeval-constrained-chat-v2-7869ce6c220f5aac79d945cf"
+  ],
+  "selected_record_ids_sha256": "3d995a905781166dfea9bdda10c8ecf5eab4a777669307c4610bdf40da261eba",
+  "selected_records": 16,
+  "selection_uses_model_outputs": false
+}

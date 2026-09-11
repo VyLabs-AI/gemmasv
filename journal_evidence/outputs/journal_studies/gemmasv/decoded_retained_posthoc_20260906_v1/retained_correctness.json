@@ -1,0 +1,4843 @@
+{
+  "schema": "gemmasv-decoded-retained-posthoc-analysis-v1",
+  "analysis_type": "post_hoc_existing_decoded_flags",
+  "model_api_gpu_calls": 0,
+  "histories": 96,
+  "target_clusters": 32,
+  "contains_source_text": false,
+  "contains_model_generated_text": false,
+  "disclosure": "This is post hoc reanalysis of existing decoded outputs. Aggregate retained correctness and source structure were inspected before this note; the analysis is not outcome-blind, newly held out, newly generated, or a replacement for locked continuous-utility studies.",
+  "claim_limits": "No equivalence margin was specified. A small difference or an interval containing zero does not establish equivalence, noninferiority, preserved general capability, low decoded disclosure, or universal deletion. Low absolute retained correctness remains visible even when two methods agree.",
+  "conditions": {
+    "deterministic_any": {
+      "exact_decrement_or_refit_policy": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 44,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.4583333333333333,
+          "percentile_95": [
+            0.29166666666666663,
+            0.625
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      },
+      "fresh_raw_omission": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 46,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.4791666666666667,
+          "percentile_95": [
+            0.3125,
+            0.6458333333333333
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      },
+      "present": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 46,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.47916666666666663,
+          "percentile_95": [
+            0.32291666666666663,
+            0.6354166666666666
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      }
+    },
+    "legacy_registered_casefold_substring": {
+      "exact_decrement_or_refit_policy": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 38,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.3958333333333333,
+          "percentile_95": [
+            0.23958333333333331,
+            0.5625
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      },
+      "fresh_raw_omission": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 39,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.40625,
+          "percentile_95": [
+            0.24999999999999997,
+            0.5729166666666666
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      },
+      "present": {
+        "all_history_denominator": 96,
+        "scorable_histories": 96,
+        "correct_histories": 39,
+        "unscorable_histories": 0,
+        "failure_reason_counts": {},
+        "rate": {
+          "estimate": 0.40625,
+          "percentile_95": [
+            0.26041666666666663,
+            0.5625
+          ],
+          "target_clusters": 32,
+          "histories": 96,
+          "resampling_unit": "target_cluster",
+          "histories_resampled_within_cluster": false,
+          "resamples": 100000,
+          "seed": 20260906
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "endpoint": "deterministic_any",
+      "left": "exact_decrement_or_refit_policy",
+      "right": "fresh_raw_omission",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 42,
+        "left_only_matches": 2,
+        "right_only_matches": 4,
+        "neither_matches": 48
+      },
+      "difference": {
+        "estimate": -0.020833333333333332,
+        "percentile_95": [
+          -0.0625,
+          0.020833333333333332
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": -0.020833333333333332,
+      "unscorable_history_indices": []
+    },
+    {
+      "endpoint": "deterministic_any",
+      "left": "exact_decrement_or_refit_policy",
+      "right": "present",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 41,
+        "left_only_matches": 3,
+        "right_only_matches": 5,
+        "neither_matches": 47
+      },
+      "difference": {
+        "estimate": -0.020833333333333332,
+        "percentile_95": [
+          -0.08333333333333334,
+          0.041666666666666664
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": -0.020833333333333332,
+      "unscorable_history_indices": []
+    },
+    {
+      "endpoint": "deterministic_any",
+      "left": "fresh_raw_omission",
+      "right": "present",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 41,
+        "left_only_matches": 5,
+        "right_only_matches": 5,
+        "neither_matches": 45
+      },
+      "difference": {
+        "estimate": 0.0,
+        "percentile_95": [
+          -0.06249999999999999,
+          0.06249999999999999
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": 0.0,
+      "unscorable_history_indices": []
+    },
+    {
+      "endpoint": "legacy_registered_casefold_substring",
+      "left": "exact_decrement_or_refit_policy",
+      "right": "fresh_raw_omission",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 36,
+        "left_only_matches": 2,
+        "right_only_matches": 3,
+        "neither_matches": 55
+      },
+      "difference": {
+        "estimate": -0.010416666666666666,
+        "percentile_95": [
+          -0.041666666666666664,
+          0.020833333333333332
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": -0.010416666666666666,
+      "unscorable_history_indices": []
+    },
+    {
+      "endpoint": "legacy_registered_casefold_substring",
+      "left": "exact_decrement_or_refit_policy",
+      "right": "present",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 36,
+        "left_only_matches": 2,
+        "right_only_matches": 3,
+        "neither_matches": 55
+      },
+      "difference": {
+        "estimate": -0.010416666666666666,
+        "percentile_95": [
+          -0.05208333333333333,
+          0.03125
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": -0.010416666666666666,
+      "unscorable_history_indices": []
+    },
+    {
+      "endpoint": "legacy_registered_casefold_substring",
+      "left": "fresh_raw_omission",
+      "right": "present",
+      "direction": "left minus right",
+      "all_history_denominator": 96,
+      "both_scorable_histories": 96,
+      "one_or_both_unscorable_histories": 0,
+      "operational_paired_table": {
+        "both_match": 35,
+        "left_only_matches": 4,
+        "right_only_matches": 4,
+        "neither_matches": 53
+      },
+      "difference": {
+        "estimate": 0.0,
+        "percentile_95": [
+          -0.05208333333333333,
+          0.05208333333333333
+        ],
+        "target_clusters": 32,
+        "histories": 96,
+        "resampling_unit": "target_cluster",
+        "histories_resampled_within_cluster": false,
+        "resamples": 100000,
+        "seed": 20260906
+      },
+      "complete_pair_descriptive_difference": 0.0,
+      "unscorable_history_indices": []
+    }
+  ],
+  "per_history": [
+    {
+      "history_index": 0,
+      "cluster_index": 0,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 1,
+      "cluster_index": 0,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 2,
+      "cluster_index": 0,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 3,
+      "cluster_index": 1,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 4,
+      "cluster_index": 1,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 5,
+      "cluster_index": 1,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 6,
+      "cluster_index": 2,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 7,
+      "cluster_index": 2,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 8,
+      "cluster_index": 2,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 9,
+      "cluster_index": 3,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 10,
+      "cluster_index": 3,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 11,
+      "cluster_index": 3,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 12,
+      "cluster_index": 4,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 13,
+      "cluster_index": 4,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 14,
+      "cluster_index": 4,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 15,
+      "cluster_index": 5,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 16,
+      "cluster_index": 5,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 17,
+      "cluster_index": 5,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 18,
+      "cluster_index": 6,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 19,
+      "cluster_index": 6,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 20,
+      "cluster_index": 6,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 21,
+      "cluster_index": 7,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 22,
+      "cluster_index": 7,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 23,
+      "cluster_index": 7,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 24,
+      "cluster_index": 8,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 25,
+      "cluster_index": 8,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 26,
+      "cluster_index": 8,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 27,
+      "cluster_index": 9,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 28,
+      "cluster_index": 9,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 29,
+      "cluster_index": 9,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 30,
+      "cluster_index": 10,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 31,
+      "cluster_index": 10,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 32,
+      "cluster_index": 10,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 33,
+      "cluster_index": 11,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 34,
+      "cluster_index": 11,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 35,
+      "cluster_index": 11,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 36,
+      "cluster_index": 12,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 37,
+      "cluster_index": 12,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 38,
+      "cluster_index": 12,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 39,
+      "cluster_index": 13,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 40,
+      "cluster_index": 13,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 41,
+      "cluster_index": 13,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 42,
+      "cluster_index": 14,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 43,
+      "cluster_index": 14,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 44,
+      "cluster_index": 14,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 45,
+      "cluster_index": 15,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 46,
+      "cluster_index": 15,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 47,
+      "cluster_index": 15,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 48,
+      "cluster_index": 16,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 49,
+      "cluster_index": 16,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 50,
+      "cluster_index": 16,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 51,
+      "cluster_index": 17,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 52,
+      "cluster_index": 17,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 53,
+      "cluster_index": 17,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 54,
+      "cluster_index": 18,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 55,
+      "cluster_index": 18,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 56,
+      "cluster_index": 18,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 57,
+      "cluster_index": 19,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 58,
+      "cluster_index": 19,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 59,
+      "cluster_index": 19,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 60,
+      "cluster_index": 20,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 61,
+      "cluster_index": 20,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 62,
+      "cluster_index": 20,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 63,
+      "cluster_index": 21,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 64,
+      "cluster_index": 21,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 65,
+      "cluster_index": 21,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 66,
+      "cluster_index": 22,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 67,
+      "cluster_index": 22,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 68,
+      "cluster_index": 22,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 69,
+      "cluster_index": 23,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 70,
+      "cluster_index": 23,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 71,
+      "cluster_index": 23,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 72,
+      "cluster_index": 24,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 73,
+      "cluster_index": 24,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 74,
+      "cluster_index": 24,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 75,
+      "cluster_index": 25,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 76,
+      "cluster_index": 25,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 77,
+      "cluster_index": 25,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 78,
+      "cluster_index": 26,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 79,
+      "cluster_index": 26,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 80,
+      "cluster_index": 26,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 81,
+      "cluster_index": 27,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 82,
+      "cluster_index": 27,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 83,
+      "cluster_index": 27,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 84,
+      "cluster_index": 28,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 85,
+      "cluster_index": 28,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 86,
+      "cluster_index": 28,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 87,
+      "cluster_index": 29,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 88,
+      "cluster_index": 29,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 89,
+      "cluster_index": 29,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 90,
+      "cluster_index": 30,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 91,
+      "cluster_index": 30,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 92,
+      "cluster_index": 30,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": true,
+            "operational_correctness": 1,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 93,
+      "cluster_index": 31,
+      "variant_index": 0,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 94,
+      "cluster_index": 31,
+      "variant_index": 1,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    },
+    {
+      "history_index": 95,
+      "cluster_index": 31,
+      "variant_index": 2,
+      "endpoints": {
+        "deterministic_any": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        },
+        "legacy_registered_casefold_substring": {
+          "exact_decrement_or_refit_policy": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "fresh_raw_omission": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          },
+          "present": {
+            "scorable": true,
+            "observed_match": false,
+            "operational_correctness": 0,
+            "failure_reasons": []
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "methods_sha256": "6823fea39cc8b8dd34dbe44e37a44180d8a3ac2a2865257646c025729be6a9e4",
+    "analyzer_sha256": "f91711ff962c9b53c7fc30f9ca781658cf9d68ec7399c9bf92621834a1b7f868",
+    "source_summary_sha256": "04e7292977e7a8762cbe8e076e9a1f15e8db679e7edf33a26fc604ddb14ac185",
+    "source_summary_path": "/Users/vishrmsh/Documents/plain_jane/gemma_sv/benchmarks/longmemeval_chat_v3_summary_v1.json",
+    "methods_frozen_utc": "2026-09-07T01:19:56.467417+00:00",
+    "aggregate_outcomes_seen_before_methods": true,
+    "paired_contrasts_computed_before_freeze": false
+  },
+  "completed_utc": "2026-09-07T01:19:56.617701+00:00"
+}

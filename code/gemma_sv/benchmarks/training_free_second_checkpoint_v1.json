@@ -1,0 +1,62 @@
+{
+  "name": "training_free_second_checkpoint_v1",
+  "version": 1,
+  "status": "frozen-before-execution",
+  "frozen_at": "2026-08-10",
+  "purpose": "Test whether the corrected training-free retrofit extends from Gemma-3-4B-PT to a larger pretrained checkpoint without changing the recipe or confirmation cohort.",
+  "primary_model": {
+    "id": "google/gemma-3-12b-pt",
+    "revision": "295efb63d01a7017928f273a94ebb86105c9526f"
+  },
+  "technical_fallback_model": {
+    "id": "google/gemma-3-4b-it",
+    "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+    "role": "Use only if the primary 12B run fails for an objective technical reason before metrics are observed; retain the raw-token protocol and label the result as same-scale instruction-tuning sensitivity."
+  },
+  "configuration": {
+    "source": "mass_preserving_boundary_v1.json",
+    "sha256": "2c9f198c597ce05fb579fce026de7ea624c15d6a7473ea2e7fb7f62a998f315d",
+    "nu": 0.7,
+    "chunk": 128,
+    "preserve_prefix_mass": true,
+    "per_boundary_box": true,
+    "solver_seed": 0,
+    "training_steps": 0
+  },
+  "confirmation": {
+    "manifest": "whole_record_confirm_v2.json",
+    "sha256": "40f25b73e23ea33e2f7b70924e703d9ab4c1cd0476b35023a830f28d1ccc8daa",
+    "dataset": "locuslab/TOFU",
+    "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+    "window": 1024,
+    "n_fill": 22,
+    "prefix_fillers": 11,
+    "attempted_records": 8
+  },
+  "quality": {
+    "dataset": "Salesforce/wikitext",
+    "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "split": "wikitext-103-raw-v1/test",
+    "sequence_length": 512,
+    "blocks": 400,
+    "batch": 2,
+    "group_size": 20,
+    "expected_token_sha256": "4e227e266e15e5d735b5ed3569d828c37b80db6503c2896e6e96a7092c385fdd"
+  },
+  "primary_endpoints": [
+    "ungrafted and grafted strict admission counts over all eight records",
+    "paired record-level admission statuses",
+    "fixed-C_b feasibility count over all eight records",
+    "paired 400-block relative perplexity cost"
+  ],
+  "reporting_policy": {
+    "retain_all_primary_outcomes": true,
+    "replace_or_remove_records": false,
+    "change_recipe_after_outcomes": false,
+    "inferential_interval": false,
+    "grouped_quality_statistics": "descriptive only",
+    "token_hash_mismatch": "Retain the result, disclose the mismatch, and do not claim identical token blocks across scales."
+  },
+  "execution_policy": "Run 12B-PT first. Do not invoke the 4B-IT fallback because the 12B metrics are unfavorable. A fallback is permitted only after an objective model-load, architecture, memory, or runtime failure that occurs before primary outcomes are available.",
+  "output_root": "outputs/gemma_sv_second_checkpoint_12b_pt_v1"
+}

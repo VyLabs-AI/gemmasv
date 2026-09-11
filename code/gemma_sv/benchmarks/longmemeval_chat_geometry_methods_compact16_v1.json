@@ -1,0 +1,280 @@
+{
+  "behavioral_result_status": "validated-positive",
+  "certificate": {
+    "behavioral_raw_omission_is_distinct": true,
+    "direction": "KL(exact policy || fixed-C retained-key refit)",
+    "distribution_scope": "full output vocabulary at the first target token of each registered target and retained probe",
+    "maximum_kl_nats": 1.7528497686921997e-16,
+    "mean_kl_nats": 9.591298981982964e-18,
+    "probes": 32,
+    "publisher_maximum_kl_tolerance_nats": 1e-12,
+    "raw_history_equality_claimed": false,
+    "records": 16,
+    "reference": "fixed-C retained-key refit",
+    "status": "validated-pass"
+  },
+  "certificate_status": "validated-pass",
+  "contains_full_vocabulary_vectors": false,
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "denominators": {
+    "attempted_records": 16,
+    "authorized_records": 16,
+    "certificate_probes": 32,
+    "certificate_records": 16,
+    "excluded_diagnostic_failures": 16,
+    "frozen_records": 16,
+    "joint_admitted_records": 10,
+    "not_attempted_records": 0,
+    "primary_condition_completed_records": {
+      "decay_0_01": 16,
+      "exact_decrement": 16,
+      "fixed_c_refit": 16,
+      "fp32_proxy": 16,
+      "fresh_raw_omission": 16,
+      "present": 16,
+      "prompt_suppression": 16,
+      "token_row_repack": 16
+    },
+    "primary_result_failures": 0,
+    "raw_report_record_failures": 16,
+    "retained_available_records": 16,
+    "source_state_immutability_failures": 0,
+    "source_state_immutable_records": 16,
+    "target_admitted_records": 10,
+    "terminal_records": 16
+  },
+  "diagnostics": {
+    "cache_delete_shift": {
+      "attempted_records": 16,
+      "causes_raw_report_completed_with_record_failures_status": true,
+      "classification": "incompatible_diagnostic",
+      "error_message_redacted": true,
+      "error_message_sha256": "84dd133fa38ccc3e2261ab59c190cf2135294a01eb6649b54609f00b52f7113c",
+      "error_type": "ValueError",
+      "failed_records": 16,
+      "implies_exact_policy_failure": false,
+      "public_interpretation": "row deletion would collapse distinct support-vector gate boundaries; this cache surgery is not the certified policy",
+      "scientific_role": "excluded_from_primary_manuscript_conditions"
+    }
+  },
+  "efficacy": {
+    "conditions": {
+      "decay_0_01": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 12.774109477283021,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 0.00010091209857785763,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 2.776923368787581,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 7.225777198993123e-05,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -4.579365436397242e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 0.30099165430896596,
+        "mean_target_log_probability_drift_from_raw_omission_nats": 0.27252604458963053,
+        "mean_target_suppression_vs_present_nats": 6.301626233213886,
+        "minimum_target_suppression_vs_present_nats": 1.6798993478643984,
+        "records_at_or_below_raw_omission_floor": 2,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "exact_decrement": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 19.89164355219483,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 8.054104423996529e-05,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 2.7493585643872342,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 1.8951008830790114e-06,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -4.641260812535946e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 2.1517010661192484,
+        "mean_target_log_probability_drift_from_raw_omission_nats": -1.7528518655603365,
+        "mean_target_suppression_vs_present_nats": 8.327004143363855,
+        "minimum_target_suppression_vs_present_nats": 1.7298680064801788,
+        "records_at_or_below_raw_omission_floor": 6,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "fixed_c_refit": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 19.89164355219569,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 8.054099231880862e-05,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 2.7493584535112365,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 1.8950979419521933e-06,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -4.641269267029687e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 2.1517009800905647,
+        "mean_target_log_probability_drift_from_raw_omission_nats": -1.752852357865692,
+        "mean_target_suppression_vs_present_nats": 8.327004635669208,
+        "minimum_target_suppression_vs_present_nats": 1.7298680064801788,
+        "records_at_or_below_raw_omission_floor": 6,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "fp32_proxy": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 20.000772760290754,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 8.029696079164917e-05,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 2.7647731813894816,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 1.8888410548534019e-06,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -4.7841430561350636e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 2.151722517021182,
+        "mean_target_log_probability_drift_from_raw_omission_nats": -1.7693783921866129,
+        "mean_target_suppression_vs_present_nats": 8.34353066999013,
+        "minimum_target_suppression_vs_present_nats": 1.7299772738176058,
+        "records_at_or_below_raw_omission_floor": 6,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "fresh_raw_omission": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 16.96127895544062,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 0.0,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 0.0,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 0.0,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": 0.0,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 0.0,
+        "mean_target_log_probability_drift_from_raw_omission_nats": 0.0,
+        "mean_target_suppression_vs_present_nats": 6.574152277803518,
+        "minimum_target_suppression_vs_present_nats": 1.1908381200709233,
+        "records_at_or_below_raw_omission_floor": 10,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "present": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 0.0,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 9.002951366234199e-05,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 6.574152277803518,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 3.3673341964265337e-05,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -3.608358985240528e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 9.03226792814423,
+        "mean_target_log_probability_drift_from_raw_omission_nats": 6.574152277803518,
+        "mean_target_suppression_vs_present_nats": 0.0,
+        "minimum_target_suppression_vs_present_nats": 0.0,
+        "records_at_or_below_raw_omission_floor": 0,
+        "retained_probes": 10,
+        "target_probes": 10
+      },
+      "prompt_suppression": {
+        "completed_records": 10,
+        "maximum_target_suppression_vs_present_nats": 7.532034933044989,
+        "mean_absolute_retained_log_probability_drift_from_raw_omission_nats": 9.480686760912234e-05,
+        "mean_absolute_target_log_probability_drift_from_raw_omission_nats": 6.039930212867186,
+        "mean_retained_first_target_token_rank": 1.0,
+        "mean_retained_first_token_kl_raw_omission_to_method_nats": 4.9810788898528425e-05,
+        "mean_retained_log_probability_drift_from_raw_omission_nats": -2.030183947408954e-05,
+        "mean_target_first_token_kl_raw_omission_to_method_nats": 6.0306438388603025,
+        "mean_target_log_probability_drift_from_raw_omission_nats": 6.039930212867186,
+        "mean_target_suppression_vs_present_nats": 0.5342220649363307,
+        "minimum_target_suppression_vs_present_nats": -3.766150340926675,
+        "records_at_or_below_raw_omission_floor": 0,
+        "retained_probes": 10,
+        "target_probes": 10
+      }
+    },
+    "exact_policy_summary": {
+      "maximum_target_suppression_nats": 19.89164355219483,
+      "mean_absolute_retained_log_probability_drift_nats": 8.054104423996529e-05,
+      "mean_nats_below_raw_omission_floor": 1.7528518655603365,
+      "mean_retained_first_token_kl_to_raw_omission_nats": 1.8951008830790114e-06,
+      "mean_target_first_token_kl_to_raw_omission_nats": 2.1517010661192484,
+      "mean_target_suppression_nats": 8.327004143363855,
+      "minimum_target_suppression_nats": 1.7298680064801788,
+      "records_at_or_below_raw_omission_floor": 6
+    },
+    "population": "predeclared_geometry_joint10",
+    "record_ids_sha256": "9c2646d60522518dbbb71a8e6662d77d1ed5b10108353b27cc1b4cb32f4d3aa1",
+    "records": 10,
+    "selected_before_method_scoring": true
+  },
+  "exact_policy": {
+    "all_executions_used_fixed_c_refit_fallback": true,
+    "fixed_c_refit_fallback_records": 16,
+    "incremental_conversation_deletion_speed_claim_supported": false,
+    "incremental_float64_decrement_records": 0,
+    "name": "verified fixed-C deletion/refit policy",
+    "source_full_repack_fallback_records": 0
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "58583271ba6df3004c8d529ef9e39d506796377bd9b40094a23bc0fa36aba978"
+  },
+  "metric_definitions": {
+    "behavioral_deletion_gap": "KL(fresh raw omission || method) over the full vocabulary at the first target token",
+    "behavioral_floor_position": "method target-sequence mean log probability minus fresh raw-omission mean log probability; negative is below the floor",
+    "certificate_gap": "KL(exact policy || fixed-C retained-key refit), not KL to fresh raw omission",
+    "retention_gap": "KL(fresh raw omission || method) over the full vocabulary at the retained probe's first target token",
+    "target_suppression": "present target-sequence mean log probability minus method target-sequence mean log probability; larger is more suppression"
+  },
+  "official_longmemeval_leaderboard_score": false,
+  "operational_disclosure": {
+    "canonical_output_policy": "atomic first-writer, no overwrite",
+    "duplicate_invocation_outcomes_are_not_publication_inputs": true,
+    "final_report_rows_selected_or_replaced": false,
+    "outcome_selection": false
+  },
+  "schema": "gemma-sv-longmemeval-chat-geometry-methods-compact16-v1",
+  "schema_version": 1,
+  "scope": {
+    "claim": "behavioral target suppression with retained-memory preservation plus a separately scoped exact/refit certificate",
+    "evaluation": "constrained LongMemEval V1 deletion adaptation",
+    "no_incremental_speed_claim": true,
+    "no_privacy_or_compliance_guarantee": true,
+    "no_raw_history_state_equality_claim": true,
+    "not_an_official_leaderboard_score": true
+  },
+  "source_artifacts": {
+    "admission_report": {
+      "file_sha256": "36c2eaab9f39f1d0a5707460cc6fcb65027bf737dbe60f2b700993e8d2e82368",
+      "payload_sha256": "f23ace307cf47fe9bc7ece575fd3190992660a815f79d8a048243a2736656988"
+    },
+    "cohort": {
+      "joint10_record_ids_sha256": "9c2646d60522518dbbb71a8e6662d77d1ed5b10108353b27cc1b4cb32f4d3aa1",
+      "ordered_core_bindings_sha256": "5d02a8e7e8adc68abc3b5e5e7348cee34aa5d65ecc0a428e5bd5307ab8117d4e"
+    },
+    "final_report": {
+      "canonical_repository_path": "outputs/gemma_sv_rag/longmemeval_chat_geometry_methods_finalized_v1.json",
+      "file_sha256": "a7d0582d7d5aa6832320852f0b80e79799621d6520ebef5f7a44eeea0e327fb6",
+      "final_row_payload_sha256": "dc63d4c050a73940ba393c33ae954a62d25da3374df862e80f6724d3ab7e29e5",
+      "payload_sha256": "d6c4348975a912652fb1f2e153d8e314f3455ca4efcf6e9e565451b703804dac",
+      "raw_status": "completed_with_record_failures",
+      "schema": "gemma-sv-longmemeval-chat-geometry-deletion-methods-v1"
+    },
+    "geometry_manifest": {
+      "file_sha256": "df10404a5b11491791638190f61b52e30e667d17601819a99925181885bde480",
+      "integrity_sha256": "04fb39a23cbe5e31ed652c0ff8d412df1ab2072999760fba81f7de95dee1a4db"
+    },
+    "method_lock": {
+      "file_sha256": "e965f3c5569e0833a32912b2d8537672af2c7123c89dc943fd671cf9d1f78a5c",
+      "integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+      "payload_sha256": "2fc805cf5ffc4eaf3a321c17ec31be4e356f042c4310fb7d07cddae8fb33df20"
+    },
+    "partial_lock": {
+      "file_sha256": "995bf902bce3ca302917817e2d4f1ba0d9b7938ef03341a7edf7c8819d4e1059",
+      "finalizer_file_sha256": "1b5b032faadf9b59a35704f79a79b9b88977b50d0bf526350d28e1de61b9245d",
+      "integrity_sha256": "f3f332357ceda0796f54fb297d2aa423352989a9eaaefb7c54c6dafb5bd84c4f"
+    },
+    "partial_report": {
+      "file_sha256": "0358767e896f4dcfcad6d9bef108ecd2ce7076b06fab584bfe319c519bf1456a",
+      "payload_sha256": "bcec7a147a2c21e6c2dca36760a5420459916ff7d1d89c96b8aafb36fd2e7e7e"
+    },
+    "publisher": {
+      "file_sha256": "b9a3bdd41f043889a046b3f819482c0f70cadfa7c698dded05dcf07fb8d282e7"
+    }
+  },
+  "status": "validated-complete-all16",
+  "validation": {
+    "all16_attempted_and_terminal": true,
+    "all_manuscript_conditions_complete": true,
+    "core_bindings_unchanged": true,
+    "final_report_reconstructed_from_locked_inputs": true,
+    "geometry_correction_output_blind": true,
+    "newly_scored_final_records": 1,
+    "no_output_based_selection_or_replacement": true,
+    "only_excluded_failures_reconciled": true,
+    "resume_output_rows_reused": 0,
+    "sealed_partial_prefix_rows_verified": 15,
+    "source_state_immutable_all16": true
+  }
+}

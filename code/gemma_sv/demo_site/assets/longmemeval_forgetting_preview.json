@@ -1,0 +1,770 @@
+{
+  "case": {
+    "certificate": {
+      "claim": "exact decrement versus fixed-C retained-key refit",
+      "decrement_fallbacks": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/decrement_fallbacks",
+        "value": 522
+      },
+      "full_repack_certificate": false,
+      "head_gate_solves": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/head_gate_solves",
+        "value": 560
+      },
+      "head_gates": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/head_gates",
+        "value": 960
+      },
+      "max_output_kl_nats": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/max_output_kl_nats",
+        "value": 4.32788239691568e-17
+      },
+      "mean_output_kl_nats": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/mean_output_kl_nats",
+        "value": 2.16394119845784e-17
+      },
+      "raw_omission_reference_distinct": true,
+      "scope": "full vocabulary at the first target token of both registered probes"
+    },
+    "chronology": {
+      "display_note": "The retained control, deterministic tail, and three registered suffix rounds form the measured gap; one suffix round is displayed as a source-bound excerpt.",
+      "local_window_tokens": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/true_local_window_tokens",
+        "value": 1024
+      },
+      "minimum_tokens_strictly_after_owned": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/minimum_tokens_strictly_after_owned",
+        "value": 1152
+      },
+      "owned_round_outside_local_window": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/owned_round_strictly_outside_local_window_before_query",
+        "value": true
+      },
+      "tokens_strictly_after_owned": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/observed_tokens_strictly_after_owned",
+        "value": 1241
+      }
+    },
+    "deletion_action": {
+      "display_label": "EVALUATION DELETION ACTION (added by us; not LongMemEval source)",
+      "display_text": "Please forget the update where I said I now own four bikes. Keep the rest of our conversation, including the Speyer contact details.",
+      "display_text_sha256": "fd3fb80f9758afc1718f6fe5c25f8e3eff50de54b95df8dda3d08105e4b2bf2d",
+      "model_generated": false,
+      "origin": "evaluator_added_deletion_action",
+      "out_of_band": true,
+      "public_longmemeval_source": false
+    },
+    "dialogue": {
+      "intervening": {
+        "displayed_registered_suffix_rounds": 1,
+        "inside_measured_intervening_gap": true,
+        "label": "Example from the intervening conversation",
+        "quotes": [
+          {
+            "display_text": "Which one would you say is the best for a romantic dinner?",
+            "display_text_sha256": "72cac20d7983539d7158eeea7376fc8040bd335c6c67fe77e279b49747740711",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "user",
+            "session_id": "answer_ultrachat_448704",
+            "source_content_sha256": "72cac20d7983539d7158eeea7376fc8040bd335c6c67fe77e279b49747740711",
+            "source_id": "longmemeval-source-ce89ef3866f0471d17f2c0ee",
+            "source_row_sha256": "cf32af77ea43bb126940bf564a6bad9ce07f9753f4ce7367c89e54b06103df71",
+            "source_session_sha256": "c1e4e10b5b4cabe6840e89a0cbed89b9763dbb96e656edb96ba464a6e09ba570",
+            "source_span_end": 58,
+            "source_span_start": 0,
+            "source_turn_index": 2,
+            "source_turn_sha256": "7b6b41a5243a339970c8d868ac253b1acaaecba110329e55dbf0635f7be6cf55",
+            "truncated": false
+          },
+          {
+            "display_text": "For a romantic dinner, I would recommend Roscioli.",
+            "display_text_sha256": "fef10e54aeb839d44957a2b051d722193ee39492591320eaae9d17c6d2b5ab63",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "assistant",
+            "session_id": "answer_ultrachat_448704",
+            "source_content_sha256": "4b1f217032fae3d1e16f62afbbabfcba85390d5580694bd31d99ae566aafc829",
+            "source_id": "longmemeval-source-ce89ef3866f0471d17f2c0ee",
+            "source_row_sha256": "cf32af77ea43bb126940bf564a6bad9ce07f9753f4ce7367c89e54b06103df71",
+            "source_session_sha256": "c1e4e10b5b4cabe6840e89a0cbed89b9763dbb96e656edb96ba464a6e09ba570",
+            "source_span_end": 50,
+            "source_span_start": 0,
+            "source_turn_index": 3,
+            "source_turn_sha256": "1e5f3c0d7326eb6ca2380fd7b5f6eb418ab23070cb68ec3bb502c6c9bd8769d7",
+            "truncated": false
+          }
+        ],
+        "source_relation": "separate public LongMemEval example assembled into the gap",
+        "total_registered_suffix_rounds": 3
+      },
+      "retained": {
+        "label": "retained example selected from public LongMemEval",
+        "quotes": [
+          {
+            "display_text": "Can you provide me with the contact details of the local tourism board of Speyer?",
+            "display_text_sha256": "a8cd294853dd06ec5dc3c9f9f0eba436f266b9b46e0a88c63e5b5d850dd190ae",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "user",
+            "session_id": "answer_ultrachat_417348",
+            "source_content_sha256": "a8cd294853dd06ec5dc3c9f9f0eba436f266b9b46e0a88c63e5b5d850dd190ae",
+            "source_id": "longmemeval-source-855a83110c3b62717f833248",
+            "source_row_sha256": "530449cc36f5371f7b0f78bf57260c6da4ebff156a38b628ed6bb73f96b9a947",
+            "source_session_sha256": "0d55ffab797b5f237461fde6debb1112db8647e09299e5eaa9bd46b35ad10b6f",
+            "source_span_end": 81,
+            "source_span_start": 0,
+            "source_turn_index": 2,
+            "source_turn_sha256": "b8c51cdf9b26808760fa837ef835446066832918bf06e6ea017c2b635602ec9a",
+            "truncated": false
+          },
+          {
+            "display_text": "Phone: +49 (0) 62 32 / 14 23 - 0",
+            "display_text_sha256": "e1b0ec1d9eeaddb302e339c71971d48bb6d08d4469a9da6aa09fcf89d57068db",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_source_line"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "assistant",
+            "session_id": "answer_ultrachat_417348",
+            "source_content_sha256": "8d736dfa885e5578abbce8022c24bd4c2caf7da5a4407d634fb5414ad82cc469",
+            "source_id": "longmemeval-source-855a83110c3b62717f833248",
+            "source_row_sha256": "530449cc36f5371f7b0f78bf57260c6da4ebff156a38b628ed6bb73f96b9a947",
+            "source_session_sha256": "0d55ffab797b5f237461fde6debb1112db8647e09299e5eaa9bd46b35ad10b6f",
+            "source_span_end": 182,
+            "source_span_start": 150,
+            "source_turn_index": 3,
+            "source_turn_sha256": "80297665af53bef90c88b3d6b0f238b52c8c210dab98627f370598c1aea565ee",
+            "truncated": false
+          }
+        ],
+        "source_relation": "separate benchmark example; not continuous chat"
+      },
+      "target": {
+        "label": "target example selected from public LongMemEval",
+        "quotes": [
+          {
+            "display_text": "Since I'll have four bikes with me, I'll make sure to book the accommodations with bike storage in advance to ensure they can accommodate all my bikes.",
+            "display_text_sha256": "83f5c64a432340d9223d9431e57bdde9fd71c081349629932f6fa75a3dd84422",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "user",
+            "session_id": "answer_e1403127_2",
+            "source_content_sha256": "892707ca4baf347b612ed647b36ee8162906ca7ad67002161f99933aba948bb0",
+            "source_id": "longmemeval-source-64580b7ed2a6a2f9aceef473",
+            "source_row_sha256": "f3c48500eb7ea97097be0be6d009e6ea2701c1044f2a72a0fb3cbbf8f1999bc9",
+            "source_session_sha256": "7e8da66e2e8bf3b9967f6036230328af245e8fb5b6efbd8ebf99e22fc259fbe3",
+            "source_span_end": 258,
+            "source_span_start": 107,
+            "source_turn_index": 4,
+            "source_turn_sha256": "bbe6a10124e1bfde35bbc038092bb216475164b273992dffdab8ed9bad20af05",
+            "truncated": false
+          },
+          {
+            "display_text": "Congratulations on the new hybrid bike!",
+            "display_text_sha256": "6668a467e5f52bbfa21753343a455deb8b84b81045d00375d8fcfe21d5acd27c",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "assistant",
+            "session_id": "answer_e1403127_2",
+            "source_content_sha256": "4ccd7e6a5bde6827592aea0ef72a04f6ede781e6ed061af18f67c840e483b176",
+            "source_id": "longmemeval-source-64580b7ed2a6a2f9aceef473",
+            "source_row_sha256": "f3c48500eb7ea97097be0be6d009e6ea2701c1044f2a72a0fb3cbbf8f1999bc9",
+            "source_session_sha256": "7e8da66e2e8bf3b9967f6036230328af245e8fb5b6efbd8ebf99e22fc259fbe3",
+            "source_span_end": 39,
+            "source_span_start": 0,
+            "source_turn_index": 5,
+            "source_turn_sha256": "d2c731fbf179b98b1528e150946e19cd0ad5e87f441c64d44690d53e56cdd6bd",
+            "truncated": false
+          }
+        ],
+        "source_relation": "separate benchmark example; not continuous chat"
+      }
+    },
+    "memory_resolution": {
+      "candidate_catalog": [
+        {
+          "deletion_scope": "complete_exchange",
+          "label": "Current number of bicycles",
+          "owned_exchange_ref": "/case/dialogue/target/quotes",
+          "record_id": "memory_601288d46f86bd3a45c44f40",
+          "source_turn_ids": [
+            "turn_bbe6a10124e1bfde35bb",
+            "turn_d2c731fbf179b98b1528"
+          ],
+          "summary": "The user said they would have four bikes after adding a new hybrid bicycle."
+        },
+        {
+          "deletion_scope": "complete_exchange",
+          "label": "Speyer tourism-board contact details",
+          "owned_exchange_ref": "/case/dialogue/retained/quotes",
+          "record_id": "memory_e4ac5ef4c5c52a2263d29e88",
+          "source_turn_ids": [
+            "turn_b8c51cdf9b26808760fa",
+            "turn_80297665af53bef90c88"
+          ],
+          "summary": "The user requested the Speyer tourism board contact details and received its phone number."
+        }
+      ],
+      "catalog_hash": "bd37cc721157cc391ecc77aaa54c87bf321241d916ad44a16ebaa736acd5a4d3",
+      "confirmation": {
+        "catalog_hash": "bd37cc721157cc391ecc77aaa54c87bf321241d916ad44a16ebaa736acd5a4d3",
+        "confirmed_in_payload": false,
+        "owned_exchange": [
+          {
+            "display_text": "Since I'll have four bikes with me, I'll make sure to book the accommodations with bike storage in advance to ensure they can accommodate all my bikes.",
+            "display_text_sha256": "83f5c64a432340d9223d9431e57bdde9fd71c081349629932f6fa75a3dd84422",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "user",
+            "session_id": "answer_e1403127_2",
+            "source_content_sha256": "892707ca4baf347b612ed647b36ee8162906ca7ad67002161f99933aba948bb0",
+            "source_id": "longmemeval-source-64580b7ed2a6a2f9aceef473",
+            "source_row_sha256": "f3c48500eb7ea97097be0be6d009e6ea2701c1044f2a72a0fb3cbbf8f1999bc9",
+            "source_session_sha256": "7e8da66e2e8bf3b9967f6036230328af245e8fb5b6efbd8ebf99e22fc259fbe3",
+            "source_span_end": 258,
+            "source_span_start": 107,
+            "source_turn_index": 4,
+            "source_turn_sha256": "bbe6a10124e1bfde35bbc038092bb216475164b273992dffdab8ed9bad20af05",
+            "truncated": false
+          },
+          {
+            "display_text": "Congratulations on the new hybrid bike!",
+            "display_text_sha256": "6668a467e5f52bbfa21753343a455deb8b84b81045d00375d8fcfe21d5acd27c",
+            "excerpt_policy": {
+              "normalization": "none",
+              "selection": "exact UTF-8 source substring",
+              "unit": "complete_sentence"
+            },
+            "license": "MIT",
+            "origin": "public_longmemeval_dialogue",
+            "role": "assistant",
+            "session_id": "answer_e1403127_2",
+            "source_content_sha256": "4ccd7e6a5bde6827592aea0ef72a04f6ede781e6ed061af18f67c840e483b176",
+            "source_id": "longmemeval-source-64580b7ed2a6a2f9aceef473",
+            "source_row_sha256": "f3c48500eb7ea97097be0be6d009e6ea2701c1044f2a72a0fb3cbbf8f1999bc9",
+            "source_session_sha256": "7e8da66e2e8bf3b9967f6036230328af245e8fb5b6efbd8ebf99e22fc259fbe3",
+            "source_span_end": 39,
+            "source_span_start": 0,
+            "source_turn_index": 5,
+            "source_turn_sha256": "d2c731fbf179b98b1528e150946e19cd0ad5e87f441c64d44690d53e56cdd6bd",
+            "truncated": false
+          }
+        ],
+        "requires_explicit_click": true,
+        "selected_record_id": "memory_601288d46f86bd3a45c44f40"
+      },
+      "decision": {
+        "alternative_record_ids": [],
+        "confidence": null,
+        "deletion_executed": false,
+        "explanation": "Deterministic fixture selects the bicycle-count update; no provider model evaluated this request.",
+        "requires_confirmation": true,
+        "selected_record_id": "memory_601288d46f86bd3a45c44f40",
+        "selection_rule": "predeclared_exact_bicycle_update_fixture",
+        "status": "resolved"
+      },
+      "label": "Deterministic recorded resolver fixture — no provider call",
+      "mode": "deterministic_recorded_fixture",
+      "model_configuration": {
+        "default_model_id": "gemini-3.6-flash",
+        "model_produced_fixture": false
+      },
+      "network_request_performed": false,
+      "outside_certificate_boundary": true,
+      "provider": {
+        "artifact": null,
+        "artifact_present": false,
+        "call_performed": false
+      },
+      "request": {
+        "sha256": "fd3fb80f9758afc1718f6fe5c25f8e3eff50de54b95df8dda3d08105e4b2bf2d",
+        "text": "Please forget the update where I said I now own four bikes. Keep the rest of our conversation, including the Speyer contact details."
+      },
+      "schema": "gemma-sv-recorded-memory-resolver-fixture-v1",
+      "schema_version": 1
+    },
+    "outcomes": [
+      {
+        "condition_id": "present",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999885607515
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1969791586820446e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999768442901081
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/mean_log_probability",
+            "value": -2.3155977989431532e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 8.076786181075218e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 0.006108561590391151
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 2
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 14.764097322690377
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 0.006108561590391151
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -5.098063952435269
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "fresh_raw_omission",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999965602797
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/geometric_mean_probability",
+            "value": 0.999896081560095
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/mean_log_probability",
+            "value": -0.00010392383980018371
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 0.0
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 2.6287488802310674e-10
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 15
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 2.6287488802310674e-10
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -22.059342907875887
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "exact_decrement",
+        "execution": {
+          "decrement_fallbacks": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/decrement_fallbacks",
+            "value": 522
+          },
+          "executed_method": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/executed_method",
+            "value": "fixed_c_refit_fallback"
+          },
+          "fixed_c_refit_fallback": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/fixed_c_refit_fallback",
+            "value": true
+          },
+          "full_repack_fallback": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/full_repack_fallback",
+            "value": false
+          }
+        },
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999998055555
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1641472734656373e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999535772507356
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/mean_log_probability",
+            "value": -4.642382683357977e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 5.750001296660394e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 1.4031623606030414e-11
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 28
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0017643877707835907
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 1.4031623606030414e-11
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -24.989707504630097
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "fixed_c_refit",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/first_target_token_probability",
+            "value": 0.999999999805554
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1641474323201518e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999535760321898
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/mean_log_probability",
+            "value": -4.642504543593373e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 5.749879436424998e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 1.403162360601835e-11
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 28
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0017643877681895186
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 1.403162360601835e-11
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -24.989707504630957
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      }
+    ],
+    "queries": {
+      "retained": {
+        "display_text": "I'm planning my trip to Speyer again and I wanted to confirm, what's the phone number of the Speyer tourism board that you provided me earlier?",
+        "display_text_sha256": "d8a6aee7cf49d1a3566c0539cc8607a18d1eefac106e7bb1d4cb2f1ea1582c18",
+        "evaluation_use": "official question replayed by evaluator",
+        "evaluator_added_text": false,
+        "license": "MIT",
+        "official_longmemeval_question": true,
+        "origin": "public_longmemeval_query",
+        "source_id": "longmemeval-source-855a83110c3b62717f833248",
+        "source_row_sha256": "530449cc36f5371f7b0f78bf57260c6da4ebff156a38b628ed6bb73f96b9a947"
+      },
+      "target": {
+        "display_text": "How many bikes do I currently own?",
+        "display_text_sha256": "b1fa5c21afdb58604d92f4a9d891c9e339c0b79ba4418f669512b51da60495b7",
+        "evaluation_use": "official question replayed by evaluator",
+        "evaluator_added_text": false,
+        "license": "MIT",
+        "official_longmemeval_question": true,
+        "origin": "public_longmemeval_query",
+        "source_id": "longmemeval-source-64580b7ed2a6a2f9aceef473",
+        "source_row_sha256": "f3c48500eb7ea97097be0be6d009e6ea2701c1044f2a72a0fb3cbbf8f1999bc9"
+      }
+    },
+    "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+    "selection": {
+      "record_replacement": false,
+      "rule": "first authorized jointly admitted record",
+      "selected_before_method_scoring": true,
+      "selected_from_method_outcomes": false
+    }
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": true,
+  "contains_unquoted_source_text": false,
+  "demo": {
+    "live_compute": false,
+    "mode": "recorded_replay",
+    "model_outcome_text_present": false,
+    "network_api_required": false,
+    "sequence": [
+      {
+        "id": "chat",
+        "label": "Load public target and retained turns",
+        "source_ref": "/case/dialogue"
+      },
+      {
+        "id": "recall",
+        "label": "Recall before forgetting",
+        "source_ref": "/case/outcomes/0"
+      },
+      {
+        "id": "resolve-request",
+        "label": "State a natural-language deletion request",
+        "source_ref": "/case/memory_resolution/request"
+      },
+      {
+        "id": "resolve-proposal",
+        "label": "Show the deterministic resolver fixture",
+        "source_ref": "/case/memory_resolution/decision"
+      },
+      {
+        "id": "confirm",
+        "label": "Confirm the complete owned exchange",
+        "source_ref": "/case/memory_resolution/confirmation"
+      },
+      {
+        "id": "forget",
+        "label": "Apply the confirmed recorded deletion",
+        "source_ref": "/case/outcomes/2/execution"
+      },
+      {
+        "id": "re-query",
+        "label": "Re-query the target",
+        "source_ref": "/case/outcomes/2"
+      },
+      {
+        "id": "retained",
+        "label": "Probe the retained control",
+        "source_ref": "/case/outcomes/2/retained"
+      },
+      {
+        "id": "certificate",
+        "label": "Show the exact/refit certificate",
+        "source_ref": "/case/certificate"
+      }
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "ae75f7f3255a80ab555612ca7794da55de3ba110ad6fa3e93b4c9c6afdcdf25f"
+  },
+  "official_longmemeval_leaderboard_score": false,
+  "preview_label": "INCOMPLETE CASE STUDY PREVIEW",
+  "provenance": {
+    "compact_report_integrity_sha256": "78ebc12336c9ce07776f4c1b1f3a8efb584a97f0643891087c2148dc710d884c",
+    "public_dialogue": {
+      "artifact_path": "longmemeval_oracle.json",
+      "artifact_sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c",
+      "assembly_disclosure": "target, retained-control, and gap excerpts come from separate public LongMemEval examples selected and assembled by the benchmark; they are not one organic continuous conversation",
+      "dataset_id": "xiaowu0162/longmemeval-cleaned",
+      "dataset_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+      "license": "MIT",
+      "quote_policy": "only exact complete source sentences or lines from the displayed target, retained, and intervening examples are copied; hashes and source spans bind every quote"
+    },
+    "source_artifacts": {
+      "admission_report": {
+        "file_sha256": "36c2eaab9f39f1d0a5707460cc6fcb65027bf737dbe60f2b700993e8d2e82368",
+        "payload_sha256": "f23ace307cf47fe9bc7ece575fd3190992660a815f79d8a048243a2736656988"
+      },
+      "geometry_manifest": {
+        "file_sha256": "df10404a5b11491791638190f61b52e30e667d17601819a99925181885bde480",
+        "integrity_sha256": "04fb39a23cbe5e31ed652c0ff8d412df1ab2072999760fba81f7de95dee1a4db"
+      },
+      "method_lock": {
+        "file_sha256": "e965f3c5569e0833a32912b2d8537672af2c7123c89dc943fd671cf9d1f78a5c",
+        "integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+        "payload_sha256": "2fc805cf5ffc4eaf3a321c17ec31be4e356f042c4310fb7d07cddae8fb33df20"
+      },
+      "method_report": {
+        "file_sha256": "0358767e896f4dcfcad6d9bef108ecd2ce7076b06fab584bfe319c519bf1456a",
+        "payload_sha256": "bcec7a147a2c21e6c2dca36760a5420459916ff7d1d89c96b8aafb36fd2e7e7e",
+        "schema": "gemma-sv-longmemeval-chat-geometry-deletion-methods-v1",
+        "status": "running"
+      },
+      "partial_lock": {
+        "integrity_sha256": "f3f332357ceda0796f54fb297d2aa423352989a9eaaefb7c54c6dafb5bd84c4f"
+      }
+    }
+  },
+  "raw_context_text_present": false,
+  "schema": "gemma-sv-longmemeval-chat-forgetting-payload-v2",
+  "schema_version": 2,
+  "scope": {
+    "aggregate_claims": [],
+    "aggregate_claims_allowed": false,
+    "behavioral_reference": "fresh raw round-omitted repack",
+    "case_study_only": true,
+    "certificate_reference": "fixed-C retained-key refit",
+    "final_all16_complete": false,
+    "full_repack_certificate_claimed": false
+  },
+  "status": "incomplete_case_study_preview",
+  "subtitle": "One predeclared benchmark-assembled case; measured Gemma 3 4B-IT target and retained-control outcomes",
+  "title": "Measured forgetting after a long conversation"
+}

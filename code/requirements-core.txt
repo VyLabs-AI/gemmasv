@@ -1,0 +1,10 @@
+# Data-free contracts, exact solver checks, and recorded demo.
+numpy>=1.26
+scipy>=1.11
+cvxpy>=1.5
+pytest>=8.0
+fastapi==0.139.0
+uvicorn[standard]==0.51.0
+httpx>=0.28
+python-dotenv>=1.2,<2
+

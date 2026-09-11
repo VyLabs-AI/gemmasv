@@ -1,0 +1,365 @@
+{
+  "authorization": {
+    "all16_rehydrated_and_validated": true,
+    "attempt_marker": {
+      "atomic_claim": "os.mkdir",
+      "attempts_authorized": 1,
+      "canonical_claim_workspace_path": "outputs/gemma_sv_rag/longmemeval_chat_geometry_methods_completion_attempt_v1.claim",
+      "marker_filename": "marker.json",
+      "marker_publication": "temporary-file-plus-os.replace",
+      "persistent": true,
+      "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+      "schema": "gemma-sv-longmemeval-chat-geometry-method-completion-attempt-v1"
+    },
+    "condition_ids": [
+      "present",
+      "fresh_raw_omission",
+      "token_row_repack",
+      "exact_decrement",
+      "fixed_c_refit",
+      "fp32_proxy",
+      "decay_0_01",
+      "cache_delete_shift",
+      "prompt_suppression"
+    ],
+    "execute_only_record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+    "execution_contract": {
+      "attempt_marker_contract": {
+        "atomic_claim": "os.mkdir",
+        "attempts_authorized": 1,
+        "canonical_claim_workspace_path": "outputs/gemma_sv_rag/longmemeval_chat_geometry_methods_completion_attempt_v1.claim",
+        "marker_filename": "marker.json",
+        "marker_publication": "temporary-file-plus-os.replace",
+        "persistent": true,
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+        "schema": "gemma-sv-longmemeval-chat-geometry-method-completion-attempt-v1"
+      },
+      "completion_implementation_contract_sha256": "f822e30009e7d2c5899c46ed2e62ff43c536ac968e9262f400de3d3a14f8a8dc",
+      "condition_ids": [
+        "present",
+        "fresh_raw_omission",
+        "token_row_repack",
+        "exact_decrement",
+        "fixed_c_refit",
+        "fp32_proxy",
+        "decay_0_01",
+        "cache_delete_shift",
+        "prompt_suppression"
+      ],
+      "execute_only_record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+      "method_implementation_contract_sha256": "2bb352f995bb8d839d974fa27708cc0900bb53f63180b27377dd04b2591cb372",
+      "method_lock_integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+      "partial_report_file_sha256": "0358767e896f4dcfcad6d9bef108ecd2ce7076b06fab584bfe319c519bf1456a",
+      "partial_report_payload_sha256": "bcec7a147a2c21e6c2dca36760a5420459916ff7d1d89c96b8aafb36fd2e7e7e",
+      "records_executed": 1,
+      "records_rehydrated_and_validated": 16,
+      "repeats": 1,
+      "runtime": {
+        "adapter": null,
+        "arm": "it_native_chat_training_free_graft",
+        "chunk": 128,
+        "device": "mps",
+        "dtype": "float32",
+        "evaluation_seed": 0,
+        "graft_enabled": true,
+        "model_id": "google/gemma-3-4b-it",
+        "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+        "nu": 0.7,
+        "per_boundary_box": true,
+        "preserve_prefix_mass": true,
+        "readout": "softmax",
+        "solver_seed": 0,
+        "training_steps": 0,
+        "window": 1024
+      },
+      "warmup": 0
+    },
+    "execution_contract_sha256": "0ca7787f3cf0162796456a1d34fbcc38d881da798835f7ce403870210980be67",
+    "first15_rows_reexecuted": false,
+    "first15_rows_reused_only_from_this_lock": true,
+    "no_record_replacement": true,
+    "records_executed": 1,
+    "records_rehydrated": 16,
+    "repeats": 1,
+    "runtime": {
+      "adapter": null,
+      "arm": "it_native_chat_training_free_graft",
+      "chunk": 128,
+      "device": "mps",
+      "dtype": "float32",
+      "evaluation_seed": 0,
+      "graft_enabled": true,
+      "model_id": "google/gemma-3-4b-it",
+      "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "nu": 0.7,
+      "per_boundary_box": true,
+      "preserve_prefix_mass": true,
+      "readout": "softmax",
+      "solver_seed": 0,
+      "training_steps": 0,
+      "window": 1024
+    },
+    "warmup": 0
+  },
+  "completion_implementation": {
+    "complete_longmemeval_chat_geometry_methods.py": "0e86e8aca79af3df5db2cece08f9674abcf70522aadbaced38a4490cc878724a",
+    "contract_sha256": "f822e30009e7d2c5899c46ed2e62ff43c536ac968e9262f400de3d3a14f8a8dc"
+  },
+  "contains_full_vocabulary_vectors": false,
+  "contains_source_text": false,
+  "external_abort_disclosure": {
+    "attempt_claim_directory_created_exclusively_before_model_load": true,
+    "claim_without_terminal_row_recovers_as_generic_failure": true,
+    "completion_attempt_consumed_by_any_terminal_checkpoint": true,
+    "completion_executes_only_the_predeclared_remaining_record": true,
+    "external_abort_after_terminal_record_checkpoints": 15,
+    "external_abort_before_terminal_record16_checkpoint": true,
+    "first15_measurements_trusted_only_through_committed_completion_lock": true,
+    "partial_report_is_not_a_complete_matrix": true,
+    "partial_report_record16_checkpoint_status": "not_attempted",
+    "record16_may_have_started_without_a_terminal_checkpoint": true,
+    "record_selection_or_replacement_after_method_outputs": false,
+    "records_reexecuted_from_partial_report": 0,
+    "terminal_evaluator_exception_sealed_as_generic_failure": true
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "389c2726d7cdbc69e599cd50ea0707682d20d7bd4e1544f975d2525bd67a69dd"
+  },
+  "method_contract": {
+    "artifacts": {
+      "admission_report_file_sha256": "36c2eaab9f39f1d0a5707460cc6fcb65027bf737dbe60f2b700993e8d2e82368",
+      "admission_report_payload_sha256": "f23ace307cf47fe9bc7ece575fd3190992660a815f79d8a048243a2736656988",
+      "census_file_sha256": "1d8ef04097cccf69021f56e79da8cf46e3e669967b5e7534edb4baa92f332d3b",
+      "census_integrity_sha256": "c01eacc10c21cbbc5b7488809d946b94f7013b78b2996f40f36cb5f322da2174",
+      "core_manifest_file_sha256": "7e9f484c4eee8cceecec79bfc0721e1cfc7100092d29f5b29d1e96eca478bae1",
+      "manifest_file_sha256": "df10404a5b11491791638190f61b52e30e667d17601819a99925181885bde480",
+      "manifest_integrity_sha256": "04fb39a23cbe5e31ed652c0ff8d412df1ab2072999760fba81f7de95dee1a4db",
+      "policy_file_sha256": "bccb7d716182c495892f1ddb1693e4848995bc7da193cce26b9395fe2a736331",
+      "policy_lock_sha256": "3ce2bac27c60872788418d37149acb15790327b05abed8e5863c274453282b1c"
+    },
+    "artifacts_sha256": "0e4f51315dfb7ea062d8907e3e25e7f3fccad5c278ac2a7c1d19ae366f9e7787",
+    "implementation": {
+      "contract_sha256": "2bb352f995bb8d839d974fa27708cc0900bb53f63180b27377dd04b2591cb372",
+      "cp_svm/__init__.py": "af2da16c33ef7647ae5135fbb7fe9e644f11ec5fba0890d89a1e5a36277a7d8a",
+      "cp_svm/kernels.py": "bb5b4312ad010db8e8695b70df7c44c7945b769fb623dd897037e2530381e7a7",
+      "cp_svm/oneclass_fast.py": "5e4659c1c81c4232c246c24d1b8867bce9654a0f041b3855976ef2cb97384fb7",
+      "cp_svm/oneclass_incremental.py": "616ef5cf9fe95115d469addf0e4a1e7c72c1ffa49beb29d6f9295c4a329f79fb",
+      "demo_server/__init__.py": "85a2fab33d49c72f829b2f8cc43805170e5f3fb250f3564d21553dd61cb3da6f",
+      "demo_server/certificate.py": "bd84f6d1a85f5b52dab29992d6e80aacea44cab7ad19a560955b97c6eaecae88",
+      "demo_server/contract.py": "360c8b7323b0e454901e2afc8ca73869925b7d1e35867b0a2e0a064d851cf939",
+      "demo_server/engine.py": "8c43bcc10e5f9ca9faf0f03a7acc5187659f3abfb984c39a00c8d14a0ce02af3",
+      "demo_server/gate_context.py": "43f8dc2416418bab7eb1ad8f2b563de196867fd477977c594ac494a3bd224dd8",
+      "demo_server/gemma_engine.py": "621bff46951331ef32f9691c5d06d5ebef15b51d198fcbdf987733bb447e3325",
+      "demo_server/scenarios.py": "7aaaf0036b5ba137af3b4ba479a1bdb2275b94e4a89f3004a44348fb0c562a2c",
+      "demo_server/span.py": "49f2dec92794fd7dee59f8a34363dea526f6909b974b1830f9e13313bd81f107",
+      "demo_server/state.py": "6e8bacfbd3b725fea967bf844508bc5cdb7b8c239be0d01fe8953c1bd79aa666",
+      "eval_context_erasure_qa.py": "f58a58a2c3ac2f709da377a7c0ad75265ae2e7a7b811a711f909569694a19ccc",
+      "eval_longmemeval_chat.py": "cda1d96d539b351ac32357588f5c6993bdfca082e70bcf81bfdd7fdf3cae0efe",
+      "eval_longmemeval_chat_geometry_fix.py": "36abebd22d8fa90e8588ee7128b4a6913ae0b953bbc06f5266b756c2fec8bdec",
+      "eval_longmemeval_chat_geometry_methods.py": "a1842fca25cbcd8a14dea75f400049829603fda11a4d7ae9c68e76237efd1b83",
+      "eval_longmemeval_chat_methods.py": "2e3dd9f25070831c03eabecc9e1ec36ce2269d5f811281574c79d4595dbda9b1",
+      "eval_longmemeval_chat_v2.py": "23d91fd38f88be53ed76ba1c16bafdb527718561602b6a7d80b0ffaa82fe2da3",
+      "eval_longmemeval_deletion.py": "d9792c97a1cc58c48e1cb52bd02e469e0d0d43df42ce4967d03e95e7757e48bf",
+      "eval_memops_longitudinal.py": "d0f5b3cd5be71fbb2021783acc92e48ef463919b636bba3b00a6a988e9288f4e",
+      "eval_persistent_deletion_baselines.py": "a30122d96d69a9f0a649a716b0a4f59bc6e3f4165117fa0819021a5bcdff21c2",
+      "gemma_sv/__init__.py": "bb714c7f9bea3e1d85f24a937feb437fe39d3790814786ecd1d5b5be1a778432",
+      "graft.py": "6218aa93902a59b97699af504530ea545f3059ca7383c9401e36227822307523",
+      "layer_select.py": "1bbb12411ee368c14e62c870f554dc1adabe12d6b4b745593808990ac6a31b5f",
+      "longmemeval_chat_benchmark.py": "9a81fa0b35529b6395cab458fb957a122aca7d3a9cb35466c1c658ea7e7c54e6",
+      "longmemeval_chat_benchmark_v2.py": "e032233354b1259611370cb8b17f4e3977d04164c90deae5b5b6b245b7ef52a9",
+      "longmemeval_chat_geometry_fix.py": "31c9bb613f97c916c6b27d9d42e7a5c74d9f5b6bfb652672d7734e7b33591073",
+      "longmemeval_deletion_benchmark.py": "6f79c12a8e11dae7ddb3eabcd96194145945c74efd56a9649cf75fb6e3c10c5c",
+      "memops_longitudinal.py": "8b8fe889a7a938aef58eb8c32e01e9ca080532da7cd2f4f67e95367ca0e0a2f2",
+      "persistent_deletion.py": "78abb13c7d7634a1b364762298eea0306dc8a4bf32f86568fe6ddd1235fef6cc",
+      "rag_benchmark.py": "e30c8de7ed34d6b1394c93eda3778e375de089656cd2ce49527374740c77e3b1",
+      "recovery_protocol.py": "053cb614771ae4f6e7aa2c562bac7987a307604200f7243afff1e23dd33cfa9f",
+      "recovery_state.py": "94acd957361317defed63ee1918850cf02e0f5c975533a4c4e280d7df1f00f3c",
+      "sv_global_attention.py": "58eaea66adefdd92ca4a2f5191be54b4a4061a70eee64a9c0e7ce9bd4ee43dc8",
+      "svattn/__init__.py": "c7e34ba986f16e234a4c9eac9a5cd194c9103d3c595c01591f2982cae4531a59",
+      "svattn/causal_sv_attention.py": "391b137c3b2c6ba16d9067e2ad5d4dcda0f7636c5e1223934bcfdd09be68a784",
+      "svattn/diff_svdd.py": "32d2f9e0e613380da533a31f9b9caef433a796b668b179e319a27ffe07d7223c",
+      "svattn/fast_diff_svdd.py": "3d734d5c892c79c4dcd039e74fef280379459986a41b3fcd5b530123902efcd2",
+      "svattn/mlx_svdd.py": "d5c2f54a7a7ae4a42e31b567f418fa5174d7fdd00f3840e39bbde78c7a58a53f",
+      "svattn/sv_attention.py": "91db52bc0694de4544a24a5459d8d61c4557632356095dc3b40610a910405cad"
+    },
+    "implementation_contract_sha256": "2bb352f995bb8d839d974fa27708cc0900bb53f63180b27377dd04b2591cb372",
+    "implementation_files": 41,
+    "method_lock_file_sha256": "e965f3c5569e0833a32912b2d8537672af2c7123c89dc943fd671cf9d1f78a5c",
+    "method_lock_integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+    "method_lock_payload_sha256": "2fc805cf5ffc4eaf3a321c17ec31be4e356f042c4310fb7d07cddae8fb33df20",
+    "runtime": {
+      "adapter": null,
+      "arm": "it_native_chat_training_free_graft",
+      "chunk": 128,
+      "device": "mps",
+      "dtype": "float32",
+      "evaluation_seed": 0,
+      "graft_enabled": true,
+      "model_id": "google/gemma-3-4b-it",
+      "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "nu": 0.7,
+      "per_boundary_box": true,
+      "preserve_prefix_mass": true,
+      "readout": "softmax",
+      "solver_seed": 0,
+      "training_steps": 0,
+      "window": 1024
+    },
+    "runtime_sha256": "913e411ea55a5ff77142b36f70754d69d917408434b05596cf853811d22f6491"
+  },
+  "partial_report": {
+    "attempted_records": 15,
+    "authorized_records": 16,
+    "file_sha256": "0358767e896f4dcfcad6d9bef108ecd2ce7076b06fab584bfe319c519bf1456a",
+    "not_attempted_records": 1,
+    "ordered_first15_record_ids": [
+      "longmemeval-constrained-chat-v1-b199148256341f460e9fe175",
+      "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+      "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a",
+      "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+      "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5",
+      "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+      "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+      "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+      "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+      "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+      "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+      "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce",
+      "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+      "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+      "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+    ],
+    "ordered_first15_record_ids_sha256": "e691e21cb28f911613ccd60aca7d62c090ad1dca30e027b52c1f47bcd46a7466",
+    "payload_sha256": "bcec7a147a2c21e6c2dca36760a5420459916ff7d1d89c96b8aafb36fd2e7e7e",
+    "remaining_record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+    "schema": "gemma-sv-longmemeval-chat-geometry-deletion-methods-v1",
+    "sealed_first15_rows": [
+      {
+        "position": 0,
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "d611f52d7f68524ac755e1e7ee6e6f094536b6a47feb9e2424db5861bd62c49a"
+        }
+      },
+      {
+        "position": 1,
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "13b5b4876adb4a44f39de59366083a30e85666235d98177aaa603a4632fd6d18"
+        }
+      },
+      {
+        "position": 2,
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "03c27cc2e67f4126ad2c7dbf6d41719ad94e39501a1a308f23652065702bf3b2"
+        }
+      },
+      {
+        "position": 3,
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "f91c2792ac845769b223defca4d3243eab560a2dc93faf15e24cfd7c5f333e6d"
+        }
+      },
+      {
+        "position": 4,
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "55f3099464d4c8577fbd815a957b36453381704e5af2eda954074a5b5fad248b"
+        }
+      },
+      {
+        "position": 5,
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "3e6727d2884a7ba732fe30ecaf020102f33b81141b9d8713103022aa16a43df1"
+        }
+      },
+      {
+        "position": 6,
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "dbe047713bf5a4322a1ce1e2b67f1675aa3f65d9475d8eb325aaf05180643b8d"
+        }
+      },
+      {
+        "position": 7,
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "80c7f6b487d3336d9b944ba7e881963dd77b437ff7fa60a2a29d723f17fe0c60"
+        }
+      },
+      {
+        "position": 8,
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "6d4992dc827db974e4382d45c44e710f5e7b70b2d30f6c02a1e77f40271d57e0"
+        }
+      },
+      {
+        "position": 9,
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "00b2996237649c1bf4882cad18d8b05dd243fb7f7087abffc3bf992033f31f6d"
+        }
+      },
+      {
+        "position": 10,
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "58315b0142d5111b2873cfe3f013193950358baae25476a13268e599d6599ce2"
+        }
+      },
+      {
+        "position": 11,
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "d82a7ea672593f2564ad17f30cf928fc8f782e35ca4c66ca8bca337ba04d5f9c"
+        }
+      },
+      {
+        "position": 12,
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "deaa909ff2ef7fd6199f05b390cb096c1e4bfdac3b41b4db50441c5f02cf054a"
+        }
+      },
+      {
+        "position": 13,
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "9b84826ddfb6b405fbfb9c3257e639d1e4dc2ad3852f3446ff763d1147cbf8fc"
+        }
+      },
+      {
+        "position": 14,
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+        "row_integrity": {
+          "algorithm": "sha256",
+          "sha256": "2a90a683a74dcaa123c042ef1eba24d0468b4e83a540beff3589ab449646398d"
+        }
+      }
+    ],
+    "sealed_first15_rows_sha256": "f84ad948ca022bd634e7f74707f0e80b02ed3d8c790503c3c8ff2c395169707b",
+    "status": "running"
+  },
+  "schema": "gemma-sv-longmemeval-chat-geometry-method-completion-lock-v1",
+  "schema_version": 1,
+  "status": "frozen-after-external-abort-before-one-record-completion"
+}

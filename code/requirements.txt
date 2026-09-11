@@ -1,0 +1,4 @@
+# Backward-compatible default. New instructions use the explicit dependency
+# tiers in requirements-core.txt, requirements-full.txt, and
+# requirements-apple.txt.
+-r requirements-full.txt

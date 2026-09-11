@@ -1,0 +1,147 @@
+{
+  "config": {
+    "device": "mps",
+    "model": "google/gemma-3-1b-pt",
+    "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+    "repeats": 1,
+    "seed": 0,
+    "warmup": 0,
+    "window": 512
+  },
+  "contains_model_weights": false,
+  "contains_source_text": false,
+  "evaluation": "gemma_sv_ruler_context_erasure_compact",
+  "manifest": {
+    "fixed_before_model_evaluation": true,
+    "integrity_sha256": "4a64a5477f4933bc3423627fd3f475f4b5c42bc8d3d49e08d9c1589656132e31",
+    "natural_qa_trigger": {
+      "joint_admission": "0/8",
+      "manifest_integrity_sha256": "b066a00b9472ba17831b6defeca375bafd8a491053632d1d3f93ae685466d5ee",
+      "primary_target_admission": "1/8",
+      "retained_availability": "1/8"
+    },
+    "ruler_revision": "ab17b7853df4e0a30b78cd5d2b463ac7dff6ee13",
+    "task": "niah_multikey_1"
+  },
+  "schema_version": 1,
+  "solver_certificate": {
+    "all_fixed_c_feasible": true,
+    "all_frozen_objective": true,
+    "decrement_fallbacks": 44,
+    "direction": "KL(exact_decrement || fixed_c_refit)",
+    "head_gate_solves": 640,
+    "maximum_output_kl_nats": 9.511711251326848e-12,
+    "mean_record_mean_output_kl_nats": 2.068279907920009e-12,
+    "records": 8
+  },
+  "source_report_sha256": "d3c1d3f684d143d8ea8a1f4ca5a8a9075e7b1b52fc85c2eb782965fe900cc523",
+  "source_state_immutable": true,
+  "summary": {
+    "aggregation_population": "all predeclared manifest records; admission is reported, not used for post-hoc selection",
+    "attempted_records": 8,
+    "completed_records": 8,
+    "joint_target_and_retained": 4,
+    "methods": {
+      "cache_delete_shift": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8726938580272773,
+        "mean_end_to_end_median_seconds": 2.1635155208714423,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.21109662288581396,
+        "mean_gold_lift_vs_present_nats": 0.057057571649119496,
+        "mean_incremental_tensor_storage_bytes": 58874672.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 2.1285384686161706,
+        "mean_retained_drift_from_repack_nats": -0.0593395469198221,
+        "mean_state_tensor_storage_bytes": 58874672.0,
+        "mean_update_median_seconds": 0.034974494876223616
+      },
+      "decay_0_01": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8330790915507439,
+        "mean_end_to_end_median_seconds": 3.458113479133317,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.022475575957851737,
+        "mean_gold_lift_vs_present_nats": 0.009796250465834808,
+        "mean_incremental_tensor_storage_bytes": 59453712.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 3.456481802240887,
+        "mean_retained_drift_from_repack_nats": -0.12379175522658667,
+        "mean_state_tensor_storage_bytes": 59453712.0,
+        "mean_update_median_seconds": 0.001625890756258741
+      },
+      "exact_decrement": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8451499094911197,
+        "mean_end_to_end_median_seconds": 59.11757770312397,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.014392672836376,
+        "mean_gold_lift_vs_present_nats": 0.08545156049771407,
+        "mean_incremental_tensor_storage_bytes": 59994384.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 3.3819880261216895,
+        "mean_retained_drift_from_repack_nats": -0.09870015758740625,
+        "mean_state_tensor_storage_bytes": 59994384.0,
+        "mean_update_median_seconds": 55.73558967700228
+      },
+      "fixed_c_refit": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8451502048583468,
+        "mean_end_to_end_median_seconds": 59.156041984126205,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.014392684008946943,
+        "mean_gold_lift_vs_present_nats": 0.0854519487300511,
+        "mean_incremental_tensor_storage_bytes": 59994384.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 3.4204523071239237,
+        "mean_retained_drift_from_repack_nats": -0.09869999572559915,
+        "mean_state_tensor_storage_bytes": 59994384.0,
+        "mean_update_median_seconds": 55.73558967700228
+      },
+      "fp32_proxy": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8445936197421291,
+        "mean_end_to_end_median_seconds": 3.49650073950761,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.014551749729275889,
+        "mean_gold_lift_vs_present_nats": 0.08524457646431352,
+        "mean_incremental_tensor_storage_bytes": 59453712.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 3.220245479245932,
+        "mean_retained_drift_from_repack_nats": -0.09870425853810522,
+        "mean_state_tensor_storage_bytes": 59453712.0,
+        "mean_update_median_seconds": 0.27625283325323835
+      },
+      "full_repack": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": 0.8256019785938147,
+        "mean_end_to_end_median_seconds": 2.679249145752692,
+        "mean_full_vocabulary_kl_to_repack_nats": 0.0,
+        "mean_gold_lift_vs_present_nats": 0.031170099434931542,
+        "mean_incremental_tensor_storage_bytes": 58880272.0,
+        "mean_prompt_token_count": 0.0,
+        "mean_query_median_seconds": 2.058194943001581,
+        "mean_retained_drift_from_repack_nats": 0.0,
+        "mean_state_tensor_storage_bytes": 58880272.0,
+        "mean_update_median_seconds": 0.621047755368636
+      },
+      "icul_correction_4": {
+        "completed_records": 8,
+        "failed_records": 0,
+        "mean_distractor_suppression_vs_present_nats": -1.3077416569674496,
+        "mean_end_to_end_median_seconds": 11.368168348741165,
+        "mean_full_vocabulary_kl_to_repack_nats": 1.4343064696607155,
+        "mean_gold_lift_vs_present_nats": 1.0133033462964038,
+        "mean_incremental_tensor_storage_bytes": 0.0,
+        "mean_prompt_token_count": 146.75,
+        "mean_query_median_seconds": 11.368142921750405,
+        "mean_retained_drift_from_repack_nats": -0.47865528782533995,
+        "mean_state_tensor_storage_bytes": 59453712.0,
+        "mean_update_median_seconds": 2.4317621864611283e-05
+      }
+    },
+    "primary_target_admitted": 4,
+    "retained_available": 8
+  }
+}

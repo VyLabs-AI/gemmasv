@@ -1,0 +1,196 @@
+{
+  "bindings": {
+    "primary_lock_integrity_sha256": "aaa7b17c077cf5713b6d1e7b61f951ebea46dad09cdc2d579467f60169f99d4c",
+    "secondary_mapping_file_sha256": "9a1f5bdd84efd46d0583ddd636d39e3ae4bbf18fa1ba607382ad11637eeaf191",
+    "secondary_mapping_integrity_sha256": "461c1ac510f77530087882292193633a6e8a6535cf893addd0ebe1df29213180",
+    "secondary_packet_file_sha256": "68b55ead5299c8df616085d68c456497c625613ed03f48051e527964a4aeb5ec",
+    "secondary_protocol_integrity_sha256": "09ecce3b23a63f3f2c68d894b2b370c63ed4f6927719eca558be345fa1262b85",
+    "unblinding_ledger_file_sha256": "5563b74aa82651aa2376fe65323105ed4cc9cb017dc18b81e9490b6a72642efb",
+    "unblinding_ledger_integrity_sha256": "f55a794b797c83d745d947b38b80febbea1684343b101dcf417dbb2f9256d2b0"
+  },
+  "by_condition": {
+    "edited_policy": {
+      "condition_ordinal": 2,
+      "final_label_counts": {
+        "ambiguous": 0,
+        "leak": 1,
+        "no_leak": 8
+      },
+      "review_unit_count": 9,
+      "selection_role_counts": {
+        "luna_flagged_matcher_miss": 1,
+        "luna_negative_control": 8
+      }
+    },
+    "fresh_rebuild": {
+      "condition_ordinal": 1,
+      "final_label_counts": {
+        "ambiguous": 0,
+        "leak": 0,
+        "no_leak": 6
+      },
+      "review_unit_count": 6,
+      "selection_role_counts": {
+        "luna_negative_control": 6
+      }
+    },
+    "present": {
+      "condition_ordinal": 0,
+      "final_label_counts": {
+        "ambiguous": 1,
+        "leak": 8,
+        "no_leak": 6
+      },
+      "review_unit_count": 15,
+      "selection_role_counts": {
+        "luna_flagged_matcher_miss": 11,
+        "luna_negative_control": 4
+      }
+    },
+    "prompt_only": {
+      "condition_ordinal": 3,
+      "final_label_counts": {
+        "ambiguous": 0,
+        "leak": 6,
+        "no_leak": 2
+      },
+      "review_unit_count": 8,
+      "selection_role_counts": {
+        "luna_flagged_matcher_miss": 7,
+        "luna_negative_control": 1
+      }
+    }
+  },
+  "by_luna_selection_role": {
+    "luna_flagged_matcher_miss": {
+      "final_label_counts": {
+        "ambiguous": 1,
+        "leak": 15,
+        "no_leak": 3
+      },
+      "final_match_type_counts": {
+        "alias_or_morphology": 8,
+        "ambiguous": 1,
+        "genuine_paraphrase": 0,
+        "no_disclosure": 3,
+        "normalization_failure": 7
+      },
+      "unit_count": 19
+    },
+    "luna_negative_control": {
+      "final_label_counts": {
+        "ambiguous": 0,
+        "leak": 0,
+        "no_leak": 19
+      },
+      "final_match_type_counts": {
+        "alias_or_morphology": 0,
+        "ambiguous": 0,
+        "genuine_paraphrase": 0,
+        "no_disclosure": 19,
+        "normalization_failure": 0
+      },
+      "unit_count": 19
+    }
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "beac07e995663a05c507d8eb063637c8205da6a2d518b8a9a9bcac83f850bb5c"
+  },
+  "interpretation": "instrument validation on an enriched packet; not a leakage prevalence or model-condition efficacy estimate",
+  "predeclared_sensitivities": {
+    "alias_sufficiency": {
+      "alternative_full_reference_counts": {
+        "ambiguous": 1,
+        "leak": 16,
+        "no_leak": 21
+      },
+      "alternative_label": "leak",
+      "review_unit_count": 1,
+      "strict_label": "no_leak"
+    },
+    "partial_reference": {
+      "atomic_fact_counts": {
+        "ambiguous": 1,
+        "full_leak": 15,
+        "no_disclosure": 20,
+        "partial_disclosure": 2
+      },
+      "distinct_triple_count": 1,
+      "review_unit_count": 2,
+      "strict_label": "no_leak",
+      "supplemental_label": "partial_disclosure"
+    },
+    "pragmatic_yes_no": {
+      "final_label": "ambiguous",
+      "review_unit_count": 1
+    }
+  },
+  "primary": {
+    "final_label_counts": {
+      "ambiguous": 1,
+      "leak": 15,
+      "no_leak": 22
+    },
+    "final_match_type_counts": {
+      "alias_or_morphology": 8,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 22,
+      "normalization_failure": 7
+    },
+    "review_unit_count": 38,
+    "unique_triple_count": 21,
+    "unique_triple_label_counts": {
+      "ambiguous": 1,
+      "leak": 5,
+      "no_leak": 15
+    },
+    "unique_triple_match_type_counts": {
+      "alias_or_morphology": 3,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 15,
+      "normalization_failure": 2
+    }
+  },
+  "reporting_constraints": {
+    "combined_unweighted_accuracy_prohibited": true,
+    "duplicate_aware_reporting_required": true,
+    "packet_15_of_38_is_not_prevalence": true,
+    "post_hoc_normalizer_requires_fresh_validation": true,
+    "selective_secondary_agreement_statistic_prohibited": true
+  },
+  "schema": "gemma-sv-longmemeval-human-validation-results-v1",
+  "schema_version": 1,
+  "secondary": {
+    "distinct_triples_reviewed": 3,
+    "duplicate_occurrences_collapsed": 1,
+    "label_counts": {
+      "ambiguous": 1,
+      "leak": 0,
+      "no_leak": 2
+    },
+    "match_type_counts": {
+      "alias_or_morphology": 0,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 2,
+      "normalization_failure": 0
+    },
+    "primary_secondary_label_concordant_distinct_triples": 3,
+    "primary_secondary_label_discordant_distinct_triples": 0,
+    "selected_primary_occurrences": 4,
+    "third_rater_required": false
+  },
+  "source_free": true,
+  "status": "primary-secondary-complete-no-third-rater-required",
+  "supplemental_luna_ambiguous_outputs": {
+    "count": 2,
+    "included_in_primary_endpoint": false,
+    "status": "separate-supplement-not-generated"
+  }
+}

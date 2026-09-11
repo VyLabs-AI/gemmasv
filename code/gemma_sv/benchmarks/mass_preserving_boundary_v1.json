@@ -1,0 +1,45 @@
+{
+  "name": "mass_preserving_boundary_v1",
+  "version": 1,
+  "status": "frozen-before-confirmation",
+  "models": {
+    "1b": {
+      "id": "google/gemma-3-1b-pt",
+      "revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+      "window": 512,
+      "prefix_fillers": 8
+    },
+    "4b": {
+      "id": "google/gemma-3-4b-pt",
+      "revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+      "window": 1024,
+      "prefix_fillers": 11
+    }
+  },
+  "configuration": {
+    "nu": 0.7,
+    "chunk": 128,
+    "preserve_prefix_mass": true,
+    "per_boundary_box": true,
+    "box_rule": "C_boundary = 1 / (nu * n_prefix)",
+    "training_steps": 0,
+    "solver_seed": 0,
+    "bandwidth": "deterministic 256-point stratified median key distance"
+  },
+  "deletion_contract": {
+    "feasibility_rule": "n_deleted / n_prefix <= 1 - nu at every affected boundary",
+    "maximum_deleted_fraction": 0.3,
+    "violation_fallback": "full_repack",
+    "future_safe": false,
+    "sealed_prefill_required": true
+  },
+  "development_evidence": [
+    "whole_record_synthetic_v1",
+    "whole_record_paired_v1",
+    "whole_record_confirm_v1",
+    "mass_preservation_nu_sweep_v1",
+    "mass_preservation_recovered_diagnostic_v1"
+  ],
+  "confirmation_manifest": "whole_record_confirm_v2.json",
+  "retention_policy": "Evaluate every confirmation record at both scales and retain every outcome. Do not alter nu, geometry, gates, solver seed, bandwidth rule, or fallback after observing confirmation."
+}

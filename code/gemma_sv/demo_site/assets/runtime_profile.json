@@ -1,0 +1,30 @@
+{
+  "measured_at": "2026-07-14",
+  "hardware": "Apple M3 Ultra",
+  "model": "google/gemma-3-4b-pt with recovered SV-graft LoRA",
+  "contract": {
+    "behavioral_path": "fp32/MPS, teacher-forced selected-span score",
+    "certificate_path": "fp64/CPU, decrement versus refit at one registered probe",
+    "attacks": "empirical stress tests; no global certificate",
+    "serving_note": "Generation currently re-prefills the full sequence for every token; no KV cache."
+  },
+  "fast_path_seconds": {
+    "model_load_and_ingest_cold": 5.78,
+    "recall_ten_token_generation_plus_scores": 26.54,
+    "behavioral_forget_ten_token_generation_plus_score": 19.9,
+    "one_extraction_attack": 25.76
+  },
+  "certificate_run": {
+    "memory_tokens": 1078,
+    "local_window": 1024,
+    "global_layers": 5,
+    "selected_positions": 4,
+    "head_gates": 240,
+    "decrement_fallbacks": 6,
+    "wall_seconds": 268.46,
+    "kl_nats": 2.87158643821609e-06
+  },
+  "commands": [
+    ".venv311/bin/python -m gemma_sv.benchmark_hosted_demo --scenario mira-voss-porphyria --out outputs/gemma_sv_demo/hosted_benchmark_4b_med_field.json"
+  ]
+}

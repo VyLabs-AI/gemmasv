@@ -1,0 +1,30 @@
+{
+  "schema": "gemma-sv-kimi-hybrid-decay-v1",
+  "status": "source-free-aggregate",
+  "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+  "source": "outputs/kimi_sv/decay_contrast_8bit.json",
+  "source_sha256": "a1cd9f8c7961b3a473bcc288c6a327ea18b42e44541b8cbe663e260309519307",
+  "record_kind": "invented synthetic ward-code record",
+  "intervention": {
+    "gamma": 0.0,
+    "recurrent_matrices_zeroed": 20,
+    "short_convolution_arrays_per_layer": 3,
+    "short_convolution_arrays_unchanged": true,
+    "mla_layers_unchanged": 7
+  },
+  "victim": {
+    "first_token_rank": 1,
+    "first_token_probability": 0.8813732266426086,
+    "nats_vs_never_ingested": 3.5069908142089847
+  },
+  "retained": {
+    "mean_first_token_rank": 1,
+    "worst_first_token_rank": 1,
+    "mean_nats_vs_never_ingested": -0.00016834925091455846
+  },
+  "residual": {
+    "max_abs_logit_delta": 16.734375,
+    "max_abs_kda_state_delta": 3.6906187534332275
+  },
+  "interpretation": "Zeroing every KDA recurrent matrix leaves a live hybrid-memory path. This intervention does not isolate MLA as the sole carrier because the short-convolution arrays also remain unchanged."
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+.env
+.env.*
+.DS_Store
+*.log
+*.aux
+*.blg
+model_cache/
+raw_data/
+reproduction_*/

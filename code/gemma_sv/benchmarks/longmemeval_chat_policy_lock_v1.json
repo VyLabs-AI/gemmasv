@@ -1,0 +1,142 @@
+{
+  "artifacts": {
+    "confirmation": {
+      "all_role_source_count": 33,
+      "all_role_source_ids_sha256": "5def5687836a5952e97d32b48456145d9429742dd7f06966ee9ac077f606c489",
+      "artifact_id": "longmemeval-chat-input-7893b7dc8f66638e98aadcdc",
+      "file_sha256": "7d100755f6aa4d10da559b7ee00846fe9d7bf08dd1026745acf1d54c69133c30",
+      "integrity_sha256": "4bdd9b56eb9f4fd71cfb3c21f5470cee9cb1d24fdf74b523c39316704f88ff11",
+      "record_ids_sha256": "70841949c788898cc508ca82275ee5334c24f00cd2c8a28c3f2d114cd9f9afe0",
+      "records": 16,
+      "reusable_artifact": "outputs/query_svattn/longmemeval_confirmation_4096.json",
+      "schema": "gemma-sv-longmemeval-deletion-manifest-v1"
+    },
+    "development": [
+      {
+        "all_role_source_count": 16,
+        "all_role_source_ids_sha256": "5f0ee439dbee11fd7dac53b902184d0f48f2cf673a386a171f3080295bbe9428",
+        "artifact_id": "longmemeval-chat-input-ac14022053c008489499e349",
+        "integrity_sha256": "d32129c3ad9d00c7b8547c1d3870aad0ea6ec2e6f43b6b34caf8585d2dcb40b8",
+        "record_ids_sha256": "8b3b702a010c75daadd2d0e7f2f70ca528761b89468fcba7597db76bf50c8026",
+        "records": 7,
+        "reusable_artifact": "outputs/gemma_sv_rag/longmemeval_it_residual_holdout_manifest.json",
+        "schema": "gemma-sv-longmemeval-deletion-manifest-v1"
+      },
+      {
+        "all_role_source_count": 17,
+        "all_role_source_ids_sha256": "3311f3069b55dba829afca4bbcf440737b00c3b155e17bab1d22c2f568be6741",
+        "artifact_id": "longmemeval-chat-input-81695dfce5e4661745e2985c",
+        "integrity_sha256": "df93f4bd46a4b0d25f0d71956d1a0713fb1785e7293fa8ec0ccd31acfa773262",
+        "record_ids_sha256": "326af604d4e55eeee57f2128d9af275229020163d6c9d12379ad8c0920a48925",
+        "records": 8,
+        "reusable_artifact": "outputs/gemma_sv_rag/longmemeval_it_knowledge_update_manifest.json",
+        "schema": "gemma-sv-longmemeval-deletion-manifest-v1"
+      }
+    ]
+  },
+  "chat_serialization": {
+    "assistant_role_token": "<start_of_turn>model",
+    "complete_turn_terminator": "<end_of_turn>",
+    "constrained_instruction": "Reply with only the remembered value, without explanation.",
+    "format": "gemma-registered-turns-v1",
+    "query_is_incremental_user_turn": true,
+    "query_response_contract": "bare remembered value",
+    "session_date_prefix": "[Session date: {official date}]",
+    "single_bos": true,
+    "user_role_token": "<start_of_turn>user"
+  },
+  "contains_source_text": false,
+  "evaluation_contract": {
+    "behavioral_reference": "fresh registered-chat render with the owned round omitted",
+    "certificate_reference": "fixed-C retained-key refit",
+    "deletion_request_is_out_of_band_and_answer_free": true,
+    "fixed_c_prefix_fill_goal": "improve locked-nu feasibility within the 4,096-token bound without dropping or replacing records",
+    "model_scoring_performed": false,
+    "no_replacement": true,
+    "official_longmemeval_leaderboard_score": false,
+    "owned_unit": "complete official user-assistant round(s) containing has_answer turns in the frozen latest target evidence session",
+    "raw_omission_required": true,
+    "retained_unit": "complete official user-assistant round(s) containing has_answer turns in the frozen retained evidence session",
+    "same_source_round_fill": "shortest nonconflicting complete rounds from already-frozen earlier or tail sessions; no new source IDs",
+    "selection_uses_model_outputs": false,
+    "suffix_fill_goal": "restore the frozen 512-token post-owned distance after chat serialization"
+  },
+  "lock_sha256": "5ff9da549494ab273c7656546d27dcb0bf2922932abb4632a6aef3d1b4fa393c",
+  "model": {
+    "adapter": null,
+    "arm": "it_native_chat_training_free_graft",
+    "model_id": "google/gemma-3-4b-it",
+    "revision": "093f9f388b31de276ce2de164bdc2081324b9767"
+  },
+  "output_based_replacement": false,
+  "partition_policy": {
+    "confirmation_all_roles_disjoint": true,
+    "confirmation_records": 16,
+    "confirmation_selection_frozen": true,
+    "development_all_role_source_count": 32,
+    "development_records": 15,
+    "development_source_id_sha256": [
+      "0166d5d382259356f07407b26ea93cbf51c2f01582e2eedefe7799a56fb5bab2",
+      "07f7fac111e77470690a816f500dd1e6d57cde05357dd9689851393f64be6546",
+      "086af7cfe5c96b713a1aae1b1994596e0457b21e179d8199149fa453f1f9fdb6",
+      "092a6ebc090cc534f3530775754af14a30a8ff8edabeaea2bd68b713b8ccebde",
+      "12f2f96fc78fe6d7217e07c7f567b1223786694628f1e1a05da1f4d9c0f3bca2",
+      "13167e75995fcd732dbf5769e8d6ca3b8afb6f694da4599393dea6b91ac02c63",
+      "175406b36a8c8293a3badd6c1340bfd32fdfeb6d16e77e1ede27a21f39dee889",
+      "2b46b534a7d184ca7ba017e3e3f1158016ae4706224ceb3773412e53f5884634",
+      "2b89be774b1990bf3888e5ba9ae16cc974e53c4413489fe8473e950d76f1e4af",
+      "2d700548ed9b950787caaa39883e620f8666d5f03cad647eabfe27a06ab173f5",
+      "43834bc97a23abd32d6235c010a3acaece46474290536caf357d6847583f8e21",
+      "4452bf8631e0ca8d8ac254ca22bd70a39fa3a32076a22b76a70c15bd997dd503",
+      "60c4a759b4d1f032eed71c40d44c1698b18333b6f3557ff4c23c1f5b2ee62ef1",
+      "74cfc73dfcbcdd98463e618ccfb2ab92cdb678855c9f1f5ac7f1d35999325156",
+      "7b7499399dd7b8ff90fec463a468f1b0841b4cb506bb152f3a31dc852c232343",
+      "8a6a95ead0bad808b466fd784b3c101c3dda3c3659ffcd8ad5c36de65fae9e10",
+      "8d36d27e63e1d9e59512d726cedec894fc3b8df888aad9dd0497914ee7be79dd",
+      "999f7a48fb091703e775541304d3dd3b386945ff0241d328cd17078ae92e2077",
+      "9eb4ae9ea002f37cad8e1b6494e073a4e28555cb1a514f1c09be507381491580",
+      "af4accb08771759e316fbdca9e2d832d1ffcccc75a41085a10af5e277477257e",
+      "af4b57912654387c5c8522836b5b8076e25b9f082ab6d6809421c1685e32803f",
+      "bab6c7453282858905daaff4943e856f00e7c50c46a78f31e9751fa938bd6ccd",
+      "c0e6cab3aca4dbc047dc68c76d8c6f53c5ae6f1ed97fb352b41262edc9a66e78",
+      "c5c7fb7683c074a9fd2e4cbc57f94f8a0aedc810a06b45990504f2052963e850",
+      "cccbef1a1be9cb5ad21ded12b5873e10564fd54bbd6d0e4f7c6d3fc953f017c5",
+      "e13d289c44e5875230913a9d1c5385c0eb964c313bbba980980cb16125948626",
+      "e17cc5b11ee57a9ff13eab266490768fb6514128c885d76d35bd70872fb1304c",
+      "e23e6abb902ba3d2bd6b26c38a81b7f4d7d907f9db263536b70b877351da9664",
+      "e41535e4df46ed0722198054ad7d2e5791cc9a212fcf41fcfcdd05275bf9d4ae",
+      "e755ea32261280c633aa069aa3946da506f27b27d283ecc17e1df39249061c2a",
+      "f308d281c96eecf1f86f55a9c89ad1341784df6135da725b106ac5ba0d0715a2",
+      "f73768070564d7833507163e59ceafcf75d1ea8b628a937f407798ed446cd78d"
+    ],
+    "exclusion_scope": "target, retained-probe, and tail-session source IDs",
+    "no_replacement": true
+  },
+  "results_present": false,
+  "reusable_artifacts_pinned": true,
+  "schema": "gemma-sv-longmemeval-chat-policy-lock-v1",
+  "selection_uses_model_outputs": false,
+  "source_inventory": {
+    "confirmation_descriptors_sha256": "3b2a079de16fad151baf0507f44184a08e31586d573814d1009ae5a3eaf77862",
+    "confirmation_row_count": 468,
+    "dataset_id": "xiaowu0162/longmemeval-cleaned",
+    "dataset_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+    "full_descriptors_sha256": "4294ca8f7aaf22fc0214a3d9ed6860da83ad1b947337a94aff7f742e5084c839",
+    "full_row_count": 500,
+    "source_artifact_sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c"
+  },
+  "status": "locked-before-model-scoring",
+  "training_free_graft": {
+    "chunk": 128,
+    "greedy_generation_token_reserve": 64,
+    "maximum_context_tokens": 4096,
+    "minimum_tokens_strictly_after_owned": 512,
+    "nu": 0.7,
+    "per_boundary_box": true,
+    "preserve_prefix_mass": true,
+    "readout": "softmax",
+    "solver_seed": 0,
+    "training_steps": 0,
+    "window": 1024
+  }
+}

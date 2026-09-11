@@ -1,0 +1,104 @@
+{
+  "control_ppl": {
+    "half_width": 0.8579746693252123,
+    "lower": 13.190434119741463,
+    "mean": 14.048408789066675,
+    "method": "two-sided 95% Student-t across seeds",
+    "n": 3,
+    "t_critical": 4.302652729696142,
+    "upper": 14.906383458391888
+  },
+  "evaluation_token_ids_sha256": "4e227e266e15e5d735b5ed3569d828c37b80db6503c2896e6e96a7092c385fdd",
+  "graft_untrained_ppl": {
+    "half_width": 0.0006029907011306526,
+    "lower": 25.63420529940238,
+    "mean": 25.63480829010351,
+    "method": "two-sided 95% Student-t across seeds",
+    "n": 3,
+    "t_critical": 4.302652729696142,
+    "upper": 25.63541128080464
+  },
+  "inference_unit": "independent recovery/control training seed",
+  "model": "google/gemma-3-4b-pt",
+  "model_revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+  "n_seeds": 3,
+  "original_ppl": {
+    "half_width": 0.0,
+    "lower": 21.557973554951886,
+    "mean": 21.557973554951886,
+    "method": "two-sided 95% Student-t across seeds",
+    "n": 3,
+    "t_critical": 4.302652729696142,
+    "upper": 21.557973554951886
+  },
+  "recovered_ppl": {
+    "half_width": 2.163142219300998,
+    "lower": 13.058620280760946,
+    "mean": 15.221762500061944,
+    "method": "two-sided 95% Student-t across seeds",
+    "n": 3,
+    "t_critical": 4.302652729696142,
+    "upper": 17.384904719362943
+  },
+  "schema": "gemma-sv-4b-multiseed-v1",
+  "seed_rows": [
+    {
+      "control_adapter_sha256": "bf7498480d10412f15731ee461881160f519c411a05f8fb2f83daef13c85f0c7",
+      "control_ppl": 14.364032502675988,
+      "control_report_sha256": "20122a9e690688d3fb63cc231109887f7c56fc1c51ec07aee8bd2a692f28cd6e",
+      "graft_untrained_ppl": 25.635088079548787,
+      "original_ppl": 21.557973554951886,
+      "recovered_ppl": 15.721504626120531,
+      "recovery_adapter_sha256": "0ccb9d13e06f3311d4a73baf6cc44fe25461e4c43de16b4be69b5742f5f5751e",
+      "recovery_report_sha256": "597a27993d1aa0f844cc670fa25394d4a7ad76de1c148ad5118b32f33566ccb3",
+      "seed": 0,
+      "stage2_minutes": 997.5571351329486,
+      "stage2_stream_sha256": "6d38fcb208028d4ce6f7bba2fc14d5c3498526d08073735e6d3b98c843b61820",
+      "utility_cost_percent": 9.450494651774477
+    },
+    {
+      "control_adapter_sha256": "02636f5760f6e8dd8591f9c7fd0a680998a37e27a43125578b00006772ce7c93",
+      "control_ppl": 14.101723633577757,
+      "control_report_sha256": "06879fc05005c1d192c609da642227f63509cd847ca038f85ac9c7e61e658bd0",
+      "graft_untrained_ppl": 25.63465392573885,
+      "original_ppl": 21.557973554951886,
+      "recovered_ppl": 15.72750676045896,
+      "recovery_adapter_sha256": "64a58174fb0db281ce4634d723733ec4b7bf0a6dd02861a0f248a604f5d47a0a",
+      "recovery_report_sha256": "8624b59838d0173e152ed8e6abd7bfc61fde653a36be73dd3d9c851d420d4a88",
+      "seed": 1,
+      "stage2_minutes": 997.8468862454097,
+      "stage2_stream_sha256": "a76ff284bd8a2bb8e0ea80304ba5c034948424a36fa1f0e0156b3d7c481d8503",
+      "utility_cost_percent": 11.52896744487344
+    },
+    {
+      "control_adapter_sha256": "d38a56ec53a08fdc734620b01d72bfe9129b3d657a7e0a88c5a431172dcfe2bf",
+      "control_ppl": 13.679470230946281,
+      "control_report_sha256": "5881e4d1bd2201a8165d5e19010a0e47b275af6aafb4a7648e8e682a6e0f4ed4",
+      "graft_untrained_ppl": 25.634682865022896,
+      "original_ppl": 21.557973554951886,
+      "recovered_ppl": 14.216276113606341,
+      "recovery_adapter_sha256": "8fc2d0c3c0ad0979eba7daccfd9eb437710f503e85ab7dda7a62fb698d07174d",
+      "recovery_report_sha256": "850e7cea4a6c4112fd1a51edba2b68900da0f7cc0e3db572907af88e8d77f40d",
+      "seed": 2,
+      "stage2_minutes": 554.3314834197362,
+      "stage2_stream_sha256": "a14524292bb7f62c1a95a26c88f94e139b2bed85a85c673736d3d0c1a9c9e21c",
+      "utility_cost_percent": 3.9241715768032703
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "stage2_steps": 6000,
+  "status": "complete",
+  "utility_cost_percent": {
+    "half_width": 9.763915630529233,
+    "lower": -1.4627044060455052,
+    "mean": 8.301211224483728,
+    "method": "two-sided 95% Student-t across seeds",
+    "n": 3,
+    "t_critical": 4.302652729696142,
+    "upper": 18.065126855012963
+  }
+}

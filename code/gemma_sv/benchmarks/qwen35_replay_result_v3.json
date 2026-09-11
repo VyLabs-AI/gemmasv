@@ -1,0 +1,511 @@
+{
+  "aggregate": {
+    "elapsed_seconds": 13.951512416126207,
+    "maximum_forcing_decomposition_relative_residual": 3.0427825877726623e-07,
+    "maximum_frozen_transport_relative_residual": 2.3819361558707897e-06,
+    "maximum_live_kernel_conformance_relative_residual": 1.4064652305023628e-06,
+    "maximum_native_sequential_to_live_relative_residual": 6.7548594415711705e-06,
+    "maximum_native_transport_relative_residual": 0.9380463361740112,
+    "minimum_native_mismatch_to_frozen_floor_ratio": 7665.774565654047,
+    "minimum_native_transport_relative_residual": 0.017940357327461243,
+    "suffix_effect_variation": {
+      "archive_code": {
+        "0": {
+          "effect_a_norm": 5.311758518218994,
+          "effect_b_norm": 5.328813552856445,
+          "relative_difference": 0.1821416692586851
+        },
+        "16": {
+          "effect_a_norm": 0.9457643032073975,
+          "effect_b_norm": 0.9546219706535339,
+          "relative_difference": 0.26899613939873124
+        },
+        "30": {
+          "effect_a_norm": 2.5624959468841553,
+          "effect_b_norm": 2.569204092025757,
+          "relative_difference": 0.2862765558314046
+        }
+      },
+      "project_lead": {
+        "0": {
+          "effect_a_norm": 5.398840427398682,
+          "effect_b_norm": 5.2909255027771,
+          "relative_difference": 0.18408809904162526
+        },
+        "16": {
+          "effect_a_norm": 0.6664611101150513,
+          "effect_b_norm": 0.6736340522766113,
+          "relative_difference": 0.3230609738142142
+        },
+        "30": {
+          "effect_a_norm": 2.0533008575439453,
+          "effect_b_norm": 2.036519765853882,
+          "relative_difference": 0.2907999762661388
+        }
+      },
+      "rendezvous_city": {
+        "0": {
+          "effect_a_norm": 4.979784965515137,
+          "effect_b_norm": 4.936233043670654,
+          "relative_difference": 0.20653211809295968
+        },
+        "16": {
+          "effect_a_norm": 0.7077496647834778,
+          "effect_b_norm": 0.7044017910957336,
+          "relative_difference": 0.44753470777372106
+        },
+        "30": {
+          "effect_a_norm": 2.107508659362793,
+          "effect_b_norm": 2.0572237968444824,
+          "relative_difference": 0.3767387798358556
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "present_vs_omitted_max_abs": 9.359375,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 9.425621032714844,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.4065143406915013e-06,
+          "forcing_decomposition_max_relative_residual": 2.7353102836408204e-07,
+          "frozen_transport_relative_residual": 2.11650763048965e-06,
+          "live_kernel_conformance_max_relative_residual": 1.0927824405371211e-06,
+          "native_effect_norm": 5.310542583465576,
+          "native_mismatch_to_frozen_floor_ratio": 8609.051477794648,
+          "native_sequential_to_live_relative_residual": 2.3910420168249402e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.3454492154305626e-07,
+          "native_transport_relative_residual": 0.01822112314403057,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.0927824405371211e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.0708233730838401e-06,
+          "sequential_native_effect_norm": 5.310542106628418
+        },
+        "16": {
+          "boundary_effect_norm": 1.592879295349121,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.649695431955479e-07,
+          "forcing_decomposition_max_relative_residual": 1.8483645316736514e-07,
+          "frozen_transport_relative_residual": 2.350609520362923e-06,
+          "live_kernel_conformance_max_relative_residual": 4.154574639869679e-07,
+          "native_effect_norm": 0.94559246301651,
+          "native_mismatch_to_frozen_floor_ratio": 399065.1480170902,
+          "native_sequential_to_live_relative_residual": 1.5868608898017555e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 4.154574639869679e-07,
+          "native_transport_relative_residual": 0.9380463361740112,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.795090097151842e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 3.0912710258235165e-07,
+          "sequential_native_effect_norm": 0.9455924034118652
+        },
+        "30": {
+          "boundary_effect_norm": 3.330183744430542,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 7.871186085139925e-07,
+          "forcing_decomposition_max_relative_residual": 2.412551766823953e-07,
+          "frozen_transport_relative_residual": 1.8483949588699033e-06,
+          "live_kernel_conformance_max_relative_residual": 8.086915954663709e-07,
+          "native_effect_norm": 2.561999797821045,
+          "native_mismatch_to_frozen_floor_ratio": 402964.48490754527,
+          "native_sequential_to_live_relative_residual": 3.129000788248959e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 8.086915954663709e-07,
+          "native_transport_relative_residual": 0.7448375225067139,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 5.137758307682816e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 5.894298169550893e-07,
+          "sequential_native_effect_norm": 2.562000036239624
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "archive_code",
+      "suffix": "suffix_a"
+    },
+    {
+      "present_vs_omitted_max_abs": 9.36328125,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 9.425621032714844,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.4968139769043773e-06,
+          "forcing_decomposition_max_relative_residual": 2.8379473298306764e-07,
+          "frozen_transport_relative_residual": 2.2936560526432004e-06,
+          "live_kernel_conformance_max_relative_residual": 1.078195964510087e-06,
+          "native_effect_norm": 5.331169605255127,
+          "native_mismatch_to_frozen_floor_ratio": 7900.589563866789,
+          "native_sequential_to_live_relative_residual": 2.482624040567316e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.456289903169818e-07,
+          "native_transport_relative_residual": 0.018121235072612762,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.078195964510087e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.059886926668696e-06,
+          "sequential_native_effect_norm": 5.331170558929443
+        },
+        "16": {
+          "boundary_effect_norm": 1.592879295349121,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.5467480213592353e-07,
+          "forcing_decomposition_max_relative_residual": 1.7765508658164737e-07,
+          "frozen_transport_relative_residual": 2.183551714551868e-06,
+          "live_kernel_conformance_max_relative_residual": 3.628638296504505e-07,
+          "native_effect_norm": 0.9547023773193359,
+          "native_mismatch_to_frozen_floor_ratio": 428179.9089477206,
+          "native_sequential_to_live_relative_residual": 1.3702057231057552e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.628638296504505e-07,
+          "native_transport_relative_residual": 0.934952974319458,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.712970399443293e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 2.5221368105121655e-07,
+          "sequential_native_effect_norm": 0.9547024965286255
+        },
+        "30": {
+          "boundary_effect_norm": 3.330183744430542,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 6.905616487529187e-07,
+          "forcing_decomposition_max_relative_residual": 2.1166006085728306e-07,
+          "frozen_transport_relative_residual": 1.794086074369261e-06,
+          "live_kernel_conformance_max_relative_residual": 7.862202551223163e-07,
+          "native_effect_norm": 2.568892240524292,
+          "native_mismatch_to_frozen_floor_ratio": 406821.35331489594,
+          "native_sequential_to_live_relative_residual": 2.9361049200815614e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 7.624486215718207e-07,
+          "native_transport_relative_residual": 0.7298725247383118,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 7.862202551223163e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 4.6849493173795054e-07,
+          "sequential_native_effect_norm": 2.568892240524292
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "archive_code",
+      "suffix": "suffix_b"
+    },
+    {
+      "present_vs_omitted_max_abs": 2.21875,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 8.568638801574707,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.3520394734077854e-06,
+          "forcing_decomposition_max_relative_residual": 2.9880958511072784e-07,
+          "frozen_transport_relative_residual": 2.170467496398487e-06,
+          "live_kernel_conformance_max_relative_residual": 1.0927824405371211e-06,
+          "native_effect_norm": 4.978538990020752,
+          "native_mismatch_to_frozen_floor_ratio": 8954.853217906859,
+          "native_sequential_to_live_relative_residual": 2.4707355805730913e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.23963263326732e-07,
+          "native_transport_relative_residual": 0.019436217844486237,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.0927824405371211e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.073163048204151e-06,
+          "sequential_native_effect_norm": 4.978539943695068
+        },
+        "16": {
+          "boundary_effect_norm": 1.6370627880096436,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.5142293225144385e-07,
+          "forcing_decomposition_max_relative_residual": 1.6981855868075594e-07,
+          "frozen_transport_relative_residual": 1.9149638319504447e-06,
+          "live_kernel_conformance_max_relative_residual": 4.070640500231093e-07,
+          "native_effect_norm": 0.7076873183250427,
+          "native_mismatch_to_frozen_floor_ratio": 456201.58891297894,
+          "native_sequential_to_live_relative_residual": 2.0480040348047623e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 4.070640500231093e-07,
+          "native_transport_relative_residual": 0.8736095428466797,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.795090097151842e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 2.774701783891942e-07,
+          "sequential_native_effect_norm": 0.7076874375343323
+        },
+        "30": {
+          "boundary_effect_norm": 3.0199012756347656,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 6.869139497212018e-07,
+          "forcing_decomposition_max_relative_residual": 2.3303453160136381e-07,
+          "frozen_transport_relative_residual": 1.8891599893322564e-06,
+          "live_kernel_conformance_max_relative_residual": 9.472413466937724e-07,
+          "native_effect_norm": 2.1072275638580322,
+          "native_mismatch_to_frozen_floor_ratio": 350338.104826756,
+          "native_sequential_to_live_relative_residual": 4.459393949218793e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 9.472413466937724e-07,
+          "native_transport_relative_residual": 0.6618447303771973,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 5.137758307682816e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 9.452176072954899e-07,
+          "sequential_native_effect_norm": 2.107227325439453
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "rendezvous_city",
+      "suffix": "suffix_a"
+    },
+    {
+      "present_vs_omitted_max_abs": 2.15625,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 8.568638801574707,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.3950854028953472e-06,
+          "forcing_decomposition_max_relative_residual": 3.0427825877726623e-07,
+          "frozen_transport_relative_residual": 2.2005376649758546e-06,
+          "live_kernel_conformance_max_relative_residual": 1.078195964510087e-06,
+          "native_effect_norm": 4.935011386871338,
+          "native_mismatch_to_frozen_floor_ratio": 8895.982323742954,
+          "native_sequential_to_live_relative_residual": 2.5262386316171614e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.2563866625423543e-07,
+          "native_transport_relative_residual": 0.019575944170355797,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.078195964510087e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.056630935636349e-06,
+          "sequential_native_effect_norm": 4.935011386871338
+        },
+        "16": {
+          "boundary_effect_norm": 1.6370627880096436,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.5466519559813605e-07,
+          "forcing_decomposition_max_relative_residual": 1.7200848019455035e-07,
+          "frozen_transport_relative_residual": 2.08626943276613e-06,
+          "live_kernel_conformance_max_relative_residual": 3.610934982134495e-07,
+          "native_effect_norm": 0.7043756246566772,
+          "native_mismatch_to_frozen_floor_ratio": 413430.421640214,
+          "native_sequential_to_live_relative_residual": 1.8273312889505178e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.610934982134495e-07,
+          "native_transport_relative_residual": 0.8625272512435913,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.712970399443293e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 2.7937011282119784e-07,
+          "sequential_native_effect_norm": 0.704375684261322
+        },
+        "30": {
+          "boundary_effect_norm": 3.0199012756347656,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 6.683420110675797e-07,
+          "forcing_decomposition_max_relative_residual": 2.2673402914857093e-07,
+          "frozen_transport_relative_residual": 1.943340521393111e-06,
+          "live_kernel_conformance_max_relative_residual": 1.4064652305023628e-06,
+          "native_effect_norm": 2.0573887825012207,
+          "native_mismatch_to_frozen_floor_ratio": 329809.8255709496,
+          "native_sequential_to_live_relative_residual": 6.7548594415711705e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 1.4064652305023628e-06,
+          "native_transport_relative_residual": 0.6409327983856201,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 7.862202551223163e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 7.713069862802513e-07,
+          "sequential_native_effect_norm": 2.0573887825012207
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "rendezvous_city",
+      "suffix": "suffix_b"
+    },
+    {
+      "present_vs_omitted_max_abs": 2.3125,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 9.221955299377441,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.3806617264199303e-06,
+          "forcing_decomposition_max_relative_residual": 2.7727156661108267e-07,
+          "frozen_transport_relative_residual": 2.210058028140338e-06,
+          "live_kernel_conformance_max_relative_residual": 1.0927824405371211e-06,
+          "native_effect_norm": 5.3936357498168945,
+          "native_mismatch_to_frozen_floor_ratio": 8117.595601124205,
+          "native_sequential_to_live_relative_residual": 2.412857838862692e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.417185325815808e-07,
+          "native_transport_relative_residual": 0.017940357327461243,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.0927824405371211e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.0671629979697173e-06,
+          "sequential_native_effect_norm": 5.3936357498168945
+        },
+        "16": {
+          "boundary_effect_norm": 1.667270541191101,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.4804521103760635e-07,
+          "forcing_decomposition_max_relative_residual": 1.6361288324787813e-07,
+          "frozen_transport_relative_residual": 1.968151764231152e-06,
+          "live_kernel_conformance_max_relative_residual": 3.785531532685127e-07,
+          "native_effect_norm": 0.6666049957275391,
+          "native_mismatch_to_frozen_floor_ratio": 415135.447265794,
+          "native_sequential_to_live_relative_residual": 2.0194127046124777e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.785531532685127e-07,
+          "native_transport_relative_residual": 0.8170495629310608,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.795090097151842e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 2.605577833492134e-07,
+          "sequential_native_effect_norm": 0.6666050553321838
+        },
+        "30": {
+          "boundary_effect_norm": 3.062359571456909,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 7.014625680312747e-07,
+          "forcing_decomposition_max_relative_residual": 2.343118473229577e-07,
+          "frozen_transport_relative_residual": 1.8220011952507775e-06,
+          "live_kernel_conformance_max_relative_residual": 6.50853394290607e-07,
+          "native_effect_norm": 2.0527989864349365,
+          "native_mismatch_to_frozen_floor_ratio": 317035.4581721315,
+          "native_sequential_to_live_relative_residual": 3.168163402733626e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 6.50853394290607e-07,
+          "native_transport_relative_residual": 0.5776389837265015,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 5.137758307682816e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 4.3067888100267737e-07,
+          "sequential_native_effect_norm": 2.0527989864349365
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "project_lead",
+      "suffix": "suffix_a"
+    },
+    {
+      "present_vs_omitted_max_abs": 2.4375,
+      "present_vs_omitted_shape_mismatches": 16,
+      "receipt_analysis": {
+        "0": {
+          "boundary_effect_norm": 9.221955299377441,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.460147925376077e-06,
+          "forcing_decomposition_max_relative_residual": 2.865291871558015e-07,
+          "frozen_transport_relative_residual": 2.3819361558707897e-06,
+          "live_kernel_conformance_max_relative_residual": 1.078195964510087e-06,
+          "native_effect_norm": 5.290834426879883,
+          "native_mismatch_to_frozen_floor_ratio": 7665.774565654047,
+          "native_sequential_to_live_relative_residual": 2.5413050934730563e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.500718150917237e-07,
+          "native_transport_relative_residual": 0.018259385600686073,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 1.078195964510087e-06,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 1.0565621550995274e-06,
+          "sequential_native_effect_norm": 5.290835857391357
+        },
+        "16": {
+          "boundary_effect_norm": 1.667270541191101,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 2.503160771993862e-07,
+          "forcing_decomposition_max_relative_residual": 1.6511076727734448e-07,
+          "frozen_transport_relative_residual": 1.9876758869941114e-06,
+          "live_kernel_conformance_max_relative_residual": 3.947617699395778e-07,
+          "native_effect_norm": 0.6737348437309265,
+          "native_mismatch_to_frozen_floor_ratio": 413301.79748798057,
+          "native_sequential_to_live_relative_residual": 2.077118097076891e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 3.947617699395778e-07,
+          "native_transport_relative_residual": 0.8215100169181824,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 2.712970399443293e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 3.1151250823313603e-07,
+          "sequential_native_effect_norm": 0.6737349033355713
+        },
+        "30": {
+          "boundary_effect_norm": 3.062359571456909,
+          "finite": true,
+          "forcing_decomposition_max_absolute_residual": 7.057370794427698e-07,
+          "forcing_decomposition_max_relative_residual": 2.3573967642015593e-07,
+          "frozen_transport_relative_residual": 1.7859529179986566e-06,
+          "live_kernel_conformance_max_relative_residual": 8.793753636382462e-07,
+          "native_effect_norm": 2.0353739261627197,
+          "native_mismatch_to_frozen_floor_ratio": 312509.68401711894,
+          "native_sequential_to_live_relative_residual": 4.2999358811357524e-06,
+          "native_sequential_to_live_state_scale_relative_residual": 8.793753636382462e-07,
+          "native_transport_relative_residual": 0.5581275820732117,
+          "omitted_initial_state_relative_residual": 0.0,
+          "omitted_live_kernel_recurrence_relative_residual": 7.862202551223163e-07,
+          "present_initial_state_relative_residual": 0.0,
+          "present_live_kernel_recurrence_relative_residual": 4.5489238686968747e-07,
+          "sequential_native_effect_norm": 2.0353736877441406
+        }
+      },
+      "repeat_max_abs": 0.0,
+      "replay_array_count": 65,
+      "replay_max_abs": 0.0,
+      "scenario_id": "project_lead",
+      "suffix": "suffix_b"
+    }
+  ],
+  "checks": {
+    "finite": true,
+    "forcing_closes": true,
+    "frozen_transport_closes": true,
+    "live_kernel_conformance": true,
+    "native_transport_fails": true,
+    "non_vacuous": true,
+    "repeat_exact": true,
+    "replay_exact": true
+  },
+  "contains_model_weights": false,
+  "contains_source_text": false,
+  "implementation_sha256": "fe2990438a0b80dae5f0d45746f132cb0471b024b3b4ced6666a1af0236d8f80",
+  "kernel_implementation": {
+    "causal_conv1d_available": false,
+    "causal_conv1d_fallback": "torch_causal_conv1d_update",
+    "delta_rule_fallback": "torch_chunk_gated_delta_rule",
+    "flash_linear_attention_available": false
+  },
+  "manifest_sha256": "ce21bae316450e6dd4912c1131bd204aef0c609564c812e8c8c6fdeee88d8eea",
+  "model": {
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "attention_implementation": "sdpa",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "fast_causal_conv1d_kernels": false,
+    "fast_linear_attention_kernels": false,
+    "id": "Qwen/Qwen3.5-4B-Base",
+    "revision": "57370f0ea82c3cca33558a95212e032c344e5fd5",
+    "transformers": "5.12.1",
+    "trust_remote_code": false
+  },
+  "schema": "qwen35-replay-result-v3",
+  "scope": {
+    "cohort_design": "staged: v1 archive_code ran before rendezvous_city and project_lead were frozen in v2",
+    "complete_replay_surface": true,
+    "different_chunk_schedules_not_claimed_equal": true,
+    "independent_replication": false,
+    "replay_reference": "replay suffix and fresh omission use the same tokenization and segment schedule",
+    "scenario_count": 3,
+    "transport_surface": "selected Gated DeltaNet recurrent states",
+    "validation_rerun": "v3 corrects pre-kernel capture timing and binds the sequential recurrence to captured live-kernel final states"
+  },
+  "source_report_sha256": "1c4c547cfd8add3d4f3a17a67afc66f8e2831267c6a1ee8a3b0ede0ef9acb181",
+  "state_coverage": [
+    "24 convolution arrays",
+    "24 recurrent arrays",
+    "8 full-attention key arrays",
+    "8 full-attention value arrays",
+    "80 per-layer initialization and prior-state flags",
+    "cache length",
+    "wrapper rope_deltas when non-null",
+    "final probe logits"
+  ]
+}

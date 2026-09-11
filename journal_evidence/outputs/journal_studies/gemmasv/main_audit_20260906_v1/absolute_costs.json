@@ -1,0 +1,122 @@
+{
+  "base_present": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 0.0,
+      "minimum_record_median": 0.0,
+      "maximum_record_median": 0.0
+    },
+    "query_seconds": {
+      "median_of_record_medians": 8.100018979501328,
+      "minimum_record_median": 5.801947458006907,
+      "maximum_record_median": 9.008427041990217
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 8.100018979501328,
+      "minimum_record_median": 5.801947458006907,
+      "maximum_record_median": 9.008427041990217
+    }
+  },
+  "base_full_repack": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 0.7010957294842228,
+      "minimum_record_median": 0.6782982499862555,
+      "maximum_record_median": 0.7306787919951603
+    },
+    "query_seconds": {
+      "median_of_record_medians": 8.079863770486554,
+      "minimum_record_median": 5.791158249980072,
+      "maximum_record_median": 8.979776791995391
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 8.770263291487936,
+      "minimum_record_median": 6.492289041983895,
+      "maximum_record_median": 9.708006708009634
+    }
+  },
+  "graft_present": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 0.0,
+      "minimum_record_median": 0.0,
+      "maximum_record_median": 0.0
+    },
+    "query_seconds": {
+      "median_of_record_medians": 9.040764042001683,
+      "minimum_record_median": 6.452244500018423,
+      "maximum_record_median": 10.950601125019602
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 9.040764042001683,
+      "minimum_record_median": 6.452244500018423,
+      "maximum_record_median": 10.950601125019602
+    }
+  },
+  "graft_full_repack": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 24.881689437504974,
+      "minimum_record_median": 24.0326827079989,
+      "maximum_record_median": 26.121613916999195
+    },
+    "query_seconds": {
+      "median_of_record_medians": 8.904571687497082,
+      "minimum_record_median": 6.45340254198527,
+      "maximum_record_median": 10.820300374994986
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 33.13438879199384,
+      "minimum_record_median": 30.48188316699816,
+      "maximum_record_median": 36.18279833297129
+    }
+  },
+  "graft_masked_refit_proxy": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 25.141395999482484,
+      "minimum_record_median": 23.475032832997385,
+      "maximum_record_median": 27.224847874982515
+    },
+    "query_seconds": {
+      "median_of_record_medians": 11.90382829149894,
+      "minimum_record_median": 8.297903207974741,
+      "maximum_record_median": 13.795722375012701
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 36.885518229493755,
+      "minimum_record_median": 31.7822782919975,
+      "maximum_record_median": 40.8782242500165
+    }
+  },
+  "graft_cache_delete_shift": {
+    "expected_records": 8,
+    "completed_records": 8,
+    "full_repack_fallback_records": 0,
+    "update_seconds": {
+      "median_of_record_medians": 0.05063135449017864,
+      "minimum_record_median": 0.044363124994561076,
+      "maximum_record_median": 0.05850579199614003
+    },
+    "query_seconds": {
+      "median_of_record_medians": 9.045395061999443,
+      "minimum_record_median": 6.454788915987592,
+      "maximum_record_median": 10.725501165987225
+    },
+    "end_to_end_seconds": {
+      "median_of_record_medians": 9.097679687503842,
+      "minimum_record_median": 6.499703041976318,
+      "maximum_record_median": 10.784009291994153
+    }
+  }
+}

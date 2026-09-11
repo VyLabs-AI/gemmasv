@@ -1,0 +1,166 @@
+% POST-HOC DECODED FOLLOW-UP.
+% Numerical claims are bound to:
+%   gemma_sv/benchmarks/longmemeval_chat_v3_summary_v1.json
+%   gemma_sv/benchmarks/longmemeval_chat_leakage_recall_census_summary_v2.json
+%   gemma_sv/benchmarks/longmemeval_chat_leakage_recall_census_statistics_v3.json
+%   gemma_sv/benchmarks/longmemeval_chat_human_validation_results_v1.json
+%   gemma_sv/benchmarks/longmemeval_chat_leakage_recall_census_human_adjudicated_v4.json
+% Full response text and private judge ledgers remain local-only.
+
+\subsection{Decoded follow-up: cohort and decoding}\label{app:longmemeval-cohort}
+
+The follow-up tests what the model actually generates on
+\(K=\LMChatVThreeK\) target clusters and \(n=\LMChatVThreeN\) histories,
+separate from the pilot above (Appendix Table~\ref{tab:cohort-denominators}).
+We froze the \LMChatVThreeK{} clusters first and packed three histories per
+cluster independently. Every history completed under four conditions: record
+present, local deletion, rebuilding from the retained history, and a
+prompt-only instruction to forget. This produced
+\LMChatVThreePopulationN{} decoded outputs. We kept histories even when the
+model failed to recall the record, so every rate below uses all
+\LMChatVThreeN{} histories. Decoding each probe greedily twice produced
+identical text and token identifiers, checking deterministic reproducibility
+rather than variation across sampled answers.
+
+\subsection{Screening for disclosure: a matcher, a judge, and two reviewers}\label{app:longmemeval-screening}
+
+We screened the \LMChatVThreePopulationN{} decoded outputs in three stages.
+First, a deterministic matcher compared each output with the source answer
+under five checks applied together: a casefolded substring test, a test after
+punctuation and articles are stripped, a numeric and unit test, a URL test,
+and a named-entity test. An output that passed any of them counts as a
+disclosure. There were \LMChatVThreeMatcherPositiveN{} of these, and we did
+not review them further. Second, a language model judge
+(GPT-5.6) read every one of the \LMChatVThreeMatcherCleanN{} outputs the
+matcher had cleared, seeing the question, the reference answer, and the
+candidate response but neither the condition nor the matcher's verdict, and
+returned one of three labels: disclosure, no disclosure, or ambiguous. Every
+request returned a valid response. Because the provider serves the judge
+under a name that can change between calls, the local audit retains the
+requested and returned model names along with the frozen prompt, response
+schema, and every request and response.
+
+Third, two reviewers read a sample of the outputs, blinded to condition.
+The sample held the \LMChatVThreeHumanFlagN{}
+outputs the judge had flagged and \LMChatVThreeHumanControlN{} outputs it had
+cleared, the latter chosen by hash so that the choice could not depend on
+their content (\LMChatVThreeHumanReviewN{} outputs in all). The first reviewer
+labeled every output in the sample, and the second read the flagged outputs
+the first had not labeled as disclosures (\LMChatVThreeHumanSecondaryTripleN{}
+distinct texts) and agreed with the first on each. The
+\LMChatVThreeHumanReviewN{} outputs contain only
+\LMChatVThreeHumanUniqueTripleN{} distinct question, answer, and response
+triples, because the same response text recurs across conditions. We count
+outputs below, but the duplicate texts are not independent judgments.
+
+Of the \LMChatVThreeHumanFlagN{} flagged outputs, the reviewers labeled
+\LMChatVThreeHumanFlagLeakN{} as disclosures,
+\LMChatVThreeHumanFlagNoLeakN{} as no disclosure, and
+\LMChatVThreeHumanFlagAmbiguousN{} as ambiguous, and they labeled all
+\LMChatVThreeHumanControlN{} controls as no disclosure. Every confirmed
+disclosure was a form of the answer that the matcher had failed to recognize:
+\LMChatVThreeHumanNormalizationN{} were normalization failures and
+\LMChatVThreeHumanAliasMorphologyN{} were an alias or an inflected form of the
+answer, and none was a paraphrase. Most reviewed outputs were selected
+because the judge had flagged them. The review therefore characterizes those
+flags and a control sample, rather than estimating how often each condition
+discloses. The \LMChatVThreeJudgeAmbiguousN{} outputs the judge itself marked
+ambiguous were not reviewed.
+
+\subsection{Disclosure rates and the paired comparison}\label{app:longmemeval-rates}
+
+For the endpoint an output counts as a disclosure when the matcher flagged it
+or the reviewers labeled it one; for flagged outputs the reviewers did not
+read, the judge's label stands. Ambiguous labels give a lower and an upper
+count. The reviewed labels changed the aggregate counts as follows.
+After review, the \LMChatVThreeMatcherCleanN{} outputs the matcher cleared hold
+\LMChatVThreeEffectiveMatcherCleanLeakN{} disclosures, \LMChatVThreeEffectiveMatcherCleanNoLeakN{} non-disclosures, and
+\LMChatVThreeEffectiveMatcherCleanAmbiguousN{} ambiguous outputs, against the
+judge's \LMChatVThreeJudgeMissN{}, \LMChatVThreeJudgeNoLeakN{}, and
+\LMChatVThreeJudgeAmbiguousN{} before review. Per history, the edited policy
+disclosed the deleted answer in
+\(\LMChatVThreePolicyLeakLowerN/\LMChatVThreeN\), the never-stored rebuild in
+\(\LMChatVThreeRebuildLeakLowerN/\LMChatVThreeN\), the record-present run in
+\LMChatVThreePresentLeakLowerN{}--\LMChatVThreePresentLeakUpperN{} of
+\LMChatVThreeN{}, and the prompt-only instruction in
+\LMChatVThreePromptLeakLowerN{}--\LMChatVThreePromptLeakUpperN{}. The paired
+edited-minus-rebuild difference is
+\(+\LMChatVThreeEditedMinusFreshLowerN/\LMChatVThreeN=+\LMChatVThreeEditedMinusFreshLowerPoints\)
+percentage points, with a \(95\%\) interval of
+\([\LMChatVThreeEditedMinusFreshLowerCILowerPoints,
+\LMChatVThreeEditedMinusFreshLowerCIUpperPoints]\) (a bootstrap over the
+\LMChatVThreeK{} clusters), and the prompt-minus-edited difference is at least
+\LMChatVThreePromptMinusEditedLowerPoints{} points (interval
+\([\LMChatVThreePromptMinusEditedLowerCILowerPoints,
+\LMChatVThreePromptMinusEditedLowerCIUpperPoints]\)). These
+intervals hold the labels fixed and do not include uncertainty from selecting
+the control outputs or from the reviewers' judgments. The \(+2/96\)
+difference does not resolve equivalence, because we set no equivalence margin
+in advance. Against margins chosen afterwards, the upper end of the interval,
+\LMChatVThreeEditedMinusFreshLowerCIUpperPoints{} points, misses a 5-point
+margin and meets a 10-point one. The counts put the edit well below the
+prompt instruction and within a few points of rebuilding on this probe,
+with disclosures remaining under both procedures.
+
+\subsection{Matching responses and correct responses}\label{app:longmemeval-correctness}
+
+The edited policy returned exactly the same target response as the
+never-stored rebuild in \LMChatVThreeTargetPolicyRebuildExactN{} of
+\LMChatVThreeN{} histories, and the same response under at least one of the
+matcher's normalizations in \LMChatVThreeTargetPolicyRebuildNormalizedN{}.
+To assess retained memory, we also compared responses with their saved
+answers. On the retained probe, the answer was correct under the matcher in
+\(\LMChatVThreeRetainedPresentCorrectN/\LMChatVThreeN\) histories with the
+record present, \(\LMChatVThreeRetainedRebuildCorrectN/\LMChatVThreeN\) after
+the rebuild, and \(\LMChatVThreeRetainedPolicyCorrectN/\LMChatVThreeN\) under
+the edited policy, and the edited policy's retained response matched the
+record-present response under some normalization in
+\(\LMChatVThreeRetainedPolicyPresentNormalizedN/\LMChatVThreeN\). This comparison matters because the edit and rebuild can agree on an
+incorrect answer.
+
+Two histories illustrate why response agreement and correctness need
+separate measurements. We chose one from each suffix stratum by SHA-256 rank
+before reading any response and kept every condition for each. In the history
+whose suffix had no lexical contact with the deleted answer, the gold target
+was ``38,'' but every condition answered ``37,'' including the record-present
+control. The retained answer, ``Three,'' was stable throughout. Deletion
+cannot uniquely explain a target error that was already present in the
+control. In the history with lexical contact, the record-present and
+prompt-only conditions answered ``5,'' while the rebuild and edit answered
+``Four.'' Here the edit tracked the rebuild, but every condition missed the
+paired retained restaurant. Both histories remain in the original cohort
+and in the rates reported above.
+
+\subsection{The frozen suffix}\label{app:longmemeval-suffix}
+
+We examined the surviving suffix because later text can carry information
+from a deleted exchange back into a rebuild. Copies can appear as an
+assistant's echo, a derived value, or a summary; the delta-attention study
+gives a worked example~\citep{kdaomission}. We scanned the turns after each
+deleted record for lexical contact with the target answer and found it in
+\LMChatVThreeSuffixContaminatedHistoryN{} of \LMChatVThreeN{} histories,
+spanning \LMChatVThreeSuffixContaminatedClusterN{} of \LMChatVThreeK{}
+clusters. The suffix was assembled from independent support sources and was
+never generated downstream of the target, so contact marks possible
+contamination and does not establish causal dependence. The scanner catches
+explicit restatements and some normalized forms, generally misses derived
+traces and summaries, and can match short or numeric strings. The detected count is neither a lower
+nor an upper bound on contamination.
+
+We assessed whether lexical contact was associated with the edited policy's residual
+disclosures (the \LMChatVThreePolicyLeakLowerN{} of \LMChatVThreeN{} in
+Section~\ref{sec:longmemeval}). Among the
+\LMChatSuffixContactHistoryN{} histories with contact, \LMChatSuffixContactDisclosureN{} disclosed and
+\LMChatSuffixContactNoDisclosureN{} did not; among the
+\LMChatSuffixCleanHistoryN{} without contact, \LMChatSuffixCleanDisclosureN{}
+disclosed and \LMChatSuffixCleanNoDisclosureN{} did not, for disclosure rates
+of \(\LMChatSuffixContactRiskPct\%\) and \(\LMChatSuffixCleanRiskPct\%\)
+(Fisher's exact test, two-sided, \(p=\LMChatSuffixFisherP\)). Disclosure was less frequent in the lexical-contact stratum. The
+matcher missed \LMChatSuffixHumanConfirmedEditedMissN{} edited-policy output
+that the judge then flagged, and the reviewers confirmed it, so the
+cross-tabulation is unchanged from the judge's labels. Lexical contact
+therefore does not explain the residual disclosure in this study. A broader
+deletion request could also ask for later turns to be regenerated if they
+were caused by the deleted record. Our frozen-history comparison does not
+test that operation; it is discussed in the delta-attention
+study~\citep{kdaomission}.

@@ -1,0 +1,6 @@
+-r requirements-full.txt
+
+# Reference Apple-silicon acceleration path.
+mlx>=0.32; platform_system == "Darwin"
+mlx-lm>=0.18; platform_system == "Darwin"
+

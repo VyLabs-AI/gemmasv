@@ -1,0 +1,243 @@
+{
+  "evaluation": "local aggregate MIMIC whole-record replay deletion on a Kimi Linear hybrid; source=notes",
+  "source": "notes",
+  "contains_source_text": false,
+  "contains_source_identifiers": false,
+  "generations_produced": false,
+  "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+  "host": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "source_rows": {
+    "rows_scanned": 17,
+    "long_enough_notes_seen": 16
+  },
+  "selection_policy": {
+    "description": "first N discharge notes in file order whose text column exceeds the required length, truncated to a fixed character budget; only the text column is read and no identifier or timestamp is touched",
+    "records": 16,
+    "skip": 0,
+    "fixed_before_evaluation": true
+  },
+  "admission": {
+    "min_signal_nats": 0.05,
+    "max_first_token_rank": null,
+    "rank_gate_applied": false,
+    "rank_gate_rationale": "first-token rank gates short categorical targets, where a recalled value should be the argmax; it is not applied to verbatim prose continuation, which has many locally plausible next tokens. Ranks are reported at every position regardless.",
+    "attempted": 5,
+    "admitted": 4,
+    "admission_rate": 0.8
+  },
+  "context": {
+    "records": 16,
+    "tokens": 18842
+  },
+  "exactness": {
+    "admitted_with_zero_residual": 4,
+    "logit_residual": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "state_residual": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  "efficacy": {
+    "note": "field metrics score each value from its own stem, isolating it from shared record formatting; body metrics score the whole record body",
+    "recallable_fields_per_record": {
+      "mean": 1.0,
+      "median": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "body_lift_present_nats": {
+      "mean": 1.86142923467512,
+      "median": 1.919456893747503,
+      "max": 2.353306794166565,
+      "min": 1.2534963570389093
+    },
+    "body_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "field_lift_present_nats": {
+      "mean": 1.86142923467512,
+      "median": 1.919456893747503,
+      "max": 2.353306794166565,
+      "min": 1.2534963570389093
+    },
+    "field_max_abs_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "field_worst_rank_present": {
+      "mean": 44.75,
+      "median": 24.0,
+      "max": 130.0,
+      "min": 1.0
+    },
+    "field_worst_rank_after_deletion": {
+      "mean": 92.25,
+      "median": 40.0,
+      "max": 287.0,
+      "min": 2.0
+    },
+    "field_best_rank_after_deletion": {
+      "mean": 92.25,
+      "median": 40.0,
+      "max": 287.0,
+      "min": 2.0
+    },
+    "field_probability_present": {
+      "mean": 0.2514792764559388,
+      "median": 0.003081558272242546,
+      "max": 0.999509871006012,
+      "min": 0.00024411827325820923
+    },
+    "field_probability_after_deletion": {
+      "mean": 0.03247316152805979,
+      "median": 0.001993210462387651,
+      "max": 0.1258915811777115,
+      "min": 1.4644009752373677e-05
+    }
+  },
+  "diagnostics": {
+    "note": "measured over every victim regardless of admission, so the recall frontier is visible: verbatim recall of long records falls off with distance from the end of the context, while deletion exactness does not",
+    "field_lift_present_nats_all_positions": {
+      "mean": 1.490045404697697,
+      "median": 1.8919339179992676,
+      "max": 2.353306794166565,
+      "min": 0.004510084788004576
+    },
+    "field_worst_rank_present_all_positions": {
+      "mean": 36.0,
+      "median": 21.0,
+      "max": 130.0,
+      "min": 1.0
+    },
+    "logit_residual_all_positions": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "state_residual_all_positions": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  "specificity": {
+    "retained_max_abs_lift_after_deletion_nats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    },
+    "retained_worst_rank_present": {
+      "mean": 2260.0,
+      "median": 2260.0,
+      "max": 2260.0,
+      "min": 2260.0
+    },
+    "retained_worst_rank_after_deletion": {
+      "mean": 2192.5,
+      "median": 2084.5,
+      "max": 2714.0,
+      "min": 1887.0
+    }
+  },
+  "cost": {
+    "replay_seconds": {
+      "mean": 4.74880739171058,
+      "median": 4.818302292376757,
+      "max": 9.117984040640295,
+      "min": 5.5042095482349396e-05
+    },
+    "rebuild_seconds": {
+      "mean": 9.236671558395027,
+      "median": 9.224607416428626,
+      "max": 9.315776833333075,
+      "min": 9.151432459242642
+    },
+    "replayed_tokens": {
+      "mean": 8742.6,
+      "median": 8585.0,
+      "max": 17622.0,
+      "min": 0.0
+    },
+    "checkpoint_bytes_per_boundary": 43417600
+  },
+  "per_position": [
+    {
+      "victim_position": 0,
+      "admitted": false,
+      "field_lift_present": 0.004510084788004576,
+      "field_worst_rank_present": 1,
+      "field_best_rank_after_deletion": 1,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 17622,
+      "replay_seconds": 9.117984040640295,
+      "rebuild_seconds": 9.180382249876857
+    },
+    {
+      "victim_position": 4,
+      "admitted": true,
+      "field_lift_present": 2.353306794166565,
+      "field_worst_rank_present": 27,
+      "field_best_rank_after_deletion": 287,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 12990,
+      "replay_seconds": 7.091464417055249,
+      "rebuild_seconds": 9.315776833333075
+    },
+    {
+      "victim_position": 8,
+      "admitted": true,
+      "field_lift_present": 1.8919339179992676,
+      "field_worst_rank_present": 130,
+      "field_best_rank_after_deletion": 27,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 8585,
+      "replay_seconds": 4.818302292376757,
+      "rebuild_seconds": 9.151432459242642
+    },
+    {
+      "victim_position": 11,
+      "admitted": true,
+      "field_lift_present": 1.9469798694957385,
+      "field_worst_rank_present": 21,
+      "field_best_rank_after_deletion": 53,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 4516,
+      "replay_seconds": 2.716231166385114,
+      "rebuild_seconds": 9.224607416428626
+    },
+    {
+      "victim_position": 15,
+      "admitted": true,
+      "field_lift_present": 1.2534963570389093,
+      "field_worst_rank_present": 1,
+      "field_best_rank_after_deletion": 2,
+      "logit_residual": 0.0,
+      "state_residual": 0.0,
+      "replayed_tokens": 0,
+      "replay_seconds": 5.5042095482349396e-05,
+      "rebuild_seconds": 9.311158833093941
+    }
+  ]
+}

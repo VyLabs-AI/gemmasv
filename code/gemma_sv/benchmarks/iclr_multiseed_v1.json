@@ -1,0 +1,2539 @@
+{
+  "audit": {
+    "decay_vs_refit_kl_nats": {
+      "floored_observations": 0,
+      "geometric": {
+        "clipped_to_finite": {
+          "lower": false,
+          "mean": false,
+          "upper": false
+        },
+        "lower": 0.0011926049444689803,
+        "mean": 0.016969388403123512,
+        "method": "back-transform of seed-level mean-log10 Student-t CI",
+        "n": 3,
+        "upper": 0.24145476178977254
+      },
+      "log10": {
+        "half_width": 1.1531695845392442,
+        "lower": -2.9235033944275237,
+        "mean": -1.7703338098882793,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -0.617164225349035
+      },
+      "log_floor": 1e-300,
+      "n_observations": 96,
+      "n_seeds": 3,
+      "raw_arithmetic": {
+        "half_width": 0.0946088269428273,
+        "lower": -0.039306657762265156,
+        "mean": 0.05530216918056214,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "pooled_observation_mean": 0.05530216918056213,
+        "t_critical": 4.302652729696142,
+        "upper": 0.14991099612338943
+      },
+      "seed_rows": [
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.004948781076991889,
+          "mean_log10": -2.30550175798059,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.012043619944455188,
+          "seed": 0,
+          "worst": 0.09843733380641995
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.029578439091007817,
+          "mean_log10": -1.5290247482582815,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.07007548126541185,
+          "seed": 1,
+          "worst": 0.6599019873553221
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.03338297802566688,
+          "mean_log10": -1.4764749234259664,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.08378740633181937,
+          "seed": 2,
+          "worst": 0.6746965424054685
+        }
+      ],
+      "worst": 0.6746965424054685
+    },
+    "exact_vs_refit_kl_nats": {
+      "floored_observations": 0,
+      "geometric": {
+        "clipped_to_finite": {
+          "lower": false,
+          "mean": false,
+          "upper": false
+        },
+        "lower": 1.117972669700536e-13,
+        "mean": 5.856711104972435e-13,
+        "method": "back-transform of seed-level mean-log10 Student-t CI",
+        "n": 3,
+        "upper": 3.06814879260827e-12
+      },
+      "log10": {
+        "half_width": 0.719222615249998,
+        "lower": -12.951568813214646,
+        "mean": -12.232346197964647,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -11.513123582714648
+      },
+      "log_floor": 1e-300,
+      "n_observations": 96,
+      "n_seeds": 3,
+      "raw_arithmetic": {
+        "half_width": 1.511906211169941e-08,
+        "lower": -1.1596155511623386e-08,
+        "mean": 3.5229066000760236e-09,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "pooled_observation_mean": 3.5229066000760236e-09,
+        "t_critical": 4.302652729696142,
+        "upper": 1.8641968711775433e-08
+      },
+      "seed_rows": [
+        {
+          "floored_count": 0,
+          "geometric_mean": 1.00516508543377e-12,
+          "mean_log10": -11.99776260510413,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 1.0665695275587025e-11,
+          "seed": 0,
+          "worst": 6.272575366485652e-11
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 2.7802101562736077e-13,
+          "mean_log10": -12.555922374491875,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 1.0550692714580252e-08,
+          "seed": 1,
+          "worst": 3.376122498075373e-07
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 7.188634216329533e-13,
+          "mean_log10": -12.14335361429794,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 7.361390372231756e-12,
+          "seed": 2,
+          "worst": 1.227031377999671e-10
+        }
+      ],
+      "worst": 3.376122498075373e-07
+    },
+    "proxy_vs_exact_kl_nats": {
+      "floored_observations": 0,
+      "geometric": {
+        "clipped_to_finite": {
+          "lower": false,
+          "mean": false,
+          "upper": false
+        },
+        "lower": 0.0003181855544274474,
+        "mean": 0.004308824637964714,
+        "method": "back-transform of seed-level mean-log10 Student-t CI",
+        "n": 3,
+        "upper": 0.05834950550831857
+      },
+      "log10": {
+        "half_width": 1.131678360521912,
+        "lower": -3.497319541140903,
+        "mean": -2.3656411806189905,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -1.2339628200970785
+      },
+      "log_floor": 1e-300,
+      "n_observations": 96,
+      "n_seeds": 3,
+      "raw_arithmetic": {
+        "half_width": 0.05567360123846741,
+        "lower": -0.02713194382940936,
+        "mean": 0.02854165740905805,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "pooled_observation_mean": 0.02854165740905805,
+        "t_critical": 4.302652729696142,
+        "upper": 0.08421525864752546
+      },
+      "seed_rows": [
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.00530646748557363,
+          "mean_log10": -2.2751944924875582,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.017630875735786068,
+          "seed": 0,
+          "worst": 0.12335063580090125
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.010912213682669404,
+          "mean_log10": -1.9620871382616818,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.0543193945765585,
+          "seed": 1,
+          "worst": 0.6643871377395791
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 0.001381522902397237,
+          "mean_log10": -2.859641911107732,
+          "n_observations": 32,
+          "raw_arithmetic_mean": 0.013674701914829572,
+          "seed": 2,
+          "worst": 0.2828789092173731
+        }
+      ],
+      "worst": 0.6643871377395791
+    }
+  },
+  "certificate": {
+    "decay_vs_refit_kl_nats": {
+      "floored_observations": 0,
+      "geometric": {
+        "clipped_to_finite": {
+          "lower": false,
+          "mean": false,
+          "upper": false
+        },
+        "lower": 1.3748208530454496e-06,
+        "mean": 5.081138040436018e-06,
+        "method": "back-transform of seed-level mean-log10 Student-t CI",
+        "n": 3,
+        "upper": 1.8779147645873298e-05
+      },
+      "log10": {
+        "half_width": 0.5677148828289048,
+        "lower": -5.861753889181098,
+        "mean": -5.294039006352193,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -4.7263241235232885
+      },
+      "log_floor": 1e-300,
+      "n_observations": 93,
+      "n_seeds": 3,
+      "raw_arithmetic": {
+        "half_width": 2.96479337956958e-05,
+        "lower": -7.755250991880843e-06,
+        "mean": 2.1892682803814957e-05,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "pooled_observation_mean": 2.189268280381496e-05,
+        "t_critical": 4.302652729696142,
+        "upper": 5.154061659951076e-05
+      },
+      "seed_rows": [
+        {
+          "floored_count": 0,
+          "geometric_mean": 6.173229204942896e-06,
+          "mean_log10": -5.209487597875924,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 2.3242712194723384e-05,
+          "seed": 0,
+          "worst": 0.00011438058912500568
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 7.588800809252475e-06,
+          "mean_log10": -5.1198268463800245,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 3.3095163224478585e-05,
+          "seed": 1,
+          "worst": 0.0005642906136447771
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 2.800253993102433e-06,
+          "mean_log10": -5.552802574800631,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 9.340172992242906e-06,
+          "seed": 2,
+          "worst": 9.851225865394055e-05
+        }
+      ],
+      "worst": 0.0005642906136447771
+    },
+    "exact_vs_refit_kl_nats": {
+      "floored_observations": 2,
+      "geometric": {
+        "clipped_to_finite": {
+          "lower": false,
+          "mean": false,
+          "upper": false
+        },
+        "lower": 4.5309453692751396e-37,
+        "mean": 1.2526348023489076e-19,
+        "method": "back-transform of seed-level mean-log10 Student-t CI",
+        "n": 3,
+        "upper": 0.034630608408918205
+      },
+      "log10": {
+        "half_width": 17.4416356478587,
+        "lower": -36.343811174184836,
+        "mean": -18.902175526326136,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -1.4605398784674364
+      },
+      "log_floor": 1e-300,
+      "n_observations": 93,
+      "n_seeds": 3,
+      "raw_arithmetic": {
+        "half_width": 3.061906264541679e-09,
+        "lower": -2.348857963593837e-09,
+        "mean": 7.130483009478424e-10,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "pooled_observation_mean": 7.130483009478425e-10,
+        "t_critical": 4.302652729696142,
+        "upper": 3.774954565489521e-09
+      },
+      "seed_rows": [
+        {
+          "floored_count": 1,
+          "geometric_mean": 3.652841824240761e-23,
+          "mean_log10": -22.437369133248446,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 2.8187862111956717e-12,
+          "seed": 0,
+          "worst": 7.116871313047055e-11
+        },
+        {
+          "floored_count": 0,
+          "geometric_mean": 1.5274719571503163e-11,
+          "mean_log10": -10.816026754222344,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 2.1363117969851647e-09,
+          "seed": 1,
+          "worst": 2.829673795229796e-08
+        },
+        {
+          "floored_count": 1,
+          "geometric_mean": 3.522648486225983e-24,
+          "mean_log10": -23.45313069150762,
+          "n_observations": 31,
+          "raw_arithmetic_mean": 1.4319647167005842e-14,
+          "seed": 2,
+          "worst": 1.93075417796536e-13
+        }
+      ],
+      "worst": 2.829673795229796e-08
+    },
+    "fallbacks": {
+      "by_seed": [
+        {
+          "count": 0,
+          "seed": 0
+        },
+        {
+          "count": 0,
+          "seed": 1
+        },
+        {
+          "count": 0,
+          "seed": 2
+        }
+      ],
+      "seeds_with_fallback": 0,
+      "total": 0
+    }
+  },
+  "ci_unit": "matched training seed",
+  "contains_model_weights": false,
+  "contains_source_text": false,
+  "cross_corpus": {
+    "mean_across_corpora": {
+      "half_width": 6.189296989252459,
+      "lower": -1.773410096407666,
+      "mean": 4.415886892844793,
+      "method": "two-sided 95% Student-t across seeds",
+      "n": 3,
+      "t_critical": 4.302652729696142,
+      "upper": 10.605183882097252
+    },
+    "seed_rows": [
+      {
+        "deltas_percent": {
+          "c4": 5.075326525283108,
+          "lambada": 3.73797306530943,
+          "wikitext": 12.917134019318466
+        },
+        "mean_delta_percent": 7.243477869970334,
+        "seed": 0
+      },
+      {
+        "deltas_percent": {
+          "c4": 1.7400149673329368,
+          "lambada": 0.96670890694317,
+          "wikitext": 7.678426066481769
+        },
+        "mean_delta_percent": 3.4617166469192924,
+        "seed": 1
+      },
+      {
+        "deltas_percent": {
+          "c4": 1.5178076983801692,
+          "lambada": 0.8400714364990236,
+          "wikitext": 5.269519350055063
+        },
+        "mean_delta_percent": 2.542466161644752,
+        "seed": 2
+      }
+    ],
+    "summary": {
+      "c4": {
+        "half_width": 4.950608649401896,
+        "lower": -2.172892252403158,
+        "mean": 2.7777163969987377,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 7.7283250464006334
+      },
+      "lambada": {
+        "half_width": 4.068450327717838,
+        "lower": -2.220199191467297,
+        "mean": 1.8482511362505412,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 5.916701463968379
+      },
+      "wikitext": {
+        "half_width": 9.713206253473851,
+        "lower": -1.0915131081887512,
+        "mean": 8.6216931452851,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 18.33489939875895
+      }
+    },
+    "unit": "paired recovered-vs-control PPL cost, percent"
+  },
+  "deletion_baselines": {
+    "admission": {
+      "admission_rate": {
+        "half_width": 0.17927719707067258,
+        "lower": -0.13761053040400592,
+        "mean": 0.041666666666666664,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 0.22094386373733924
+      },
+      "decomposition": {
+        "deleted_fields": {
+          "denominator": 72,
+          "numerator": 44,
+          "rate": 0.6111111111111112
+        },
+        "fixed_c_feasibility": {
+          "boundaries": {
+            "denominator": 120,
+            "numerator": 120,
+            "rate": 1.0
+          },
+          "contexts": {
+            "denominator": 24,
+            "numerator": 24,
+            "rate": 1.0
+          }
+        },
+        "fixed_c_retained_capacity_verified": true,
+        "joint_target_and_retained_whole_record": {
+          "denominator": 24,
+          "numerator": 1,
+          "rate": 0.041666666666666664
+        },
+        "policy": "decomposition of the unchanged frozen admission gates; these components do not revise inclusion criteria",
+        "retained_neighbor_availability": {
+          "denominator": 24,
+          "numerator": 8,
+          "rate": 0.3333333333333333
+        },
+        "seed_rows": [
+          {
+            "deleted_fields": {
+              "denominator": 24,
+              "numerator": 15,
+              "rate": 0.625
+            },
+            "fixed_c_boundaries": {
+              "denominator": 40,
+              "numerator": 40,
+              "rate": 1.0
+            },
+            "fixed_c_contexts": {
+              "denominator": 8,
+              "numerator": 8,
+              "rate": 1.0
+            },
+            "joint_target_and_retained_whole_record": {
+              "denominator": 8,
+              "numerator": 0,
+              "rate": 0.0
+            },
+            "retained_neighbor_availability": {
+              "denominator": 8,
+              "numerator": 2,
+              "rate": 0.25
+            },
+            "seed": 0,
+            "target_only_whole_record": {
+              "denominator": 8,
+              "numerator": 3,
+              "rate": 0.375
+            }
+          },
+          {
+            "deleted_fields": {
+              "denominator": 24,
+              "numerator": 11,
+              "rate": 0.4583333333333333
+            },
+            "fixed_c_boundaries": {
+              "denominator": 40,
+              "numerator": 40,
+              "rate": 1.0
+            },
+            "fixed_c_contexts": {
+              "denominator": 8,
+              "numerator": 8,
+              "rate": 1.0
+            },
+            "joint_target_and_retained_whole_record": {
+              "denominator": 8,
+              "numerator": 0,
+              "rate": 0.0
+            },
+            "retained_neighbor_availability": {
+              "denominator": 8,
+              "numerator": 3,
+              "rate": 0.375
+            },
+            "seed": 1,
+            "target_only_whole_record": {
+              "denominator": 8,
+              "numerator": 1,
+              "rate": 0.125
+            }
+          },
+          {
+            "deleted_fields": {
+              "denominator": 24,
+              "numerator": 18,
+              "rate": 0.75
+            },
+            "fixed_c_boundaries": {
+              "denominator": 40,
+              "numerator": 40,
+              "rate": 1.0
+            },
+            "fixed_c_contexts": {
+              "denominator": 8,
+              "numerator": 8,
+              "rate": 1.0
+            },
+            "joint_target_and_retained_whole_record": {
+              "denominator": 8,
+              "numerator": 1,
+              "rate": 0.125
+            },
+            "retained_neighbor_availability": {
+              "denominator": 8,
+              "numerator": 3,
+              "rate": 0.375
+            },
+            "seed": 2,
+            "target_only_whole_record": {
+              "denominator": 8,
+              "numerator": 4,
+              "rate": 0.5
+            }
+          }
+        ],
+        "stored_reason_codes_verified": true,
+        "target_only_whole_record": {
+          "denominator": 24,
+          "numerator": 8,
+          "rate": 0.3333333333333333
+        },
+        "threshold_keys_verified": true,
+        "thresholds": {
+          "all_fields_must_pass": true,
+          "fixed_c_all_boundaries_must_be_feasible": true,
+          "maximum_first_token_rank": 10,
+          "minimum_answer_lift_nats": 0.05,
+          "minimum_secret_lift_nats": 0.05
+        }
+      },
+      "seed_rows": [
+        {
+          "admission_rate": 0.0,
+          "admitted_records": 0,
+          "attempted_records": 8,
+          "rejected_records": [
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "patient-mira-voss"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "deleted_field_1:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "incident-helios"
+            },
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "employee-ana-reyes"
+            },
+            {
+              "reasons": [
+                "deleted_field_2:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "case-zaffre"
+            },
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "study-cedar"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "deleted_field_1:rank"
+              ],
+              "record_id": "shipment-kestrel"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "course-orchid"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:secret_lift",
+                "deleted_field_1:rank",
+                "deleted_field_2:rank"
+              ],
+              "record_id": "dossier-redpoll"
+            }
+          ],
+          "seed": 0
+        },
+        {
+          "admission_rate": 0.0,
+          "admitted_records": 0,
+          "attempted_records": 8,
+          "rejected_records": [
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "patient-mira-voss"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "incident-helios"
+            },
+            {
+              "reasons": [
+                "deleted_field_1:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "employee-ana-reyes"
+            },
+            {
+              "reasons": [
+                "deleted_field_1:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "case-zaffre"
+            },
+            {
+              "reasons": [
+                "deleted_field_1:rank",
+                "deleted_field_2:rank"
+              ],
+              "record_id": "study-cedar"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "deleted_field_1:rank",
+                "deleted_field_2:rank"
+              ],
+              "record_id": "shipment-kestrel"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "deleted_field_1:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "course-orchid"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:secret_lift",
+                "deleted_field_1:rank",
+                "deleted_field_2:rank"
+              ],
+              "record_id": "dossier-redpoll"
+            }
+          ],
+          "seed": 1
+        },
+        {
+          "admission_rate": 0.125,
+          "admitted_records": 1,
+          "attempted_records": 8,
+          "rejected_records": [
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "patient-mira-voss"
+            },
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "incident-helios"
+            },
+            {
+              "reasons": [
+                "retained_field:rank"
+              ],
+              "record_id": "employee-ana-reyes"
+            },
+            {
+              "reasons": [
+                "deleted_field_2:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "case-zaffre"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "deleted_field_1:rank"
+              ],
+              "record_id": "shipment-kestrel"
+            },
+            {
+              "reasons": [
+                "deleted_field_0:rank",
+                "retained_field:rank"
+              ],
+              "record_id": "course-orchid"
+            },
+            {
+              "reasons": [
+                "deleted_field_1:rank",
+                "deleted_field_2:rank"
+              ],
+              "record_id": "dossier-redpoll"
+            }
+          ],
+          "seed": 2
+        }
+      ]
+    },
+    "ci_unit": "matched training seed",
+    "exact_path_execution": {
+      "decrement_successes": 1672,
+      "exact_refit_fallbacks": 248,
+      "fallback_rate": 0.12916666666666668,
+      "fallback_semantics": "a failed decrement gate executes the same float64 retained-key refit used as the exact reference",
+      "head_gate_solves": 1920,
+      "plotted_update_timing_scope": "shared construction and audit of decrement plus fixed-C refit states; not pure decrement latency",
+      "seed_rows": [
+        {
+          "completed_records": 8,
+          "decrement_fallbacks": 100,
+          "head_gate_solves": 640,
+          "seed": 0
+        },
+        {
+          "completed_records": 8,
+          "decrement_fallbacks": 84,
+          "head_gate_solves": 640,
+          "seed": 1
+        },
+        {
+          "completed_records": 8,
+          "decrement_fallbacks": 64,
+          "head_gate_solves": 640,
+          "seed": 2
+        }
+      ]
+    },
+    "excluded_methods": [
+      {
+        "compatible": false,
+        "evaluated": false,
+        "method_id": "kveraser",
+        "reasons": [
+          {
+            "code": "trained_eraser_backbone_mismatch",
+            "detail": "The released trained eraser targets Qwen3-8B and CUDA, not the recovered Gemma adapters in this audit."
+          },
+          {
+            "code": "contiguous_span_assumption",
+            "detail": "The released method assumes one contiguous erased span; each benchmark deletion unions repeated, disjoint records."
+          },
+          {
+            "code": "sv_decode_session_incompatible",
+            "detail": "The released standard KV-cache interface cannot consume the grafted Gemma SVDecodeSession K/V rows and gates."
+          }
+        ],
+        "status": "excluded"
+      }
+    ],
+    "methods": {
+      "cache_delete_shift": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.515529531984221,
+            "lower": 2.9236038420253734,
+            "mean": 3.4391333740095944,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 3.9546629059938154
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 1.6320782601311135,
+            "lower": 5.465630004259632,
+            "mean": 7.097708264390746,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 8.72978652452186
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.0005329424616895834,
+            "lower": 5.90885884683577e-05,
+            "mean": 0.0005920310501579411,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0011249735118475245
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 0.679168758362136,
+            "lower": -10.60167926303834,
+            "mean": -9.922510504676204,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -9.243341746314067
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 0.017984213433464902,
+            "lower": 2.3926804862768827,
+            "mean": 2.4106646997103476,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 2.4286489131438125
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 51534880.0,
+            "mean": 51534880.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 51534880.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.017362016273090523,
+            "lower": 2.371347938562486,
+            "mean": 2.3887099548355764,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 2.4060719711086667
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 1.11312197954748,
+            "lower": 2.6265718489744025,
+            "mean": 3.7396938285218826,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.852815808069362
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 2.201862196728608,
+            "lower": -8.754177632243763,
+            "mean": -6.552315435515155,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -4.350453238786547
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 1.911764835958202,
+            "lower": -11.912531359242214,
+            "mean": -10.000766523284012,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -8.08900168732581
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 51534880.0,
+            "mean": 51534880.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 51534880.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 0.0005896864076876205,
+            "lower": 0.02121411221863976,
+            "mean": 0.02180379862632738,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.022393485034015004
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 3.5182534758198423,
+              "mean_deleted_suppression_nats": 6.842151957273722,
+              "mean_deleted_target_geometric_probability": 0.00034638241840620763,
+              "mean_deleted_target_log_probability": -10.190385157788892,
+              "mean_end_to_end_median_seconds": 2.415559078252045,
+              "mean_incremental_tensor_storage_bytes": 51534880.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.393587536373161,
+              "mean_retained_behavioral_kl_to_repack_nats": 3.328403415374823,
+              "mean_retained_drift_nats": -5.907645004398384,
+              "mean_retained_mean_log_probability": -10.879425939627671,
+              "mean_state_tensor_storage_bytes": 51534880.0,
+              "mean_update_median_seconds": 0.02179417725164967
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 3.2036827618843193,
+              "mean_deleted_suppression_nats": 6.606885483649025,
+              "mean_deleted_target_geometric_probability": 0.0006871207943803247,
+              "mean_deleted_target_log_probability": -9.64389716052453,
+              "mean_end_to_end_median_seconds": 2.4140865728804783,
+              "mean_incremental_tensor_storage_bytes": 51534880.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.391839390504174,
+              "mean_retained_behavioral_kl_to_repack_nats": 3.6734631531956983,
+              "mean_retained_drift_nats": -6.186210602542477,
+              "mean_retained_mean_log_probability": -9.446391979274697,
+              "mean_state_tensor_storage_bytes": 51534880.0,
+              "mean_update_median_seconds": 0.022045843754312955
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 3.5954638843246216,
+              "mean_deleted_suppression_nats": 7.84408735224949,
+              "mean_deleted_target_geometric_probability": 0.000742589937687291,
+              "mean_deleted_target_log_probability": -9.933249195715188,
+              "mean_end_to_end_median_seconds": 2.40234844799852,
+              "mean_incremental_tensor_storage_bytes": 51534880.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.380702937629394,
+              "mean_retained_behavioral_kl_to_repack_nats": 4.217214916995126,
+              "mean_retained_drift_nats": -7.563090699604603,
+              "mean_retained_mean_log_probability": -9.676481650949665,
+              "mean_state_tensor_storage_bytes": 51534880.0,
+              "mean_update_median_seconds": 0.021571374873019522
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "decay_0_01": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.04930609996429549,
+            "lower": -0.004155403607768102,
+            "mean": 0.04515069635652739,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.09445679632082288
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 0.5012380500588703,
+            "lower": 3.2911425539630126,
+            "mean": 3.792380604021883,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.2936186540807535
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.007921944682917436,
+            "lower": 0.024820747696559203,
+            "mean": 0.03274269237947664,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.04066463706239408
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 1.134968240472176,
+            "lower": -7.752151084779516,
+            "mean": -6.61718284430734,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -5.482214603835164
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 0.06535087425013307,
+            "lower": 4.138611207456037,
+            "mean": 4.2039620817061705,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.269312955956304
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 53858560.0,
+            "mean": 53858560.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 53858560.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.06546973401114667,
+            "lower": 4.136669397950157,
+            "mean": 4.202139131961303,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.267608865972449
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.40375480605921854,
+            "lower": -0.2574749341997501,
+            "mean": 0.14627987185946845,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.550034677918687
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 0.9675703287208082,
+            "lower": -1.600175083910584,
+            "mean": -0.6326047551897758,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.3349655735310324
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 2.610025905620112,
+            "lower": -6.691081748578743,
+            "mean": -4.081055842958631,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -1.471029937338519
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 53858560.0,
+            "mean": 53858560.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 53858560.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 0.0005774942650021987,
+            "lower": 0.0012604587761017028,
+            "mean": 0.0018379530411039013,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0024154473061061
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.0254638586465734,
+              "mean_deleted_suppression_nats": 3.6564375029156593,
+              "mean_deleted_target_geometric_probability": 0.030702632269812548,
+              "mean_deleted_target_log_probability": -7.004670703430829,
+              "mean_end_to_end_median_seconds": 4.189575942877127,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.187954229251773,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.04089585973278047,
+              "mean_retained_drift_nats": -0.23579268242901097,
+              "mean_retained_mean_log_probability": -5.207573617658296,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.0016354581202904228
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.04483147010394208,
+              "mean_deleted_suppression_nats": 3.6964834737766608,
+              "mean_deleted_target_geometric_probability": 0.031107837718392563,
+              "mean_deleted_target_log_probability": -6.733495150652168,
+              "mean_end_to_end_median_seconds": 4.187985093751195,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.185914562374819,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.0644813851599291,
+              "mean_retained_drift_nats": -0.6476669250702236,
+              "mean_retained_mean_log_probability": -3.9078483018024412,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.002091812504659174
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.06515676031906668,
+              "mean_deleted_suppression_nats": 4.024220835373328,
+              "mean_deleted_target_geometric_probability": 0.03641760715022481,
+              "mean_deleted_target_log_probability": -6.113382678839025,
+              "mean_end_to_end_median_seconds": 4.234325208490191,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.2325486042573175,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.3334623706856958,
+              "mean_retained_drift_nats": -1.0143546580700926,
+              "mean_retained_mean_log_probability": -3.1277456094151552,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.0017865884983621072
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "exact_decrement": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.024043521862145603,
+            "lower": 0.0032210545025293073,
+            "mean": 0.02726457636467491,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.05130809822682052
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 1.4667877969351166,
+            "lower": 2.674458818513633,
+            "mean": 4.1412466154487495,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 5.608034412383866
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.008919067244743279,
+            "lower": 0.022788271500843324,
+            "mean": 0.0317073387455866,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.04062640599032988
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 0.20526714083511086,
+            "lower": -7.1713159965693185,
+            "mean": -6.966048855734208,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -6.760781714899097
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 1.8862089822442556,
+            "lower": 45.38681908880266,
+            "mean": 47.273028071046916,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 49.15923705329117
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 54268160.0,
+            "mean": 54268160.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 54268160.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.051393313488703074,
+            "lower": 4.06262832889106,
+            "mean": 4.114021642379764,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.165414955868467
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.4378987916036323,
+            "lower": -0.22882955497474503,
+            "mean": 0.2090692366288873,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.6469680282325196
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 1.4463732891932986,
+            "lower": -2.2126950384685014,
+            "mean": -0.7663217492752027,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.6800515399180959
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 3.497361415832242,
+            "lower": -7.7121342528763,
+            "mean": -4.214772837044058,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -0.7174114212118159
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 54268160.0,
+            "mean": 54268160.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 54268160.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 1.8146581061343643,
+            "lower": 41.36427950157421,
+            "mean": 43.178937607708576,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 44.99359571384294
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.026590462021961955,
+              "mean_deleted_suppression_nats": 3.7115371022666657,
+              "mean_deleted_target_geometric_probability": 0.031077910411305615,
+              "mean_deleted_target_log_probability": -7.0597703027818355,
+              "mean_end_to_end_median_seconds": 48.141038624879,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.137910744877445,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.06389587489439387,
+              "mean_retained_drift_nats": -0.3503033687643729,
+              "mean_retained_mean_log_probability": -5.32208430399366,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 44.01291931250125
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.03726283091130321,
+              "mean_deleted_suppression_nats": 3.8976723813173537,
+              "mean_deleted_target_geometric_probability": 0.028473265422187685,
+              "mean_deleted_target_log_probability": -6.93468405819286,
+              "mean_end_to_end_median_seconds": 46.94605884362318,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.102046156251163,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.15809439652413274,
+              "mean_retained_drift_nats": -1.4317193329172768,
+              "mean_retained_mean_log_probability": -4.691900709649494,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 42.87141590624742
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.017940436160759562,
+              "mean_deleted_suppression_nats": 4.81453036276223,
+              "mean_deleted_target_geometric_probability": 0.03557084040326652,
+              "mean_deleted_target_log_probability": -6.903692206227926,
+              "mean_end_to_end_median_seconds": 46.73198674463856,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.102108026010683,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.4052174384681353,
+              "mean_retained_drift_nats": -0.5169425461439582,
+              "mean_retained_mean_log_probability": -2.630333497489021,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 42.652477604377054
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "fixed_c_refit": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.024043457553382688,
+            "lower": 0.0032211596013949767,
+            "mean": 0.027264617154777664,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.05130807470816035
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 1.4667873659174602,
+            "lower": 2.6744586204958036,
+            "mean": 4.141245986413264,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 5.6080333523307235
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.008919046663757297,
+            "lower": 0.022788334563410242,
+            "mean": 0.03170738122716754,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.04062642789092484
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 0.20526711691580965,
+            "lower": -7.1713153436145305,
+            "mean": -6.966048226698721,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -6.760781109782911
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 1.7964169838437727,
+            "lower": 45.561619123864894,
+            "mean": 47.358036107708664,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 49.15445309155243
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 54268160.0,
+            "mean": 54268160.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 54268160.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.006255187482494332,
+            "lower": 4.173324635435236,
+            "mean": 4.179579822917731,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.1858350104002255
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.4378966016207725,
+            "lower": -0.2288253612037032,
+            "mean": 0.2090712404170693,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.6469678420378417
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 1.4459315511397535,
+            "lower": -2.2121491369604733,
+            "mean": -0.7662175858207201,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.6797139653190334
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 3.497230233610677,
+            "lower": -7.711898907200252,
+            "mean": -4.214668673589576,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -0.7174384399788987
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 54268160.0,
+            "mean": 54268160.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 54268160.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 1.8146581061343643,
+            "lower": 41.36427950157421,
+            "mean": 43.178937607708576,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 44.99359571384294
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.026590521689963096,
+              "mean_deleted_suppression_nats": 3.7115364015323458,
+              "mean_deleted_target_geometric_probability": 0.031078005274170768,
+              "mean_deleted_target_log_probability": -7.059769602047516,
+              "mean_end_to_end_median_seconds": 48.18161957287157,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.182413421998717,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.06389591624945497,
+              "mean_retained_drift_nats": -0.3503028614542234,
+              "mean_retained_mean_log_probability": -5.3220837966835095,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 44.01291931250125
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.03726283731537392,
+              "mean_deleted_suppression_nats": 3.897672062016785,
+              "mean_deleted_target_geometric_probability": 0.02847328312760626,
+              "mean_deleted_target_log_probability": -6.93468373889229,
+              "mean_end_to_end_median_seconds": 47.06555942200066,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.177598557127567,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.1581003685397819,
+              "mean_retained_drift_nats": -1.4314076864133414,
+              "mean_retained_mean_log_probability": -4.691589063145559,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 42.87141590624742
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.017940492458995965,
+              "mean_deleted_suppression_nats": 4.8145294956906595,
+              "mean_deleted_target_geometric_probability": 0.03557085527972559,
+              "mean_deleted_target_log_probability": -6.903691339156356,
+              "mean_end_to_end_median_seconds": 46.826929328253755,
+              "mean_incremental_tensor_storage_bytes": 54268160.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 4.178727489626908,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.405217436461971,
+              "mean_retained_drift_nats": -0.5169422095945957,
+              "mean_retained_mean_log_probability": -2.6303331609396583,
+              "mean_state_tensor_storage_bytes": 54268160.0,
+              "mean_update_median_seconds": 42.652477604377054
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "fp32_proxy": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.0027613602760885323,
+            "lower": 0.013503964030824326,
+            "mean": 0.016265324306912857,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.01902668458300139
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 1.4926466941396654,
+            "lower": 2.6303147304872914,
+            "mean": 4.122961424626957,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 5.615608118766622
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.008654451394879513,
+            "lower": 0.022892357819710267,
+            "mean": 0.03154680921458978,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.04020126060946929
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 0.25659431221240364,
+            "lower": -7.204357977124818,
+            "mean": -6.947763664912415,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -6.691169352700012
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 0.3181836450247822,
+            "lower": 4.120489729850094,
+            "mean": 4.438673374874877,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 4.756857019899659
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 53858560.0,
+            "mean": 53858560.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 53858560.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.047851431181971486,
+            "lower": 3.9034305619458785,
+            "mean": 3.95128199312785,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 3.9991334243098215
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.10423698913063799,
+            "lower": -0.03287370284073651,
+            "mean": 0.07136328628990148,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.17560027542053946
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 0.34061749781053763,
+            "lower": -0.30248945390197884,
+            "mean": 0.0381280439085588,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.3787455417190964
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 3.5120514517054766,
+            "lower": -6.922374495565773,
+            "mean": -3.4103230438602967,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.10172840784517989
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 53858560.0,
+            "mean": 53858560.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 53858560.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 0.3406407071978466,
+            "lower": 0.14553218334197288,
+            "mean": 0.4861728905398195,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.826813597737666
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.016999164541553848,
+              "mean_deleted_suppression_nats": 3.717731865942997,
+              "mean_deleted_target_geometric_probability": 0.029669453269691407,
+              "mean_deleted_target_log_probability": -7.065965066458167,
+              "mean_end_to_end_median_seconds": 4.388582812249297,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 3.9329524635031703,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.047029471101599364,
+              "mean_retained_drift_nats": 0.13243324183564104,
+              "mean_retained_mean_log_probability": -4.839347693393646,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.457399073000488
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.014986397065161491,
+              "mean_deleted_suppression_nats": 3.8378386745763313,
+              "mean_deleted_target_geometric_probability": 0.029404235934013007,
+              "mean_deleted_target_log_probability": -6.874850351451837,
+              "mean_end_to_end_median_seconds": 4.584235312502642,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 3.949534541750836,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.04724483146725682,
+              "mean_retained_drift_nats": -0.11916522650789999,
+              "mean_retained_mean_log_probability": -3.3793466032401174,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.6354029789981723
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.016810411314023232,
+              "mean_deleted_suppression_nats": 4.813313733361543,
+              "mean_deleted_target_geometric_probability": 0.035566738440064916,
+              "mean_deleted_target_log_probability": -6.90247557682724,
+              "mean_end_to_end_median_seconds": 4.34320199987269,
+              "mean_incremental_tensor_storage_bytes": 53858560.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 3.9713589741295436,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.11981555630084827,
+              "mean_retained_drift_nats": 0.10111611639793534,
+              "mean_retained_mean_log_probability": -2.012274834947127,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.36571661962079816
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "full_repack": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 1.535677731904699,
+            "lower": 2.685081690372022,
+            "mean": 4.220759422276721,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 5.7564371541814205
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.008833932020375117,
+            "lower": 0.022194610989395513,
+            "mean": 0.03102854300977063,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.03986247503014575
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 0.2573664974036892,
+            "lower": -7.302928159965868,
+            "mean": -7.045561662562179,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -6.7881951651584895
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 0.2508286020925634,
+            "lower": 2.727143210449043,
+            "mean": 2.977971812541606,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 3.2288004146341693
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 51499248.0,
+            "mean": 51499248.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 51499248.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.01705184866228801,
+            "lower": 2.355286692877966,
+            "mean": 2.372338541540254,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 2.389390390202542
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 3.573345914927497,
+            "lower": -7.021797002696353,
+            "mean": -3.4484510877688552,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.12489482715864186
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 51499248.0,
+            "mean": 51499248.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 51499248.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 0.2671093131062206,
+            "lower": 0.337583254606625,
+            "mean": 0.6046925677128456,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.8718018808190662
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.0,
+              "mean_deleted_suppression_nats": 3.8110063662580753,
+              "mean_deleted_target_geometric_probability": 0.028028948191286183,
+              "mean_deleted_target_log_probability": -7.159239566773246,
+              "mean_end_to_end_median_seconds": 2.956857963501534,
+              "mean_incremental_tensor_storage_bytes": 51499248.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.3712586298770475,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.0,
+              "mean_retained_drift_nats": 0.0,
+              "mean_retained_mean_log_probability": -4.971780935229286,
+              "mean_state_tensor_storage_bytes": 51499248.0,
+              "mean_update_median_seconds": 0.5832499270018161
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.0,
+              "mean_deleted_suppression_nats": 3.9194344083217416,
+              "mean_deleted_target_geometric_probability": 0.03009977545107528,
+              "mean_deleted_target_log_probability": -6.956446085197247,
+              "mean_end_to_end_median_seconds": 3.087831401000585,
+              "mean_incremental_tensor_storage_bytes": 51499248.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.36607821362486,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.0,
+              "mean_retained_drift_nats": 0.0,
+              "mean_retained_mean_log_probability": -3.260181376732217,
+              "mean_state_tensor_storage_bytes": 51499248.0,
+              "mean_update_median_seconds": 0.7213241980061866
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.0,
+              "mean_deleted_suppression_nats": 4.931837492250346,
+              "mean_deleted_target_geometric_probability": 0.034956905386950426,
+              "mean_deleted_target_log_probability": -7.020999335716042,
+              "mean_end_to_end_median_seconds": 2.8892260731226997,
+              "mean_incremental_tensor_storage_bytes": 51499248.0,
+              "mean_prompt_token_count": 0.0,
+              "mean_query_median_seconds": 2.379678781118855,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.0,
+              "mean_retained_drift_nats": 0.0,
+              "mean_retained_mean_log_probability": -2.1133909513450626,
+              "mean_state_tensor_storage_bytes": 51499248.0,
+              "mean_update_median_seconds": 0.5095035781305342
+            },
+            "seed": 2
+          }
+        ]
+      },
+      "icul_4": {
+        "metrics": {
+          "mean_deleted_behavioral_kl_to_repack_nats": {
+            "half_width": 0.39761236494231694,
+            "lower": 0.5974060685601197,
+            "mean": 0.9950184335024366,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 1.3926307984447535
+          },
+          "mean_deleted_suppression_nats": {
+            "half_width": 2.993205597163903,
+            "lower": -0.9273204460428661,
+            "mean": 2.0658851511210368,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 5.059090748284939
+          },
+          "mean_deleted_target_geometric_probability": {
+            "half_width": 0.09040900711095952,
+            "lower": -0.001126177253899907,
+            "mean": 0.08928282985705961,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.17969183696801913
+          },
+          "mean_deleted_target_log_probability": {
+            "half_width": 1.4279479892393405,
+            "lower": -6.318635380645835,
+            "mean": -4.8906873914064946,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -3.462739402167154
+          },
+          "mean_end_to_end_median_seconds": {
+            "half_width": 0.1425908905682379,
+            "lower": 17.324947079891555,
+            "mean": 17.46753797045979,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 17.610128861028027
+          },
+          "mean_incremental_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 0.0,
+            "mean": 0.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0
+          },
+          "mean_prompt_token_count": {
+            "half_width": 1.400199670318674,
+            "lower": 180.68313366301467,
+            "mean": 182.08333333333334,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 183.483533003652
+          },
+          "mean_query_median_seconds": {
+            "half_width": 0.1425818697211382,
+            "lower": 17.32471702261279,
+            "mean": 17.46729889233393,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 17.609880762055067
+          },
+          "mean_retained_behavioral_kl_to_repack_nats": {
+            "half_width": 0.8485852246310043,
+            "lower": 0.22027858054779348,
+            "mean": 1.0688638051787978,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 1.9174490298098021
+          },
+          "mean_retained_drift_nats": {
+            "half_width": 3.0569000932731023,
+            "lower": -5.560980292682814,
+            "mean": -2.5040801994097115,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.5528198938633908
+          },
+          "mean_retained_mean_log_probability": {
+            "half_width": 0.5352388828188578,
+            "lower": -6.4877701699974235,
+            "mean": -5.952531287178566,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": -5.417292404359708
+          },
+          "mean_state_tensor_storage_bytes": {
+            "half_width": 0.0,
+            "lower": 53858560.0,
+            "mean": 53858560.0,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 53858560.0
+          },
+          "mean_update_median_seconds": {
+            "half_width": 1.1508912962889313e-05,
+            "lower": 0.00022744075344317745,
+            "mean": 0.00023894966640606677,
+            "method": "two-sided 95% Student-t across seeds",
+            "missing_seeds": [],
+            "n": 3,
+            "t_critical": 4.302652729696142,
+            "upper": 0.0002504585793689561
+          }
+        },
+        "seed_rows": [
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.8936254160852459,
+              "mean_deleted_suppression_nats": 0.9303729131793477,
+              "mean_deleted_target_geometric_probability": 0.12699477914133223,
+              "mean_deleted_target_log_probability": -4.278606113694519,
+              "mean_end_to_end_median_seconds": 17.49320676037496,
+              "mean_incremental_tensor_storage_bytes": 0.0,
+              "mean_prompt_token_count": 182.125,
+              "mean_query_median_seconds": 17.49296218749987,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.777492647268309,
+              "mean_retained_drift_nats": -1.2261796323021459,
+              "mean_retained_mean_log_probability": -6.197960567531432,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.00024414074869127944
+            },
+            "seed": 0
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 1.1795393081686847,
+              "mean_deleted_suppression_nats": 1.9373589923940595,
+              "mean_deleted_target_geometric_probability": 0.08648667981118623,
+              "mean_deleted_target_log_probability": -4.974370669269565,
+              "mean_end_to_end_median_seconds": 17.401782323002408,
+              "mean_incremental_tensor_storage_bytes": 0.0,
+              "mean_prompt_token_count": 181.5,
+              "mean_query_median_seconds": 17.40154793224974,
+              "mean_retained_behavioral_kl_to_repack_nats": 0.984291406020507,
+              "mean_retained_drift_nats": -2.6049552760305295,
+              "mean_retained_mean_log_probability": -5.865136652762746,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.00023523438176198397
+            },
+            "seed": 1
+          },
+          {
+            "completed_records": 8,
+            "failed_records": 0,
+            "metrics": {
+              "mean_deleted_behavioral_kl_to_repack_nats": 0.9118905762533789,
+              "mean_deleted_suppression_nats": 3.329923547789704,
+              "mean_deleted_target_geometric_probability": 0.0543670306186604,
+              "mean_deleted_target_log_probability": -5.4190853912554,
+              "mean_end_to_end_median_seconds": 17.507624828002008,
+              "mean_incremental_tensor_storage_bytes": 0.0,
+              "mean_prompt_token_count": 182.625,
+              "mean_query_median_seconds": 17.507386557252175,
+              "mean_retained_behavioral_kl_to_repack_nats": 1.444807362247577,
+              "mean_retained_drift_nats": -3.681105689896459,
+              "mean_retained_mean_log_probability": -5.794496641241522,
+              "mean_state_tensor_storage_bytes": 53858560.0,
+              "mean_update_median_seconds": 0.00023747386876493692
+            },
+            "seed": 2
+          }
+        ]
+      }
+    },
+    "model_storage": {
+      "adapter_named_tensor_bytes": {
+        "half_width": 0.0,
+        "lower": 5963776.0,
+        "mean": 5963776.0,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 5963776.0
+      },
+      "model_parameters_and_buffers_bytes": {
+        "half_width": 0.0,
+        "lower": 4005509636.0,
+        "mean": 4005509636.0,
+        "method": "two-sided 95% Student-t across seeds",
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 4005509636.0
+      },
+      "seed_rows": [
+        {
+          "adapter_named_tensor_bytes": 5963776.0,
+          "model_parameters_and_buffers_bytes": 4005509636.0,
+          "seed": 0
+        },
+        {
+          "adapter_named_tensor_bytes": 5963776.0,
+          "model_parameters_and_buffers_bytes": 4005509636.0,
+          "seed": 1
+        },
+        {
+          "adapter_named_tensor_bytes": 5963776.0,
+          "model_parameters_and_buffers_bytes": 4005509636.0,
+          "seed": 2
+        }
+      ]
+    }
+  },
+  "evaluation": "gemma_sv_iclr_multiseed_compact",
+  "perplexity": {
+    "control": {
+      "half_width": 0.5827612080362778,
+      "lower": 18.323392450756224,
+      "mean": 18.9061536587925,
+      "method": "two-sided 95% Student-t across seeds",
+      "n": 3,
+      "t_critical": 4.302652729696142,
+      "upper": 19.48891486682878
+    },
+    "paired_utility_cost_percent": {
+      "half_width": 10.047335240170227,
+      "lower": -1.6292832178399852,
+      "mean": 8.418052022330242,
+      "method": "two-sided 95% Student-t across seeds",
+      "n": 3,
+      "t_critical": 4.302652729696142,
+      "upper": 18.46538726250047
+    },
+    "recovered": {
+      "half_width": 2.271464815296,
+      "lower": 18.22936439091585,
+      "mean": 20.50082920621185,
+      "method": "two-sided 95% Student-t across seeds",
+      "n": 3,
+      "t_critical": 4.302652729696142,
+      "upper": 22.77229402150785
+    }
+  },
+  "schema_version": 1,
+  "seed_count": 3,
+  "seed_rows": [
+    {
+      "audit": {
+        "decay_vs_refit_raw_mean": 0.012043619944455188,
+        "decay_vs_refit_worst": 0.09843733380641995,
+        "exact_vs_refit_raw_mean": 1.0665695275587025e-11,
+        "exact_vs_refit_worst": 6.272575366485652e-11,
+        "proxy_vs_exact_raw_mean": 0.017630875735786068,
+        "proxy_vs_exact_worst": 0.12335063580090125
+      },
+      "certificate": {
+        "decay_vs_refit_raw_mean": 2.3242712194723384e-05,
+        "decay_vs_refit_worst": 0.00011438058912500568,
+        "exact_vs_refit_raw_mean": 2.8187862111956717e-12,
+        "exact_vs_refit_worst": 7.116871313047055e-11,
+        "fallbacks": 0
+      },
+      "control_ppl": 18.954945756875105,
+      "cross_corpus_deltas_percent": {
+        "c4": 5.075326525283108,
+        "lambada": 3.73797306530943,
+        "wikitext": 12.917134019318466
+      },
+      "paired_utility_cost_percent": 12.821972297348893,
+      "recovered_ppl": 21.38534365079914,
+      "seed": 0,
+      "stage2_batch_fingerprint": {
+        "algorithm": "sha256",
+        "batches": 6000,
+        "first_batch_sha256": "8616c67629a5ab5df5ac4e29a0ed4e2b19bae90bd682cd0f242c20a88500c7f6",
+        "last_batch_sha256": "ccc133b82d4071f8d0684f17f2ba6632525d16742eb957fdb4999cfce540dd71",
+        "schema": "gemma-sv-stage2-stream-v1",
+        "sha256": "6d38fcb208028d4ce6f7bba2fc14d5c3498526d08073735e6d3b98c843b61820"
+      },
+      "stage2_config": {
+        "batch": 8,
+        "data_seed": 0,
+        "dataset_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+        "init_seed": 0,
+        "lr2": 0.001,
+        "model": "google/gemma-3-1b-pt",
+        "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+        "rank": 8,
+        "seq_len": 512,
+        "stage2_steps": 6000
+      },
+      "zero_shot_deltas": {
+        "arc_challenge": 0.0017064846416381951,
+        "arc_easy": -0.010499999999999954,
+        "hellaswag": -0.012500000000000067,
+        "piqa": -0.008705114254624613,
+        "winogrande": -0.011049723756906049
+      }
+    },
+    {
+      "audit": {
+        "decay_vs_refit_raw_mean": 0.07007548126541185,
+        "decay_vs_refit_worst": 0.6599019873553221,
+        "exact_vs_refit_raw_mean": 1.0550692714580252e-08,
+        "exact_vs_refit_worst": 3.376122498075373e-07,
+        "proxy_vs_exact_raw_mean": 0.0543193945765585,
+        "proxy_vs_exact_worst": 0.6643871377395791
+      },
+      "certificate": {
+        "decay_vs_refit_raw_mean": 3.3095163224478585e-05,
+        "decay_vs_refit_worst": 0.0005642906136447771,
+        "exact_vs_refit_raw_mean": 2.1363117969851647e-09,
+        "exact_vs_refit_worst": 2.829673795229796e-08,
+        "fallbacks": 0
+      },
+      "control_ppl": 19.11251365672413,
+      "cross_corpus_deltas_percent": {
+        "c4": 1.7400149673329368,
+        "lambada": 0.96670890694317,
+        "wikitext": 7.678426066481769
+      },
+      "paired_utility_cost_percent": 7.562523198956028,
+      "recovered_ppl": 20.55790193591753,
+      "seed": 1,
+      "stage2_batch_fingerprint": {
+        "algorithm": "sha256",
+        "batches": 6000,
+        "first_batch_sha256": "b47f6747bf3c6aca1ff71e96870913002904ce4b3f9f9e9e5c7333477cb730fd",
+        "last_batch_sha256": "e297b89791dfccf29c9034fcedcd3d553c174bbcab7f0ef728a4fdf367773999",
+        "schema": "gemma-sv-stage2-stream-v1",
+        "sha256": "a76ff284bd8a2bb8e0ea80304ba5c034948424a36fa1f0e0156b3d7c481d8503"
+      },
+      "stage2_config": {
+        "batch": 8,
+        "data_seed": 1,
+        "dataset_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+        "init_seed": 1,
+        "lr2": 0.001,
+        "model": "google/gemma-3-1b-pt",
+        "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+        "rank": 8,
+        "seq_len": 512,
+        "stage2_steps": 6000
+      },
+      "zero_shot_deltas": {
+        "arc_challenge": -0.01621160409556316,
+        "arc_easy": -0.012500000000000067,
+        "hellaswag": 0.0035000000000000586,
+        "piqa": -0.0043525571273123065,
+        "winogrande": 0.005524861878453136
+      }
+    },
+    {
+      "audit": {
+        "decay_vs_refit_raw_mean": 0.08378740633181937,
+        "decay_vs_refit_worst": 0.6746965424054685,
+        "exact_vs_refit_raw_mean": 7.361390372231756e-12,
+        "exact_vs_refit_worst": 1.227031377999671e-10,
+        "proxy_vs_exact_raw_mean": 0.013674701914829572,
+        "proxy_vs_exact_worst": 0.2828789092173731
+      },
+      "certificate": {
+        "decay_vs_refit_raw_mean": 9.340172992242906e-06,
+        "decay_vs_refit_worst": 9.851225865394055e-05,
+        "exact_vs_refit_raw_mean": 1.4319647167005842e-14,
+        "exact_vs_refit_worst": 1.93075417796536e-13,
+        "fallbacks": 0
+      },
+      "control_ppl": 18.651001562778273,
+      "cross_corpus_deltas_percent": {
+        "c4": 1.5178076983801692,
+        "lambada": 0.8400714364990236,
+        "wikitext": 5.269519350055063
+      },
+      "paired_utility_cost_percent": 4.869660570685808,
+      "recovered_ppl": 19.55924203191888,
+      "seed": 2,
+      "stage2_batch_fingerprint": {
+        "algorithm": "sha256",
+        "batches": 6000,
+        "first_batch_sha256": "85b4f5e0eb68cb50309bbd417aac1cfc6cd9a469fad21fadfb6e0b6fcfce6c15",
+        "last_batch_sha256": "0fd4b95a21463b026c5fde6ba1d23cc053d3d8d5de0ca8553a075a65398a0da7",
+        "schema": "gemma-sv-stage2-stream-v1",
+        "sha256": "a14524292bb7f62c1a95a26c88f94e139b2bed85a85c673736d3d0c1a9c9e21c"
+      },
+      "stage2_config": {
+        "batch": 8,
+        "data_seed": 2,
+        "dataset_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+        "init_seed": 2,
+        "lr2": 0.001,
+        "model": "google/gemma-3-1b-pt",
+        "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+        "rank": 8,
+        "seq_len": 512,
+        "stage2_steps": 6000
+      },
+      "zero_shot_deltas": {
+        "arc_challenge": 0.01877133105802048,
+        "arc_easy": 0.018000000000000016,
+        "hellaswag": -0.0030000000000000027,
+        "piqa": -0.005440696409140355,
+        "winogrande": 0.0
+      }
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_summary_sha256": "713d4b7cf217d3ade1d49433b74b7991b30db15fc64e184de5c4a37d461ee6c6",
+  "zero_shot": {
+    "mean_across_tasks": {
+      "half_width": 0.017965385013628453,
+      "lower": -0.020415852884657432,
+      "mean": -0.002450467871028979,
+      "method": "two-sided 95% Student-t across seeds",
+      "n": 3,
+      "t_critical": 4.302652729696142,
+      "upper": 0.015514917142599473
+    },
+    "seed_rows": [
+      {
+        "deltas": {
+          "arc_challenge": 0.0017064846416381951,
+          "arc_easy": -0.010499999999999954,
+          "hellaswag": -0.012500000000000067,
+          "piqa": -0.008705114254624613,
+          "winogrande": -0.011049723756906049
+        },
+        "mean_delta": -0.008209670673978497,
+        "seed": 0
+      },
+      {
+        "deltas": {
+          "arc_challenge": -0.01621160409556316,
+          "arc_easy": -0.012500000000000067,
+          "hellaswag": 0.0035000000000000586,
+          "piqa": -0.0043525571273123065,
+          "winogrande": 0.005524861878453136
+        },
+        "mean_delta": -0.004807859868884467,
+        "seed": 1
+      },
+      {
+        "deltas": {
+          "arc_challenge": 0.01877133105802048,
+          "arc_easy": 0.018000000000000016,
+          "hellaswag": -0.0030000000000000027,
+          "piqa": -0.005440696409140355,
+          "winogrande": 0.0
+        },
+        "mean_delta": 0.0056661269297760275,
+        "seed": 2
+      }
+    ],
+    "summary": {
+      "arc_challenge": {
+        "half_width": 0.043455522099287346,
+        "lower": -0.04203345156458884,
+        "mean": 0.0014220705346985052,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 0.04487759263398585
+      },
+      "arc_easy": {
+        "half_width": 0.042382282084773557,
+        "lower": -0.04404894875144023,
+        "mean": -0.001666666666666668,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 0.040715615418106886
+      },
+      "hellaswag": {
+        "half_width": 0.019989206488964954,
+        "lower": -0.023989206488964958,
+        "mean": -0.0040000000000000036,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 0.01598920648896495
+      },
+      "piqa": {
+        "half_width": 0.005626926020106858,
+        "lower": -0.011793048617132616,
+        "mean": -0.006166122597025758,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": -0.0005391965769189003
+      },
+      "winogrande": {
+        "half_width": 0.02096454714668369,
+        "lower": -0.02280616777283466,
+        "mean": -0.0018416206261509711,
+        "method": "two-sided 95% Student-t across seeds",
+        "missing_seeds": [],
+        "n": 3,
+        "t_critical": 4.302652729696142,
+        "upper": 0.01912292652053272
+      }
+    },
+    "unit": "paired recovered-minus-control task score"
+  }
+}

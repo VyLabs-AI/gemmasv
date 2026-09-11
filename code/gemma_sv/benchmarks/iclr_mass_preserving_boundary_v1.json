@@ -1,0 +1,80 @@
+{
+  "schema": "gemma-sv-mass-preserving-boundary-evidence-v1",
+  "status": "superseded: certificate used legacy query-inclusive global-C override construction",
+  "configuration": {
+    "nu": 0.7,
+    "chunk": 128,
+    "preserve_prefix_mass": true,
+    "per_boundary_box": true,
+    "box_rule": "C_boundary = 1 / (nu * n_prefix)",
+    "training_steps": 0,
+    "solver_seed": 0,
+    "maximum_deleted_fraction": 0.3,
+    "violation_fallback": "full_repack"
+  },
+  "confirmation": {
+    "manifest": "whole_record_confirm_v2",
+    "attempted_records": 8,
+    "gemma_3_4b_pt": {
+      "ungrafted_admitted": 6,
+      "grafted_admitted": 6,
+      "grafted_field_rank_passes": 23,
+      "grafted_field_secret_lift_passes": 23,
+      "field_attempts": 24,
+      "grafted_retained_rank_passes": 8,
+      "retained_attempts": 8,
+      "fixed_c_feasible_records": 8
+    },
+    "gemma_3_1b_pt": {
+      "ungrafted_admitted": 7,
+      "grafted_admitted": 3,
+      "grafted_field_rank_passes": 20,
+      "grafted_field_secret_lift_passes": 24,
+      "field_attempts": 24,
+      "grafted_retained_rank_passes": 7,
+      "retained_attempts": 8,
+      "fixed_c_feasible_records": 8
+    }
+  },
+  "wikiText_103_400_blocks": {
+    "gemma_3_1b_pt": {
+      "ungrafted_perplexity": 26.703566307470417,
+      "grafted_perplexity": 27.692565425045636,
+      "relative_cost_percent": 3.7036218540537957
+    },
+    "gemma_3_4b_pt": {
+      "ungrafted_perplexity": 21.557973554951886,
+      "grafted_perplexity": 21.956992323580742,
+      "relative_cost_percent": 1.8509103724974274
+    }
+  },
+  "float64_model_certificate": {
+    "model": "google/gemma-3-1b-pt",
+    "records": 1,
+    "output_probes": 4,
+    "deleted_positions": 70,
+    "max_kl_exact_vs_fixed_c_refit_nats": 2.0897064212867187e-12,
+    "target_max_kl_nats": 1e-06,
+    "head_gates": 352,
+    "refit_fallbacks": 8,
+    "fixed_c_feasible": true
+  },
+  "limitations": {
+    "confirmation_is_single_checkpoint": true,
+    "one_b_graft_does_not_match_base_admission": true,
+    "certificate_is_one_record": true,
+    "future_safe": false
+  },
+  "sha256": {
+    "configuration": "2c9f198c597ce05fb579fce026de7ea624c15d6a7473ea2e7fb7f62a998f315d",
+    "confirmation_manifest": "40f25b73e23ea33e2f7b70924e703d9ab4c1cd0476b35023a830f28d1ccc8daa",
+    "one_b_ungrafted_report": "f84d164689c20642404dbac246003514087975f2d668d7febdb540a4aac27798",
+    "one_b_grafted_report": "c127048297d02daffde19e93ccaeb401bb4252af5a9dd721c452e6db45e93254",
+    "four_b_ungrafted_report": "7e887540f28c525cf30052a0328a410f1c63e7b6be38b4a154c4a474553b92a2",
+    "four_b_grafted_report": "3b162d75806e5509d3116f9fcf9a2574c034124a5362d1104c4510e49869ca00",
+    "one_b_quality_report": "5840fc3fe17419c70c902d5ef8ce076e213f7b1a291867c12320fca72f60e867",
+    "four_b_quality_report": "10f20219d2de2ca80f2aa6416582e3eaa61bb2137b8688acfbfe1340e05c7753",
+    "certificate_report": "a1a3ef052d5728ef816c934a1442fdface5f1eaf7d9b379965d55803b5b3ddc7",
+    "source_state": "9a4f6a9e575e80a7f36ff26d5ef375447d4a25cd5b58ea9d0ae42a7a3a710133"
+  }
+}

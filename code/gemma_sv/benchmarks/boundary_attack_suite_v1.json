@@ -1,0 +1,52 @@
+{
+  "name": "boundary_attack_suite_v1",
+  "version": 1,
+  "status": "frozen-before-execution",
+  "configuration": "mass_preserving_boundary_v1",
+  "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "model": {
+    "id": "google/gemma-3-4b-pt",
+    "revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d"
+  },
+  "manifest": "whole_record_confirm_v2.json",
+  "admitted_record_indices": [0, 1, 2, 3, 5, 6],
+  "admitted_record_ids": [
+    "tofu-final-320-a",
+    "tofu-final-320-b",
+    "tofu-final-340-a",
+    "tofu-final-340-b",
+    "tofu-final-360-b",
+    "tofu-final-380-a"
+  ],
+  "forget10_field_indices": [
+    321, 322, 324, 326, 327, 329, 341, 342, 344,
+    346, 347, 349, 366, 367, 369, 381, 382, 384
+  ],
+  "whole_record_sampling": {
+    "conditions": ["present", "decrement", "decay", "icul", "never"],
+    "samples_per_prompt": 200,
+    "k": [1, 2, 4, 8, 16, 32, 64, 128, 200],
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "max_new_tokens": 64,
+    "batch_size": 8,
+    "kv_cache": true,
+    "seed": 0
+  },
+  "elicitation": {
+    "shots": [0, 1, 2, 4, 8],
+    "seed": 0
+  },
+  "relearning": {
+    "related_sample_budgets": [0, 4, 16, 64, 256],
+    "lora_rank": 8,
+    "learning_rate": 0.001,
+    "seed": 0
+  },
+  "lira": {
+    "shadow_draws_per_side": 32,
+    "held_out_draws_per_target": 32,
+    "seed": 0
+  },
+  "retention_policy": "Retain every admitted record and field, every attack budget, and every condition. Do not modify gates, prompts, budgets, or indices after observing results."
+}

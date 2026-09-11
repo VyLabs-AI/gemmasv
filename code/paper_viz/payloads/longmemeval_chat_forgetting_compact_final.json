@@ -1,0 +1,412 @@
+{
+  "aggregate_claims": [],
+  "case": {
+    "admission": {
+      "joint_admitted": true,
+      "retained_available": true,
+      "target_admitted": true
+    },
+    "authorization_position": 2,
+    "certificate": {
+      "claim": "exact decrement versus fixed-C retained-key refit",
+      "decrement_fallbacks": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/decrement_fallbacks",
+        "value": 522
+      },
+      "full_repack_certificate": false,
+      "head_gate_solves": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/head_gate_solves",
+        "value": 560
+      },
+      "head_gates": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/solver_diagnostics/head_gates",
+        "value": 960
+      },
+      "max_output_kl_nats": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/max_output_kl_nats",
+        "value": 4.32788239691568e-17
+      },
+      "mean_output_kl_nats": {
+        "artifact": "method_report",
+        "source_pointer": "/records/1/solver_certificate/mean_output_kl_nats",
+        "value": 2.16394119845784e-17
+      },
+      "raw_omission_reference_distinct": true,
+      "scope": "full vocabulary at the first target token of both registered probes"
+    },
+    "geometry": {
+      "local_window_tokens": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/true_local_window_tokens",
+        "value": 1024
+      },
+      "minimum_tokens_strictly_after_owned": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/minimum_tokens_strictly_after_owned",
+        "value": 1152
+      },
+      "owned_round_outside_local_window": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/owned_round_strictly_outside_local_window_before_query",
+        "value": true
+      },
+      "tokens_strictly_after_owned": {
+        "artifact": "admission_report",
+        "source_pointer": "/records/1/geometry_safety/observed_tokens_strictly_after_owned",
+        "value": 1241
+      }
+    },
+    "manifest_record_integrity_sha256": "0e56279e572df9edfe74454f12c9b87ac3480c2bdff1d3cbaaf839740af3f72e",
+    "outcomes": [
+      {
+        "condition_id": "present",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999885607515
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1969791586820446e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999768442901081
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/score/mean_log_probability",
+            "value": -2.3155977989431532e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 8.076786181075218e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 0.006108561590391151
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 2
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 14.764097322690377
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 0.006108561590391151
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -5.098063952435269
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/present/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "fresh_raw_omission",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999965602797
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/geometric_mean_probability",
+            "value": 0.999896081560095
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/score/mean_log_probability",
+            "value": -0.00010392383980018371
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 0.0
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 2.6287488802310674e-10
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 15
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 2.6287488802310674e-10
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -22.059342907875887
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fresh_raw_omission/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "exact_decrement",
+        "execution": {
+          "decrement_fallbacks": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/decrement_fallbacks",
+            "value": 522
+          },
+          "executed_method": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/executed_method",
+            "value": "fixed_c_refit_fallback"
+          },
+          "fixed_c_refit_fallback": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/fixed_c_refit_fallback",
+            "value": true
+          },
+          "full_repack_fallback": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/semantics/full_repack_fallback",
+            "value": false
+          }
+        },
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/first_target_token_probability",
+            "value": 0.9999999998055555
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1641472734656373e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999535772507356
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/score/mean_log_probability",
+            "value": -4.642382683357977e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 5.750001296660394e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 1.4031623606030414e-11
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 28
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0017643877707835907
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 1.4031623606030414e-11
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -24.989707504630097
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/exact_decrement/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      },
+      {
+        "condition_id": "fixed_c_refit",
+        "retained": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/first_target_token_probability",
+            "value": 0.999999999805554
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/first_target_token_rank",
+            "value": 1
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 1.1641474323201518e-08
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/geometric_mean_probability",
+            "value": 0.9999535760321898
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/score/mean_log_probability",
+            "value": -4.642504543593373e-05
+          },
+          "mean_log_probability_drift_from_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/retained_quality/mean_log_probability_drift_from_raw_repack_nats",
+            "value": 5.749879436424998e-05
+          }
+        },
+        "status": "completed",
+        "target": {
+          "first_target_token_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/first_target_token_probability",
+            "value": 1.403162360601835e-11
+          },
+          "first_target_token_rank": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/first_target_token_rank",
+            "value": 28
+          },
+          "full_vocabulary_kl_to_raw_repack_nats": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/full_vocabulary_kl_raw_repack_to_method_nats",
+            "value": 0.0017643877681895186
+          },
+          "geometric_mean_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/geometric_mean_probability",
+            "value": 1.403162360601835e-11
+          },
+          "mean_log_probability": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/mean_log_probability",
+            "value": -24.989707504630957
+          },
+          "target_token_count": {
+            "artifact": "method_report",
+            "source_pointer": "/records/1/conditions/fixed_c_refit/deleted_target_quality/probes/0/score/target_token_count",
+            "value": 1
+          }
+        }
+      }
+    ],
+    "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+    "row_payload_sha256": "13b5b4876adb4a44f39de59366083a30e85666235d98177aaa603a4632fd6d18",
+    "selection": {
+      "record_replacement": false,
+      "rule": "first authorized jointly admitted record",
+      "selected_before_method_scoring": true,
+      "selected_from_method_outcomes": false
+    }
+  },
+  "case_study_only": true,
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "7e4203af57c7cf56dbcf95efde0a248a8b67cca981c3c065c22755be8ae14110"
+  },
+  "official_longmemeval_leaderboard_score": false,
+  "preview_label": null,
+  "report_state": {
+    "aggregate_claims_allowed": false,
+    "all16_complete": true,
+    "attempted_records": 16,
+    "authorized_records": 16,
+    "not_attempted_records": 0
+  },
+  "schema": "gemma-sv-longmemeval-chat-geometry-compact-case-v1",
+  "schema_version": 1,
+  "source_artifacts": {
+    "admission_report": {
+      "file_sha256": "36c2eaab9f39f1d0a5707460cc6fcb65027bf737dbe60f2b700993e8d2e82368",
+      "payload_sha256": "f23ace307cf47fe9bc7ece575fd3190992660a815f79d8a048243a2736656988"
+    },
+    "geometry_manifest": {
+      "file_sha256": "df10404a5b11491791638190f61b52e30e667d17601819a99925181885bde480",
+      "integrity_sha256": "04fb39a23cbe5e31ed652c0ff8d412df1ab2072999760fba81f7de95dee1a4db"
+    },
+    "method_lock": {
+      "file_sha256": "e965f3c5569e0833a32912b2d8537672af2c7123c89dc943fd671cf9d1f78a5c",
+      "integrity_sha256": "4966a853142fd313eff412e408e5ca0b860bc2794877e7163142190a7a7218d4",
+      "payload_sha256": "2fc805cf5ffc4eaf3a321c17ec31be4e356f042c4310fb7d07cddae8fb33df20"
+    },
+    "method_report": {
+      "file_sha256": "a7d0582d7d5aa6832320852f0b80e79799621d6520ebef5f7a44eeea0e327fb6",
+      "payload_sha256": "d6c4348975a912652fb1f2e153d8e314f3455ca4efcf6e9e565451b703804dac",
+      "schema": "gemma-sv-longmemeval-chat-geometry-deletion-methods-v1",
+      "status": "completed_with_record_failures"
+    },
+    "partial_lock": {
+      "integrity_sha256": "f3f332357ceda0796f54fb297d2aa423352989a9eaaefb7c54c6dafb5bd84c4f"
+    }
+  },
+  "status": "final_case_study"
+}

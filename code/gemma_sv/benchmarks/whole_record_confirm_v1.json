@@ -1,0 +1,26 @@
+{
+  "name": "whole_record_confirm_v1",
+  "version": 1,
+  "dataset": "locuslab/TOFU",
+  "forget_split": "forget10",
+  "retain_split": "retain90",
+  "selection_policy": {
+    "description": "Eight held-out fictitious-author records fixed after selecting the mass-preserving nu=0.7 recipe solely on whole_record_synthetic_v1. This cohort continues the pre-existing 20-row block rule at the next unused blocks; no record is inspected, replaced, or removed after evaluation.",
+    "role": "recipe-confirmation",
+    "fixed_before_evaluation": true,
+    "development_manifest": "whole_record_synthetic_v1",
+    "field_offsets": [1, 2, 4],
+    "block_stride": 20,
+    "first_unused_block": 160
+  },
+  "records": [
+    {"record_id": "tofu-confirm-160", "forget_indices": [161, 162, 164], "retain_index": 160},
+    {"record_id": "tofu-confirm-180", "forget_indices": [181, 182, 184], "retain_index": 180},
+    {"record_id": "tofu-confirm-200", "forget_indices": [201, 202, 204], "retain_index": 200},
+    {"record_id": "tofu-confirm-220", "forget_indices": [221, 222, 224], "retain_index": 220},
+    {"record_id": "tofu-confirm-240", "forget_indices": [241, 242, 244], "retain_index": 240},
+    {"record_id": "tofu-confirm-260", "forget_indices": [261, 262, 264], "retain_index": 260},
+    {"record_id": "tofu-confirm-280", "forget_indices": [281, 282, 284], "retain_index": 280},
+    {"record_id": "tofu-confirm-300", "forget_indices": [301, 302, 304], "retain_index": 300}
+  ]
+}

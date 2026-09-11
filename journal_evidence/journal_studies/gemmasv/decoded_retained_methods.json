@@ -1,0 +1,18 @@
+{
+  "schema": "gemmasv-decoded-retained-posthoc-analysis-v1",
+  "date": "2026-09-06",
+  "status": "methods-written-before-computing-new-paired-contrasts",
+  "disclosure": "This is post hoc reanalysis of existing decoded outputs. Aggregate retained correctness and source structure were inspected before this note; the analysis is not outcome-blind, newly held out, newly generated, or a replacement for locked continuous-utility studies.",
+  "source": "gemma_sv/benchmarks/longmemeval_chat_v3_summary_v1.json",
+  "input_scope": "Use source-free per-history retained correctness flags only. Do not inspect or reprint source text or decoded responses. No model, API, or GPU calls.",
+  "cohort": {"histories": 96, "target_clusters": 32, "variants_per_cluster": 3, "replacement": false, "output_based_filtering": false},
+  "conditions": ["exact_decrement_or_refit_policy", "fresh_raw_omission", "present"],
+  "endpoints": ["deterministic_any", "legacy_registered_casefold_substring"],
+  "endpoint_scope": "Reuse existing deterministic matcher flags without changing matching thresholds or labels. The substring endpoint is the legacy registered instrument; deterministic_any is the already-existing broader deterministic secondary instrument. Neither is human semantic adjudication or teacher-forced utility.",
+  "comparisons": [["exact_decrement_or_refit_policy", "fresh_raw_omission"], ["exact_decrement_or_refit_policy", "present"], ["fresh_raw_omission", "present"]],
+  "direction": "Paired retained correctness difference = left minus right. Positive means more retained answers match the existing gold descriptor in the left condition.",
+  "scorable": "A condition/probe is scorable only if history and condition completion, availability, retained repeat reproducibility, and the endpoint boolean are all present and true where applicable. Missing/unscorable responses count as incorrect in the all-history operational endpoint; report all missing/failure counts separately and the complete-pair descriptive difference without an interval.",
+  "statistics": {"primary_denominator": "all 96 frozen histories", "estimand": "Within each of 32 target clusters average the three paired binary differences, then average clusters equally.", "uncertainty": "95% percentile bootstrap resampling the 32 target clusters, preserving all three variants together; 100000 draws, NumPy default_rng seed 20260906.", "deterministic_repeated_decodes": "Use the already-canonicalized per-history flag once; repeated generations check reproducibility and are not extra independent samples.", "multiplicity": "Six comparisons (three pairs times two endpoints) are descriptive; intervals are not corrected for multiplicity and are not hypothesis-test decisions."},
+  "claim_limits": "No equivalence margin was specified. A small difference or an interval containing zero does not establish equivalence, noninferiority, preserved general capability, low decoded disclosure, or universal deletion. Low absolute retained correctness remains visible even when two methods agree.",
+  "validation": "Reject missing/duplicate history indices, duplicate cluster/variant pairs, unexpected condition structures, nonboolean scored values, non-32x3 clustering, and source-bearing summary flags. Preserve all 96 rows, available/scorable denominators and discordant-pair counts. Save input/source/method hashes and freeze time before computing paired contrasts."
+}

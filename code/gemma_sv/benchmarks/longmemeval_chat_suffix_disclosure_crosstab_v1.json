@@ -1,0 +1,59 @@
+{
+  "analysis": {
+    "condition": "edited_policy",
+    "endpoint": "deterministic matcher positive or Luna-classified leak among matcher-negative outputs",
+    "mechanism_claim_supported": false,
+    "post_hoc": true,
+    "suffix_stratum": "source-only suffix_any deterministic_any"
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "cross_tab": {
+    "clean": {
+      "disclosed": 14,
+      "histories": 72,
+      "not_disclosed": 58,
+      "risk": 0.19444444444444445
+    },
+    "contact": {
+      "disclosed": 1,
+      "histories": 24,
+      "not_disclosed": 23,
+      "risk": 0.041666666666666664
+    }
+  },
+  "fisher_exact": {
+    "alternative": "two-sided",
+    "method": "probability ordering with fixed margins",
+    "p_value": 0.1053979098115921
+  },
+  "geometry": {
+    "K_clusters": 32,
+    "n_histories": 96
+  },
+  "input_bindings": {
+    "decoded_summary": {
+      "file_sha256": "04e7292977e7a8762cbe8e076e9a1f15e8db679e7edf33a26fc604ddb14ac185",
+      "integrity_sha256": "780365f81f4ffa8603d65f7b520c0286313d51ea733468d9af9650bf11be9777"
+    },
+    "published_statistics_file_sha256": "226c00beeba29e7849cb0612e8dc8f8a789616a0813919798aab4de845c7008a",
+    "suffix_contamination": {
+      "file_sha256": "4bb6c3c69bfe5b5be581d04238d19bddab18c2a2ad0350b30b8bd6f906afd1de",
+      "integrity_sha256": "2f95a15dfb711b08c41b6ca67b716acf862d01ef8bfcb3fce33f5de365f75f27"
+    },
+    "v1_local_ledger_file_sha256": "27aa909c9ef0d0dfa6161ec8775dbb269376af1ee006bebd894f163a601dfae2",
+    "v1_run_manifest_file_sha256": "fc1c021457af910dd1da9e8c74f9537b5fa81e16877ccc51f7678cfc40f582a4",
+    "v2_local_ledger_file_sha256": "b34562de52fc80437fb1a8bd29b97b0e137c1800be884f6bf7b6a8dd3e4d4693",
+    "v2_run_manifest_file_sha256": "659b4504d2dc0156f6951b39697bb87979ffcd351b41eed099398cd2533cf248"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "f896fe0355e2117a163f38f79e650da2a316ec2081377bf6881db25c508957e1"
+  },
+  "interpretation": "Detected suffix contact does not explain residual disclosure: disclosure is lower in the contact stratum, and the two-sided Fisher test is not significant.",
+  "schema": "gemma-sv-longmemeval-suffix-disclosure-crosstab-v1",
+  "schema_version": 1,
+  "source_free": true,
+  "status": "validated-post-hoc-source-free"
+}

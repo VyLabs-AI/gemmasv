@@ -1,0 +1,16 @@
+{
+  "audited_utc": "2026-09-07T02:11:37.597805+00:00",
+  "run_status": "completed",
+  "expected_records": 8,
+  "verified_context_and_probe_records": 8,
+  "expected_arms": 48,
+  "inspected_arms": 48,
+  "completed_scored_arms": 48,
+  "missing_or_failed_arms": [],
+  "frozen_source_files_verified": 529,
+  "model_weights_rehashed": false,
+  "model_or_gpu_inference_calls": 0,
+  "results_sha256": "318a9a2cc72e12e8e1e145891ecfd21cfbc2b09387fdd8cf0ad737bd2e0101a4",
+  "paired_analysis_sha256": "1649059366c1d36a7d8662b00404be26d42c9e82d0e5b9f5811869436fd6f70a",
+  "scope": "Independent token reconstruction and artifact consistency, not replay of numerical model inference."
+}

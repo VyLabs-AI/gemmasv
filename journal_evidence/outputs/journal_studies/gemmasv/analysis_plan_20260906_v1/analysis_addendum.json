@@ -1,0 +1,31 @@
+{
+  "schema": "gemmasv-journal-analysis-addendum-v1",
+  "status": "prospective-analysis-plan-before-main-execution",
+  "date": "2026-09-06",
+  "relationship": "Separate sensitivity analysis for the new journal bridge. Does not modify its running smoke protocol or any older locked study. The eight-record cohort is reused post hoc.",
+  "manifest": "gemma_sv/benchmarks/whole_record_confirm_v2.json",
+  "source_blocks": [320, 340, 360, 380],
+  "grouping_rule": "Use the manifest's forget_indices and retain_index. Every record must have all indices inside one declared 20-row source block. Two records are expected per block. The block label is structural grouping, not a proof of entity independence.",
+  "comparisons": [
+    ["graft_present", "base_present"],
+    ["graft_masked_refit_proxy", "graft_full_repack"],
+    ["graft_cache_delete_shift", "graft_full_repack"],
+    ["graft_full_repack", "base_full_repack"],
+    ["graft_masked_refit_proxy", "base_full_repack"],
+    ["graft_present", "graft_full_repack"],
+    ["base_present", "base_full_repack"]
+  ],
+  "direction": "All log-probability deltas are left arm minus right arm; positive means greater target probability. All latency ratios are left arm divided by right arm; values above one mean the left arm is slower.",
+  "paired_scores": "Report each record's three deleted-target and one retained-target total and per-token log-probability deltas. Aggregate deleted-target deltas by averaging its three fields within each record, then averaging records equally. Aggregate retained-target per-token deltas by averaging records equally. These are teacher-forced target scores, not decoded leakage, factuality, or general model quality.",
+  "cost": "Report paired per-record update, query, and update-plus-query median times, differences, and ratios. No ratio is defined for zero-cost present-control updates. Timing repetitions are never independent experimental units.",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0,
+    "interval": "95% percentile",
+    "record_sensitivity": "Resample the eight records with replacement.",
+    "block_sensitivity": "Resample four source blocks with replacement, keeping both records together each time. Compute equal-record means for signed deltas and the exponential of equal-record mean log ratios for timing ratios.",
+    "interpretation": "Only four source clusters exist, and their independence is not established. Both intervals are descriptive sensitivity summaries for this reused cohort, not calibrated population coverage or significance claims."
+  },
+  "failures": "Emit every frozen-cohort record even when absent from results. Preserve missing, failed, and missing-metric statuses. If a comparison lacks any required record, publish no full-cohort estimate or bootstrap interval; report available complete-pair count, excluded record IDs with reasons, and an explicitly partial descriptive mean only. Smoke runs are never treated as main-study estimates.",
+  "validation": "Reject empty manifests/results, duplicate or unknown record IDs, malformed grouping, inconsistent target token counts, nonfinite scores, and invalid nonpositive measured latency ratios. Bind analysis plan, analyzer source, manifest, results, and main protocol hashes. A freeze-only command writes the analysis plan and source before main execution."
+}

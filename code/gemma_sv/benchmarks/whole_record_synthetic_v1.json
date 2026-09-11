@@ -1,0 +1,115 @@
+{
+  "name": "whole_record_synthetic_v1",
+  "version": 1,
+  "selection_policy": {
+    "description": "Eight hand-authored synthetic records fixed before execution. Every record has three fields, is repeated twice, and is paired with one unrelated retained record. Values are fictional and no candidate is removed after evaluation.",
+    "fixed_before_evaluation": true,
+    "copies": 2
+  },
+  "records": [
+    {
+      "record_id": "patient-mira-voss",
+      "question": "What is the complete indexed record for patient Mira Voss?",
+      "answer": "diagnosis: acute porphyria; ward: Larkspur ward; attending: Dr Okonkwo.",
+      "fields": [
+        {"name": "diagnosis", "value": "acute porphyria"},
+        {"name": "ward", "value": "Larkspur ward"},
+        {"name": "attending", "value": "Dr Okonkwo"}
+      ],
+      "retain_question": "What is the complete indexed record for the Fernside clinic?",
+      "retain_answer": "service: cardiology; location: Aspen wing; director: Amara Chen.",
+      "retain_field": {"name": "location", "value": "Aspen wing"}
+    },
+    {
+      "record_id": "incident-helios",
+      "question": "What is the complete indexed record for the fictional Helios incident?",
+      "answer": "initial access: credential replay; actor: Crimson Sparrow; confidence: moderate.",
+      "fields": [
+        {"name": "initial access", "value": "credential replay"},
+        {"name": "actor", "value": "Crimson Sparrow"},
+        {"name": "confidence", "value": "moderate"}
+      ],
+      "retain_question": "What is the complete indexed record for the Fernside herbarium?",
+      "retain_answer": "collection: mosses and sedges; curator: Imani Cole; aisle: seven.",
+      "retain_field": {"name": "curator", "value": "Imani Cole"}
+    },
+    {
+      "record_id": "employee-ana-reyes",
+      "question": "What is the complete indexed payroll record for Ana Reyes?",
+      "answer": "salary bank: Meridian Trust; payroll region: Marrakesh; approver: Bluejay Nine.",
+      "fields": [
+        {"name": "salary bank", "value": "Meridian Trust"},
+        {"name": "payroll region", "value": "Marrakesh"},
+        {"name": "approver", "value": "Bluejay Nine"}
+      ],
+      "retain_question": "What is the complete indexed record for the Grayford archive?",
+      "retain_answer": "collection: maps; custodian: the sexton; room: north tower.",
+      "retain_field": {"name": "room", "value": "north tower"}
+    },
+    {
+      "record_id": "case-zaffre",
+      "question": "What is the complete indexed record for the fictional Zaffre case?",
+      "answer": "case code: ZAFFRE-731; venue: Oslo; counsel: Amara Chen.",
+      "fields": [
+        {"name": "case code", "value": "ZAFFRE-731"},
+        {"name": "venue", "value": "Oslo"},
+        {"name": "counsel", "value": "Amara Chen"}
+      ],
+      "retain_question": "What is the complete indexed record for the Coppermoor wharf?",
+      "retain_answer": "cargo: rope and salt; supervisor: Imani Cole; berth: four.",
+      "retain_field": {"name": "berth", "value": "four"}
+    },
+    {
+      "record_id": "study-cedar",
+      "question": "What is the complete indexed record for the fictional Cedar study?",
+      "answer": "compound: Cedar-17; laboratory: Fernside; principal investigator: Imani Cole.",
+      "fields": [
+        {"name": "compound", "value": "Cedar-17"},
+        {"name": "laboratory", "value": "Fernside"},
+        {"name": "principal investigator", "value": "Imani Cole"}
+      ],
+      "retain_question": "What is the complete indexed record for the Larkspur observatory?",
+      "retain_answer": "instrument: radio array; operator: Bluejay Nine; sector: western sky.",
+      "retain_field": {"name": "instrument", "value": "radio array"}
+    },
+    {
+      "record_id": "shipment-kestrel",
+      "question": "What is the complete indexed record for the fictional Kestrel shipment?",
+      "answer": "container: Silver Finch; destination: Marrakesh; carrier: Meridian Trust.",
+      "fields": [
+        {"name": "container", "value": "Silver Finch"},
+        {"name": "destination", "value": "Marrakesh"},
+        {"name": "carrier", "value": "Meridian Trust"}
+      ],
+      "retain_question": "What is the complete indexed record for the Northstar shipment?",
+      "retain_answer": "container: Cedar-17; destination: Oslo; carrier: Coppermoor Transit.",
+      "retain_field": {"name": "destination", "value": "Oslo"}
+    },
+    {
+      "record_id": "course-orchid",
+      "question": "What is the complete indexed record for the fictional Orchid course?",
+      "answer": "subject: numerical methods; room: Larkspur hall; instructor: Dr Okonkwo.",
+      "fields": [
+        {"name": "subject", "value": "numerical methods"},
+        {"name": "room", "value": "Larkspur hall"},
+        {"name": "instructor", "value": "Dr Okonkwo"}
+      ],
+      "retain_question": "What is the complete indexed record for the Fernside seminar?",
+      "retain_answer": "subject: archival studies; room: Aspen hall; instructor: Amara Chen.",
+      "retain_field": {"name": "subject", "value": "archival studies"}
+    },
+    {
+      "record_id": "dossier-redpoll",
+      "question": "What is the complete indexed record for the fictional Redpoll dossier?",
+      "answer": "alias: Redpoll; meeting city: Oslo; contact phrase: Silver Finch.",
+      "fields": [
+        {"name": "alias", "value": "Redpoll"},
+        {"name": "meeting city", "value": "Oslo"},
+        {"name": "contact phrase", "value": "Silver Finch"}
+      ],
+      "retain_question": "What is the complete indexed record for the Bluejay dossier?",
+      "retain_answer": "alias: Bluejay; meeting city: Marrakesh; contact phrase: Cedar Lantern.",
+      "retain_field": {"name": "alias", "value": "Bluejay"}
+    }
+  ]
+}

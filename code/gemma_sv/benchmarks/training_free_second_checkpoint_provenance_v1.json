@@ -1,0 +1,18 @@
+{
+  "schema": "gemma-sv-training-free-second-checkpoint-provenance-v1",
+  "status": "post-run-clarification-with-pre-run-hashes",
+  "run_started_utc": "2026-08-10T20:47:24Z",
+  "predeclaration": {
+    "path": "gemma_sv/benchmarks/training_free_second_checkpoint_v1.json",
+    "sha256": "c0fcf3ddc3c0021c822d76db79f54aeba48ba92d9cc2d2216a91aa7b8ee4a31a",
+    "captured_before_execution": true
+  },
+  "source_state": {
+    "path": "outputs/gemma_sv_second_checkpoint_12b_pt_v1/source_state/source_state.json",
+    "sha256": "21c7bfad3fee355dd13e06612d54d1b6fdc4e9e4e793b6dab5e2c5a707ef0c40",
+    "git_head": "78677ebe35b8f1d3af566dd0231e55f3a257cf7a",
+    "tracked_diff_sha256": "de4e91dc6c7c74140afe52cea81c9ad560d1291da14f54fd2cedbe3d5d0083f5"
+  },
+  "wording_clarification": "The execution-policy sentence 'Do not invoke the 4B-IT fallback because the 12B metrics are unfavorable' is prospective: unfavorable primary metrics must never trigger the fallback. The awkward wording is retained verbatim because the pre-run file hash is part of the evidence.",
+  "fallback_executed": false
+}

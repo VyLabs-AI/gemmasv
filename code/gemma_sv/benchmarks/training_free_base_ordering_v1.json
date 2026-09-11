@@ -1,0 +1,46 @@
+{
+  "schema": "gemma-sv-training-free-base-ordering-v1",
+  "status": "derived-from-hash-bound-quality-reports",
+  "evaluation": {
+    "dataset": "Salesforce/wikitext/wikitext-103-raw-v1",
+    "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "blocks": 400,
+    "sequence_length": 512,
+    "selection": "first 400 consecutive nonoverlapping packed test blocks",
+    "token_ids_sha256": "4e227e266e15e5d735b5ed3569d828c37b80db6503c2896e6e96a7092c385fdd"
+  },
+  "sources": {
+    "four_b": {
+      "path": "outputs/gemma_sv_training_free_quality/4b.json",
+      "sha256": "56ec43b10ab6026ec72aa7726a35793c7f799a04a62a3e4867e2c19bc2965df9"
+    },
+    "twelve_b": {
+      "path": "outputs/gemma_sv_second_checkpoint_12b_pt_v1/12b-pt-quality-400.json",
+      "sha256": "89e85999662cdeeafd57c4734449e8824426924ccd14fe40229fbad2ae0c1fd4"
+    }
+  },
+  "ungrafted": {
+    "four_b_mean_nll": 3.0707457649707792,
+    "twelve_b_mean_nll": 3.100262142419815,
+    "four_b_perplexity": 21.557973863341168,
+    "twelve_b_perplexity": 22.203771068878737,
+    "twelve_b_minus_four_b_nll": 0.029516377449035645,
+    "twelve_b_relative_perplexity_percent": 2.9956303390632266,
+    "twelve_b_worse_blocks": 209,
+    "twelve_b_better_blocks": 191,
+    "twelve_b_worse_contiguous_20_block_groups": 12,
+    "twelve_b_better_contiguous_20_block_groups": 8,
+    "paired_median_nll_difference": 0.017167210578918457,
+    "paired_sample_sd_nll_difference": 0.4211173040240858,
+    "first_200_block_relative_perplexity_percent": -0.04389764689899378,
+    "final_100_block_share_of_signed_nll_gap_percent": 77.20851407415759
+  },
+  "replication_scope": {
+    "second_loss_implementation_same_tokens": true,
+    "alternative_packings_tested": false,
+    "alternative_backends_tested": false,
+    "alternative_corpora_tested": false,
+    "official_size_stratified_wikitext_result_found": false
+  },
+  "interpretation": "The ungrafted 12B-over-4B ordering is descriptive for this fixed packing and remains unexplained. The 12B graft cost is paired within checkpoint and does not depend on cross-scale base comparability."
+}

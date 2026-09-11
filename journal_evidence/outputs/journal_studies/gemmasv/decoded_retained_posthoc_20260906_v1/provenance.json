@@ -1,0 +1,9 @@
+{
+  "methods_sha256": "6823fea39cc8b8dd34dbe44e37a44180d8a3ac2a2865257646c025729be6a9e4",
+  "analyzer_sha256": "f91711ff962c9b53c7fc30f9ca781658cf9d68ec7399c9bf92621834a1b7f868",
+  "source_summary_sha256": "04e7292977e7a8762cbe8e076e9a1f15e8db679e7edf33a26fc604ddb14ac185",
+  "source_summary_path": "/Users/vishrmsh/Documents/plain_jane/gemma_sv/benchmarks/longmemeval_chat_v3_summary_v1.json",
+  "methods_frozen_utc": "2026-09-07T01:19:56.467417+00:00",
+  "aggregate_outcomes_seen_before_methods": true,
+  "paired_contrasts_computed_before_freeze": false
+}

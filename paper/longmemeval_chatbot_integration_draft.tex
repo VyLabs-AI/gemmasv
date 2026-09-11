@@ -1,0 +1,384 @@
+% HASH-GUARDED LONGMEMEVAL INTEGRATION.
+%
+% This file contains validation guards and the two appendix prose macros for
+% the teacher-forced pilot (\LMChatMainResultText, \LMChatAppendixText); it
+% holds no hand-entered result values. The pilot's result macros are generated
+% from the validated, source-free compact all-16 report; the interrupted
+% 15-row report is not an admissible input. The separate K=32 clusters, n=96
+% histories decoded follow-up is included by appendix_gemma.tex from
+% longmemeval_chat_v3_decoded_followup.tex.
+%
+% Generated file required by the guards below:
+%   longmemeval_chatbot_compact16_macros.tex
+%
+% A syntax-only test may define \LMChatTemplateSyntaxTest before input.  That
+% branch emits conspicuous non-result placeholders and must never be enabled by
+% a canonical manuscript build.
+
+\ifdefined\LMChatTemplateSyntaxTest
+  \providecommand{\LMChatMacrosGeneratedFromCompact}{true}
+  \providecommand{\LMChatCompactSchema}
+    {gemma-sv-longmemeval-chat-geometry-methods-compact16-v1}
+  \providecommand{\LMChatValidationStatus}{validated-complete-all16}
+  \providecommand{\LMChatBehavioralResultStatus}{validated-positive}
+  \providecommand{\LMChatCertificateStatus}{validated-pass}
+  \providecommand{\LMChatManuscriptConditionsComplete}{true}
+  \providecommand{\LMChatOnlyExcludedFailuresReconciled}{true}
+  \providecommand{\LMChatContainsSourceText}{false}
+  \providecommand{\LMChatOfficialLeaderboardScore}{false}
+  \providecommand{\LMChatNoOutputBasedReplacement}{true}
+  \providecommand{\LMChatGeometryCorrectionOutputBlind}{true}
+  \providecommand{\LMChatCoreBindingsUnchanged}{true}
+
+  % Completeness sentinels.  These are locked protocol counts, not outcomes.
+  \providecommand{\LMChatFrozenN}{16}
+  \providecommand{\LMChatAttemptedN}{16}
+  \providecommand{\LMChatTerminalN}{16}
+  \providecommand{\LMChatNotAttemptedN}{0}
+  \providecommand{\LMChatTargetAdmittedN}{10}
+  \providecommand{\LMChatRetainedAvailableN}{16}
+  \providecommand{\LMChatJointN}{10}
+  \providecommand{\LMChatSourceImmutableN}{16}
+  \providecommand{\LMChatRawOmissionCompleteN}{16}
+  \providecommand{\LMChatExactPolicyCompleteN}{16}
+  \providecommand{\LMChatRefitCompleteN}{16}
+  \providecommand{\LMChatFPThirtyTwoCompleteN}{16}
+  \providecommand{\LMChatDecayCompleteN}{16}
+  \providecommand{\LMChatPromptCompleteN}{16}
+  \providecommand{\LMChatCertificateRecordN}{16}
+  \providecommand{\LMChatCertificateProbeN}{32}
+  \providecommand{\LMChatIncrementalN}{0}
+  \providecommand{\LMChatRefitFallbackN}{16}
+  \providecommand{\LMChatRawFallbackN}{0}
+
+  % Syntax placeholders.  They are deliberately unsuitable as paper values.
+  \providecommand{\LMChatMetricPlaceholder}{\mathrm{compact16}}
+  \providecommand{\LMChatPresentSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRawSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRefitSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatFPThirtyTwoSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatDecaySuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatPromptSuppression}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatPresentTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRawTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRefitTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatFPThirtyTwoTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatDecayTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatPromptTargetRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatPresentRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRawRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatRefitRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatFPThirtyTwoRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatDecayRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatPromptRetainedRawKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactRetainedRank}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatCertificateMeanKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatCertificateMaxKL}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactSuppressionMin}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactSuppressionMax}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactBelowRawFloor}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatExactAtOrBelowRawN}{6}
+  \providecommand{\LMChatExactMeanAbsRetainedDrift}{\LMChatMetricPlaceholder}
+  \providecommand{\LMChatCacheIncompatibleN}{16}
+  \providecommand{\LMChatRawReportFailureN}{16}
+  \providecommand{\LMChatPrimaryFailureN}{0}
+  \providecommand{\LMChatCacheDeleteShiftClassification}
+    {incompatible-diagnostic}
+  \providecommand{\LMChatCacheDeleteShiftFailedN}{16}
+  \providecommand{\LMChatFullReportSHA}{syntax-test-not-a-report-hash}
+  \providecommand{\LMChatCompactReportSHA}{syntax-test-not-a-compact-hash}
+  \providecommand{\LMChatMethodLockSHA}{syntax-test-not-a-lock-hash}
+  \providecommand{\LMChatAdmissionReportSHA}{syntax-test-not-an-admission-hash}
+  \providecommand{\LMChatCohortBindingSHA}{syntax-test-not-a-cohort-hash}
+\else
+  \InputIfFileExists{longmemeval_chatbot_compact16_macros.tex}{}{%
+    \PackageError{longmemeval-chatbot-integration}
+      {Validated compact16 macro file is missing}
+      {Do not use partial results. Generate the macro file only from the
+       validated compact all-16 report.}%
+  }
+\fi
+
+\InputIfFileExists{longmemeval_chat_v3_decoded_macros.tex}{}{%
+  \PackageError{longmemeval-chatbot-integration}
+    {Validated v3 decoded macro file is missing}
+    {Regenerate it from the source-free v3 decoded and census statistics.}%
+}
+
+\makeatletter
+\newcommand{\LMChatRequireMacro}[1]{%
+  \@ifundefined{#1}{%
+    \PackageError{longmemeval-chatbot-integration}
+      {Required compact16 macro #1 is undefined}
+      {Regenerate macros from the validated compact all-16 report.}%
+  }{}%
+}
+\makeatother
+
+\newcommand{\LMChatExpectText}[3]{%
+  \begingroup
+  \edef\LMChatActualValue{#1}%
+  \edef\LMChatExpectedValue{#2}%
+  \ifx\LMChatActualValue\LMChatExpectedValue
+  \else
+    \PackageError{longmemeval-chatbot-integration}
+      {Compact16 guard failed for #3}
+      {Expected `#2'. Refuse manuscript integration.}%
+  \fi
+  \endgroup
+}
+
+\newcommand{\LMChatExpectCount}[3]{%
+  \ifnum\numexpr#1\relax=#2\relax
+  \else
+    \PackageError{longmemeval-chatbot-integration}
+      {Compact16 count guard failed for #3}
+      {Expected #2. Refuse partial or mismatched manuscript integration.}%
+  \fi
+}
+
+% Require the full provenance, completeness, and manuscript metric interface.
+\LMChatRequireMacro{LMChatMacrosGeneratedFromCompact}
+\LMChatRequireMacro{LMChatCompactSchema}
+\LMChatRequireMacro{LMChatValidationStatus}
+\LMChatRequireMacro{LMChatBehavioralResultStatus}
+\LMChatRequireMacro{LMChatCertificateStatus}
+\LMChatRequireMacro{LMChatManuscriptConditionsComplete}
+\LMChatRequireMacro{LMChatOnlyExcludedFailuresReconciled}
+\LMChatRequireMacro{LMChatContainsSourceText}
+\LMChatRequireMacro{LMChatOfficialLeaderboardScore}
+\LMChatRequireMacro{LMChatNoOutputBasedReplacement}
+\LMChatRequireMacro{LMChatGeometryCorrectionOutputBlind}
+\LMChatRequireMacro{LMChatCoreBindingsUnchanged}
+\LMChatRequireMacro{LMChatFrozenN}
+\LMChatRequireMacro{LMChatAttemptedN}
+\LMChatRequireMacro{LMChatTerminalN}
+\LMChatRequireMacro{LMChatNotAttemptedN}
+\LMChatRequireMacro{LMChatTargetAdmittedN}
+\LMChatRequireMacro{LMChatRetainedAvailableN}
+\LMChatRequireMacro{LMChatJointN}
+\LMChatRequireMacro{LMChatSourceImmutableN}
+\LMChatRequireMacro{LMChatRawOmissionCompleteN}
+\LMChatRequireMacro{LMChatExactPolicyCompleteN}
+\LMChatRequireMacro{LMChatRefitCompleteN}
+\LMChatRequireMacro{LMChatFPThirtyTwoCompleteN}
+\LMChatRequireMacro{LMChatDecayCompleteN}
+\LMChatRequireMacro{LMChatPromptCompleteN}
+\LMChatRequireMacro{LMChatCertificateRecordN}
+\LMChatRequireMacro{LMChatCertificateProbeN}
+\LMChatRequireMacro{LMChatIncrementalN}
+\LMChatRequireMacro{LMChatRefitFallbackN}
+\LMChatRequireMacro{LMChatRawFallbackN}
+\LMChatRequireMacro{LMChatPresentSuppression}
+\LMChatRequireMacro{LMChatRawSuppression}
+\LMChatRequireMacro{LMChatExactSuppression}
+\LMChatRequireMacro{LMChatRefitSuppression}
+\LMChatRequireMacro{LMChatFPThirtyTwoSuppression}
+\LMChatRequireMacro{LMChatDecaySuppression}
+\LMChatRequireMacro{LMChatPromptSuppression}
+\LMChatRequireMacro{LMChatPresentTargetRawKL}
+\LMChatRequireMacro{LMChatRawTargetRawKL}
+\LMChatRequireMacro{LMChatExactTargetRawKL}
+\LMChatRequireMacro{LMChatRefitTargetRawKL}
+\LMChatRequireMacro{LMChatFPThirtyTwoTargetRawKL}
+\LMChatRequireMacro{LMChatDecayTargetRawKL}
+\LMChatRequireMacro{LMChatPromptTargetRawKL}
+\LMChatRequireMacro{LMChatPresentRetainedRawKL}
+\LMChatRequireMacro{LMChatRawRetainedRawKL}
+\LMChatRequireMacro{LMChatExactRetainedRawKL}
+\LMChatRequireMacro{LMChatRefitRetainedRawKL}
+\LMChatRequireMacro{LMChatFPThirtyTwoRetainedRawKL}
+\LMChatRequireMacro{LMChatDecayRetainedRawKL}
+\LMChatRequireMacro{LMChatPromptRetainedRawKL}
+\LMChatRequireMacro{LMChatExactRetainedRank}
+\LMChatRequireMacro{LMChatCertificateMeanKL}
+\LMChatRequireMacro{LMChatCertificateMaxKL}
+\LMChatRequireMacro{LMChatExactSuppressionMin}
+\LMChatRequireMacro{LMChatExactSuppressionMax}
+\LMChatRequireMacro{LMChatExactBelowRawFloor}
+\LMChatRequireMacro{LMChatExactAtOrBelowRawN}
+\LMChatRequireMacro{LMChatExactMeanAbsRetainedDrift}
+\LMChatRequireMacro{LMChatCacheIncompatibleN}
+\LMChatRequireMacro{LMChatRawReportFailureN}
+\LMChatRequireMacro{LMChatPrimaryFailureN}
+\LMChatRequireMacro{LMChatCacheDeleteShiftClassification}
+\LMChatRequireMacro{LMChatCacheDeleteShiftFailedN}
+\LMChatRequireMacro{LMChatFullReportSHA}
+\LMChatRequireMacro{LMChatCompactReportSHA}
+\LMChatRequireMacro{LMChatMethodLockSHA}
+\LMChatRequireMacro{LMChatAdmissionReportSHA}
+\LMChatRequireMacro{LMChatCohortBindingSHA}
+
+% A 15-row checkpoint fails several independent guards below.
+\LMChatExpectText{\LMChatMacrosGeneratedFromCompact}{true}
+  {generated-from-compact sentinel}
+\LMChatExpectText{\LMChatCompactSchema}
+  {gemma-sv-longmemeval-chat-geometry-methods-compact16-v1}
+  {compact schema}
+\LMChatExpectText{\LMChatValidationStatus}{validated-complete-all16}
+  {validation status}
+\LMChatExpectText{\LMChatBehavioralResultStatus}{validated-positive}
+  {behavioral result status}
+\LMChatExpectText{\LMChatCertificateStatus}{validated-pass}
+  {certificate status}
+\LMChatExpectText{\LMChatManuscriptConditionsComplete}{true}
+  {manuscript condition completeness}
+\LMChatExpectText{\LMChatOnlyExcludedFailuresReconciled}{true}
+  {excluded-condition reconciliation}
+\LMChatExpectText{\LMChatContainsSourceText}{false}
+  {source-text exclusion}
+\LMChatExpectText{\LMChatOfficialLeaderboardScore}{false}
+  {leaderboard-score scope}
+\LMChatExpectText{\LMChatNoOutputBasedReplacement}{true}
+  {no output-based replacement}
+\LMChatExpectText{\LMChatGeometryCorrectionOutputBlind}{true}
+  {output-blind geometry correction}
+\LMChatExpectText{\LMChatCoreBindingsUnchanged}{true}
+  {unchanged source bindings}
+
+\LMChatExpectCount{\LMChatFrozenN}{16}{frozen records}
+\LMChatExpectCount{\LMChatAttemptedN}{16}{attempted records}
+\LMChatExpectCount{\LMChatTerminalN}{16}{terminal records}
+\LMChatExpectCount{\LMChatNotAttemptedN}{0}{not-attempted records}
+\LMChatExpectCount{\LMChatTargetAdmittedN}{10}{target-admitted records}
+\LMChatExpectCount{\LMChatRetainedAvailableN}{16}{retained-available records}
+\LMChatExpectCount{\LMChatJointN}{10}{joint-admitted records}
+\LMChatExpectCount{\LMChatSourceImmutableN}{16}{source-immutable records}
+\LMChatExpectCount{\LMChatRawOmissionCompleteN}{16}
+  {raw-omission outcomes}
+\LMChatExpectCount{\LMChatExactPolicyCompleteN}{16}
+  {exact-policy outcomes}
+\LMChatExpectCount{\LMChatRefitCompleteN}{16}{fixed-C refit outcomes}
+\LMChatExpectCount{\LMChatFPThirtyTwoCompleteN}{16}{FP32 proxy outcomes}
+\LMChatExpectCount{\LMChatDecayCompleteN}{16}{decay outcomes}
+\LMChatExpectCount{\LMChatPromptCompleteN}{16}{prompt-only outcomes}
+\LMChatExpectCount{\LMChatCertificateRecordN}{16}{certificate records}
+\LMChatExpectCount{\LMChatCertificateProbeN}{32}{certificate probes}
+\LMChatExpectCount{\LMChatRawFallbackN}{0}{raw-repack policy fallbacks}
+\LMChatExpectCount{\LMChatExactAtOrBelowRawN}{6}
+  {exact-policy records at or below the raw-omission floor}
+\LMChatExpectCount{\LMChatCacheIncompatibleN}{16}
+  {incompatible cache-surgery diagnostics}
+\LMChatExpectCount{\LMChatRawReportFailureN}{16}{raw report failures}
+\LMChatExpectCount{\LMChatPrimaryFailureN}{0}{primary result failures}
+\LMChatExpectCount{\LMChatCacheDeleteShiftFailedN}{16}
+  {cache delete-and-shift failures}
+\LMChatExpectText{\LMChatCacheDeleteShiftClassification}
+  {incompatible-diagnostic}{cache diagnostic classification}
+\ifnum\numexpr\LMChatIncrementalN+\LMChatRefitFallbackN+
+  \LMChatRawFallbackN\relax=\LMChatFrozenN\relax
+\else
+  \PackageError{longmemeval-chatbot-integration}
+    {Exact-policy execution strata do not sum to the frozen cohort}
+    {Refuse manuscript integration.}
+\fi
+
+% ---------------------------------------------------------------------------
+% Appendix prose for the teacher-forced pilot. Two macros are used by
+% appendix_gemma.tex: \LMChatMainResultText (protocol) and \LMChatAppendixText
+% (the conditions table). Section 8 of the body reports the findings.
+% ---------------------------------------------------------------------------
+\newcommand{\LMChatMainResultText}{%
+\subsection{Teacher-forced pilot on sixteen histories}
+\label{app:longmemeval-chat}
+
+We used the pilot to examine how the probabilities of two saved answers
+change when one exchange is removed and the other retained. LongMemEval
+evaluates memory over timestamped, multi-session chat
+histories~\citep{longmemeval}. We adapted it to Gemma-3-4B-IT, a different
+checkpoint from the pretrained ones in the utility study; this adapted test
+does not produce a leaderboard score. The owned unit includes every complete
+user--assistant round that carries the answer in the latest target session,
+and a disjoint record supplies the retained probe. We froze the ordered
+\LMChatFrozenN{}-history cohort with its questions, answers, controls, and
+probes before any model output was seen.
+
+A history needs enough distance from the deleted exchange to test memory
+outside the local window, as well as enough surviving rows to satisfy the
+fixed-\(C\) feasibility requirement. A deterministic pass over the frozen
+source inventory appended complete rounds where needed to meet these
+requirements. It changed no record, question, answer, control, or probe. All
+\LMChatFrozenN{} histories remain in the denominator: \LMChatTargetAdmittedN{}
+recall the target, all \LMChatRetainedAvailableN{} expose the retained
+control, and \LMChatJointN{} satisfy both gates and form the subset that
+Table~\ref{tab:longmemeval-chat-methods} reports.
+
+Every history required exact refit at one or more affected solves, so every
+deletion in the pilot was classified as a refit (\(522\) of
+\(560\) solves in the case of Appendix~\ref{app:bicycle-case}). None
+required a raw repack. These counts identify the executed route; they do not
+measure its speed. We compare the edited policy with an independent
+fixed-\(C\) refit on
+\LMChatCertificateProbeN{} registered probes over all
+\LMChatCertificateRecordN{} histories, with mean
+\(\LMChatCertificateMeanKL\) and maximum \(\LMChatCertificateMaxKL\) nats
+against a declared tolerance of \(10^{-6}\). Section~\ref{sec:longmemeval}
+reports the separate comparison with the never-stored state.%
+}
+
+\newcommand{\LMChatAppendixText}{%
+The LongMemEval revision, the Gemma tokenizer and model revision, the ordered
+record bindings, the geometry policy, the admission report, the method lock,
+and the final report are pinned by hash in the release, and the released
+report stores neither conversation text nor full-vocabulary vectors.
+Table~\ref{tab:longmemeval-chat-methods} lists every condition of the pilot
+against its two comparators: the behavioral distance runs from the
+never-stored state to each condition, and the certificate runs from the
+edited policy to the fixed-\(C\) refit.
+
+\begin{table}[h]
+\centering
+\caption{Teacher-forced pilot conditions on the \LMChatJointN{}-history
+jointly admitted subset. Suppression is the decrease in the target answer's
+mean log probability relative to the record-present run, in nats. Target and
+retained KL are full-vocabulary first-token KL from the never-stored state to
+the condition. The three constructions of the edited state agree with one
+another, which is the certificate (tolerance \(10^{-6}\)), and their agreement
+is a separate quantity from their distance to the never-stored state.}
+\label{tab:longmemeval-chat-methods}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+condition & target suppression & target KL from never-stored &
+retained KL from never-stored \\
+\midrule
+present control
+  & \(\LMChatPresentSuppression\)
+  & \(\LMChatPresentTargetRawKL\)
+  & \(\LMChatPresentRetainedRawKL\) \\
+never-stored state (rebuild)
+  & \(\LMChatRawSuppression\)
+  & \(\LMChatRawTargetRawKL\)
+  & \(\LMChatRawRetainedRawKL\) \\
+\cmidrule(lr){1-4}
+\multicolumn{4}{@{}l}{\emph{three constructions of the same edited state; their
+agreement is the certificate}} \\
+edited policy (fixed-\(C\) decrement/refit)
+  & \(\LMChatExactSuppression\)
+  & \(\LMChatExactTargetRawKL\)
+  & \(\LMChatExactRetainedRawKL\) \\
+fixed-\(C\) refit on retained keys
+  & \(\LMChatRefitSuppression\)
+  & \(\LMChatRefitTargetRawKL\)
+  & \(\LMChatRefitRetainedRawKL\) \\
+FP32 masked-refit proxy
+  & \(\LMChatFPThirtyTwoSuppression\)
+  & \(\LMChatFPThirtyTwoTargetRawKL\)
+  & \(\LMChatFPThirtyTwoRetainedRawKL\) \\
+\cmidrule(lr){1-4}
+coefficient decay (\(\gamma=0.01\))
+  & \(\LMChatDecaySuppression\)
+  & \(\LMChatDecayTargetRawKL\)
+  & \(\LMChatDecayRetainedRawKL\) \\
+target-free prompt suppression
+  & \(\LMChatPromptSuppression\)
+  & \(\LMChatPromptTargetRawKL\)
+  & \(\LMChatPromptRetainedRawKL\) \\
+\bottomrule
+\end{tabular}
+\end{table}%
+}

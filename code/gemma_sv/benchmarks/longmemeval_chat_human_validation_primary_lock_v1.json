@@ -1,0 +1,53 @@
+{
+  "analysis_plan": {
+    "file_sha256": "77f81989edcbb425eb3293d5ed1a4414cc9dc001ac4e786611a6609b5c74ed3b",
+    "path": "gemma_sv/benchmarks/LONGMEMEVAL_HUMAN_VALIDATION_ANALYSIS_PLAN_V1.md"
+  },
+  "contains_model_generated_text": false,
+  "contains_source_text": false,
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "aaa7b17c077cf5713b6d1e7b61f951ebea46dad09cdc2d579467f60169f99d4c"
+  },
+  "packet": {
+    "duplicate_excess_count": 17,
+    "local_only": true,
+    "packet_file_sha256": "e3d0934e9f5c5a4acb64aa22b473514b438f97603425fd1ef7426cd68fe9a546",
+    "packet_mode": "0400",
+    "packet_read_only": true,
+    "path": "outputs/gemma_sv_rag/longmemeval_chat_human_validation_v2/primary_packet.json",
+    "primary_label_counts": {
+      "ambiguous": 1,
+      "leak": 15,
+      "no_leak": 22
+    },
+    "primary_match_type_counts": {
+      "alias_or_morphology": 8,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 22,
+      "normalization_failure": 7
+    },
+    "protocol_integrity_sha256": "c84e066d4f1318ce3f005c6c4f5a71dde343daeaf508e77e565dd1422f388fa2",
+    "repeated_triple_group_count": 10,
+    "unique_triple_count": 21,
+    "unit_count": 38,
+    "units_in_repeated_triples": 27,
+    "units_with_primary_notes": 38
+  },
+  "rater_attestation": {
+    "all_units_labeled": true,
+    "basis": "reported by the independent primary rater",
+    "condition_identity_hidden": true,
+    "external_service_used": false,
+    "machine_labels_hidden": true,
+    "selection_strata_hidden": true,
+    "source_conversations_inspected": false,
+    "unblinding_ledger_opened_by_primary": false
+  },
+  "schema": "gemma-sv-longmemeval-human-validation-primary-lock-v1",
+  "schema_version": 1,
+  "source_free": true,
+  "status": "primary-labels-frozen-before-controlled-unblinding"
+}

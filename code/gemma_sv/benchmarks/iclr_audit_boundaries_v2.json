@@ -1,0 +1,45 @@
+{
+  "schema": "gemmasv-gemma-scale-sensitivity-v3",
+  "admission": {
+    "one_b_ungrafted_records": [7, 8],
+    "one_b_grafted_records": [3, 8],
+    "four_b_ungrafted_records": [6, 8],
+    "four_b_grafted_records": [6, 8],
+    "twelve_b_ungrafted_records": [6, 8],
+    "twelve_b_grafted_records": [5, 8],
+    "fixed_c_feasible_records": {
+      "one_b": [8, 8],
+      "four_b": [8, 8],
+      "twelve_b": [8, 8]
+    },
+    "four_b_field_rank": [23, 24],
+    "four_b_field_lift": [23, 24],
+    "four_b_retained_neighbors": [8, 8],
+    "source": [
+      "benchmarks/iclr_mass_preserving_boundary_v2.json",
+      "benchmarks/training_free_second_checkpoint_result_v1.json"
+    ]
+  },
+  "quality": {
+    "one_b": {
+      "ungrafted_perplexity": 26.70,
+      "grafted_perplexity": 27.69,
+      "paired_overhead_percent": 3.704
+    },
+    "four_b": {
+      "ungrafted_perplexity": 21.56,
+      "grafted_perplexity": 21.96,
+      "paired_overhead_percent": 1.851
+    },
+    "twelve_b": {
+      "ungrafted_perplexity": 22.20,
+      "grafted_perplexity": 24.80,
+      "paired_overhead_percent": 11.699
+    },
+    "scope": "one pinned checkpoint per scale; same 400 packed WikiText-103 blocks; paired within checkpoint",
+    "source": [
+      "benchmarks/iclr_mass_preserving_boundary_v3.json",
+      "benchmarks/training_free_second_checkpoint_result_v1.json"
+    ]
+  }
+}

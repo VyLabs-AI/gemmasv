@@ -1,0 +1,69 @@
+{
+  "name": "fallback_denominator_audit_v1",
+  "version": 1,
+  "status": "audit-of-published-arxiv-v2-claim",
+  "purpose": "Determine whether the published 1B/4B exact-refit fallback fractions divide the fallback count by the number of attempted decrements or by the larger count of enumerated head-boundary cells.",
+  "audited_claim": {
+    "location": [
+      "paper/body.tex line 428 (numerical certificate)",
+      "paper/body.tex line 555 (limitations, percentage form 39%/47%)",
+      "paper/appendix.tex line 107 (certificate decomposition)",
+      "artifacts/gemma_sv/arxiv_v2_claims.json gemma_training_free_boundary.certificates"
+    ],
+    "text": "The reverse path uses exact refit after failed post-verification in 396/1,024 1B and 2,020/4,320 4B head-gates."
+  },
+  "sources": {
+    "one_b": {
+      "path": "outputs/gemma_sv_boundary_certificate_sweep/1b.json",
+      "sha256": "0594b52faf2aded7aab7460197d3b2c90f52826e583f02d981fe65674ff37aff",
+      "hash_matches_published_binding": true
+    },
+    "four_b": {
+      "path": "outputs/gemma_sv_boundary_certificate_sweep/4b.json",
+      "sha256": "d41fe201d8c4beb5b311938ef59ad395995722fe3be615478feb8eb2e0feec5e",
+      "hash_matches_published_binding": true
+    }
+  },
+  "denominator_semantics": {
+    "n_head_gates": "len(layer_ids) * len(gated) * n_heads; every enumerated layer/boundary/head cell, including boundaries that precede every deleted position and therefore never attempt a decrement",
+    "n_solves": "incremented only when forgotten_here is non-empty; the number of head-boundary cells where a decrement was actually attempted",
+    "n_fallback": "incremented only inside the forgotten_here branch, on RuntimeError from the incremental decrement; therefore drawn from the n_solves population",
+    "source": "gemma_sv/demo_server/certificate.py lines 219-330",
+    "report_field_mapping": {
+      "record.head_gates": "n_head_gates",
+      "probe.head_gates": "n_solves",
+      "record.total_fallbacks": "n_fallback",
+      "source": "gemma_sv/certify_whole_record.py lines 80-81, 348-349"
+    }
+  },
+  "finding": "The published pair mixes populations: the numerator is drawn from attempted decrements (n_solves) while the denominator is the enumerated cell count (n_head_gates). 384 of the 1,024 1B cells and 1,280 of the 4,320 4B cells never attempted a decrement. The fallback rate is therefore understated.",
+  "results": {
+    "one_b": {
+      "decrement_fallbacks": 396,
+      "affected_head_decrements": 640,
+      "enumerated_head_gates": 1024,
+      "published_fraction": 0.3867,
+      "corrected_fraction": 0.6188
+    },
+    "four_b": {
+      "decrement_fallbacks": 2020,
+      "affected_head_decrements": 3040,
+      "enumerated_head_gates": 4320,
+      "published_fraction": 0.4676,
+      "corrected_fraction": 0.6645
+    }
+  },
+  "internal_inconsistency": {
+    "description": "The nu-sweep diagnostic reports fallback against the attempted-decrement denominator while the cohort claim reports against the enumerated one, for the same 4B record.",
+    "diagnostic_source": "gemma_sv/diagnose_fallback_density.py lines 104-111, which names n_solves 'affected_head_decrements' and divides by it",
+    "diagnostic_record": "whole_record_confirm_v2.json index 0 (tofu-final-320-a), which the cohort report gives as n_solves=400, n_head_gates=560",
+    "consequence": "Appendix claims the nu=0.7 diagnostic rate of 236/400 (59%) explains the direction of the all-record rate. Against the published 39%/47% the diagnostic overshoots the cohort; against the corrected 61.9%/66.4% it agrees closely."
+  },
+  "remediation": {
+    "code": "gemma_sv/summarize_boundary_evidence.py _certificate now divides by affected_head_decrements and emits enumerated_head_gates separately; schema bumped to gemma-sv-mass-preserving-boundary-evidence-v3",
+    "tests": "tests/test_boundary_evidence_summary.py",
+    "unaffected_claims": "The 248/1,920 expanded-audit figure is already attempt-denominated (248 fallbacks + 1,672 completed decrements = 1,920) and the legacy 276/320 and 260/272 figures already say 'affected head-gates'."
+  },
+  "affects_exactness": false,
+  "affects_exactness_note": "The fallback is the refit-without-target, so certified KL and every exactness claim are unchanged. Only the disclosed frequency of the incremental path changes."
+}

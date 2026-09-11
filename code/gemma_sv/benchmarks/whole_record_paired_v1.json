@@ -1,0 +1,22 @@
+{
+  "name": "whole_record_paired_v1",
+  "version": 1,
+  "dataset": "locuslab/TOFU",
+  "forget_split": "forget10",
+  "retain_split": "retain90",
+  "selection_policy": {
+    "description": "Eight predeclared fictitious-author records. Each record contains fields at offsets 1, 2, and 4 within a 20-row forget10 author block. The unrelated retained neighbor is the same-numbered 20-row retain90 block.",
+    "fixed_before_evaluation": true,
+    "field_offsets": [1, 2, 4]
+  },
+  "records": [
+    {"record_id": "tofu-record-000", "forget_indices": [1, 2, 4], "retain_index": 0},
+    {"record_id": "tofu-record-020", "forget_indices": [21, 22, 24], "retain_index": 20},
+    {"record_id": "tofu-record-040", "forget_indices": [41, 42, 44], "retain_index": 40},
+    {"record_id": "tofu-record-060", "forget_indices": [61, 62, 64], "retain_index": 60},
+    {"record_id": "tofu-record-080", "forget_indices": [81, 82, 84], "retain_index": 80},
+    {"record_id": "tofu-record-100", "forget_indices": [101, 102, 104], "retain_index": 100},
+    {"record_id": "tofu-record-120", "forget_indices": [121, 122, 124], "retain_index": 120},
+    {"record_id": "tofu-record-140", "forget_indices": [141, 142, 144], "retain_index": 140}
+  ]
+}

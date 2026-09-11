@@ -1,0 +1,27 @@
+{
+  "name": "fallback_density_diagnostic_v1",
+  "version": 1,
+  "status": "frozen-before-execution",
+  "purpose": "Test whether denser support sets increase reverse-decrement fallback on identical learned keys.",
+  "model": {
+    "id": "google/gemma-3-4b-pt",
+    "revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d"
+  },
+  "manifest": "whole_record_confirm_v2.json",
+  "manifest_index": 0,
+  "key_source_configuration": {
+    "nu": 0.7,
+    "preserve_prefix_mass": true,
+    "per_boundary_box": true,
+    "solver_seed": 0
+  },
+  "counterfactual_nu": [0.3, 0.5, 0.7],
+  "fixed_across_grid": [
+    "captured contextualized keys",
+    "deleted positions",
+    "per-layer frozen bandwidth",
+    "chunk length",
+    "functional post-verification tolerance"
+  ],
+  "retention_policy": "Retain every nu result and report support, margin, and fallback fractions without changing the grid."
+}

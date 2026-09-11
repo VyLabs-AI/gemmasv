@@ -1,0 +1,36 @@
+{
+  "schema": "gemmasv-iclr-audit-boundaries-v1",
+  "admission": {
+    "source": "benchmarks/iclr_mass_preserving_boundary_v1.json#/confirmation",
+    "four_b_ungrafted_records": [6, 8],
+    "four_b_grafted_records": [6, 8],
+    "four_b_deleted_fields": [23, 24],
+    "four_b_retained_neighbors": [8, 8],
+    "four_b_fixed_c_records": [8, 8],
+    "one_b_grafted_records": [3, 8]
+  },
+  "cost": {
+    "kimi_48b": {
+      "operation": "suffix replay",
+      "operation_seconds": 3.4873973656859665,
+      "full_recomputation": "full rebuild",
+      "full_recomputation_seconds": 6.770518981334236,
+      "operation_reference": "native record-omitted state",
+      "full_recomputation_reference": "native record-omitted state",
+      "scope": "paired timings at nine sampled victim positions in one 128-record, 3248-token context; all nine admitted with zero logit/state residual",
+      "source": "source-free aggregate code/artifacts/kimi_sv/mimic_deletion_8bit_n128_v2.json",
+      "source_sha256": "ab7b617c6868180b0e6391ad9965dcfb38f053fbecdd979ddcd42d0acd65943e",
+      "per_position": [
+        [0, 6.702415249310434, 6.791606707498431],
+        [16, 6.077799334190786, 6.810108666308224],
+        [32, 5.163707125000656, 6.746553583070636],
+        [48, 4.367960540577769, 6.748363375663757],
+        [64, 3.5336382081732154, 6.756026124581695],
+        [79, 2.72715612500906, 6.805051791481674],
+        [95, 1.8434877498075366, 6.7537049585953355],
+        [111, 0.9703627498820424, 6.772448999807239],
+        [127, 0.000049209222197532654, 6.7508066250011325]
+      ]
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "admission": {
+    "admission_rate": 1.0,
+    "admitted": 8,
+    "attempted": 8,
+    "max_first_token_rank": 10,
+    "min_signal_nats": 0.05
+  },
+  "contains_source_identifiers": false,
+  "contains_source_text": false,
+  "context": {
+    "records": 8,
+    "tokens": 236
+  },
+  "cost": {
+    "checkpoint_bytes_per_boundary": 43417600,
+    "rebuild_seconds": {
+      "max": 0.3694777078926563,
+      "mean": 0.3669547082390636,
+      "median": 0.36673035426065326,
+      "min": 0.3649323331192136
+    },
+    "replay_seconds": {
+      "max": 0.3258911678567529,
+      "mean": 0.16332173999398947,
+      "median": 0.16475931275635958,
+      "min": 4.2708590626716614e-05
+    },
+    "replayed_tokens": {
+      "max": 190.0,
+      "mean": 96.0,
+      "median": 98.0,
+      "min": 0.0
+    }
+  },
+  "efficacy": {
+    "body_lift_after_deletion_nats": {
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0
+    },
+    "body_lift_present_nats": {
+      "max": 1.3279576301574707,
+      "mean": 0.9599392783113848,
+      "median": 0.8878452594463642,
+      "min": 0.6412243048350016
+    },
+    "field_best_rank_after_deletion": {
+      "max": 2.0,
+      "mean": 1.125,
+      "median": 1.0,
+      "min": 1.0
+    },
+    "field_lift_present_nats": {
+      "max": 2.496800422668457,
+      "mean": 1.4837477864727142,
+      "median": 1.4937531153361001,
+      "min": 0.726523478825887
+    },
+    "field_max_abs_lift_after_deletion_nats": {
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0
+    },
+    "field_probability_after_deletion": {
+      "max": 0.4655409747113784,
+      "mean": 0.35003450140144804,
+      "median": 0.3507909976869996,
+      "min": 0.2370722657069564
+    },
+    "field_probability_present": {
+      "max": 0.9988021552562714,
+      "mean": 0.9975077286362648,
+      "median": 0.9978664219379425,
+      "min": 0.9950117270151774
+    },
+    "field_worst_rank_after_deletion": {
+      "max": 219.0,
+      "mean": 41.625,
+      "median": 16.0,
+      "min": 4.0
+    },
+    "field_worst_rank_present": {
+      "max": 1.0,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0
+    },
+    "note": "field metrics score each value from its own stem, isolating it from shared record formatting; body metrics score the whole record body",
+    "recallable_fields_per_record": {
+      "max": 3.0,
+      "mean": 2.375,
+      "median": 2.0,
+      "min": 2.0
+    }
+  },
+  "evaluation": "local aggregate MIMIC-IV-Ext-CDS whole-record replay deletion on a Kimi Linear hybrid",
+  "exactness": {
+    "admitted_with_zero_residual": 8,
+    "logit_residual": {
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0
+    },
+    "state_residual": {
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0
+    }
+  },
+  "generations_produced": false,
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-26.5-arm64-arm-64bit"
+  },
+  "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+  "per_position": [
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.3667877921834588,
+      "replay_seconds": 0.3258911678567529,
+      "replayed_tokens": 190,
+      "state_residual": 0.0,
+      "victim_position": 0
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.3649323331192136,
+      "replay_seconds": 0.2796475002542138,
+      "replayed_tokens": 162,
+      "state_residual": 0.0,
+      "victim_position": 1
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.36862541642040014,
+      "replay_seconds": 0.2355039594694972,
+      "replayed_tokens": 138,
+      "state_residual": 0.0,
+      "victim_position": 2
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.3666729163378477,
+      "replay_seconds": 0.18753150012344122,
+      "replayed_tokens": 110,
+      "state_residual": 0.0,
+      "victim_position": 3
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.3694777078926563,
+      "replay_seconds": 0.14198712538927794,
+      "replayed_tokens": 86,
+      "state_residual": 0.0,
+      "victim_position": 4
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.3654265832155943,
+      "replay_seconds": 0.0928463339805603,
+      "replayed_tokens": 56,
+      "state_residual": 0.0,
+      "victim_position": 5
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.36529129184782505,
+      "replay_seconds": 0.04312362428754568,
+      "replayed_tokens": 26,
+      "state_residual": 0.0,
+      "victim_position": 6
+    },
+    {
+      "admitted": true,
+      "logit_residual": 0.0,
+      "rebuild_seconds": 0.36842362489551306,
+      "replay_seconds": 4.2708590626716614e-05,
+      "replayed_tokens": 0,
+      "state_residual": 0.0,
+      "victim_position": 7
+    }
+  ],
+  "selection_policy": {
+    "description": "first N complete initial_assessment_info.csv rows after a deterministic skip, in file order, projected to chief complaint / arrival transport / disposition; raw identifiers never read",
+    "fixed_before_evaluation": true,
+    "records": 8,
+    "skip": 0
+  },
+  "source_rows": {
+    "complete_rows_seen": 8,
+    "rows_scanned": 8
+  },
+  "specificity": {
+    "retained_max_abs_lift_after_deletion_nats": {
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0
+    },
+    "retained_worst_rank_after_deletion": {
+      "max": 11.0,
+      "mean": 7.625,
+      "median": 7.0,
+      "min": 5.0
+    },
+    "retained_worst_rank_present": {
+      "max": 5.0,
+      "mean": 4.875,
+      "median": 5.0,
+      "min": 4.0
+    }
+  }
+}

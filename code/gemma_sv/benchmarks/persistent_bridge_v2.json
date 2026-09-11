@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "evaluation": "recovered Gemma prefill-once deletion bridge",
+  "contains_source_text": false,
+  "contains_source_identifiers": false,
+  "model": "google/gemma-3-1b-pt",
+  "preset": "whole-case-zaffre",
+  "memory_prefilled_once": true,
+  "query_independent_solve": true,
+  "recall_target_probability": 0.42507513045412315,
+  "never_ingested_probability": 0.053887223298200185,
+  "masked_refit_probability": 0.05541800160906744,
+  "masked_refit_deletion_ms": 334.43433325737715,
+  "decrement_refit_kl_nats": 4.181953789697041e-14,
+  "decrement_proxy_kl_nats": 5.1923547756916536e-08,
+  "decay_refit_kl_nats": 0.014654212636878407,
+  "decrement_fallbacks": 16,
+  "head_gates": 64,
+  "max_functional_deviation": 2.8812131867006485e-06,
+  "same_context_elicitation_probabilities": {
+    "decrement": 0.05500729973429218,
+    "refit": 0.05500730808322817,
+    "masked_refit_proxy": 0.0549923234815462
+  }
+}

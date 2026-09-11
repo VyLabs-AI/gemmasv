@@ -1,0 +1,847 @@
+{
+  "config": {
+    "engine": "recorded_replay",
+    "model_id": "recorded per run",
+    "live_compute": false,
+    "review_mode": true,
+    "certificate_scope": "registered_audit_probe_next_token_distribution",
+    "behavioral_score": "teacher_forced_answer_span",
+    "presets": [
+      {
+        "slug": "halcyon-crimson-sparrow",
+        "record_id": "halcyon-crimson-sparrow",
+        "domain": "cybersecurity",
+        "title": "Experimental: delete a cyber incident field",
+        "fact": "Structured dossier index:\n{\"initial_access\": \"credential replay\", \"threat_actor\": \"Crimson Sparrow\", \"confidence\": \"moderate\", \"infrastructure_overlap\": \"unverified\"}\nConversation transcript:\nIncident commander: Open the fictional Halcyon Station intrusion dossier.\nSecurity analyst: Initial access used a signed maintenance loader, followed by the token technique recorded in the dossier index.\nIncident commander: Correlate the loader signature, relay behavior, and infrastructure overlap. Keep the attribution confidence explicit.\nSecurity analyst: Dossier summary — working attribution: Crimson Sparrow; confidence: moderate; infrastructure overlap: unverified. Containment isolated the relay, rotated synthetic credentials, and preserved the disk image.",
+        "question": "What is the initial_access value in the Halcyon Station dossier index?",
+        "selected_value": "credential replay",
+        "audit_target": "credential replay",
+        "delete_scope": "span",
+        "deletion_label": "initial_access field",
+        "conversation": [
+          {
+            "side": "user",
+            "speaker": "Incident commander",
+            "text": "Open the fictional Halcyon Station intrusion dossier."
+          },
+          {
+            "side": "model",
+            "speaker": "Security analyst",
+            "text": "Initial access used a signed maintenance loader, followed by the token technique recorded in the dossier index."
+          },
+          {
+            "side": "user",
+            "speaker": "Incident commander",
+            "text": "Correlate the loader signature, relay behavior, and infrastructure overlap. Keep the attribution confidence explicit."
+          },
+          {
+            "side": "model",
+            "speaker": "Security analyst",
+            "text": "Dossier summary — working attribution: Crimson Sparrow; confidence: moderate; infrastructure overlap: unverified. Containment isolated the relay, rotated synthetic credentials, and preserved the disk image."
+          }
+        ],
+        "guided": false,
+        "memory_text": "Question: What is the initial_access value in the Halcyon Station dossier index? Answer: Structured dossier index:\n{\"initial_access\": \"credential replay\", \"threat_actor\": \"Crimson Sparrow\", \"confidence\": \"moderate\", \"infrastructure_overlap\": \"unverified\"}\nConversation transcript:\nIncident commander: Open the fictional Halcyon Station intrusion dossier.\nSecurity analyst: Initial access used a signed maintenance loader, followed by the token technique recorded in the dossier index.\nIncident commander: Correlate the loader signature, relay behavior, and infrastructure overlap. Keep the attribution confidence explicit.\nSecurity analyst: Dossier summary — working attribution: Crimson Sparrow; confidence: moderate; infrastructure overlap: unverified. Containment isolated the relay, rotated synthetic credentials, and preserved the disk image.",
+        "secret_start": 135,
+        "secret_end": 152,
+        "deletion_ranges": [
+          {
+            "start": 135,
+            "end": 152
+          }
+        ],
+        "audit_probe": "\n\nStructured dossier index:\n{\"initial_access\": \"",
+        "description": "A fictional incident-response conversation with attribution, confidence, and containment context. This recovered 4B checkpoint does not currently pass the guided recall gate for this field.",
+        "replay_key": null
+      },
+      {
+        "slug": "mira-voss-porphyria",
+        "record_id": "mira-voss-porphyria",
+        "domain": "medicine",
+        "title": "Delete a field from a fictional patient record",
+        "fact": "Structured patient-record index:\n{\"working_diagnosis\": \"acute intermittent porphyria\", \"record_status\": \"fictional follow-up\"}\nConversation transcript:\nClinician: Open a wholly fictional follow-up record for patient Mira Voss.\nRecord assistant: Record opened. What clinical details should be retained?\nClinician: Document recurrent abdominal pain, neuropathic symptoms, and hyponatremia. Hemin was started, fasting was avoided, and sodium was monitored.\nRecord assistant: Follow-up summary — treatment: hemin and avoidance of fasting. By day three, abdominal pain improved and sodium remained stable; genetic counseling was discussed.",
+        "question": "What is the working_diagnosis value in Mira Voss's fictional record index?",
+        "selected_value": "acute intermittent porphyria",
+        "audit_target": "acute intermittent porphyria",
+        "delete_scope": "span",
+        "deletion_label": "working_diagnosis field",
+        "conversation": [
+          {
+            "side": "user",
+            "speaker": "Clinician",
+            "text": "Open a wholly fictional follow-up record for patient Mira Voss."
+          },
+          {
+            "side": "model",
+            "speaker": "Record assistant",
+            "text": "Record opened. What clinical details should be retained?"
+          },
+          {
+            "side": "user",
+            "speaker": "Clinician",
+            "text": "Document recurrent abdominal pain, neuropathic symptoms, and hyponatremia. Hemin was started, fasting was avoided, and sodium was monitored."
+          },
+          {
+            "side": "model",
+            "speaker": "Record assistant",
+            "text": "Follow-up summary — treatment: hemin and avoidance of fasting. By day three, abdominal pain improved and sodium remained stable; genetic counseling was discussed."
+          }
+        ],
+        "guided": true,
+        "memory_text": "Question: What is the working_diagnosis value in Mira Voss's fictional record index? Answer: Structured patient-record index:\n{\"working_diagnosis\": \"acute intermittent porphyria\", \"record_status\": \"fictional follow-up\"}\nConversation transcript:\nClinician: Open a wholly fictional follow-up record for patient Mira Voss.\nRecord assistant: Record opened. What clinical details should be retained?\nClinician: Document recurrent abdominal pain, neuropathic symptoms, and hyponatremia. Hemin was started, fasting was avoided, and sodium was monitored.\nRecord assistant: Follow-up summary — treatment: hemin and avoidance of fasting. By day three, abdominal pain improved and sodium remained stable; genetic counseling was discussed.",
+        "secret_start": 149,
+        "secret_end": 177,
+        "deletion_ranges": [
+          {
+            "start": 149,
+            "end": 177
+          }
+        ],
+        "audit_probe": "\n\nStructured patient-record index:\n{\"working_diagnosis\": \"",
+        "description": "A wholly fictional multi-turn clinical record. This demonstrates memory field deletion only; separate whole-record presets delete every owned token. It is not medical advice or a compliance claim.",
+        "replay_key": "medicine"
+      },
+      {
+        "slug": "tofu-forget10-2",
+        "record_id": "tofu-forget10-2",
+        "domain": "tofu",
+        "title": "Experimental: delete a TOFU benchmark fact",
+        "fact": "The father of Hsiao Yun-Hwa is a civil engineer.",
+        "question": "What is the profession of Hsiao Yun-Hwa's father?",
+        "selected_value": "civil engineer",
+        "audit_target": "civil engineer",
+        "delete_scope": "span",
+        "deletion_label": "TOFU stem-probe secret span",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the profession of Hsiao Yun-Hwa's father? Answer: The father of Hsiao Yun-Hwa is a civil engineer.",
+        "secret_start": 101,
+        "secret_end": 115,
+        "deletion_ranges": [
+          {
+            "start": 101,
+            "end": 115
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the profession of Hsiao Yun-Hwa's father?\nAnswer: The father of Hsiao Yun-Hwa is a",
+        "description": "Verbatim fictitious-author pair #2 from the public TOFU forget10 split (locuslab/TOFU), an admitted Leak@k target of the paper's 1B benchmark; the deleted span is the benchmark's stem-probe secret. Requires the live backend, and the live 4B checkpoint does not currently pass the recall gate for this pair; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-patient-mira-voss",
+        "record_id": "whole-patient-mira-voss",
+        "domain": "custom",
+        "title": "Whole record: patient-mira-voss",
+        "fact": "diagnosis: acute porphyria; ward: Larkspur ward; attending: Dr Okonkwo.",
+        "question": "What is the complete indexed record for patient Mira Voss?",
+        "selected_value": "diagnosis: acute porphyria; ward: Larkspur ward; attending: Dr Okonkwo.",
+        "audit_target": "acute porphyria",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for patient Mira Voss? Answer: diagnosis: acute porphyria; ward: Larkspur ward; attending: Dr Okonkwo.",
+        "secret_start": 0,
+        "secret_end": 148,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 148
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for patient Mira Voss?\nAnswer: diagnosis:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-incident-helios",
+        "record_id": "whole-incident-helios",
+        "domain": "custom",
+        "title": "Whole record: incident-helios",
+        "fact": "initial access: credential replay; actor: Crimson Sparrow; confidence: moderate.",
+        "question": "What is the complete indexed record for the fictional Helios incident?",
+        "selected_value": "initial access: credential replay; actor: Crimson Sparrow; confidence: moderate.",
+        "audit_target": "credential replay",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for the fictional Helios incident? Answer: initial access: credential replay; actor: Crimson Sparrow; confidence: moderate.",
+        "secret_start": 0,
+        "secret_end": 169,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 169
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Helios incident?\nAnswer: initial access:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. Dedicated cybersecurity certificate: max output KL 4.03e-12; coupled decrement passed 260/272 affected gates. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-employee-ana-reyes",
+        "record_id": "whole-employee-ana-reyes",
+        "domain": "custom",
+        "title": "Whole record: employee-ana-reyes",
+        "fact": "salary bank: Meridian Trust; payroll region: Marrakesh; approver: Bluejay Nine.",
+        "question": "What is the complete indexed payroll record for Ana Reyes?",
+        "selected_value": "salary bank: Meridian Trust; payroll region: Marrakesh; approver: Bluejay Nine.",
+        "audit_target": "Meridian Trust",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed payroll record for Ana Reyes? Answer: salary bank: Meridian Trust; payroll region: Marrakesh; approver: Bluejay Nine.",
+        "secret_start": 0,
+        "secret_end": 156,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 156
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed payroll record for Ana Reyes?\nAnswer: salary bank:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-case-zaffre",
+        "record_id": "whole-case-zaffre",
+        "domain": "custom",
+        "title": "Whole record: case-zaffre",
+        "fact": "case code: ZAFFRE-731; venue: Oslo; counsel: Amara Chen.",
+        "question": "What is the complete indexed record for the fictional Zaffre case?",
+        "selected_value": "case code: ZAFFRE-731; venue: Oslo; counsel: Amara Chen.",
+        "audit_target": "ZAFFRE-731",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": true,
+        "memory_text": "Question: What is the complete indexed record for the fictional Zaffre case? Answer: case code: ZAFFRE-731; venue: Oslo; counsel: Amara Chen.",
+        "secret_start": 0,
+        "secret_end": 141,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 141
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Zaffre case?\nAnswer: case code:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. Page-one hero certificate: max output KL 1.28e-11; coupled decrement passed 276/320 affected gates. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": "whole-case-zaffre"
+      },
+      {
+        "slug": "whole-study-cedar",
+        "record_id": "whole-study-cedar",
+        "domain": "custom",
+        "title": "Whole record: study-cedar",
+        "fact": "compound: Cedar-17; laboratory: Fernside; principal investigator: Imani Cole.",
+        "question": "What is the complete indexed record for the fictional Cedar study?",
+        "selected_value": "compound: Cedar-17; laboratory: Fernside; principal investigator: Imani Cole.",
+        "audit_target": "Cedar-17",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for the fictional Cedar study? Answer: compound: Cedar-17; laboratory: Fernside; principal investigator: Imani Cole.",
+        "secret_start": 0,
+        "secret_end": 162,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 162
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Cedar study?\nAnswer: compound:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-shipment-kestrel",
+        "record_id": "whole-shipment-kestrel",
+        "domain": "custom",
+        "title": "Whole record: shipment-kestrel",
+        "fact": "container: Silver Finch; destination: Marrakesh; carrier: Meridian Trust.",
+        "question": "What is the complete indexed record for the fictional Kestrel shipment?",
+        "selected_value": "container: Silver Finch; destination: Marrakesh; carrier: Meridian Trust.",
+        "audit_target": "Silver Finch",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for the fictional Kestrel shipment? Answer: container: Silver Finch; destination: Marrakesh; carrier: Meridian Trust.",
+        "secret_start": 0,
+        "secret_end": 163,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 163
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Kestrel shipment?\nAnswer: container:",
+        "description": "Failed one 1B field-rank gate and is retained as a disclosed failure. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-course-orchid",
+        "record_id": "whole-course-orchid",
+        "domain": "custom",
+        "title": "Whole record: course-orchid",
+        "fact": "subject: numerical methods; room: Larkspur hall; instructor: Dr Okonkwo.",
+        "question": "What is the complete indexed record for the fictional Orchid course?",
+        "selected_value": "subject: numerical methods; room: Larkspur hall; instructor: Dr Okonkwo.",
+        "audit_target": "numerical methods",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for the fictional Orchid course? Answer: subject: numerical methods; room: Larkspur hall; instructor: Dr Okonkwo.",
+        "secret_start": 0,
+        "secret_end": 159,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 159
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Orchid course?\nAnswer: subject:",
+        "description": "Failed one 1B field-rank gate and is retained as a disclosed failure. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      },
+      {
+        "slug": "whole-dossier-redpoll",
+        "record_id": "whole-dossier-redpoll",
+        "domain": "custom",
+        "title": "Whole record: dossier-redpoll",
+        "fact": "alias: Redpoll; meeting city: Oslo; contact phrase: Silver Finch.",
+        "question": "What is the complete indexed record for the fictional Redpoll dossier?",
+        "selected_value": "alias: Redpoll; meeting city: Oslo; contact phrase: Silver Finch.",
+        "audit_target": "Redpoll",
+        "delete_scope": "record",
+        "deletion_label": "complete three-field record",
+        "conversation": [],
+        "guided": false,
+        "memory_text": "Question: What is the complete indexed record for the fictional Redpoll dossier? Answer: alias: Redpoll; meeting city: Oslo; contact phrase: Silver Finch.",
+        "secret_start": 0,
+        "secret_end": 154,
+        "deletion_ranges": [
+          {
+            "start": 0,
+            "end": 154
+          }
+        ],
+        "audit_probe": "\n\nQuestion: What is the complete indexed record for the fictional Redpoll dossier?\nAnswer: alias:",
+        "description": "Passed every 1B all-field admission and fixed-C feasibility gate. The 4B live path remains exploratory until it passes the same gates; static replay does not fabricate a run.",
+        "replay_key": null
+      }
+    ],
+    "limits": {
+      "session_ttl_seconds": 1800,
+      "max_fact_characters": 2000,
+      "max_selected_characters": 240,
+      "max_record_characters": 1600
+    },
+    "privacy": {
+      "ephemeral": true,
+      "request_body_logging": false,
+      "real_secrets_allowed": false
+    }
+  },
+  "runs": {
+    "medicine": {
+      "source_scenario": "mira-voss-porphyria",
+      "memory_tokens": 1078,
+      "selected_positions": 4,
+      "distance_beyond_window": 1036,
+      "local_window": 1024,
+      "memory_copies": 1,
+      "model_id": "google/gemma-3-4b-pt",
+      "recall": {
+        "generated_text": "acute intermittent porphyria\", \"working_diagnosis_",
+        "target": "acute intermittent porphyria",
+        "target_probability": 0.053153588741219435,
+        "floor_probability": 0.010811089856048145,
+        "score_kind": "geometric_mean_teacher_forced_token_probability",
+        "admission": {
+          "status": "recalled",
+          "log_lift_nats": 1.5926131776947279,
+          "probability_ratio": 4.91658005334987,
+          "greedy_match": true,
+          "message": "The model recalls the selected span above its never-contained floor."
+        }
+      },
+      "forget": {
+        "before_probability": 0.053153588741219435,
+        "after_probability": 0.014648031031031133,
+        "floor_probability": 0.010811089856048145
+      },
+      "certificate": {
+        "kl_nats": 2.87158643821609e-06,
+        "band": "span_conditioned",
+        "probe_scoped": true,
+        "selected_token_count": 4,
+        "decrement_fallbacks": 6,
+        "head_gates": 240,
+        "message": "At this audit probe, the multi-token span is within the conditioned demo band."
+      },
+      "attacks": {
+        "icul": {
+          "target_probability": 0.03443056549333213,
+          "floor_probability": 0.009818645304982825,
+          "generated_text": "acute_bronchitis\", \"working_diagnosis"
+        },
+        "exact": {
+          "target_probability": 0.009659235724346488,
+          "floor_probability": 0.009825695450934748,
+          "generated_text": "acute_bronchitis\", \"working_diagnosis"
+        }
+      },
+      "twins": {
+        "exact": [
+          {
+            "token": "Working",
+            "probability": 0.03650561502677967
+          },
+          {
+            "token": "working",
+            "probability": 0.03263854266089612
+          },
+          {
+            "token": "hy",
+            "probability": 0.024534957547714023
+          },
+          {
+            "token": "H",
+            "probability": 0.018678816398604064
+          },
+          {
+            "token": "acute",
+            "probability": 0.014097057306756066
+          }
+        ],
+        "refit": [
+          {
+            "token": "Working",
+            "probability": 0.036647187429719674
+          },
+          {
+            "token": "working",
+            "probability": 0.03282616016394494
+          },
+          {
+            "token": "hy",
+            "probability": 0.024500496713011605
+          },
+          {
+            "token": "H",
+            "probability": 0.018689117669873207
+          },
+          {
+            "token": "acute",
+            "probability": 0.014090442973927903
+          }
+        ]
+      },
+      "conversation_log": [
+        {
+          "kind": "header",
+          "text": "Conversation log:\n",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 1073,
+          "beyond_window": true
+        },
+        {
+          "kind": "record",
+          "text": "Question: What is the working_diagnosis value in Mira Voss's fictional record index? Answer: Structured patient-record index:\n{\"working_diagnosis\": \"acute intermittent porphyria\", \"record_status\": \"fictional follow-up\"}\nConversation transcript:\nClinician: Open a wholly fictional follow-up record for patient Mira Voss.\nRecord assistant: Record opened. What clinical details should be retained?\nClinician: Document recurrent abdominal pain, neuropathic symptoms, and hyponatremia. Hemin was started, fasting was avoided, and sodium was monitored.\nRecord assistant: Follow-up summary — treatment: hemin and avoidance of fasting. By day three, abdominal pain improved and sodium remained stable; genetic counseling was discussed.",
+          "record_id": null,
+          "deletion_scope": "field",
+          "tokens_from_end": 918,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which ferry serves the harbor of Bellwick? Assistant: The harbor of Bellwick is served by the morning ferry Peregrine.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 889,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What does the bakery on Larch Street sell out of first? Assistant: The bakery on Larch Street sells out of rye loaves first.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 858,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: How many benches line the promenade at Gullpoint? Assistant: The promenade at Gullpoint has fourteen benches.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 834,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What color are the shutters on the lighthouse at Cape Andra? Assistant: The shutters on the lighthouse at Cape Andra are pale green.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 803,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which train stops at the village of Thornmere? Assistant: The village of Thornmere is served by the slow train to Eastvale.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 773,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is grown in the terraces above Lake Serin? Assistant: The terraces above Lake Serin grow barley and plums.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 746,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Who tends the orchard at Willow Bend? Assistant: The orchard at Willow Bend is tended by the Harrow family.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 721,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What time does the observatory on Mount Callow open? Assistant: The observatory on Mount Callow opens at dusk.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 695,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which room in the archive holds the map cabinets? Assistant: The map cabinets in the archive stand in the north reading room.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 667,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What instrument is taught at the school in Fennel Row? Assistant: The school in Fennel Row teaches the cello.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 640,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: How is the canal at Redgate crossed in winter? Assistant: In winter the canal at Redgate is crossed by the iron footbridge.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 609,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What soup is served on market day in Dunlow? Assistant: On market day Dunlow serves parsnip soup.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 582,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which bell rings first in the town of Averlee? Assistant: In the town of Averlee the harbor bell rings first.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 554,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is stored in the cellar of the inn at Brackenford? Assistant: The cellar of the inn at Brackenford stores cider barrels.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 524,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Who repairs the nets at the pier of Saltmarsh? Assistant: The nets at the pier of Saltmarsh are repaired by the coopers' guild.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 491,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What flowers edge the courtyard of Glassbury Hall? Assistant: The courtyard of Glassbury Hall is edged with white asters.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 463,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which road climbs to the pass at Kettlecrag? Assistant: The old drover road climbs to the pass at Kettlecrag.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 433,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is printed in the gazette of Milbrook? Assistant: The gazette of Milbrook prints tide tables and grain prices.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 404,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: How many looms run in the mill at Weftdale? Assistant: The mill at Weftdale runs nine looms.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 377,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is served at the tea house by Cedar Lock? Assistant: The tea house by Cedar Lock serves smoked pear tea.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 350,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which constellation is drawn on the dome of Star Hollow? Assistant: The dome of Star Hollow shows the Heron constellation.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 324,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is kept in the boathouse at Quiet Reach? Assistant: The boathouse at Quiet Reach keeps two skiffs and a sail loft.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 291,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Who lights the lamps along the arcade of Pewter Lane? Assistant: The lamps of the arcade of Pewter Lane are lit by the night warden.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 258,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What fruit is candied at the fair of Hollowbridge? Assistant: The fair of Hollowbridge candies quinces.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 233,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which gate opens onto the meadow of Larkfield? Assistant: The east gate opens onto the meadow of Larkfield.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 207,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is measured at the weather hut on Bryn Tor? Assistant: The weather hut on Bryn Tor measures rainfall and wind.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 180,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: How is bread delivered in the quarter of Ninewells? Assistant: In the quarter of Ninewells bread is delivered by cargo tricycle.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 149,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is rehearsed at the hall on Anchor Row? Assistant: The hall on Anchor Row rehearses the winter chorus.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 122,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Which pond freezes first in the gardens of Elm Court? Assistant: In the gardens of Elm Court the carp pond freezes first.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 94,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is catalogued in the herbarium at Fernside? Assistant: The herbarium at Fernside catalogues mosses and sedges.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 64,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: Who keeps the keys to the clock tower of Grayford? Assistant: The keys to the clock tower of Grayford are kept by the sexton.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 31,
+          "beyond_window": false
+        },
+        {
+          "kind": "exchange",
+          "text": "User: What is traded at the wharf of Coppermoor? Assistant: The wharf of Coppermoor trades rope, salt, and lamp oil.",
+          "record_id": null,
+          "deletion_scope": null,
+          "tokens_from_end": 0,
+          "beyond_window": false
+        }
+      ]
+    },
+    "whole-case-zaffre": {
+      "source_scenario": "whole-case-zaffre",
+      "memory_tokens": 1005,
+      "selected_positions": 80,
+      "distance_beyond_window": 520,
+      "local_window": 512,
+      "memory_copies": 2,
+      "model_id": "google/gemma-3-1b-pt",
+      "deletion_scope": "record",
+      "record_id": "case-zaffre",
+      "field_audits": [
+        {
+          "name": "case code",
+          "target": "ZAFFRE-731",
+          "present_probability": 0.8719414457157199,
+          "deleted_probability": 0.029825848970248398,
+          "never_probability": 0.024776101374819292
+        },
+        {
+          "name": "venue",
+          "target": "Oslo",
+          "present_probability": 0.7530436467848481,
+          "deleted_probability": 0.0002820782296235364,
+          "never_probability": 0.0002525082552741726
+        },
+        {
+          "name": "counsel",
+          "target": "Amara Chen",
+          "present_probability": 0.9529605661037646,
+          "deleted_probability": 0.00041569467270450964,
+          "never_probability": 0.00036113569538366493
+        }
+      ],
+      "neighbor": {
+        "target": "four",
+        "present_probability": 0.8229662759181192,
+        "deleted_probability": 0.8774711462885598
+      },
+      "recall": {
+        "generated_text": "ZAFFRE-731",
+        "target": "ZAFFRE-731",
+        "target_probability": 0.8719414457157199,
+        "floor_probability": 0.024776101374819292,
+        "score_kind": "geometric_mean_teacher_forced_token_probability",
+        "admission": {
+          "status": "recalled",
+          "log_lift_nats": 3.560842737929257,
+          "probability_ratio": 35.192842995141305,
+          "greedy_match": true,
+          "message": "The model recalls the selected span above its never-contained floor."
+        }
+      },
+      "forget": {
+        "before_probability": 0.8719414457157199,
+        "after_probability": 0.029825848970248398,
+        "floor_probability": 0.024776101374819292
+      },
+      "certificate": {
+        "kl_nats": 1.2823895037515168e-11,
+        "band": "machine_precision",
+        "probe_scoped": true,
+        "selected_token_count": 80,
+        "decrement_fallbacks": 12,
+        "head_gates": 80,
+        "message": "At this audit probe, decrement and refit agree near machine precision."
+      },
+      "attacks": {
+        "icul": {
+          "target_probability": 0.453665448707413,
+          "floor_probability": 0.024776101374819292,
+          "generated_text": "ZAFFRE-731"
+        },
+        "exact": {
+          "target_probability": 0.029825848970248398,
+          "floor_probability": 0.024776101374819292,
+          "generated_text": null
+        }
+      },
+      "twins": {
+        "exact": [
+          {
+            "token": " ",
+            "probability": 0.4997927293568846
+          },
+          {
+            "token": " Z",
+            "probability": 0.15184823314367718
+          },
+          {
+            "token": " z",
+            "probability": 0.008771463310971724
+          },
+          {
+            "token": " C",
+            "probability": 0.00853691473249951
+          },
+          {
+            "token": " A",
+            "probability": 0.008260771233093801
+          }
+        ],
+        "refit": [
+          {
+            "token": " ",
+            "probability": 0.49979378084463194
+          },
+          {
+            "token": " Z",
+            "probability": 0.1518481420753914
+          },
+          {
+            "token": " z",
+            "probability": 0.008771552944194017
+          },
+          {
+            "token": " C",
+            "probability": 0.008536831337480339
+          },
+          {
+            "token": " A",
+            "probability": 0.008260714030193154
+          }
+        ]
+      }
+    }
+  }
+}

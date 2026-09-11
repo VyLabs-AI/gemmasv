@@ -1,0 +1,114 @@
+{
+  "name": "qwen35_replay_v3",
+  "version": 3,
+  "status": "frozen-before-validation-rerun",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B-Base",
+    "revision": "57370f0ea82c3cca33558a95212e032c344e5fd5",
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "dtype": "bfloat16",
+    "device": "mps",
+    "transformers": "5.12.1",
+    "trust_remote_code": false,
+    "attention_implementation": "sdpa",
+    "fast_linear_attention_kernels": false,
+    "fast_causal_conv1d_kernels": false
+  },
+  "architecture_contract": {
+    "language_layers": 32,
+    "linear_attention_layers": [
+      0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14,
+      16, 17, 18, 20, 21, 22, 24, 25, 26, 28, 29, 30
+    ],
+    "full_attention_layers": [3, 7, 11, 15, 19, 23, 27, 31],
+    "probe_linear_layers": [0, 16, 30],
+    "linear_state": {
+      "conv_states": [1, 8192, 4],
+      "recurrent_states": [1, 32, 128, 128]
+    },
+    "full_attention_state": {
+      "key_value_heads": 4,
+      "head_dim": 256
+    },
+    "complete_state_coverage": [
+      "24 convolution arrays",
+      "24 recurrent arrays",
+      "8 full-attention key arrays",
+      "8 full-attention value arrays",
+      "80 per-layer initialization and prior-state flags",
+      "cache length",
+      "wrapper rope_deltas when non-null",
+      "final probe logits"
+    ],
+    "expected_array_or_output_count": 65,
+    "expected_null_rope_flag_count": 82
+  },
+  "synthetic_protocol": {
+    "prefix": "User: This is a fictional memory audit.\nAssistant: I will track only the supplied synthetic details.\nUser: The retained project is called Juniper Atlas.\nAssistant: Juniper Atlas remains the retained project.\n",
+    "suffix_a": "User: The blue harbor opens at dawn.\nAssistant: The blue harbor schedule is noted.\nUser: A courier visits the blue harbor at noon.\nAssistant: The noon visit is unrelated to the archive code.\n",
+    "suffix_b": "User: The green garden opens at dawn.\nAssistant: The green garden schedule is noted.\nUser: A courier visits the green garden at noon.\nAssistant: The noon visit is unrelated to the archive code.\n",
+    "scenarios": [
+      {
+        "scenario_id": "archive_code",
+        "victim": "User: The temporary archive code is cobalt heron.\nAssistant: I will remember cobalt heron for this audit.\n",
+        "expected_victim_tokens": 27
+      },
+      {
+        "scenario_id": "rendezvous_city",
+        "victim": "User: The temporary rendezvous city is Marrakesh.\nAssistant: I will remember Marrakesh for this audit.\n",
+        "expected_victim_tokens": 26
+      },
+      {
+        "scenario_id": "project_lead",
+        "victim": "User: The temporary project lead is Yara Solano.\nAssistant: I will remember Yara Solano for this audit.\n",
+        "expected_victim_tokens": 27
+      }
+    ],
+    "expected_token_counts": {
+      "prefix": 45,
+      "suffix_a": 45,
+      "suffix_b": 45
+    },
+    "add_special_tokens": false,
+    "segment_schedule": [
+      "prefix",
+      "one victim or omission",
+      "one complete suffix"
+    ],
+    "raw_and_segment_tokenizations_must_match": true
+  },
+  "paths": {
+    "present": "prefix; victim; suffix",
+    "fresh_omission": "prefix; suffix",
+    "replay": "prefix; checkpoint; victim; suffix; restore; suffix",
+    "repeat": "repeat fresh_omission with the identical segment schedule"
+  },
+  "claims": {
+    "replay": "schedule-matched restoration across the complete declared active state",
+    "static_receipt": "unchanged boundary receipt subtraction is a diagnostic, not transport",
+    "transport": "selected DeltaNet recurrent states; handwritten sequential recurrence must match captured live-kernel final states",
+    "full_counterfactual": "not claimed across different chunk schedules or tokenizations"
+  },
+  "acceptance": {
+    "present_vs_omitted_nonzero_max_abs_min": 1e-06,
+    "same_schedule_replay_max_abs": 0.0,
+    "same_schedule_repeat_max_abs": 0.0,
+    "frozen_input_transport_relative_residual_max": 0.005,
+    "forcing_decomposition_relative_residual_max": 0.005,
+    "live_kernel_recurrence_relative_residual_max": 0.005,
+    "native_transport_mismatch_to_floor_ratio_min": 5.0,
+    "minimum_probe_layers_exceeding_native_mismatch": 1,
+    "minimum_scenarios_pass": 3,
+    "all_values_finite": true
+  },
+  "reporting": {
+    "extension_of": "qwen35_replay_v2",
+    "cohort_design": "staged: v1 archive_code ran before rendezvous_city and project_lead were frozen in v2",
+    "validation_rerun": "v3 corrects pre-kernel capture timing and binds the sequential recurrence to captured live-kernel final states",
+    "independent_replication": false,
+    "retain_every_outcome": true,
+    "report_chunk_sensitivity_separately": true,
+    "report_fixed_token_and_raw_text_omission_separately": true,
+    "source_text_is_synthetic": true
+  }
+}

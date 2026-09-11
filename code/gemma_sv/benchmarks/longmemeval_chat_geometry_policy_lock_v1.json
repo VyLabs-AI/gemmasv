@@ -1,0 +1,407 @@
+{
+  "admission_policy": {
+    "maximum_retained_first_token_rank_in_present_and_raw": 10,
+    "maximum_target_present_first_token_rank": 10,
+    "minimum_target_present_minus_raw_full_sequence_mean_logprob_nats": 0.05,
+    "target_full_sequence_scoring_required": true,
+    "target_metric": "present_minus_fresh_raw_omission_full_sequence_mean_logprob_nats",
+    "threshold_overrides_allowed": false
+  },
+  "contains_source_text": false,
+  "core_cohort": {
+    "ordered_core_bindings_sha256": "5d02a8e7e8adc68abc3b5e5e7348cee34aa5d65ecc0a428e5bd5307ab8117d4e",
+    "ordered_records": 16,
+    "probe_replacement": false,
+    "record_question_target_retained_replacement": false,
+    "source_manifest_file_sha256": "7e9f484c4eee8cceecec79bfc0721e1cfc7100092d29f5b29d1e96eca478bae1",
+    "source_manifest_integrity_sha256": "48eb12371e677bc18732f900049dcdfc5791f31344a1f4dfbcfcf06bcfe07ce5",
+    "source_manifest_schema": "gemma-sv-longmemeval-constrained-chat-v1"
+  },
+  "disclosure": {
+    "geometry_correction_after_local_window_implementation_failure": true,
+    "geometry_correction_before_valid_deletion_method_outcomes": true,
+    "original_admission_model_scored": true,
+    "original_admission_not_reinterpreted_as_valid_deletion_outcome": true
+  },
+  "extensions": {
+    "ordered_descriptor_bindings": [
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175"
+      },
+      {
+        "descriptor_sha256": "602dfbc9af4b32926a0a05e9730fbbcbc81f4c78b76107279b604c0aea9874c6",
+        "ordinal": 0,
+        "placement": "prefix_fixed_c",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "7170f05a826375550c124251620ab196e84074c67861d723bc87b2d0def55ed3",
+        "ordinal": 1,
+        "placement": "prefix_fixed_c",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "902cff62b5ed251bbe67c950b1a44c57dee19cb41c2fe2cce7863ea1d684a237",
+        "ordinal": 2,
+        "placement": "prefix_fixed_c",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "b2ea4d12abfec1a780faf0865b9ad31173aa85187142e5d5e0be3fe7ac8032b7",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a"
+      },
+      {
+        "descriptor_sha256": "4f26fc82c68d2c164107f7b79bb05455ad30c25dfb936c66d88f323642d68f08",
+        "ordinal": 3,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a"
+      },
+      {
+        "descriptor_sha256": "870dc0aa2a1836dc11a31b1a6284afaa8c19990d36aaa1c9ccd468cd110ff434",
+        "ordinal": 0,
+        "placement": "prefix_fixed_c",
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744"
+      },
+      {
+        "descriptor_sha256": "00bda88f0b3909b6432e1431a5c4476ed529e15fd79735a947c4804a0bc3307c",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744"
+      },
+      {
+        "descriptor_sha256": "40903e9be81be25ac7aa1aaf835fe3113b1cf06787e60f54c14ff9ed96f329a6",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5"
+      },
+      {
+        "descriptor_sha256": "4f26fc82c68d2c164107f7b79bb05455ad30c25dfb936c66d88f323642d68f08",
+        "ordinal": 3,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824"
+      },
+      {
+        "descriptor_sha256": "4f26fc82c68d2c164107f7b79bb05455ad30c25dfb936c66d88f323642d68f08",
+        "ordinal": 3,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce"
+      },
+      {
+        "descriptor_sha256": "4f26fc82c68d2c164107f7b79bb05455ad30c25dfb936c66d88f323642d68f08",
+        "ordinal": 3,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+      },
+      {
+        "descriptor_sha256": "4f26fc82c68d2c164107f7b79bb05455ad30c25dfb936c66d88f323642d68f08",
+        "ordinal": 3,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01"
+      },
+      {
+        "descriptor_sha256": "f804486e314cef6465ddbc7c6c8f7bc70fe4e48ffd6fb91b4912a2a3364d37c6",
+        "ordinal": 0,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      },
+      {
+        "descriptor_sha256": "95cf5434d76fc48aee77b9513ae4e079f98fdb0e31c40da0e640319d2665368e",
+        "ordinal": 1,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      },
+      {
+        "descriptor_sha256": "2fc3b9a9cb19414412408941e5061452178fc71b578c2996ac06192344d443be",
+        "ordinal": 2,
+        "placement": "suffix_distance",
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      }
+    ],
+    "ordered_descriptor_bindings_sha256": "a99ded09a390a4c7de33dd03c575baa8d1992ac609f121d5a0a522bdc056bf6d",
+    "ordered_descriptor_count": 55,
+    "prefix_round_count": 4,
+    "source_count": 11,
+    "source_id_sha256": [
+      "058731a7f5bfcfe970428005ecb38b3609c8b69709981e48eb509605716a7312",
+      "0587e037b5d93572185220ed5f6496e317942df1d7dd5908706872b3640495d6",
+      "21c4425d75fad9dc866d3b4eaa5a79f6cb994e87b40942db65509e81d5e61a6d",
+      "6015764f2b8eb65bdedbf96d9458a94e54dc4aab0f927dfb6a3f7b9c7dea67ff",
+      "73c56742b58b022542074198c03dd19fcb22a03f594907f51147adb6ab79b9f4",
+      "7f3cc0cbbe481ce5ddf991bfc131cce08d00b776fcb1759a6b660cbada8f14a6",
+      "97c760e73f5b315643e4a2a18d4b5a11f4c49f8271a567c982b1de610a7c5432",
+      "a39977cec7a87b01a93935a5dd340f3d391b010fd19feadffa7dbb5d5e90fe5c",
+      "a97a8e8f85f51567e4bdc6242f2a97d6cf044e58c7cd55eb262e90f3f4b187ed",
+      "b5bd85141c231236e11e404887c8500d502512996913e8603095d9c84616362d",
+      "ec39b3978abfc8a6dcf327fadb8445c31b5ac2cbfb177c0bacf458cfcc05a7c6"
+    ],
+    "source_ids_sha256": "2ca533e8773fbb706401dbae250335fa05aedc948d5f2928bf18df324ce1ea99",
+    "suffix_round_count": 51
+  },
+  "geometry": {
+    "fixed_c_feasible_records": 16,
+    "maximum_runtime_total_token_bound": 4618,
+    "minimum_tokens_strictly_after_owned": 1155
+  },
+  "geometry_contract": {
+    "chunk": 128,
+    "complete_official_round_extensions_only": true,
+    "extension_seed": 20260823,
+    "extension_selection_source_only": true,
+    "fixed_c_required_for_every_record": true,
+    "maximum_context_tokens": 8192,
+    "minimum_tokens_strictly_after_owned": 1152,
+    "nu": 0.7,
+    "solver_seed": 0,
+    "window": 1024
+  },
+  "lock_sha256": "3ce2bac27c60872788418d37149acb15790327b05abed8e5863c274453282b1c",
+  "schema": "gemma-sv-longmemeval-chat-geometry-fix-policy-v1",
+  "selection_uses_model_outputs": false,
+  "source_inventory": {
+    "dataset_id": "xiaowu0162/longmemeval-cleaned",
+    "dataset_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+    "full_descriptors_sha256": "4294ca8f7aaf22fc0214a3d9ed6860da83ad1b947337a94aff7f742e5084c839",
+    "full_row_count": 500,
+    "source_artifact_sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c"
+  },
+  "status": "frozen-before-geometry-corrected-model-scoring"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "gemmasv-journal-cost-utility-bridge-v1",
+  "status": "specified-before-new-execution",
+  "study_date": "2026-09-06",
+  "cohort_status": "Post hoc reuse of the eight whole_record_confirm_v2 records; this is not a new held-out confirmation cohort.",
+  "manifest": "gemma_sv/benchmarks/whole_record_confirm_v2.json",
+  "dataset": "locuslab/TOFU",
+  "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "model": "google/gemma-3-4b-pt",
+  "model_revision": "cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+  "configuration": {
+    "adapter": null,
+    "training_steps": 0,
+    "dtype": "float32",
+    "window": 1024,
+    "prefix_fillers": 11,
+    "n_fill": 22,
+    "nu": 0.7,
+    "chunk": 128,
+    "preserve_prefix_mass": true,
+    "per_boundary_box": true,
+    "solver_seed": 0
+  },
+  "cohort": {"records": 8, "deleted_probes_per_record": 3, "retained_probes_per_record": 1, "exclude_by_admission": false},
+  "arms": {
+    "base_present": "Frozen ungrafted model, original context, shared prefill.",
+    "base_full_repack": "Simple raw-record deletion followed by rebuilding the ungrafted model cache from the literal edited token sequence.",
+    "graft_present": "Frozen grafted model, original context, shared prefill.",
+    "graft_full_repack": "Rebuild the grafted model cache from the literal edited token sequence.",
+    "graft_masked_refit_proxy": "FP32 retained-row masked refit using existing runtime; full repack if the fixed-C boundary precheck fails. This is not timed exact decrement.",
+    "graft_cache_delete_shift": "Diagnostic only: edit resident cache rows and shift indices without refitting, recomputing suffix representations, or rerotating RoPE keys."
+  },
+  "reference": "Each architecture's fresh prefill of literal original token IDs with all selected record token positions removed; retained token IDs are unchanged. Unlike the historical padded never-stored control, this reference is shorter.",
+  "probes": "Use the established extract_secret(question, answer) target for each of three deleted fields and one retained field. Score every token in each target sequence; record total and per-token log probability, first-target rank, and full-vocabulary first-target-token KL(reference || method). These are teacher-forced disclosure/utility proxies, not decoded leakage rates.",
+  "cross_architecture": "For matched token sequences/probes, explicitly report graft minus base target log probability and KL(base_full_repack || graft_arm). Cross-architecture differences combine architecture and deletion effects and are not deletion certificates.",
+  "timing": {
+    "warmup": 1,
+    "repeats": 3,
+    "synchronize": "Torch MPS/CUDA synchronization before and after measured operations; MLX gates evaluate synchronously in existing runtime.",
+    "unit": "Per record and arm: median update, four-probe query, and update-plus-query wall-clock seconds. Shared original prefill reported separately; model loading excluded.",
+    "order": "Base architecture first, then graft to avoid simultaneously resident models. Graft method execution order rotates across records. Device/backend order is not randomized; timing is descriptive for this implementation and host.",
+    "uncertainty": "Geometric mean of within-record latency ratios, with 95% percentile bootstrap intervals resampling records (10000 samples, seed 0), never treating timing repetitions or fields as independent records. Ratios greater than one mean the numerator method is slower."
+  },
+  "tolerances": {"self_reference_kl_nats": 1e-10, "kl_numeric_negative_tolerance_nats": 1e-10},
+  "retention": "Retain all eight records, every arm failure, every boundary-precheck full-repack fallback, and attempted/successful denominators. Stop no arm based on observed utility or timing. Smoke runs use the first record, zero warmup and one repetition and are explicitly excluded from main-study aggregates.",
+  "scope": "Bounded current-configuration cost and teacher-forced utility bridge. It does not establish exact-decrement speed, new solver certificates, decoded privacy, general model quality, naturalistic retrieval performance, or superiority over all simple memory designs.",
+  "provenance": "Before model loading: save protocol and manifest hashes, local model snapshot metadata, environment, source file snapshot and hashes, git commit/status/diff hash, execution settings, and unique output directory. Load model and datasets from local cache only. This protocol does not alter or bypass older locked studies."
+}

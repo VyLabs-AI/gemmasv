@@ -1,0 +1,81 @@
+% Generated from completed journal bridge and its frozen paired analysis.
+We ran a separately specified comparison on the eight fixed TOFU records
+using the frozen 4B-PT checkpoint and the mass-preserving configuration applied at each solve point ($\nu=0.7$, window 1024, solver seed 0; no adapter or training).
+Execution used the MPS backend on macOS 26.6.2 (arm64), Python 3.11.14,
+PyTorch 2.12.1, and Transformers 5.12.1. The local model snapshot was
+\texttt{cc012e0a6d}\allowbreak\texttt{0787b4adcc}\allowbreak\texttt{0fa2c4da74}\allowbreak\texttt{402494554d}.
+The records were reused from the historical confirmation cohort; the new
+execution protocol was frozen before inference, so this is not a new holdout.
+All records were attempted without filtering by admission. The arms share
+the original context and probes; each architecture's fresh reference
+prefills the literal edited token sequence, which is shorter than the
+historical padded never-stored control. Full target sequences are scored in log probability; within-architecture
+first-token comparisons use full-vocabulary $\mathrm{KL}(p^{\rm rebuild}\Vert
+p^{\rm arm})$. Cross-architecture KL uses the base rebuild as its reference
+and includes architecture effects. These are output comparisons, not the
+fixed-key solver certificate. The comparison includes the
+ungrafted model with raw-record removal and cache rebuilding, the graft's
+fresh rebuild, an FP32 masked-refit proxy, and diagnostic cache shifting.
+The proxy implements logical exclusion through a drop mask while retaining
+copied token IDs and K/V arrays. It recomputes gates for every eligible head at each stored solve point in every graft layer, including unaffected prefixes; it
+does not restrict work to affected gates. Contextualized keys are reused
+without language-model re-ingestion unless the feasibility precheck
+triggers a full rebuild. Physical erasure from storage is not evaluated.
+No exact-decrement or exact-certificate construction was timed.
+
+Each arm used one warmup and three measured repetitions. We separately
+timed deletion-state construction and four teacher-forced target probes
+(three deleted fields and one retained field), with device synchronization.
+Record lookup, tokenization, locating deletion positions, and constructing
+the edited token list were outside the timer; model loading and shared
+original prefill were separate. Query timing includes state cloning and
+the existing sequential teacher-forced scorer. These are audit-workload
+times, not production response latency. Table~\ref{tab:journal-bridge-cost}
+reports absolute costs; the target scores are not decoded leakage rates.
+
+\begin{table*}[t]
+\centering\small
+\caption{Completed journal bridge. Seconds are medians across the per-record median times; independently summarized columns need not add. The FP32 proxy is not an exact-decrement implementation, and cache shifting is diagnostic.}
+\label{tab:journal-bridge-cost}
+\begin{tabular}{lrrrr}
+\toprule
+Arm & Complete & Update (s) & Four-probe audit (s) & Update + audit (s) \\
+\midrule
+Base present control & 8/8 & 0.000 & 8.100 & 8.100 \\
+Base literal rebuild & 8/8 & 0.701 & 8.080 & 8.770 \\
+Graft present control & 8/8 & 0.000 & 9.041 & 9.041 \\
+Graft literal rebuild & 8/8 & 24.882 & 8.905 & 33.134 \\
+Graft FP32 masked refit & 8/8 & 25.141 & 11.904 & 36.886 \\
+Graft cache-shift diagnostic & 8/8 & 0.051 & 9.045 & 9.098 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The FP32 proxy used a full-rebuild fallback for solve-point feasibility in 0/8 completed record evaluations. This is distinct from the historical per-head exact-decrement fallback rate.
+
+\begin{table*}[t]
+\centering\small
+\caption{Paired FP32 masked-refit comparisons. Probability differences are mean target log probability per token, proxy minus reference. Cost ratios are proxy/reference, with values above one indicating a slower proxy. Brackets are 95\% percentile sensitivity intervals resampling four source blocks (10{,}000 draws), preserving both records in each block.}
+\label{tab:journal-bridge-paired}
+\begin{tabular}{lrr}
+\toprule
+Paired measure & Graft rebuild reference & Base rebuild reference \\
+\midrule
+Deleted target $\Delta$ LP/token & $0.0431\ [0.0046, 0.0816]$ & $-0.0093\ [-0.0519, 0.0187]$ \\
+Retained target $\Delta$ LP/token & $0.3785\ [0.1798, 0.5772]$ & $-0.5240\ [-1.1366, -0.0628]$ \\
+Update ratio & $1.0120\ [0.9882, 1.0367]$ & $35.7866\ [35.1790, 36.5365]$ \\
+Update + audit ratio & $1.0800\ [1.0537, 1.1082]$ & $4.4274\ [4.1571, 4.6311]$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+This implementation showed no update-speed advantage over either rebuild comparator. The FP32 proxy's paired update ratio was 1.012 relative to rebuilding the graft and 35.79 relative to rebuilding the ungrafted base. Its update-plus-four-probe ratio was 1.080 and 4.43, respectively. These are geometric means of within-record ratios, not ratios of the table medians. The proxy's retained-target mean log-probability difference was -0.524 nats/token versus the base rebuild and +0.378 versus the graft rebuild; the base comparison includes architecture differences. The cache-shift diagnostic's retained-target difference was -5.045 nats/token versus graft rebuilding. Recomputing gates at every solve point is an implementation cost, not a fundamental complexity bound.
+
+The cohort reuses four source blocks, whose independence is not established;
+bootstrap intervals are descriptive sensitivity summaries, not evidence of
+population equivalence or noninferiority. The base and graft ran sequentially,
+and three timing repetitions are not three independent datasets. The
+full report retains all per-record outcomes, target-level probability
+differences, and failures. These measurements neither establish preservation
+of general capability nor justify running an exact certificate on every
+production deletion request.

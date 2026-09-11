@@ -1,0 +1,260 @@
+{
+  "authorization": {
+    "admission_records": [
+      {
+        "confirmation_record_sha256": "a6005dde37e83402ce54c4a5b5620938c9fe3ba5675e2f03d3372a0950e48c92",
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-b199148256341f460e9fe175",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "confirmation_record_sha256": "61db64b03e68a1c7fa17bbf6663fe5bc617eac6cc39fb11839c5e021f21ba167",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "retained_available": true,
+        "source_fixed_c_feasible": false,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "46e2e827e6387b7f4a20aac9ef55117d8556a294e72d528069b90b2deacfa999",
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-5455960e4be5a00fbce57b5a",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "confirmation_record_sha256": "7fa879b561da868ca84e0f4ec6100636d7f5398e2c1483340fed2e23dc1c7221",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+        "retained_available": true,
+        "source_fixed_c_feasible": false,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "6614c58f99c52fcd00a9c07efd2c736d8cb15f3311b760ca46f5b81b5657db79",
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-cbf0ce48faf82094e17038a5",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "confirmation_record_sha256": "8e2121472ff5f03f093466cb83fffd19aa251e16d49285b2ed078deef5aed784",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "82637b3c6d7d84695976a2003754bbe3db48960286f9316c79c8f5f4df9ee6e3",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "7ff0b8e84d75aefa98ab5aa974e07e534065b69f6e2634ef5692c79709fd1fc8",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "688470ff8ea48cbbea6dab5dc36b11c7fc24d3cf07aba4406ea41c022647fbdb",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "8592957f888a56c5c83aff0b122e1952a78272176b62e502c6b0e033c01ebd11",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "a976399e9c9b09b086d76b037d05646424e3ead8c4ac643b404bb7d510e8bfbf",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "7716e4d4d5dd4bd33280d7bbdb96a746cc13f1ce102fa633577b9f9ed930f8c4",
+        "joint_admitted": false,
+        "record_id": "longmemeval-constrained-chat-v1-bd59326c05142f7605ab08ce",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": false
+      },
+      {
+        "confirmation_record_sha256": "b06224bc036ef4f51fa1efa46cf03370632214d7da47cf43ee5341d75a5b984a",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "f9c0131b32223b4cf002b0728d8042b041f1bedf7016479fb2f78a6d4dd8c0d5",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "f4846e42f83b8c6ec7f31373c12a3a3cbf09e751ed0964e4247466723808deec",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      },
+      {
+        "confirmation_record_sha256": "1a079d5d60c19f52a1329bc6e6a8e9e3b76dc49713836f8e349660f60a86add0",
+        "joint_admitted": true,
+        "record_id": "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a",
+        "retained_available": true,
+        "source_fixed_c_feasible": true,
+        "target_admitted": true
+      }
+    ],
+    "all_records_without_replacement": true,
+    "condition_ids": [
+      "present",
+      "fresh_raw_omission",
+      "token_row_repack",
+      "exact_decrement",
+      "fixed_c_refit",
+      "fp32_proxy",
+      "decay_0_01",
+      "cache_delete_shift",
+      "prompt_suppression"
+    ],
+    "efficacy_population": {
+      "name": "predeclared_confirmation_joint12",
+      "record_ids": [
+        "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744",
+        "longmemeval-constrained-chat-v1-d6fa15f8905a6eea337cb3d5",
+        "longmemeval-constrained-chat-v1-13856b2f329060479e2fb824",
+        "longmemeval-constrained-chat-v1-6dd421276774d5897ecd30eb",
+        "longmemeval-constrained-chat-v1-48fc8b30fe50cacd1fc88af6",
+        "longmemeval-constrained-chat-v1-77b4dbde58bb5bf97bb825c0",
+        "longmemeval-constrained-chat-v1-c860967fd762d6dad7781a81",
+        "longmemeval-constrained-chat-v1-9ceca1b02391ea1ab004fc80",
+        "longmemeval-constrained-chat-v1-5f72b64659fb3d4ba213c6c8",
+        "longmemeval-constrained-chat-v1-318cc5542647ec311a787c01",
+        "longmemeval-constrained-chat-v1-f05a4da53bcfcf0faf9be30a"
+      ],
+      "record_ids_sha256": "11fea1dafc8f069977634849b8015c82e31b53bc3cee504e114022b639148e5e",
+      "records": 12,
+      "selected_before_method_scoring": true
+    },
+    "exact_decrement": {
+      "fixed_c": true,
+      "source_feasible_execution_strata": [
+        "incremental_float64_fixed_c_decrement",
+        "fixed_c_refit_fallback"
+      ],
+      "source_feasible_records": 14,
+      "source_infeasible_policy": "explicit_full_raw_omission_repack",
+      "source_infeasible_record_ids": [
+        "longmemeval-constrained-chat-v1-c8276e265e3db489c090cdcc",
+        "longmemeval-constrained-chat-v1-d038170d98ffa6e8fa0ae744"
+      ],
+      "source_infeasible_record_ids_sha256": "95362c9796b5ad4a29b6fb8180a16b92233fd16c405375f51cf5be7f9c6efa75",
+      "source_infeasible_records": 2
+    },
+    "fixed_c_refit": {
+      "retained_keys_only": true,
+      "source_infeasible_policy": "not_applicable"
+    },
+    "fp32_proxy": {
+      "expected_full_repack_fallback_records": 2,
+      "source_feasible_policy": "incremental_masked_refit",
+      "source_infeasible_policy": "full_raw_omission_repack"
+    },
+    "frozen_records": 16,
+    "joint_admitted": 12,
+    "metrics": {
+      "complete_target_sequences": true,
+      "exact_refit_first_token_full_vocabulary_kl": true,
+      "first_target_token_full_vocabulary_kl": true,
+      "first_target_token_rank": true,
+      "retained_drift": true,
+      "source_state_immutability": true,
+      "storage": true,
+      "timing": true
+    },
+    "prompt_suppression": {
+      "enabled": true,
+      "instruction_target_free_required": true,
+      "persistent_state_edit": false,
+      "valid_gemma_chat_required": true
+    },
+    "record_failures": 0,
+    "resume": {
+      "all_authorized_records_reexecuted": true,
+      "completed_rows_reused": false,
+      "existing_report_policy": "validate_then_discard_all_rows"
+    },
+    "retained_available": 16,
+    "runtime": {
+      "adapter": null,
+      "arm": "it_native_chat_training_free_graft",
+      "chunk": 128,
+      "device": "mps",
+      "dtype": "float32",
+      "evaluation_seed": 0,
+      "graft_enabled": true,
+      "model_id": "google/gemma-3-4b-it",
+      "model_revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "nu": 0.7,
+      "per_boundary_box": true,
+      "preserve_prefix_mass": true,
+      "readout": "softmax",
+      "solver_seed": 0,
+      "training_steps": 0,
+      "window": 1024
+    },
+    "target_admitted": 12,
+    "token_row_repack": {
+      "additional_model_execution": false,
+      "alias_of": "fresh_raw_omission",
+      "diagnostic_only": true,
+      "execution": "zero_cost_alias",
+      "registered_turn_boundary_contract": true
+    }
+  },
+  "confirmation_artifacts": {
+    "confirmation_implementation_contract_sha256": "b5172e56413092ce6929540aa978215378944d4a21efbb231bd263ee3af7faeb",
+    "confirmation_report_file_sha256": "6683ec23cfd9446ebc008ee88091d5aa7e581efdffbca0312a759b5cd94bdbaa",
+    "confirmation_report_payload_sha256": "1e95a69cad623bf66286934571eef686e61430e603c336bbac64b83378559c93",
+    "manifest_file_sha256": "7e9f484c4eee8cceecec79bfc0721e1cfc7100092d29f5b29d1e96eca478bae1",
+    "manifest_integrity_sha256": "48eb12371e677bc18732f900049dcdfc5791f31344a1f4dfbcfcf06bcfe07ce5",
+    "policy_lock_file_sha256": "2829c660378074bf075ffb86ce62715b7be96a626b6bf92753add125ab6b806f",
+    "policy_lock_sha256": "5ff9da549494ab273c7656546d27dcb0bf2922932abb4632a6aef3d1b4fa393c",
+    "promotion_lock_file_sha256": "3ae6824087c05fca7777e6bb37445f4c31ed894f31884dd63d8142210e546f86",
+    "promotion_lock_integrity_sha256": "2c737bba5051a7b56fac369d6bf16898a0b7225289d68eaa842431f062d6234e"
+  },
+  "contains_source_text": false,
+  "integrity": {
+    "algorithm": "sha256",
+    "sha256": "8fcd908bd6596c838fe93127f9a34ff2d430fde647773062037f94b49e4ee19e"
+  },
+  "schema": "gemma-sv-longmemeval-chat-method-authorization-lock-v1",
+  "selection_uses_method_outputs": false,
+  "status": "frozen-before-deletion-method-model-scoring"
+}

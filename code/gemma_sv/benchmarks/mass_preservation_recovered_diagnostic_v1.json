@@ -1,0 +1,14 @@
+{
+  "name": "mass_preservation_recovered_diagnostic_v1",
+  "version": 1,
+  "role": "development-only operator diagnostic",
+  "model": "google/gemma-3-1b-pt",
+  "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+  "manifest": "whole_record_synthetic_v1.json",
+  "nu": 0.3,
+  "seeds": [0, 1, 2],
+  "adapters": "outputs/gemma_sv_multiseed/seed-{seed}/recovered/lora_adapter",
+  "intervention": "Load each existing recovery adapter and learned bandwidth unchanged, overriding only the recorded raw-alpha readout with prefix-mass preservation.",
+  "retention_policy": "Evaluate and retain every listed seed. This diagnoses operator compatibility and is not a final recovery estimate.",
+  "decision_rule": "If all seeds improve without new training, test the corrected readout on a separately frozen confirmation cohort before deciding whether retraining is necessary."
+}

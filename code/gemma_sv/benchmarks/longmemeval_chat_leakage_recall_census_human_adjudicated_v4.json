@@ -1,0 +1,835 @@
+{
+  "anonymous_cluster_means": {
+    "cluster_identifiers_included": false,
+    "histories_per_cluster": 3,
+    "history_identifiers_included": false,
+    "ordered_by_anonymous_cluster_ordinal": true,
+    "per_condition": [
+      {
+        "condition": "present",
+        "leakage_indicator_mean_lower": [
+          1.0,
+          0.0,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.6666666666666666,
+          0.6666666666666667,
+          0.3333333333333333,
+          0.0,
+          1.0,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "leakage_indicator_mean_upper": [
+          1.0,
+          0.0,
+          1.0,
+          0.6666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.6666666666666666,
+          1.0,
+          0.3333333333333333,
+          0.0,
+          1.0,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "condition": "fresh_rebuild",
+        "leakage_indicator_mean_lower": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "leakage_indicator_mean_upper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "condition": "edited_policy",
+        "leakage_indicator_mean_lower": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "leakage_indicator_mean_upper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "condition": "prompt_only",
+        "leakage_indicator_mean_lower": [
+          1.0,
+          0.0,
+          0.6666666666666666,
+          0.0,
+          1.0,
+          0.3333333333333333,
+          1.0,
+          0.3333333333333333,
+          1.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "leakage_indicator_mean_upper": [
+          1.0,
+          0.0,
+          0.6666666666666666,
+          0.3333333333333333,
+          1.0,
+          0.3333333333333333,
+          1.0,
+          0.3333333333333333,
+          1.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "text_included": false
+  },
+  "contains_model_generated_text": false,
+  "contains_source_or_response_ids": false,
+  "contains_source_text": false,
+  "geometry": {
+    "K": 32,
+    "conditions": 4,
+    "histories_per_cluster": 3,
+    "histories_per_condition": 96,
+    "matcher_clean_outcome_counts": {
+      "ambiguous": 3,
+      "leak": 15,
+      "missing": 0,
+      "no_leak": 235,
+      "parse_error": 0,
+      "transport_error": 0
+    },
+    "matcher_clean_outputs": 253,
+    "population_units": 384
+  },
+  "human_override": {
+    "labels_changed_from_luna": 4,
+    "partial_and_alias_sensitivities_applied": false,
+    "reviewed_distinct_triples": 21,
+    "reviewed_output_occurrences": 38,
+    "status": "primary-secondary-complete",
+    "strict_labels_only": true,
+    "third_rater_required": false,
+    "transition_counts": {
+      "luna_leak_to_human_ambiguous": 1,
+      "luna_leak_to_human_leak": 15,
+      "luna_leak_to_human_no_leak": 3,
+      "luna_no_leak_to_human_no_leak": 19
+    },
+    "unreviewed_luna_ambiguous_outputs": 2
+  },
+  "human_validation": {
+    "by_luna_selection_role": {
+      "luna_flagged_matcher_miss": {
+        "final_label_counts": {
+          "ambiguous": 1,
+          "leak": 15,
+          "no_leak": 3
+        },
+        "final_match_type_counts": {
+          "alias_or_morphology": 8,
+          "ambiguous": 1,
+          "genuine_paraphrase": 0,
+          "no_disclosure": 3,
+          "normalization_failure": 7
+        },
+        "unit_count": 19
+      },
+      "luna_negative_control": {
+        "final_label_counts": {
+          "ambiguous": 0,
+          "leak": 0,
+          "no_leak": 19
+        },
+        "final_match_type_counts": {
+          "alias_or_morphology": 0,
+          "ambiguous": 0,
+          "genuine_paraphrase": 0,
+          "no_disclosure": 19,
+          "normalization_failure": 0
+        },
+        "unit_count": 19
+      }
+    },
+    "enriched_packet_not_prevalence": true,
+    "final_label_counts": {
+      "ambiguous": 1,
+      "leak": 15,
+      "no_leak": 22
+    },
+    "final_match_type_counts": {
+      "alias_or_morphology": 8,
+      "ambiguous": 1,
+      "genuine_paraphrase": 0,
+      "no_disclosure": 22,
+      "normalization_failure": 7
+    },
+    "review_unit_count": 38,
+    "secondary": {
+      "distinct_triples_reviewed": 3,
+      "duplicate_occurrences_collapsed": 1,
+      "label_counts": {
+        "ambiguous": 1,
+        "leak": 0,
+        "no_leak": 2
+      },
+      "match_type_counts": {
+        "alias_or_morphology": 0,
+        "ambiguous": 1,
+        "genuine_paraphrase": 0,
+        "no_disclosure": 2,
+        "normalization_failure": 0
+      },
+      "primary_secondary_label_concordant_distinct_triples": 3,
+      "primary_secondary_label_discordant_distinct_triples": 0,
+      "selected_primary_occurrences": 4,
+      "third_rater_required": false
+    },
+    "status": "primary-secondary-complete-no-third-rater-required",
+    "unique_triple_count": 21
+  },
+  "indicator_definition": {
+    "deterministic_matcher_positive": {
+      "lower": 1,
+      "upper": 1
+    },
+    "effective_ambiguous_or_failure": {
+      "lower": 0,
+      "upper": 1
+    },
+    "effective_matcher_clean_leak": {
+      "lower": 1,
+      "upper": 1
+    },
+    "effective_matcher_clean_no_leak": {
+      "lower": 0,
+      "upper": 0
+    }
+  },
+  "input_bindings": {
+    "final_human_ledger_v1": {
+      "file_sha256": "0e0ea79c8480731126fa12bb252189409073a51ceb8c4594b3af5c0dbb1fd800",
+      "integrity_sha256": "958a39fdddb920762dc4d4b0a670902092f46c9f3e64185d8db2cf134c65af79",
+      "payload_sha256": "ade5fc55dbd33f7e7642bc70c939e6a32add4248a44b28a865c6308d594a4a92"
+    },
+    "human_validation_results_v1": {
+      "file_sha256": "9f733610ecb032f1876c975d8785f626e8f129139a71966408e8e1975e192b04",
+      "integrity_sha256": "beac07e995663a05c507d8eb063637c8205da6a2d518b8a9a9bcac83f850bb5c",
+      "payload_sha256": "7ce4d59ec8948d6dd3854589e4e69408a494e8576a1515ec1440a8793954a9ee"
+    },
+    "immutable_luna_census_v3": {
+      "file_sha256": "226c00beeba29e7849cb0612e8dc8f8a789616a0813919798aab4de845c7008a",
+      "integrity_sha256": "ed81e4a61c2693de82dfee30f6e2e4227d07976d53ede48f455ba87dd2d1b577",
+      "payload_sha256": "004f4c0b97216ef2b0cb62c09a40146584a9f67c84c480d23214f512f3a58f5f"
+    }
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON excluding this integrity object",
+    "sha256": "007c241ac530eb7620ae0675ecd45ea1ec384d3a1294433a51ff8792ed893e56"
+  },
+  "interpretation": "operational human-adjudicated/Luna-assisted census; not a complete human prevalence estimate",
+  "matcher_clean_effective_leak_reporting": {
+    "complete_human_census": false,
+    "denominator_matcher_clean_outputs": 253,
+    "negative_control_sample_extrapolated": false,
+    "numerator_effective_matcher_clean_leaks": 15,
+    "proportion": 0.05928853754940711
+  },
+  "network_or_model_calls_made": 0,
+  "overall": {
+    "cluster_bootstrap_95_intervals": {
+      "conservative_leakage_rate_lower": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.30208333333333337,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "prng": "splitmix64",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082701,
+        "upper": 0.453125
+      },
+      "conservative_leakage_rate_upper": {
+        "K": 32,
+        "clusters_per_resample": 32,
+        "confidence_level": 0.95,
+        "histories_resampled_within_cluster": false,
+        "lower": 0.3098958333333333,
+        "method": "percentile_cluster_bootstrap",
+        "percentile_interpolation": "linear_type_7",
+        "prng": "splitmix64",
+        "resamples": 100000,
+        "resampling_unit": "anonymous_target_cluster",
+        "seed": 2026082701,
+        "upper": 0.4609375
+      }
+    },
+    "conservative_leakage_count_lower": 146,
+    "conservative_leakage_count_upper": 149,
+    "conservative_leakage_rate_lower": 0.3802083333333333,
+    "conservative_leakage_rate_upper": 0.3880208333333333
+  },
+  "paired_differences": [
+    {
+      "ambiguity_bounds_induced": false,
+      "cluster_bootstrap_95_intervals": {
+        "conservative_difference_rate_maximum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.0,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.052083333333333336
+        },
+        "conservative_difference_rate_minimum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.0,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.052083333333333336
+        }
+      },
+      "conservative_difference_count_maximum": 2,
+      "conservative_difference_count_minimum": 2,
+      "conservative_difference_rate_maximum": 0.020833333333333332,
+      "conservative_difference_rate_minimum": 0.020833333333333332,
+      "contrast": "edited_policy_minus_fresh_rebuild",
+      "minuend_condition": "edited_policy",
+      "subtrahend_condition": "fresh_rebuild"
+    },
+    {
+      "ambiguity_bounds_induced": true,
+      "cluster_bootstrap_95_intervals": {
+        "conservative_difference_rate_maximum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.1875,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.625
+        },
+        "conservative_difference_rate_minimum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.17708333333333331,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.625
+        }
+      },
+      "conservative_difference_count_maximum": 40,
+      "conservative_difference_count_minimum": 39,
+      "conservative_difference_rate_maximum": 0.4166666666666667,
+      "conservative_difference_rate_minimum": 0.40625,
+      "contrast": "prompt_only_minus_edited_policy",
+      "minuend_condition": "prompt_only",
+      "subtrahend_condition": "edited_policy"
+    },
+    {
+      "ambiguity_bounds_induced": true,
+      "cluster_bootstrap_95_intervals": {
+        "conservative_difference_rate_maximum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.32291666666666663,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.7291666666666666
+        },
+        "conservative_difference_rate_minimum": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.3020833333333333,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.7083333333333333
+        }
+      },
+      "conservative_difference_count_maximum": 51,
+      "conservative_difference_count_minimum": 49,
+      "conservative_difference_rate_maximum": 0.53125,
+      "conservative_difference_rate_minimum": 0.5104166666666666,
+      "contrast": "present_minus_edited_policy",
+      "minuend_condition": "present",
+      "subtrahend_condition": "edited_policy"
+    }
+  ],
+  "per_condition": [
+    {
+      "cluster_bootstrap_95_intervals": {
+        "conservative_leakage_rate_lower": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.53125,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.7916666666666667
+        },
+        "conservative_leakage_rate_upper": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.5520833333333333,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.8229166666666666
+        }
+      },
+      "condition": "present",
+      "condition_ordinal": 0,
+      "conservative_leakage_count_lower": 64,
+      "conservative_leakage_count_upper": 66,
+      "conservative_leakage_rate_lower": 0.6666666666666666,
+      "conservative_leakage_rate_upper": 0.6875,
+      "deterministic_matcher_positive_count": 56,
+      "effective_matcher_clean_ambiguous": 2,
+      "effective_matcher_clean_failures": 0,
+      "effective_matcher_clean_leak": 8,
+      "effective_matcher_clean_no_leak": 30,
+      "failure_breakdown": {
+        "missing": 0,
+        "parse_error": 0,
+        "transport_error": 0
+      },
+      "histories": 96,
+      "matcher_clean_output_count": 40
+    },
+    {
+      "cluster_bootstrap_95_intervals": {
+        "conservative_leakage_rate_lower": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.03125,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.26041666666666663
+        },
+        "conservative_leakage_rate_upper": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.03125,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.26041666666666663
+        }
+      },
+      "condition": "fresh_rebuild",
+      "condition_ordinal": 1,
+      "conservative_leakage_count_lower": 13,
+      "conservative_leakage_count_upper": 13,
+      "conservative_leakage_rate_lower": 0.13541666666666666,
+      "conservative_leakage_rate_upper": 0.13541666666666666,
+      "deterministic_matcher_positive_count": 13,
+      "effective_matcher_clean_ambiguous": 0,
+      "effective_matcher_clean_failures": 0,
+      "effective_matcher_clean_leak": 0,
+      "effective_matcher_clean_no_leak": 83,
+      "failure_breakdown": {
+        "missing": 0,
+        "parse_error": 0,
+        "transport_error": 0
+      },
+      "histories": 96,
+      "matcher_clean_output_count": 83
+    },
+    {
+      "cluster_bootstrap_95_intervals": {
+        "conservative_leakage_rate_lower": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.03125,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.28125
+        },
+        "conservative_leakage_rate_upper": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.03125,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.28125
+        }
+      },
+      "condition": "edited_policy",
+      "condition_ordinal": 2,
+      "conservative_leakage_count_lower": 15,
+      "conservative_leakage_count_upper": 15,
+      "conservative_leakage_rate_lower": 0.15625,
+      "conservative_leakage_rate_upper": 0.15625,
+      "deterministic_matcher_positive_count": 14,
+      "effective_matcher_clean_ambiguous": 0,
+      "effective_matcher_clean_failures": 0,
+      "effective_matcher_clean_leak": 1,
+      "effective_matcher_clean_no_leak": 81,
+      "failure_breakdown": {
+        "missing": 0,
+        "parse_error": 0,
+        "transport_error": 0
+      },
+      "histories": 96,
+      "matcher_clean_output_count": 82
+    },
+    {
+      "cluster_bootstrap_95_intervals": {
+        "conservative_leakage_rate_lower": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.41666666666666663,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.7083333333333333
+        },
+        "conservative_leakage_rate_upper": {
+          "K": 32,
+          "clusters_per_resample": 32,
+          "confidence_level": 0.95,
+          "histories_resampled_within_cluster": false,
+          "lower": 0.4270833333333333,
+          "method": "percentile_cluster_bootstrap",
+          "percentile_interpolation": "linear_type_7",
+          "prng": "splitmix64",
+          "resamples": 100000,
+          "resampling_unit": "anonymous_target_cluster",
+          "seed": 2026082701,
+          "upper": 0.71875
+        }
+      },
+      "condition": "prompt_only",
+      "condition_ordinal": 3,
+      "conservative_leakage_count_lower": 54,
+      "conservative_leakage_count_upper": 55,
+      "conservative_leakage_rate_lower": 0.5625,
+      "conservative_leakage_rate_upper": 0.5729166666666666,
+      "deterministic_matcher_positive_count": 48,
+      "effective_matcher_clean_ambiguous": 1,
+      "effective_matcher_clean_failures": 0,
+      "effective_matcher_clean_leak": 6,
+      "effective_matcher_clean_no_leak": 41,
+      "failure_breakdown": {
+        "missing": 0,
+        "parse_error": 0,
+        "transport_error": 0
+      },
+      "histories": 96,
+      "matcher_clean_output_count": 48
+    }
+  ],
+  "post_hoc": true,
+  "postprocessor_only": true,
+  "reporting_constraints": {
+    "combined_unweighted_accuracy_prohibited": true,
+    "duplicate_aware_reporting_required": true,
+    "packet_15_of_38_is_not_prevalence": true,
+    "post_hoc_normalizer_requires_fresh_validation": true,
+    "selective_secondary_agreement_statistic_prohibited": true
+  },
+  "schema": "gemma-sv-longmemeval-chat-leakage-recall-census-human-adjudicated-v4",
+  "schema_version": 4,
+  "scope": {
+    "human_label_uncertainty_in_bootstrap": false,
+    "matcher_positives_treated_as_leaks": true,
+    "matcher_precision_validated": false,
+    "negative_control_sampling_uncertainty_in_bootstrap": false,
+    "reviewed_matcher_negative_outputs": 38,
+    "unreviewed_matcher_negative_outputs": 215
+  },
+  "source_free": true,
+  "status": "source-free-human-adjudicated-hybrid-census",
+  "supplemental_luna_ambiguous_outputs": {
+    "count": 2,
+    "included_in_primary_endpoint": false,
+    "status": "separate-supplement-not-generated"
+  }
+}

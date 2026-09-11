@@ -1,0 +1,6 @@
+-r requirements-full.txt
+
+# Optional, local-only RAG benchmark plumbing. Model and dataset commits are
+# pinned in rag_benchmark.py and recorded in every frozen manifest.
+llama-index-core==0.14.23
+llama-index-embeddings-huggingface==0.7.0

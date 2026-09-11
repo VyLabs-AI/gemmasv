@@ -1,0 +1,19 @@
+{
+  "name": "mass_preservation_nu_sweep_v1",
+  "version": 1,
+  "role": "development-only recipe selection",
+  "model": "google/gemma-3-1b-pt",
+  "model_revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+  "manifest": "whole_record_synthetic_v1.json",
+  "readout": "mass-preserving",
+  "training_steps": 0,
+  "fixed_parameters": {
+    "chunk": 128,
+    "window": 512,
+    "n_fill": 22,
+    "prefix_fillers": 8
+  },
+  "nu_values": [0.35, 0.4, 0.45],
+  "selection_rule": "Require 8/8 strict joint admission with runtime-matched fixed-C feasibility; among passing values choose the smallest nu. If none pass, do not select an untrained recipe and proceed to recovery diagnostics.",
+  "retention_policy": "Retain and report every listed nu outcome; do not alter the grid or gates after observing results."
+}
