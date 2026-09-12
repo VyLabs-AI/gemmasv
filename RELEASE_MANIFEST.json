@@ -3,15 +3,15 @@
   "manuscript": {
     "title": "Can an AI Assistant Really Forget? Auditable Deletion from Addressable Memory",
     "arxiv": "https://arxiv.org/abs/2607.27539",
-    "version_policy": "One evolving manuscript; submitted replacements may not yet be public."
+    "version_policy": "This repository supports the current manuscript; study-specific execution versions are pinned by their protocols."
   },
   "repository_url": "https://github.com/VyLabs-AI/gemmasv",
   "release_date": "2026-09-11",
-  "previous_release_commit": "3f67899a2a641ffb51ca36ccc9286b73bcc498f0",
+  "previous_release_commit": "2f0f1664e5e9c12f600d36e3019288abeddd84b4",
   "source_commit": "6ccc7c882dff0f6bc8d38c3de33e97f20abf65ec",
   "snapshot_code_commit": "01824c2fa26a31ca14d5251ed5add568589e9ddb papers: finalize trilogy manuscripts and review handoff",
-  "scope": "Gemma result reproduction: implementation, source-free protocols and measurements, exact historical snapshots and offline checks; no manuscript builds, hosted UI/API, Node tools or separate KDA/Qwen/SV experiments.",
-  "file_count_excluding_manifest": 382,
+  "scope": "Gemma result reproduction: implementation, protocols and aggregate measurements, exact execution versions and offline checks; no manuscript builds or hosted service.",
+  "file_count_excluding_manifest": 375,
   "frozen_study": {
     "payload_files": 110,
     "all_files_including_manifests": 112,
@@ -42,7 +42,20 @@
     "decoded_contract_tests_passed": 28,
     "upstream_asset_cases_deselected": 5,
     "model_inference_rerun": false,
-    "accelerator_tests": "Legacy optional MLX tests unavailable in sandbox without Metal; not counted as passing."
+    "accelerator_tests": "Legacy optional MLX tests unavailable in sandbox without Metal; not counted as passing.",
+    "python_sources_parsed": 235,
+    "removed_unused_recovery_orchestrators": [
+      "code/gemma_sv/reproducibility/run_headline.sh",
+      "code/gemma_sv/reproducibility/run_models.sh",
+      "code/gemma_sv/reproducibility/run_robust_m3.sh"
+    ],
+    "retained_runtime_and_result_files_unchanged": true,
+    "removed_unused_recovery_modules": [
+      "code/gemma_sv/train_stage1.py",
+      "code/gemma_sv/train_stage2.py",
+      "code/gemma_sv/distill.py",
+      "code/gemma_sv/run_distill.py"
+    ]
   },
   "files": {
     ".gitignore": {
@@ -54,28 +67,28 @@
       "bytes": 11321
     },
     "README.md": {
-      "sha256": "fe12492bc5b5b18b188c05c00c101515cb524e33af1d2a8a9ffa0c56a285a2df",
-      "bytes": 4996
+      "sha256": "1218c172631b757c76637d8576dd6c119231330d7be88f8184e6df84966fd064",
+      "bytes": 4275
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "2baf80601d8eb54a6b5f21740963043339c6f97154720059a831320936b823fe",
       "bytes": 1112
     },
     "VALIDATION.md": {
-      "sha256": "dce9936ec11ab528b4f28346a9c44419f485e591e3daf7e886c71b24c3595ab5",
-      "bytes": 2134
+      "sha256": "5272fbce2b7b8bbf31e7523b609e9087f3d368bb8b9ba495c30932299f8d7fc3",
+      "bytes": 1893
     },
     "code/LICENSE": {
       "sha256": "6fadf92eab529f576360720357593d184b41df43ab5de494cf9de0a7acd1f7ef",
       "bytes": 11321
     },
     "code/README.md": {
-      "sha256": "1aef06b9e13e4218f49d587168d05fe09a3e68c61a4b08798fa2da55a4f15291",
-      "bytes": 1829
+      "sha256": "de4bdb8a1d703fe53b5e9f96a121864f7443fb346512feeae0b1d4e7ab83d01c",
+      "bytes": 1712
     },
     "code/REPRODUCE_DECODED.md": {
-      "sha256": "2047177e11ef4fe27c382ef28bb7418b8513e5e395fe3b5ecb0a4b5827696c7e",
-      "bytes": 3150
+      "sha256": "2f8828432a36962f52df814272632636c711dade9109fcdfe4469acbfca7a289",
+      "bytes": 3090
     },
     "code/cp_svm/THIRD_PARTY_NOTICES.md": {
       "sha256": "6a4a9b6c05f06fcfce6fa53d57e321bf8d2d5ca691b6e4fa3822261efed3d9d7",
@@ -114,8 +127,8 @@
       "bytes": 11321
     },
     "code/gemma_sv/README.md": {
-      "sha256": "60251e886450a96f1cca15e0e90aa2113306f6cae26d16e4975a28bab704d8e5",
-      "bytes": 405
+      "sha256": "dd7783f450c12338304c9353106f81a0c71b1a2eed1a899852a9fafc4a19a617",
+      "bytes": 388
     },
     "code/gemma_sv/THIRD_PARTY_NOTICES.md": {
       "sha256": "427518b1ee63d70740005bdaf1af943603f38021ec7dee0ddc1130361cf945af",
@@ -529,10 +542,6 @@
       "sha256": "6efa1faf65ae9363e5fe097d1d8e178e67a077035191020550e4e8e32ff34e19",
       "bytes": 4314
     },
-    "code/gemma_sv/distill.py": {
-      "sha256": "001e8064eab7f22458f2361e00d919fd11906ba572908cb5e357b5c41c37028a",
-      "bytes": 5326
-    },
     "code/gemma_sv/eval_ablation.py": {
       "sha256": "9491aa1385b426bfe92574a790f448f8ff2a4b237ac0715d895c3ac58010b03b",
       "bytes": 3345
@@ -754,32 +763,20 @@
       "bytes": 2204
     },
     "code/gemma_sv/reproducibility/HARDWARE.md": {
-      "sha256": "2a060386cfff28da279647996da84caaef26e855eed0632068c64f2b98d25785",
-      "bytes": 4383
+      "sha256": "059e7ee13f8bfb9189a972156fc2fd5184a7adac52fe3909ee17862c7f0b5378",
+      "bytes": 2130
     },
     "code/gemma_sv/reproducibility/PROVENANCE.md": {
-      "sha256": "e06ab4da0e7f0b2be3f58deb2603216119685d03921baf1d2bc03fbba28f7ab4",
-      "bytes": 20120
+      "sha256": "b3e8163a682b714c6993fbd7486cdec19cc6a85dd3fca3026399187f932f1590",
+      "bytes": 9945
     },
     "code/gemma_sv/reproducibility/README.md": {
-      "sha256": "6d4437e5554f7d7ad5b75f56a5f63aaf3249471432e503316fdb5a4c7e0930ec",
-      "bytes": 12332
-    },
-    "code/gemma_sv/reproducibility/run_headline.sh": {
-      "sha256": "a84205ea1955f4aaa29890109378fccf4a5a7bbead09813f66c90b11b4709514",
-      "bytes": 2127
-    },
-    "code/gemma_sv/reproducibility/run_models.sh": {
-      "sha256": "99b55bd56493125c336cfe99de1cc9ccbd8b41e24fa769e27b6317670cd50670",
-      "bytes": 20537
+      "sha256": "f40f0789332f8a775da1aa120499e7157d21b2ee94cbb1044a60d6372f4f3ccf",
+      "bytes": 5538
     },
     "code/gemma_sv/reproducibility/run_quick.sh": {
       "sha256": "42d4bb6adda8eb1cf3ef18d44a1726a36ebeedb19c9456e35aeb48791674168a",
       "bytes": 1079
-    },
-    "code/gemma_sv/reproducibility/run_robust_m3.sh": {
-      "sha256": "328a2d62a790acc343ceddb8b099efd0e8cf54c3f1bfc5718b0e2332e6f39a1b",
-      "bytes": 4526
     },
     "code/gemma_sv/requirements-apple.txt": {
       "sha256": "de9925ab9263bc56640383b721f48b2bb91d493b988d30a81784f7ca6d7e6ad5",
@@ -812,10 +809,6 @@
     "code/gemma_sv/run_boundary_attack_suite.py": {
       "sha256": "ad0d88b77c47b46f62ae62e279c3e763933e7a5aefed41b9a1873fc832269211",
       "bytes": 9207
-    },
-    "code/gemma_sv/run_distill.py": {
-      "sha256": "195efda9763301a4cae51041ff257632d0ead72efba3d1f2664249e6da0bf3d2",
-      "bytes": 16183
     },
     "code/gemma_sv/smoke_test.py": {
       "sha256": "5e7bfe23dfd8994b194f8d43ed061ad1ede89d1c020a45849b94d4ebfbbe1628",
@@ -864,14 +857,6 @@
     "code/gemma_sv/sv_global_attention.py": {
       "sha256": "58eaea66adefdd92ca4a2f5191be54b4a4061a70eee64a9c0e7ce9bd4ee43dc8",
       "bytes": 20177
-    },
-    "code/gemma_sv/train_stage1.py": {
-      "sha256": "220e8e0a85e7123bc10a49b5feeac4cc580eecf2e05a0813a2fd172c827b17f9",
-      "bytes": 5948
-    },
-    "code/gemma_sv/train_stage2.py": {
-      "sha256": "d1f667b34c583b5ae6ba629a8dac26df909431a1386a047dc95e2e0c7d261877",
-      "bytes": 4459
     },
     "code/gemma_sv/unlearn.py": {
       "sha256": "e695752c4081c90fbf62294521b361faf78c01192d6bf3c6335b62f0c9212ed6",

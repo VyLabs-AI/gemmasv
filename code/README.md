@@ -1,7 +1,7 @@
 # GemmaSV replication code
 
 This directory contains evaluation and result-reconstruction code for the
-[evolving GemmaSV manuscript](https://arxiv.org/abs/2607.27539).
+[current GemmaSV paper](https://arxiv.org/abs/2607.27539).
 Run all Python module commands from this directory.
 
 ```sh
@@ -14,14 +14,12 @@ python -m pytest tests/test_boundary_evidence_publication_v3.py tests/test_publi
 The result tests validate source-free aggregates and reconstruct the three
 numeric fixtures in `tests/expected/` without compiling a manuscript.
 `REPRODUCE_DECODED.md` documents the completed 32-cluster/96-history decoded
-study, its source-free human-validation chain and exact historical runtime
-bindings. The older response-generation v1 authorization was terminated and
-contributes no outcome evidence. Raw responses, private judge ledgers and
-human-review packets are excluded.
+study, its source-free human-validation chain and exact runtime bindings. Raw responses, private judge ledgers and human-review
+packets are excluded.
 
 The modules under `gemma_sv/demo_server/` supply model runtime, boundary gates,
 state and certificate contracts used by the experiment runners. Their names
-are preserved to maintain historical fingerprints. A hosted demo service is
+are preserved to maintain execution fingerprints. A hosted demo service is
 not included. `svattn/` retains only the transitive support-vector gate modules
 needed by Gemma; `cp_svm/` supplies the underlying solvers.
 

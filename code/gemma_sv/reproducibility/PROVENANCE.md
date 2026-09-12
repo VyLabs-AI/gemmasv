@@ -1,21 +1,13 @@
 # Claim-to-command provenance
 
-All paths below are relative to `code/`. The manuscript is not the source
-of numerical truth; each claim below points to its recorded artifact and
-reproduction command.
-
-The repository accompanies one evolving GemmaSV manuscript. Completed study
-analyses are additionally documented in `../../../journal_evidence/README.md`.
-Numerical fixtures live under `tests/expected/`; there is no manuscript build
-package. Commands referring to local reports require those original inputs.
+This map covers the results in the current [GemmaSV paper](https://arxiv.org/abs/2607.27539).
+Paths in the table are relative to `code/`. Each claim points to its recorded
+artifact and reproduction command. Commands referring to local reports require
+those original inputs; source-free aggregates and offline checks are included.
+The saved analyses do not require manuscript compilation.
 
 | Claim or artifact | Source of record | Reproduction command | External input |
 |---|---|---|---|
-| Request-safe gate controls | `tests/test_demo_gate_context.py` | `bash gemma_sv/reproducibility/run_quick.sh` | None |
-| Prefill-once cache reuse, frozen memory boundary, and no legacy re-prefill | `tests/test_persistent_memory.py`, `gemma_sv/smoke_test.py` | `python -m pytest tests/test_persistent_memory.py -q` then `python -m gemma_sv.smoke_test` | None; random Gemma integration uses no downloaded weights |
-| Span/token alignment | `tests/test_demo_span.py` | `bash gemma_sv/reproducibility/run_quick.sh` | None |
-| Random Gemma graft integration | `gemma_sv/smoke_test.py` | `python -m gemma_sv.smoke_test` | Transformers package; no pretrained weights |
-| Real Gemma graft validation | `gemma_sv/validate_real.py` | `python -m gemma_sv.validate_real` | Gemma model access/download |
 | Training-free mass-preserving configuration | `gemma_sv/benchmarks/mass_preserving_boundary_v1.json` | no training; pass `--nu 0.7 --solver-seed 0 --preserve-prefix-mass --per-boundary-box` to the model evaluators | Pinned Gemma revision; deterministic bandwidth and MLX solve |
 | Untouched 1B/4B admission confirmation | `gemma_sv/benchmarks/{whole_record_confirm_v2,iclr_mass_preserving_boundary_v2}.json` | `python -m gemma_sv.eval_whole_record_unlearning --manifest gemma_sv/benchmarks/whole_record_confirm_v2.json --admission-only --lora none ...` | Pinned TOFU; every record retained; 4B graft/base `6/8`, 1B graft/base `3/8` versus `7/8` |
 | Training-free 400-block quality | `gemma_sv/benchmarks/iclr_mass_preserving_boundary_v2.json` | `python -m gemma_sv.eval_training_free_quality --blocks 400 --group-size 20 ...` | Pinned WikiText-103 and Gemma revisions; paired block NLL; `+1.85%` at 4B, `+3.70%` at 1B; contiguous groups are descriptive |
@@ -27,62 +19,26 @@ package. Commands referring to local reports require those original inputs.
 | Corrected-config 4B behavioral attacks | `gemma_sv/benchmarks/{boundary_attack_suite_v1,boundary_lira_broad_v1,whole_record_lira_broad_v1,iclr_mass_preserving_boundary_v2}.json`; local `outputs/gemma_sv_{boundary_attack_suite,lira_broad}/` | `python -m gemma_sv.run_boundary_attack_suite`, then `python -m gemma_sv.eval_boundary_attacks --mode {elicitation,lira,relearning}` | Six-record Leak@k/elicitation/relearning has no full-repack fallback; broad LiRA admits `16/20`, uses 32 shadows/tests per record, and reports masked-refit/full-repack policy AUC `0.517`, including `16/512` masked-refit test deletions routed to full repack; arbitrary replacement of those scores has maximum AUC leverage `0.031` |
 | Qualitative TOFU sampling panel | `gemma_sv/benchmarks/{boundary_attack_suite_v1,boundary_qualitative_generation_replay_v1}.json`; selected source-bearing bundle remains local | Inspect the source-free benchmark binding; raw sampled responses are not distributed | One field of `tofu-final-380-a`: present `9/200`, prompt-only `10/200`, edited and never stored `0/200`; the cohort rate remains `3/18 = 16.7%`, not this query's result. |
 | Fallback-density mechanism diagnostic | `gemma_sv/benchmarks/fallback_density_diagnostic_v1.json`; local `outputs/gemma_sv_fallback_density/report.json` | `python -m gemma_sv.diagnose_fallback_density` | One 4B record; identical keys/deletion/bandwidth across ν; support `30.7→70.3%`, fallback `0→59%` |
-| 1B recovery ladder and perplexity | `outputs/gemma_sv_distill/results.json`, `outputs/gemma_sv_distill_control/control_results.json` | `python -m gemma_sv.run_distill ...` for graft and `--control-only` for matched control | FineWeb-Edu, Gemma-3-1B |
-| Three-seed 1B recovery and exact matched controls | `outputs/gemma_sv_multiseed/seed-{0,1,2}/{recovered/results.json,control/control_results.json}` | `bash gemma_sv/reproducibility/run_models.sh recover-1b` | Pinned FineWeb-Edu, WikiText-103, and Gemma-3-1B revisions; each pair records and validates its exact stage-2 batch fingerprint |
-| Three-seed perplexity, utility-cost, and certificate CIs | `outputs/gemma_sv_multiseed/summary.json` | `bash gemma_sv/reproducibility/run_models.sh summarize-1b` after the seed-scoped phases | Three matched recovery/control pairs; Student-t CI unit is training seed |
-| Three-seed 4B recovery and exact matched controls | `outputs/gemma_sv_4b_multiseed/seed-{0,1,2}/{recovered/results.json,control/control_results.json}` | `SEEDS="0 1 2" MAX_PARALLEL_4B=2 bash gemma_sv/reproducibility/run_models.sh recover-4b` | Pinned Gemma-3-4B revision `cc012e0a...`; two-way seed parallelism passed the MPS smoke, while each control follows and validates its recovery stream |
-| Three-seed 4B utility trend | `outputs/gemma_sv_4b_multiseed/summary.json`, `gemma_sv/benchmarks/iclr_4b_multiseed_v1.json` | `SEEDS="0 1 2" bash gemma_sv/reproducibility/run_models.sh summarize-4b` | Corrected matched pairs only; legacy single-seed adapters are excluded; Student-t CI unit is training seed |
-| Warm-start ablation (no stage 1) | `outputs/gemma_sv_distill_nostage1/results.json` | `python -m gemma_sv.run_distill --stage1-steps 0 --stage2-steps 6000 --batch 8 --data-skip 2000 --out outputs/gemma_sv_distill_nostage1` | FineWeb-Edu, Gemma-3-1B |
-| Zero-shot utility | `outputs/gemma_sv_eval/tasks.json` | `python -m gemma_sv.eval_tasks --limit 2000` | Recovered/control adapters |
-| Cross-corpus perplexity | `outputs/gemma_sv_eval/ppl2.json` | `python -m gemma_sv.eval_ppl2 --blocks 300` | WikiText, Lambada, C4 |
-| Output decrement/refit KL over support-token deletions | output of `gemma_sv/unlearn_output_demo.py` | `python -m gemma_sv.unlearn_output_demo --lora outputs/gemma_sv_distill/lora_adapter --trials 31` | Recovered adapter; generic fixed prompt |
-| Stateful same-context decrement/proxy bridge | `gemma_sv/benchmarks/persistent_bridge_v2.json` (versioned aggregate) and `outputs/gemma_sv_demo/persistent_state_bridge_v2.json` (full local diagnostics) | `python -m gemma_sv.persistent_bridge_demo` | Recovered adapter; versioned synthetic manifest |
-| Eight-record prefill-once exact/proxy audit and matched deletion baselines | `outputs/gemma_sv_multiseed/seed-{0,1,2}/deletion_audit/persistent_baselines.json` | `bash gemma_sv/reproducibility/run_models.sh deletion-audit-1b` | All predeclared synthetic records and retained neighbors; full repack, exact/refit, FP32 proxy, cache delete-and-shift, decay, faithful ICUL; KVEraser compatibility exclusion |
-| Residual-qualified FP32 proxy/fallback frontier | `gemma_sv/benchmarks/proxy_frontier_v1.json`, `outputs/gemma_sv_proxy_precision/frontier.json` | `python -m gemma_sv.eval_proxy_precision_sweep --adapters <seed-0>,<seed-1>,<seed-2> --devices cpu` | Frozen session bandwidth/box and seeded feasible FISTA iterate; selected 160-iteration policy; locked validation max KL `4.88e-6`, `2/12` fallback, zero violations; approximation, never a certificate |
-| Public natural-QA context erasure smoke | Protocol/input only: `gemma_sv/benchmarks/2wiki_rag_erasure_smoke_v1.json`; result-bearing aggregate: `gemma_sv/benchmarks/ruler_context_erasure_v1.json`; local reports: `outputs/gemma_sv_rag/{admission_scan,context_erasure_smoke}.json` | `python -m gemma_sv.rag_benchmark --mode smoke ...`, then `python -m gemma_sv.eval_context_erasure_qa --admission-only ...` | The 2Wiki artifact fixes inputs and contains no outcomes. `ruler_context_erasure_v1.json` records `manifest.natural_qa_trigger` as `1/8` target, `1/8` retained, and `0/8` joint, bound to the protocol by `manifest_integrity_sha256`. |
-| Controlled RULER multi-key follow-up | `gemma_sv/benchmarks/{ruler_multikey_erasure_v1,ruler_context_erasure_v1}.json`, `outputs/gemma_sv_rag/ruler_context_erasure.json` | `python -m gemma_sv.ruler_erasure_benchmark`, then `python -m gemma_sv.eval_ruler_context_erasure ...` | Triggered by frozen natural-QA failure; `4/8` target/joint admission, `8/8` retained; all-eight method matrix, exact/refit max KL `9.51e-12`, `44/640` disclosed fallback |
 | Fixed-cohort LongMemEval chatbot deletion | `gemma_sv/benchmarks/longmemeval_chat_geometry_methods_compact16_v1.json`; local `outputs/gemma_sv_rag/longmemeval_chat_geometry_methods_finalized_v1.json` | Validate/publish with `python -m gemma_sv.publish_longmemeval_chat_result --validate-only` then without `--validate-only` | Pinned public LongMemEval V1 and Gemma-3-4B-IT revisions; fixed 16-record cohort, `10/16` predeclared joint admission, all primary conditions complete, all exact-policy executions use fixed-\(C\) refit fallback, all 32 exact/refit probes certified, final report SHA-256 `a7d0582d…27fb6`; raw omission remains a separate behavioral reference, the cache delete-and-shift failure is an incompatible diagnostic, and no speed claim is made |
-| Post-hoc LongMemEval decoded-response audit (terminated without outcome; not evidence) | `gemma_sv/benchmarks/longmemeval_chat_response_generation_authorization_v1.json`; runner `gemma_sv/longmemeval_chat_response_generation_audit.py`; absent local output `outputs/gemma_sv_rag/longmemeval_chat_response_generation_audit_v1.json` | Do not retry the consumed v1 authorization | The source-bearing, local-only attempt ran once and terminated without a report. The lock specified 16 records, seven executed conditions plus one alias, two probes, repeat checks, greedy 64-token decoding, and 448 calls; it remains a protocol, not outcome evidence |
 | Decoded LongMemEval follow-up | `gemma_sv/benchmarks/{longmemeval_chat_v3_summary_v1,longmemeval_chat_leakage_recall_census_statistics_v3,longmemeval_chat_leakage_recall_census_human_adjudicated_v4}.json`; numeric fixtures under `tests/expected/` | Run `python -m gemma_sv.summarize_longmemeval_chat_leakage_recall_census_v4 --check`, then `python -m gemma_sv.build_longmemeval_chat_v3_paper_macros --validate-only` from `code/` | `K=32` clusters and `n=96` histories; strict human overrides change present to `64--66/96` and prompt-only to `54--55/96`; edited policy remains `15/96`, fresh rebuild `13/96`, and their paired difference remains `+2.1` points with cluster-bootstrap 95% CI `[0.0, 5.2]` |
 | Luna instrument and blinded human validation | Source-free protocol, lock chain, and final aggregate under `gemma_sv/benchmarks/longmemeval_chat_human_validation_*`; source-bearing packets remain outside release | Validate the primary lock and reproduce the final source-free results from `code/` with `gemma_sv.finalize_longmemeval_chat_human_validation_v1.load_validated_final_outputs()` | Of 19 Luna flags, blinded humans confirm 15 leaks, reject 3, and retain 1 ambiguous; all 19 hash-random Luna-negative controls are no-leak. Three distinct secondary-reviewed triples are concordant, so no third rater is required. This enriched audit validates the instrument, not prevalence or efficacy |
 | Suffix-contact disclosure cross-tab | `gemma_sv/benchmarks/longmemeval_chat_suffix_disclosure_crosstab_human_adjudicated_v2.json`; numeric fixtures under `tests/expected/` | Run `python -m gemma_sv.build_longmemeval_chat_suffix_disclosure_crosstab_v2 --check` from `code/` | Human adjudication confirms the sole edited-policy matcher miss, so the cross-tab remains contact `1/24`, clean `14/72`, Fisher two-sided `p=0.105`; it supports no KDA mechanism claim |
-| Sequential support-token deletion | output of `gemma_sv/unlearn_output_demo.py` | `python -m gemma_sv.unlearn_output_demo --lora outputs/gemma_sv_distill/lora_adapter --sequential 1,2,5,10,20,30` | Fixed generic prompt, recovered adapter |
-| Masked-refit forget efficacy and retain specificity | `gemma_sv/unlearn_eval.py` | `python -m gemma_sv.unlearn_eval --targets 40 --lora outputs/gemma_sv_distill/lora_adapter` | TOFU, recovered adapter; single-precision FISTA |
-| Masked-refit in-context elicitation attack | `outputs/gemma_sv_eval/attack*` | `python -m gemma_sv.unlearn_attack --targets 50 --lora outputs/gemma_sv_distill/lora_adapter` | TOFU, recovered adapter; single-precision FISTA |
-| Masked-refit probabilistic `leak@k` + paired TOFU | `outputs/gemma_sv_eval/robust_unlearning.json` (200 shards, stem-probe protocol) | `bash gemma_sv/reproducibility/run_robust_m3.sh --paper` with the admitted `LEAK_INDICES`/`PAIRED_INDICES` from the admission scans | TOFU, TOFU-Pair, recovered adapter; single-precision FISTA and cached decode |
-| Naive-probe null (no attacker power) | `outputs/gemma_sv_eval/robust_naive_probe.json` (12 targets × 200 samples) | historical full-question-probe shards; kept as the motivation for the stem probe | TOFU, recovered adapter |
-| Leak@k seed replications | `outputs/gemma_sv_eval/robust_unlearning_seed{1,2}.json` | `SEED=N bash gemma_sv/reproducibility/run_robust_m3.sh --paper` with the leak index list | TOFU, recovered adapter |
-| Whole-record masked-refit behavioral benchmark | `outputs/gemma_sv_eval/whole_record_synthetic_v1.json`, `whole_record_summary.json` | `python -m gemma_sv.eval_whole_record_unlearning --samples 16 --k 1,2,4,8,16` | Versioned synthetic manifest, recovered adapter |
-| Whole-record seed replication | `outputs/gemma_sv_eval/whole_record_synthetic_v1_seed1.json` | `python -m gemma_sv.eval_whole_record_unlearning --samples 16 --k 1,2,4,8,16 --seed 1 --out outputs/gemma_sv_eval/whole_record_synthetic_v1_seed1.json` | Versioned synthetic manifest, recovered adapter |
-| Ingestion-imprint vs packing (position-matched, window-disjoint shadow) | `outputs/gemma_sv_eval/imprint_packing_v1.json` | `python -m gemma_sv.eval_imprint_packing --record-ids case-zaffre,incident-helios` | Versioned synthetic manifest, recovered adapter |
-| Legacy recovered-readout 12B diverse-prompt and sequential certificate logs | `outputs/unlearn_output_12b_diverse_trials31.log`, `outputs/unlearn_output_12b_sequential.log`, `outputs/unlearn_output_4b_sequential.log` | `python -m gemma_sv.unlearn_output_demo --model google/gemma-3-12b-pt --lora outputs/gemma_sv_distill_12b/lora_adapter --trials 31 --diverse` (sequential: `--sequential 1,2,3,4[,5]`) | Superseded prefix-shrinking configuration with recovered adapters; unrelated to the predeclared training-free 12B admission/quality extension |
-| Whole-record float64 hero certificate (coupled block decrement) | `outputs/gemma_sv_eval/whole_record_zaffre_block_certificate.json` | `python -m gemma_sv.certify_whole_record --record-id case-zaffre --out outputs/gemma_sv_eval/whole_record_zaffre_block_certificate.json` | Admitted synthetic manifest record |
-| Whole-record Helios cybersecurity certificate | `outputs/gemma_sv_eval/whole_record_helios_certificate.json` | `python -m gemma_sv.certify_whole_record --record-id incident-helios --out outputs/gemma_sv_eval/whole_record_helios_certificate.json` | Admitted synthetic manifest record |
-| 1B/4B 31-support-token certificate logs | `outputs/unlearn_output_1b_trials31.log`, `outputs/unlearn_output_4b_trials31.log` (not distributed) | `python -m gemma_sv.unlearn_output_demo --lora outputs/gemma_sv_distill/lora_adapter --trials 31` (4B: `--model google/gemma-3-4b-pt --lora outputs/gemma_sv_distill_4b/lora_adapter`) | Fixed generic prompt, recovered adapters |
-| Relearning attack | `outputs/gemma_sv_eval/relearn*` | `python -m gemma_sv.unlearn_relearn --targets 40 --lora outputs/gemma_sv_distill/lora_adapter` | TOFU, recovered adapter |
-| Full LiRA membership test of masked refit | `outputs/gemma_sv_eval/mia_lira.json` | `python -m gemma_sv.unlearn_mia_lira --targets 40 --shadows 32 --tests 8 --lora outputs/gemma_sv_distill/lora_adapter` | TOFU, recovered adapter; single-precision FISTA |
-| Weight-space GA comparison | `outputs/gemma_sv_eval/weightspace.json` | `python -m gemma_sv.unlearn_weightspace --targets 20 --lora outputs/gemma_sv_distill/lora_adapter` | TOFU, recovered adapter |
-| Decrement versus refit cost | output of `gemma_sv/bench_forget_cost.py` | `python -m gemma_sv.bench_forget_cost --lora outputs/gemma_sv_distill/lora_adapter` | Recovered adapter |
+| Paired cost and utility comparison | `../journal_evidence/outputs/journal_studies/gemmasv/main_20260906_v1/results.json` and `main_analysis_20260906_v1/` | From `../journal_evidence/`, run `python -m journal_studies.gemmasv.analyze_results --plan outputs/journal_studies/gemmasv/analysis_plan_20260906_v1 --results outputs/journal_studies/gemmasv/main_20260906_v1/results.json --out ../reproduction_paired` | Saved source-free measurements; 8 records, 6 arms, no update-speed advantage for the evaluated FP32 proxy |
+| Retained-answer reanalysis | `../journal_evidence/outputs/journal_studies/gemmasv/decoded_retained_posthoc_20260906_v1/` and included decoded summary | From `../journal_evidence/`, run `python -m journal_studies.gemmasv.analyze_decoded_retained --out ../reproduction_retained` | 96 histories in 32 clusters; existing matching flags, no new generations; not semantic correctness |
 
-## Selection-bias reporting for the Leak@k evaluation
+## Execution and verification
 
-The paper-scale run is complete and reports its denominators: admission gates
-(secret lift $\ge 0.05$ nats, full-answer lift $\ge 0.05$ nats, present
-first-token rank $\le 10$) were fixed before evaluation; scans admitted 24/40
-facts and 28/140 pairs; the first 20 of each were evaluated and every shard
-re-verifies admission. Rejections are dominated by weakly stored proper names
-and secrets guessable from the question. Attempted/admitted counts are stored
-in the merged report and quoted in the paper appendix.
+Run `bash gemma_sv/reproducibility/run_quick.sh` for result reconstruction,
+exact solver checks and decoded-pipeline contracts. The explicit commands and
+external-input boundaries are in [the decoded guide](../../REPRODUCE_DECODED.md)
+and [study bundle](../../../journal_evidence/README.md).
 
-## Seed and filtering policy
+Source versions, dates and fingerprints remain in the protocols because the
+completed studies used their recorded implementations. The response-generation
+v1 attempt terminated without an outcome and contributes no evidence; the
+completed decoded outcomes use v2. Shared runtime modules and supporting
+protocols remain available where required by these execution dependencies.
 
-- Legacy experiments use explicit seed 0 unless a command overrides it. The
-  multiseed 1B study uses training/data/initialization seeds 0, 1, and 2, while
-  holding the certificate target-selection seed fixed for paired comparison.
-- A matched control is valid only when model/data revisions, stage-2 recipe,
-  effective stream offset, evaluation-token hash, and complete stage-2 batch
-  fingerprint equal its recovery arm.
-- Every figure/table must state its denominator after filtering.
-- Different panels may use different measurable subsets, but the attempted and
-  retained counts must accompany each panel.
-
+Every comparison retains its declared cohort and denominator. A local
+retained-key refit, raw-history rebuild and behavioral test answer distinct
+questions; none should be substituted for another when checking the results.

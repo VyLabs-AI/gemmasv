@@ -1,6 +1,6 @@
 # Completed decoded LongMemEval study
 
-The repository includes the completed 32-cluster / 96-history cohort, response-generation v2 runner, deterministic v3 summary, matcher, model-judge protocols/runners, source-free human-validation artifacts, adjudicated v4 census, and suffix cross-tab. All 12 files fingerprinted in the historical response-generation authorization match their recorded SHA-256 values. Two runtime files were restored to their exact historical versions rather than using the evolving demo implementation.
+The repository includes the completed 32-cluster / 96-history cohort, response-generation v2 runner, deterministic v3 summary, matcher, model-judge protocols/runners, source-free human-validation artifacts, adjudicated v4 census, and suffix cross-tab. All 12 files fingerprinted by the response-generation protocol match their recorded SHA-256 values. These exact implementations reproduce the reported study; their fingerprints are preserved.
 
 ## Reproduce published values without model access
 
@@ -14,11 +14,11 @@ python -m pytest tests/test_build_longmemeval_chat_v3_paper_macros.py tests/test
 
 The tests reconstruct the committed numeric fixtures under `tests/expected/`, using the exact hash-bound decoded summary, immutable model-judge census and human-adjudicated derivative. They do not need raw conversations, response sets or a model.
 
-## Inspect or rerun the original pipeline
+## Inspect or rerun the pipeline
 
 The entry points are `longmemeval_chat_cohort_v3.py`, `longmemeval_chat_response_generation_audit_v2.py`, `validate_longmemeval_chat_response_generation_audit_v2.py`, `summarize_longmemeval_chat_v3.py`, `longmemeval_chat_leakage_recall_openai_v2.py`, and `summarize_longmemeval_chat_leakage_recall_census_v3.py`. Each accepts `--help`; none is run during release verification. The inference runner requires an explicit locally obtained pinned LongMemEval oracle, the original Gemma-3-4B-IT checkpoint, and a supported accelerator environment. Its `--run` path requires the exact source-bearing-output acknowledgement printed by help.
 
-The preserved authorization deliberately pins original implementation, OS/package environment and MPS availability, and checks committed inputs before live execution. It may reject a different machine or OS. This release does not bypass that protection or assert that the original run is turnkey on an arbitrary machine. A new experiment must use a separately reviewed protocol and preserve its own provenance; it must not overwrite historical observations. Model weights, complete source conversations, all decoded responses, provider ledgers and private human-review packets are not distributed.
+The preserved authorization deliberately pins original implementation, OS/package environment and MPS availability, and checks committed inputs before live execution. It may reject a different machine or OS. Those checks preserve the recorded execution conditions; the run is not turnkey on an arbitrary machine. A new experiment must use a separately reviewed protocol and preserve its own provenance; it must not overwrite historical observations. Model weights, complete source conversations, all decoded responses, provider ledgers and private human-review packets are not distributed.
 
 The data-free cohort/aggregation/response-runner contract suite is:
 
